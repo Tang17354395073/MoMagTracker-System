@@ -34,21 +34,72 @@ const usePermissionStore = defineStore(
       },
       generateRoutes(roles) {
         return new Promise(resolve => {
+          // 获取用户store
+          console.log('🔄 [权限Store] 开始生成动态路由')
+          console.log('🔄 [权限Store] 传入角色:', roles)
+          console.log('🔄 [权限Store] 当前路由状态 - routes:', this.routes.length)
+          console.log('🔄 [权限Store] 当前路由状态 - addRoutes:', this.addRoutes.length)
+
           // 向后端请求路由数据
           getRouters().then(res => {
+            console.log('✅ [权限Store] 后端返回的路由数据状态码:', res.code)
+            console.log('✅ [权限Store] 后端返回的路由数据:', res.data)
+
+            if (!res.data || res.data.length === 0) {
+              console.error('❌ [权限Store] 后端返回的路由数据为空！')
+              resolve([])
+              return
+            }
+
+            // 详细检查每个路由项
+            res.data.forEach((route, index) => {
+              console.log(`📋 路由 ${index}:`, {
+                path: route.path,
+                component: route.component,
+                name: route.name,
+                children: route.children ? route.children.length : 0
+              })
+            })
+
             const sdata = JSON.parse(JSON.stringify(res.data))
             const rdata = JSON.parse(JSON.stringify(res.data))
             const defaultData = JSON.parse(JSON.stringify(res.data))
+
             const sidebarRoutes = filterAsyncRouter(sdata)
             const rewriteRoutes = filterAsyncRouter(rdata, false, true)
             const defaultRoutes = filterAsyncRouter(defaultData)
             const asyncRoutes = filterDynamicRoutes(dynamicRoutes)
-            asyncRoutes.forEach(route => { router.addRoute(route) })
+
+            console.log('🔄 过滤后的路由数量:')
+            console.log('🔄 - sidebarRoutes:', sidebarRoutes.length)
+            console.log('🔄 - rewriteRoutes:', rewriteRoutes.length)
+            console.log('🔄 - asyncRoutes:', asyncRoutes.length)
+
+            // 添加动态路由前检查
+            asyncRoutes.forEach(route => {
+              console.log(`➕ 准备添加动态路由: ${route.path}, 组件:`, route.component)
+              router.addRoute(route)
+              console.log(`✅ 已添加动态路由: ${route.path}`)
+            })
+
             this.setRoutes(rewriteRoutes)
             this.setSidebarRouters(constantRoutes.concat(sidebarRoutes))
             this.setDefaultRoutes(sidebarRoutes)
             this.setTopbarRoutes(defaultRoutes)
+
+            // 验证路由是否添加成功
+            const allRoutes = router.getRoutes()
+            console.log('📊 当前所有路由数量:', allRoutes.length)
+            allRoutes.forEach(route => {
+              console.log(`📍 路由: ${route.path}, 名称: ${route.name || '未命名'}`)
+            })
+
+            console.log('✅ 路由生成完成，最终路由:', rewriteRoutes)
             resolve(rewriteRoutes)
+          }).catch(error => {
+            console.error('❌ [权限Store] 获取路由失败:', error)
+            console.error('❌ [权限Store] 错误详情:', error.response || error.message)
+            resolve([])
           })
         })
       }
@@ -115,12 +166,25 @@ export function filterDynamicRoutes(routes) {
 
 export const loadView = (view) => {
   let res
+  console.log(`🔄 加载视图组件: ${view}`)
+  
   for (const path in modules) {
     const dir = path.split('views/')[1].split('.vue')[0]
+    console.log(`🔍 检查路径: ${path}, 目录: ${dir}`)
+    
     if (dir === view) {
       res = () => modules[path]()
+      console.log(`✅ 找到组件: ${view} -> ${path}`)
+      break
     }
   }
+  
+  if (!res) {
+    console.error(`❌ 未找到组件: ${view}`)
+    // 返回一个默认的404组件或者空组件
+    return () => import('@/views/error/404.vue')
+  }
+  
   return res
 }
 

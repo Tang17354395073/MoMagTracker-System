@@ -1,12 +1,14 @@
 package tracker.framework.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -17,25 +19,28 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.web.filter.CorsFilter;
 import tracker.framework.config.properties.PermitAllUrlProperties;
+import tracker.framework.emailConfig.EmailCodeAuthenticationProvider;
+import tracker.framework.emailConfig.EmailCodeAuthenticationSecurityConfig;
 import tracker.framework.security.filter.JwtAuthenticationTokenFilter;
 import tracker.framework.security.handle.AuthenticationEntryPointImpl;
 import tracker.framework.security.handle.LogoutSuccessHandlerImpl;
 
+import java.util.Arrays;
+
 /**
  * spring security配置
- * 
- * @author ruoyi
+ *
+ * @author tangjiawei
  */
 @EnableMethodSecurity(prePostEnabled = true, securedEnabled = true)
 @Configuration
-public class SecurityConfig
-{
+public class SecurityConfig {
     /**
      * 自定义用户认证逻辑
      */
     @Autowired
     private UserDetailsService userDetailsService;
-    
+
     /**
      * 认证失败处理类
      */
@@ -53,7 +58,7 @@ public class SecurityConfig
      */
     @Autowired
     private JwtAuthenticationTokenFilter authenticationTokenFilter;
-    
+
     /**
      * 跨域过滤器
      */
@@ -66,16 +71,26 @@ public class SecurityConfig
     @Autowired
     private PermitAllUrlProperties permitAllUrl;
 
+    @Autowired
+    private EmailCodeAuthenticationProvider emailCodeAuthenticationProvider;
+
+    @Autowired
+    private EmailCodeAuthenticationSecurityConfig emailCodeAuthenticationSecurityConfig;
+
     /**
      * 身份验证实现
      */
     @Bean
-    public AuthenticationManager authenticationManager()
-    {
+    public AuthenticationManager authenticationManager() {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setUserDetailsService(userDetailsService);
         daoAuthenticationProvider.setPasswordEncoder(bCryptPasswordEncoder());
-        return new ProviderManager(daoAuthenticationProvider);
+
+        // 创建包含多个认证提供者的 AuthenticationManager
+        return new ProviderManager(Arrays.asList(
+                daoAuthenticationProvider,
+                emailCodeAuthenticationProvider  // 使用已经注入的 bean
+        ));
     }
 
     /**
@@ -94,46 +109,47 @@ public class SecurityConfig
      * authenticated       |   用户登录后可访问
      */
     @Bean
-    protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception
-    {
+    protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
-            // CSRF禁用，因为不使用session
-            .csrf(csrf -> csrf.disable())
-            // 禁用HTTP响应标头
-            .headers((headersCustomizer) -> {
-                headersCustomizer.cacheControl(cache -> cache.disable()).frameOptions(options -> options.sameOrigin());
-            })
-            // 认证失败处理类
-            .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
-            // 基于token，所以不需要session
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            // 注解标记允许匿名访问的url
-            .authorizeHttpRequests((requests) -> {
-                permitAllUrl.getUrls().forEach(url -> requests.antMatchers(url).permitAll());
-                // 对于登录login 注册register 验证码captchaImage 允许匿名访问
-                requests.antMatchers("/login", "/register", "/captchaImage").permitAll()
-                    // 静态资源，可匿名访问
-                    .antMatchers(HttpMethod.GET, "/", "/*.html", "/**/*.html", "/**/*.css", "/**/*.js", "/profile/**").permitAll()
-                    .antMatchers("/swagger-ui.html", "/swagger-resources/**", "/webjars/**", "/*/api-docs", "/druid/**").permitAll()
-                    // 除上面外的所有请求全部需要鉴权认证
-                    .anyRequest().authenticated();
-            })
-            // 添加Logout filter
-            .logout(logout -> logout.logoutUrl("/logout").logoutSuccessHandler(logoutSuccessHandler))
-            // 添加JWT filter
-            .addFilterBefore(authenticationTokenFilter, UsernamePasswordAuthenticationFilter.class)
-            // 添加CORS filter
-            .addFilterBefore(corsFilter, JwtAuthenticationTokenFilter.class)
-            .addFilterBefore(corsFilter, LogoutFilter.class)
-            .build();
+                // CSRF禁用，因为不使用session
+                .csrf(csrf -> csrf.disable())
+                // 禁用HTTP响应标头
+                .headers((headersCustomizer) -> {
+                    headersCustomizer.cacheControl(cache -> cache.disable()).frameOptions(options -> options.sameOrigin());
+                })
+                // 认证失败处理类
+                .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
+                // 基于token，所以不需要session
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                // 注解标记允许匿名访问的url
+                .authorizeHttpRequests((requests) -> {
+                    permitAllUrl.getUrls().forEach(url -> requests.antMatchers(url).permitAll());
+                    // 对于登录 login 注册 register 验证码 captchaImage 邮箱相关接口 允许匿名访问
+                    requests.antMatchers("/email/**", "/login", "/register", "/captchaImage").permitAll()
+                            // 静态资源，可匿名访问
+                            .antMatchers(HttpMethod.GET, "/", "/*.html", "/**/*.html", "/**/*.css", "/**/*.js", "/profile/**").permitAll()
+                            .antMatchers("/swagger-ui.html", "/swagger-resources/**", "/webjars/**", "/*/api-docs", "/druid/**").permitAll()
+                            // 除上面外的所有请求全部需要鉴权认证
+                            .anyRequest().authenticated();
+                })
+                // 添加邮箱登录认证配置
+                .apply(emailCodeAuthenticationSecurityConfig)
+                .and()
+                // 添加Logout filter
+                .logout(logout -> logout.logoutUrl("/logout").logoutSuccessHandler(logoutSuccessHandler))
+                // 添加JWT filter
+                .addFilterBefore(authenticationTokenFilter, UsernamePasswordAuthenticationFilter.class)
+                // 添加CORS filter
+                .addFilterBefore(corsFilter, JwtAuthenticationTokenFilter.class)
+                .addFilterBefore(corsFilter, LogoutFilter.class)
+                .build();
     }
 
     /**
      * 强散列哈希加密实现
      */
     @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder()
-    {
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 }

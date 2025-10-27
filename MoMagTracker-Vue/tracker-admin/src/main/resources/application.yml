@@ -1,13 +1,13 @@
 # 项目相关配置
 ruoyi:
   # 名称
-  name: RuoYi
+  name: MoMagTracker
   # 版本
   version: 3.9.0
   # 版权年份
   copyrightYear: 2025
-  # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
-  profile: D:/ruoyi/uploadPath
+  # 文件路径
+  profile: D:/MoMagTracker/uploadPath  # 建议改为项目相关路径
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数字计算 char 字符验证
@@ -45,8 +45,28 @@ user:
     # 密码锁定时间（默认10分钟）
     lockTime: 10
 
-# Spring配置
+# Spring 配置
 spring:
+  # 邮件配置 - 新增网易邮箱配置
+  mail:
+    host: smtp.163.com  # 邮箱服务器
+    port: 465           # SSL端口
+    username: 15948660043@163.com  # 发件人邮箱
+    password: LVxYK34uNZTgMfUM  # SMTP授权码
+    default-encoding: UTF-8
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: false  # 不使用 TLS
+          ssl:
+            enable: true   # 使用 SSL 加密
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
   # 资源信息
   messages:
     # 国际化资源文件路径
@@ -87,6 +107,10 @@ spring:
         max-active: 8
         # #连接池最大阻塞等待时间（使用负值表示没有限制）
         max-wait: -1ms
+
+# 应用配置 - 新增
+app:
+  name: MoMagTracker
 
 # token配置
 token:

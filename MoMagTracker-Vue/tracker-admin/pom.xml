@@ -49,6 +49,13 @@
             <artifactId>tracker-framework</artifactId>
         </dependency>
 
+        <!-- 系统模块 - 新增 -->
+        <dependency>
+            <groupId>tracker</groupId>
+            <artifactId>tracker-system</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+
         <!-- 定时任务-->
         <dependency>
             <groupId>tracker</groupId>

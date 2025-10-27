@@ -1,9 +1,10 @@
+import { defineStore } from 'pinia'
 import router from '@/router'
 import { ElMessageBox, } from 'element-plus'
-import { login, logout, getInfo } from '@/api/login'
+import { emailLogin as apiEmailLogin, login, logout, getInfo } from '@/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import { isHttp, isEmpty } from "@/utils/validate"
-import defAva from '@/assets/images/profile.jpg'
+import defAva from '@/assets/images/readme.jpg'
 
 const useUserStore = defineStore(
   'user',
@@ -26,9 +27,39 @@ const useUserStore = defineStore(
         const uuid = userInfo.uuid
         return new Promise((resolve, reject) => {
           login(username, password, code, uuid).then(res => {
+            // 存储 token 到本地
             setToken(res.token)
             this.token = res.token
-            resolve()
+            // 登录成功后自动获取用户信息
+            this.getInfo().then(() => {
+              resolve()
+            }).catch(error => {
+              // 即使获取用户信息失败，也认为登录成功
+              console.error('获取用户信息失败:', error)
+              resolve()
+            })
+          }).catch(error => {
+            reject(error)
+          })
+        })
+      },
+      // 邮箱登录
+      emailLogin(userInfo) { 
+        const email = userInfo.email.trim()
+        const emailCode = userInfo.emailCode
+        const uuid = userInfo.uuid
+        return new Promise((resolve, reject) => {
+          apiEmailLogin(email, emailCode, uuid).then(res => {
+            setToken(res.token)
+            this.token = res.token 
+            // 登录成功后自动获取用户信息
+            this.getInfo().then(() => {
+              resolve()
+            }).catch(error => {
+              // 即使获取用户信息失败，也认为登录成功
+              console.error('获取用户信息失败:', error)
+              resolve()
+            })
           }).catch(error => {
             reject(error)
           })
@@ -38,21 +69,36 @@ const useUserStore = defineStore(
       getInfo() {
         return new Promise((resolve, reject) => {
           getInfo().then(res => {
+            console.log('=== 获取用户信息响应 ===')
+            console.log('用户信息:', res.user)
+            console.log('角色信息:', res.roles)
+            console.log('权限信息:', res.permissions)
+
             const user = res.user
+
+            // 头像处理逻辑
             let avatar = user.avatar || ""
             if (!isHttp(avatar)) {
               avatar = (isEmpty(avatar)) ? defAva : import.meta.env.VITE_APP_BASE_API + avatar
             }
+
+            // 角色和权限处理
             if (res.roles && res.roles.length > 0) { // 验证返回的roles是否是一个非空数组
               this.roles = res.roles
               this.permissions = res.permissions
+              console.log('✅ 设置用户角色:', this.roles)
             } else {
               this.roles = ['ROLE_DEFAULT']
+              console.warn('⚠️ 用户没有分配角色，使用默认角色')
             }
+
+            // 设置用户基本信息
             this.id = user.userId
             this.name = user.userName
             this.nickName = user.nickName
             this.avatar = avatar
+            console.log('✅ 用户Store状态更新完成')
+
             /* 初始密码提示 */
             if(res.isDefaultModifyPwd) {
               ElMessageBox.confirm('您的密码还是初始密码，请修改密码！',  '安全提示', {  confirmButtonText: '确定',  cancelButtonText: '取消',  type: 'warning' }).then(() => {
@@ -67,6 +113,7 @@ const useUserStore = defineStore(
             }
             resolve(res)
           }).catch(error => {
+            console.error('❌ 获取用户信息失败:', error)
             reject(error)
           })
         })
@@ -78,6 +125,7 @@ const useUserStore = defineStore(
             this.token = ''
             this.roles = []
             this.permissions = []
+            // 清除本地token
             removeToken()
             resolve()
           }).catch(error => {

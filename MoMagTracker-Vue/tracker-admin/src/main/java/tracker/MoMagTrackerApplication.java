@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 /**
  * 启动程序
  * 
- * @author ruoyi
+ * @author tangjiawei
  */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class MoMagTrackerApplication
@@ -16,15 +16,18 @@ public class MoMagTrackerApplication
     {
         // System.setProperty("spring.devtools.restart.enabled", "false");
         SpringApplication.run(MoMagTrackerApplication.class, args);
-        System.out.println("(♥◠‿◠)ﾉﾞ  若依启动成功   ლ(´ڡ`ლ)ﾞ  \n" +
-                " .-------.       ____     __        \n" +
-                " |  _ _   \\      \\   \\   /  /    \n" +
-                " | ( ' )  |       \\  _. /  '       \n" +
-                " |(_ o _) /        _( )_ .'         \n" +
-                " | (_,_).' __  ___(_ o _)'          \n" +
-                " |  |\\ \\  |  ||   |(_,_)'         \n" +
-                " |  | \\ `'   /|   `-'  /           \n" +
-                " |  |  \\    /  \\      /           \n" +
-                " ''-'   `'-'    `-..-'              ");
+        System.out.println(
+                "(♥◠‿◠)ﾉﾞ  MoMagTracker 项目启动成功   ლ(´ڡ`ლ)ﾞ  \n" +
+                "#####  #####  #   #\n" +
+                "  #      #    #   #\n" +
+                "  #      #    # # #\n" +
+                "  #      #    ## ##\n" +
+                "  #    ###    #   #\n" +
+                "\n" +
+                "📍 项目：MoMagTracker\n" +
+                "👤 作者：唐佳伟       \n" +
+                "🕒 时间：" + java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) +
+                "\n" +
+                "✨ 系统初始化完成，开始为您服务！");
     }
 }

@@ -34,7 +34,7 @@ import tracker.system.service.ISysUserService;
 /**
  * 用户 业务层处理
  * 
- * @author ruoyi
+ * @author tangjiawei
  */
 @Service
 public class SysUserServiceImpl implements ISysUserService
@@ -114,6 +114,17 @@ public class SysUserServiceImpl implements ISysUserService
     public SysUser selectUserByUserName(String userName)
     {
         return userMapper.selectUserByUserName(userName);
+    }
+
+    /**
+     * 通过邮箱地址查询用户
+     *
+     * @param email 邮箱地址
+     * @return 用户对象信息
+     */
+    @Override
+    public SysUser selectUserByEmail(String email) {
+        return userMapper.selectUserByEmail(email);
     }
 
     /**

@@ -1,5 +1,7 @@
 package tracker.common.utils;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,22 +18,37 @@ import tracker.common.exception.ServiceException;
 /**
  * 安全服务工具类
  * 
- * @author ruoyi
+ * @author tangjiawei
  */
 public class SecurityUtils
 {
-
+    private static final Logger logger = LoggerFactory.getLogger(SecurityUtils.class);
     /**
      * 用户ID
      **/
     public static Long getUserId()
     {
+        logger.info("🔍 [SecurityUtils] 开始获取用户ID");
         try
         {
-            return getLoginUser().getUserId();
+            LoginUser loginUser = getLoginUser();
+            if (loginUser == null) {
+                logger.warn("⚠️ [SecurityUtils] getLoginUser() 返回 null");
+                return null;
+            }
+
+            if (loginUser.getUser() == null) {
+                logger.error("❌ [SecurityUtils] LoginUser中的User为null");
+                return null;
+            }
+
+            Long userId = loginUser.getUser().getUserId();
+            logger.info("✅ [SecurityUtils] 成功获取用户ID: {}", userId);
+            return userId;
         }
         catch (Exception e)
         {
+            logger.error("❌ [SecurityUtils] 获取用户ID异常", e);
             throw new ServiceException("获取用户ID异常", HttpStatus.UNAUTHORIZED);
         }
     }
