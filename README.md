@@ -5081,7 +5081,17 @@ password：tang2001
 
 ![image-20251027084544359](README.assets/image-20251027084544359.png)
 
-### 2.4 推送至远程仓库
+### 2.4 结果展示
+
+#### 2.4.1 账号密码登录页面
+
+![image-20251113141626420](README.assets/image-20251113141626420.png)
+
+#### 2.4.2 邮箱登录页面
+
+![image-20251113141652552](README.assets/image-20251113141652552.png)
+
+### 2.5 推送至远程仓库
 
 ```shell
 ls -a
@@ -5097,9 +5107,18156 @@ git commit -m "第二次提交，修改总体概括 README.md 文件，在原来
 git push -u origin dev
 ```
 
+- 结果
+
+```shell
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ ls -a
+./  ../  .git/  MoMagTracker-Vue/  MoMagTracker-Vue3/  README.assets/  README.md
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   MoMagTracker-Vue/tracker-admin/pom.xml
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/MoMagTrackerApplication.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/system/SysLoginController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application.yml
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/constant/Constants.java
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/core/domain/model/LoginBody.java
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/utils/SecurityUtils.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/config/SecurityConfig.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/SysLoginService.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/UserDetailsServiceImpl.java
+        modified:   MoMagTracker-Vue/tracker-system/pom.xml
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/mapper/SysUserMapper.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/ISysUserService.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/SysUserServiceImpl.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/resources/mapper/system/SysUserMapper.xml
+        modified:   MoMagTracker-Vue/tracker-ui/src/api/login.js
+        modified:   MoMagTracker-Vue/tracker-ui/src/store/modules/user.js
+        modified:   MoMagTracker-Vue/tracker-ui/src/views/login.vue
+        modified:   MoMagTracker-Vue3/src/api/login.js
+        modified:   MoMagTracker-Vue3/src/main.js
+        modified:   MoMagTracker-Vue3/src/permission.js
+        modified:   MoMagTracker-Vue3/src/store/modules/permission.js
+        modified:   MoMagTracker-Vue3/src/store/modules/user.js
+        modified:   MoMagTracker-Vue3/src/views/login.vue
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/system/SysGenerateEmail.java
+        MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/
+        MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/EmailUserDetailsServiceImpl.java
+        MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/SysIEmailService.java
+        MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/SysEmailServiceImpl.java
+        MoMagTracker-Vue/tracker-ui/src/assets/images/login-background-sdu.png
+        MoMagTracker-Vue3/src/assets/images/readme.jpg
+        README.assets/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git add .
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   MoMagTracker-Vue/tracker-admin/pom.xml
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/MoMagTrackerApplication.java
+        new file:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/system/SysGenerateEmail.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/system/SysLoginController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application.yml
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/constant/Constants.java
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/core/domain/model/LoginBody.java
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/utils/SecurityUtils.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/config/SecurityConfig.java
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/CustomAuthenticationFailureHandler.java
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/CustomAuthenticationSuccessHandler.java
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/EmailCodeAuthenticationFilter.java
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/EmailCodeAuthenticationProvider.java
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/EmailCodeAuthenticationSecurityConfig.java
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/EmailCodeAuthenticationToken.java
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/SpringContextUtil.java
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/EmailUserDetailsServiceImpl.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/SysLoginService.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/UserDetailsServiceImpl.java
+        modified:   MoMagTracker-Vue/tracker-system/pom.xml
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/mapper/SysUserMapper.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/ISysUserService.java
+        new file:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/SysIEmailService.java
+        new file:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/SysEmailServiceImpl.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/SysUserServiceImpl.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/resources/mapper/system/SysUserMapper.xml
+        modified:   MoMagTracker-Vue/tracker-ui/src/api/login.js
+        new file:   MoMagTracker-Vue/tracker-ui/src/assets/images/login-background-sdu.png
+        modified:   MoMagTracker-Vue/tracker-ui/src/store/modules/user.js
+        modified:   MoMagTracker-Vue/tracker-ui/src/views/login.vue
+        modified:   MoMagTracker-Vue3/src/api/login.js
+        new file:   MoMagTracker-Vue3/src/assets/images/readme.jpg
+        modified:   MoMagTracker-Vue3/src/main.js
+        modified:   MoMagTracker-Vue3/src/permission.js
+        modified:   MoMagTracker-Vue3/src/store/modules/permission.js
+        modified:   MoMagTracker-Vue3/src/store/modules/user.js
+        modified:   MoMagTracker-Vue3/src/views/login.vue
+        new file:   README.assets/image-20251017101236143.png
+        new file:   README.assets/image-20251017101430289.png
+        new file:   README.assets/image-20251021083538445.png
+        new file:   README.assets/image-20251021083953338.png
+        new file:   README.assets/image-20251027084544359.png
+        new file:   README.assets/image-20251027092745320.png
+        new file:   README.assets/image-20251027092852936.png
+        new file:   README.assets/image-20251027093224515.png
+        new file:   README.assets/image-20251027093518022.png
+        new file:   README.assets/image-20251027093849808.png
+        new file:   README.assets/image-20251027094308158.png
+        new file:   README.assets/image-20251027094717649.png
+        new file:   README.assets/image-20251027094914257.png
+        new file:   README.assets/image-20251027095104232.png
+        new file:   README.assets/image-20251027095433044.png
+        new file:   README.assets/image-20251027095706479.png
+        new file:   README.assets/image-20251027095918506.png
+        new file:   README.assets/image-20251027100027052.png
+        new file:   README.assets/image-20251027100159611.png
+        new file:   README.assets/image-20251027100256444.png
+        new file:   README.assets/image-20251027100829654.png
+        modified:   README.md
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git commit -m "第二次提交，修改总体概括 README.md 文件，在原来的账号密码登录功能之外新增邮箱登录功能"
+[master c729ef1] 第二次提交，修改总体概括 README.md 文件，在原来的账号密码登录功能之外新增邮箱登录功能
+ 59 files changed, 7236 insertions(+), 290 deletions(-)
+ create mode 100644 MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/system/SysGenerateEmail.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/CustomAuthenticationFailureHandler.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/CustomAuthenticationSuccessHandler.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/EmailCodeAuthenticationFilter.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/EmailCodeAuthenticationProvider.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/EmailCodeAuthenticationSecurityConfig.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/EmailCodeAuthenticationToken.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/emailConfig/SpringContextUtil.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/EmailUserDetailsServiceImpl.java
+ create mode 100644 MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/SysIEmailService.java
+ create mode 100644 MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/SysEmailServiceImpl.java
+ create mode 100644 MoMagTracker-Vue/tracker-ui/src/assets/images/login-background-sdu.png
+ create mode 100644 MoMagTracker-Vue3/src/assets/images/readme.jpg
+ create mode 100644 README.assets/image-20251017101236143.png
+ create mode 100644 README.assets/image-20251017101430289.png
+ create mode 100644 README.assets/image-20251021083538445.png
+ create mode 100644 README.assets/image-20251021083953338.png
+ create mode 100644 README.assets/image-20251027084544359.png
+ create mode 100644 README.assets/image-20251027092745320.png
+ create mode 100644 README.assets/image-20251027092852936.png
+ create mode 100644 README.assets/image-20251027093224515.png
+ create mode 100644 README.assets/image-20251027093518022.png
+ create mode 100644 README.assets/image-20251027093849808.png
+ create mode 100644 README.assets/image-20251027094308158.png
+ create mode 100644 README.assets/image-20251027094717649.png
+ create mode 100644 README.assets/image-20251027094914257.png
+ create mode 100644 README.assets/image-20251027095104232.png
+ create mode 100644 README.assets/image-20251027095433044.png
+ create mode 100644 README.assets/image-20251027095706479.png
+ create mode 100644 README.assets/image-20251027095918506.png
+ create mode 100644 README.assets/image-20251027100027052.png
+ create mode 100644 README.assets/image-20251027100159611.png
+ create mode 100644 README.assets/image-20251027100256444.png
+ create mode 100644 README.assets/image-20251027100829654.png
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git push -u origin master
+Enumerating objects: 189, done.
+Counting objects: 100% (189/189), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (104/104), done.
+Writing objects: 100% (119/119), 3.63 MiB | 1.68 MiB/s, done.
+Total 119 (delta 49), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (49/49), completed with 46 local objects.
+To 17354395073_github_account:Tang17354395073/MoMagTracker-System.git
+   91a45cf..c729ef1  master -> master
+branch 'master' set up to track 'origin/master'.
+```
+
+## 2.3 系统功能开发（前端页面）
+
+```
+账号：admin
+密码：admin123
+    
+账号：conner
+密码：admin123
+```
+
+### 2.3.1 首页开发（views/index.vue）
+
+![image-20251113141816232](README.assets/image-20251113141816232.png)
+
+```
+<template>
+  <div class="app-container home">
+    <div class="main-card">
+      <!-- 主标题区域 -->
+      <div class="header-section">
+        <h1 class="main-title">结构健康监测系统后台管理框架</h1>
+        <p class="description">
+          与传统的接触式监测方法相比，本系统基于先进的非接触式视觉微小运动放大技术，能够在不接触目标的情况下，帮助用户更精准地检测和分析微小的运动，尤其是那些人类肉眼无法直接感知的微弱变化。可以用于所有的 Web 应用程序，同时支持移动客户端访问。
+        </p>
+        <div class="version-info">
+          <span class="version-label">当前版本：</span>
+          <span class="version-value">v{{ version }}</span>
+          <el-tag type="success" class="free-tag">免费开源</el-tag>
+        </div>
+        <div class="action-buttons">
+          <el-button
+            type="primary"
+            icon="Cloudy"
+            class="custom-btn primary-btn"
+            @click="goTarget('https://github.com/Tang17354395073/MoMagTracker-System')"
+          >
+            访问 Github
+          </el-button>
+          <el-button
+            icon="HomeFilled"
+            class="custom-btn secondary-btn"
+            @click="goTarget('http://ruoyi.vip')"
+          >
+            访问 Gitee
+          </el-button>
+        </div>
+      </div>
+
+      <!-- 内容区域 -->
+      <div class="content-section">
+        <!-- 技术选型 -->
+        <div class="content-block tech-block">
+          <h3 class="block-title">
+            <i class="el-icon-cpu"></i>
+            技术选型
+          </h3>
+          <div class="tech-content">
+            <div class="tech-column">
+              <h4 class="tech-category">
+                <i class="el-icon-monitor"></i>
+                后端技术
+              </h4>
+              <ul class="tech-list">
+                <li><i class="el-icon-check"></i> SpringBoot</li>
+                <li><i class="el-icon-check"></i> Spring Security</li>
+                <li><i class="el-icon-check"></i> JWT</li>
+                <li><i class="el-icon-check"></i> MyBatis</li>
+                <li><i class="el-icon-check"></i> Druid</li>
+                <li><i class="el-icon-check"></i> Fastjson</li>
+                <li><i class="el-icon-more"></i> ...</li>
+              </ul>
+            </div>
+            <div class="tech-column">
+              <h4 class="tech-category">
+                <i class="el-icon-data-line"></i>
+                前端技术
+              </h4>
+              <ul class="tech-list">
+                <li><i class="el-icon-check"></i> Vue</li>
+                <li><i class="el-icon-check"></i> Vuex</li>
+                <li><i class="el-icon-check"></i> Element-ui</li>
+                <li><i class="el-icon-check"></i> Axios</li>
+                <li><i class="el-icon-check"></i> Sass</li>
+                <li><i class="el-icon-check"></i> Quill</li>
+                <li><i class="el-icon-more"></i> ...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 联系信息 -->
+        <div class="content-block contact-block">
+          <h3 class="block-title">
+            <i class="el-icon-phone-outline"></i>
+            联系信息
+          </h3>
+          <div class="contact-content">
+            <div class="contact-item">
+              <i class="el-icon-s-promotion contact-icon"></i>
+              <div class="contact-details">
+                <span class="contact-label">官网：</span>
+                <el-link 
+                  href="http://www.ruoyi.vip" 
+                  target="_blank"
+                  class="contact-link"
+                >
+                  http://www.tangjiawei.com
+                </el-link>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="el-icon-chat-dot-round contact-icon"></i>
+              <div class="contact-details">
+                <span class="contact-label">电话：</span>
+                <span class="contact-text">15948660043</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="el-icon-message contact-icon"></i>
+              <div class="contact-details">
+                <span class="contact-label">邮箱：</span>
+                <span class="contact-text">15948660043@163.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 更新日志 -->
+        <div class="content-block update-block">
+          <h3 class="block-title">
+            <i class="el-icon-notebook-2"></i>
+            更新日志
+          </h3>
+          <div class="update-content">
+            <el-collapse accordion class="custom-collapse">
+              <el-collapse-item name="2.0.0" class="collapse-item">
+                <template #title>
+                  <div class="collapse-title">
+                    <span class="version-tag">v2.0.0</span>
+                    <span class="version-date">2025-10-27</span>
+                  </div>
+                </template>
+                <div class="update-details">
+                  <ol class="update-list">
+                    <li>优化菜单搜索查询页</li>
+                  </ol>
+                </div>
+              </el-collapse-item>
+              <el-collapse-item name="1.0.0" class="collapse-item">
+                <template #title>
+                  <div class="collapse-title">
+                    <span class="version-tag">v1.0.0</span>
+                    <span class="version-date">2025-03-05</span>
+                  </div>
+                </template>
+                <div class="update-details">
+                  <ol class="update-list">
+                    <li>结构健康监测系统正式发布</li>
+                  </ol>
+                </div>
+              </el-collapse-item>
+            </el-collapse>
+          </div>
+        </div>
+
+        <!-- 捐赠支持 -->
+        <div class="content-block donation-block">
+          <h3 class="block-title">
+            <i class="el-icon-coffee-cup"></i>
+            捐赠支持
+          </h3>
+          <div class="donation-content">
+            <div class="donation-container">
+              <div class="donation-item">
+                <div class="donation-title">
+                  <i class="el-icon-alipay"></i>
+                  支付宝扫一扫付款
+                </div>
+                <div class="donation-image-wrapper">
+                  <img
+                    src="@/assets/images/alipay.jpg"
+                    alt="支付宝付款码"
+                    class="donation-image"
+                  />
+                </div>
+              </div>
+              
+              <div class="divider"></div>
+              
+              <div class="donation-item">
+                <div class="donation-title">
+                  <i class="el-icon-wechat"></i>
+                  微信扫一扫转账
+                </div>
+                <div class="donation-image-wrapper">
+                  <img
+                    src="@/assets/images/wechat.jpg"
+                    alt="微信转账码"
+                    class="donation-image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="donation-footer">
+              <i class="el-icon-chat-line-round"></i>
+              你可以请作者喝杯咖啡表示鼓励
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup name="Index">
+const version = ref('2.0.0')
+
+function goTarget(url) {
+  window.open(url, '__blank')
+}
+</script>
+
+<style scoped lang="scss">
+.home {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+    margin: 20px;
+
+    // 头部区域
+    .header-section {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid #f1f5f9;
+
+      .main-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+      }
+
+      .description {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #64748b;
+        margin-bottom: 25px;
+        text-align: left;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-indent: 2em;
+      }
+
+      .version-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+
+        .version-label {
+          font-weight: 600;
+          color: #475569;
+        }
+
+        .version-value {
+          font-weight: 700;
+          color: #1e293b;
+          font-size: 1.1rem;
+        }
+
+        .free-tag {
+          font-weight: 600;
+          padding: 8px 20px;
+          border-radius: 25px;
+          font-size: 0.95rem;
+          background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+          border: none;
+          color: white;
+        }
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .custom-btn {
+          padding: 14px 28px;
+          border-radius: 12px;
+          font-weight: 600;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+          border: none;
+          min-width: 140px;
+
+          &.primary-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+            &:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+            }
+          }
+
+          &.secondary-btn {
+            background: white;
+            border: 2px solid #e2e8f0;
+            color: #475569;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+            &:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+              border-color: #667eea;
+              color: #667eea;
+            }
+          }
+        }
+      }
+    }
+
+    // 内容区域
+    .content-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+
+      .content-block {
+        background: white;
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f5f9;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .block-title {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: #1e293b;
+          margin-bottom: 20px;
+          padding-bottom: 15px;
+          border-bottom: 2px solid #f1f5f9;
+
+          i {
+            color: #667eea;
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      // 技术选型区块
+      .tech-block {
+        .tech-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 25px;
+
+          .tech-column {
+            .tech-category {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: #374151;
+              margin-bottom: 15px;
+
+              i {
+                color: #667eea;
+              }
+            }
+
+            .tech-list {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 0;
+                color: #4b5563;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                border-bottom: 1px solid #f8fafc;
+
+                &:last-child {
+                  border-bottom: none;
+                }
+
+                &:hover {
+                  color: #667eea;
+                  transform: translateX(5px);
+                }
+
+                i {
+                  color: #10b981;
+
+                  &.el-icon-more {
+                    color: #9ca3af;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // 联系信息区块
+      .contact-block {
+        .contact-content {
+          .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f8fafc;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .contact-icon {
+              color: #667eea;
+              font-size: 1.3rem;
+              width: 24px;
+              text-align: center;
+            }
+
+            .contact-details {
+              flex: 1;
+
+              .contact-label {
+                font-weight: 600;
+                color: #374151;
+                margin-right: 8px;
+              }
+
+              .contact-link {
+                color: #667eea;
+                text-decoration: none;
+                font-weight: 500;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+
+              .contact-text {
+                color: #4b5563;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+
+      // 更新日志区块
+      .update-block {
+        .update-content {
+          .custom-collapse {
+            border: none;
+
+            .collapse-item {
+              margin-bottom: 12px;
+              border: 1px solid #e2e8f0;
+              border-radius: 12px;
+              overflow: hidden;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              :deep(.el-collapse-item__header) {
+                background: #f8fafc;
+                border: none;
+                padding: 18px 20px;
+                font-weight: 600;
+
+                .collapse-title {
+                  display: flex;
+                  align-items: center;
+                  gap: 15px;
+
+                  .version-tag {
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    padding: 6px 14px;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                  }
+
+                  .version-date {
+                    color: #6b7280;
+                    font-weight: 500;
+                  }
+                }
+              }
+
+              :deep(.el-collapse-item__wrap) {
+                border: none;
+                background: white;
+
+                .update-details {
+                  padding: 20px;
+
+                  .update-list {
+                    margin: 0;
+                    padding-left: 20px;
+
+                    li {
+                      padding: 8px 0;
+                      color: #4b5563;
+                      line-height: 1.5;
+                      font-weight: 500;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // 捐赠支持区块
+      .donation-block {
+        .donation-content {
+          .donation-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .donation-item {
+              flex: 1;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              .donation-title {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #1e293b;
+                font-size: 0.95rem;
+
+                i {
+                  font-size: 1.3rem;
+
+                  &.el-icon-alipay {
+                    color: #1677ff;
+                  }
+
+                  &.el-icon-wechat {
+                    color: #07c160;
+                  }
+                }
+              }
+
+              .donation-image-wrapper {
+                width: 130px;
+                height: 130px;
+                padding: 8px;
+                border: 2px solid #e2e8f0;
+                border-radius: 12px;
+                background: white;
+                transition: all 0.3s ease;
+
+                &:hover {
+                  border-color: #667eea;
+                  transform: scale(1.05);
+                }
+              }
+
+              .donation-image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 8px;
+              }
+            }
+
+            .divider {
+              width: 1px;
+              height: 140px;
+              background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
+              margin: 0 20px;
+            }
+          }
+
+          .donation-footer {
+            text-align: center;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 12px;
+            color: #6b7280;
+            font-weight: 500;
+
+            i {
+              margin-right: 8px;
+              color: #667eea;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 1024px) {
+    .main-card {
+      padding: 30px;
+      margin: 15px;
+
+      .content-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .home {
+      padding: 15px;
+    }
+
+    .main-card {
+      padding: 25px 20px;
+
+      .header-section {
+        .main-title {
+          font-size: 2.2rem;
+        }
+
+        .description {
+          font-size: 1.1rem;
+        }
+
+        .version-info {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          align-items: center;
+
+          .custom-btn {
+            width: 100%;
+            max-width: 250px;
+          }
+        }
+      }
+
+      .content-section {
+        .tech-block .tech-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .donation-block .donation-content .donation-container {
+          flex-direction: column;
+
+          .divider {
+            width: 80%;
+            height: 1px;
+            margin: 20px 0;
+          }
+
+          .donation-item {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .main-card {
+      padding: 20px 15px;
+
+      .header-section .main-title {
+        font-size: 1.8rem;
+      }
+
+      .content-section {
+        .content-block {
+          padding: 20px;
+        }
+
+        .donation-block .donation-content .donation-container .donation-item .donation-image-wrapper {
+          width: 110px;
+          height: 110px;
+        }
+      }
+    }
+  }
+}
+</style>
+```
+
+### 2.3.2 侧边栏开发
+
+<img src="README.assets/image-20251113142319083.png" alt="image-20251113142319083" style="zoom: 80%;" />
+
+#### 2.3.2.1 修改侧边栏样式变量（src/assets/styles/variables.module.scss）
+
+```
+// base color
+$blue: #324157;
+$light-blue: #333c46;
+$red: #C03639;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow: #FEC171;
+$panGreen: #30B08F;
+
+// 科技感主题变量
+$menuText: #e2e8f0;
+$menuActiveText: #667eea;
+$menuBg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+$menuHover: rgba(102, 126, 234, 0.1);
+
+// 浅色主题theme-light
+$menuLightBg: #ffffff;
+$menuLightHover: #f0f1f5;
+$menuLightText: #303133;
+$menuLightActiveText: #409EFF;
+
+// 基础变量
+$base-sidebar-width: 200px;
+$sideBarWidth: 200px;
+
+// 菜单科技感变量
+$base-menu-color: #e2e8f0;
+$base-menu-color-active: #667eea;
+$base-menu-background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+$base-sub-menu-background: rgba(255, 255, 255, 0.05);
+$base-sub-menu-hover: rgba(102, 126, 234, 0.15);
+
+// 组件变量 - 调整为科技感配色
+$--color-primary: #667eea;
+$--color-success: #10b981;
+$--color-warning: #F59E0B;
+$--color-danger: #EF4444;
+$--color-info: #6B7280;
+
+// 科技感阴影和边框
+$sidebar-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+$menu-border-radius: 8px;
+
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  menuLightBg: $menuLightBg;
+  menuLightHover: $menuLightHover;
+  menuLightText: $menuLightText;
+  menuLightActiveText: $menuLightActiveText;
+  sideBarWidth: $sideBarWidth;
+  // 导出基础颜色
+  blue: $blue;
+  lightBlue: $light-blue;
+  red: $red;
+  pink: $pink;
+  green: $green;
+  tiffany: $tiffany;
+  yellow: $yellow;
+  panGreen: $panGreen;
+  // 导出组件颜色
+  colorPrimary: $--color-primary;
+  colorSuccess: $--color-success;
+  colorWarning: $--color-warning;
+  colorDanger: $--color-danger;
+  colorInfo: $--color-info;
+}
+
+// CSS变量定义
+:root {
+  /* 亮色模式变量 */
+  --sidebar-bg: #{$menuBg};
+  --sidebar-text: #{$menuText};
+  --menu-hover: #{$menuHover};
+  --menu-active-text: #{$menuActiveText};
+  
+  --navbar-bg: #ffffff;
+  --navbar-text: #303133;
+  
+  /* splitpanes default-theme 变量 */
+  --splitpanes-default-bg: #ffffff;
+
+}
+
+// 暗黑模式变量 - 增强科技感
+html.dark {
+  /* 默认通用 */
+  --el-bg-color: #0f172a;
+  --el-bg-color-overlay: #1e293b;
+  --el-text-color-primary: #f1f5f9;
+  --el-text-color-regular: #cbd5e1;
+  --el-border-color: #334155;
+  --el-border-color-light: #334155;
+
+  /* 侧边栏 */
+  --sidebar-bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  --sidebar-text: #e2e8f0;
+  --menu-hover: rgba(102, 126, 234, 0.15);
+  --menu-active-text: #{$menuActiveText};
+
+  /* 顶部导航栏 */
+  --navbar-bg: #0f172a;
+  --navbar-text: #f1f5f9;
+  --navbar-hover: #1e293b;
+
+  /* 标签栏 */
+  --tags-bg: #0f172a;
+  --tags-item-bg: #1e293b;
+  --tags-item-border: #334155;
+  --tags-item-text: #cbd5e1;
+  --tags-item-hover: #334155;
+  --tags-close-hover: #64748b;
+
+  /* splitpanes 组件暗黑模式变量 */
+  --splitpanes-bg: #0f172a;
+  --splitpanes-border: #334155;
+  --splitpanes-splitter-bg: #1e293b;
+  --splitpanes-splitter-hover-bg: #334155;
+
+  /* blockquote 暗黑模式变量 */
+  --blockquote-bg: #1e293b;
+  --blockquote-border: #334155;
+  --blockquote-text: #cbd5e1;
+  
+  /* Cron 时间表达式 模式变量 */
+  --cron-border: #334155;
+
+  /* splitpanes default-theme 暗黑模式变量 */
+  --splitpanes-default-bg: #0f172a;
+
+  /* 侧边栏菜单覆盖 */
+   .sidebar-container {
+    .el-menu-item, .menu-title {
+      color: var(--el-text-color-regular);
+    }
+    & .theme-dark .nest-menu .el-sub-menu>.el-sub-menu__title,
+    & .theme-dark .el-sub-menu .el-menu-item {
+      background-color: var(--el-bg-color) !important;
+    }
+  }
+
+  /* 顶部栏栏菜单覆盖 */
+  .el-menu--horizontal {
+    .el-menu-item {
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus {
+          background-color: var(--navbar-hover) !important;
+        }
+      }
+    }
+  }
+
+  /* 分割窗格覆盖 */
+  .splitpanes {
+    background-color: var(--splitpanes-bg);
+
+    .splitpanes__pane {
+      background-color: var(--splitpanes-bg);
+      border-color: var(--splitpanes-border);
+    }
+
+    .splitpanes__splitter {
+      background-color: var(--splitpanes-splitter-bg);
+      border-color: var(--splitpanes-border);
+
+      &:hover {
+        background-color: var(--splitpanes-splitter-hover-bg);
+      }
+
+      &:before,
+      &:after {
+        background-color: var(--splitpanes-border);
+      }
+    }
+  }
+
+  /* 表格样式覆盖 */
+  .el-table {
+    --el-table-header-bg-color: var(--el-bg-color-overlay) !important;
+    --el-table-header-text-color: var(--el-text-color-regular) !important;
+    --el-table-border-color: var(--el-border-color-light) !important;
+    --el-table-row-hover-bg-color: var(--el-bg-color-overlay) !important;
+
+    .el-table__header-wrapper, .el-table__fixed-header-wrapper {
+      th {
+        background-color: var(--el-bg-color-overlay, #f8f8f9) !important;
+        color: var(--el-text-color-regular, #515a6e);
+      }
+    }
+  }
+
+  /* 树组件高亮样式覆盖 */
+  .el-tree {
+    .el-tree-node.is-current > .el-tree-node__content {
+      background-color: var(--el-bg-color-overlay) !important;
+      color: var(--el-color-primary);
+    }
+
+    .el-tree-node__content:hover {
+      background-color: var(--el-bg-color-overlay);
+    }
+  }
+  
+  /* 下拉菜单样式覆盖 */
+  .el-dropdown-menu__item:not(.is-disabled):focus, .el-dropdown-menu__item:not(.is-disabled):hover{
+    background-color: var(--navbar-hover) !important;
+  }
+
+  /* blockquote样式覆盖 */
+  blockquote {
+    background-color: var(--blockquote-bg) !important;
+    border-left-color: var(--blockquote-border) !important;
+    color: var(--blockquote-text) !important;
+  }
+  
+  /* 时间表达式标题样式覆盖 */
+  .popup-result .title {
+    background: var(--cron-border);
+  }
+}
+```
+
+#### 2.3.2.2  重写侧边栏样式（src/assets/styles/sidebar.scss）
+
+```java
+@use 'sass:color';
+@use './variables.module.scss' as vars;
+
+#app {
+
+  .main-container {
+    min-height: 100%;
+    transition: margin-left .28s;
+    margin-left: vars.$base-sidebar-width;
+    position: relative;
+  }
+
+  .sidebarHide {
+    margin-left: 0!important;
+  }
+
+  .sidebar-container {
+    transition: width 0.28s;
+    width: vars.$base-sidebar-width !important;
+    height: 100%;
+    position: fixed;
+    font-size: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    overflow: hidden;
+    background: vars.$base-menu-background;
+    box-shadow: vars.$sidebar-shadow;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+    // reset element-ui css
+    .horizontal-collapse-transition {
+      transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+    }
+
+    .scrollbar-wrapper {
+      overflow-x: hidden !important;
+    }
+
+    .el-scrollbar__bar.is-vertical {
+      right: 0px;
+    }
+
+    .el-scrollbar {
+      height: 100%;
+    }
+
+    &.has-logo {
+      .el-scrollbar {
+        height: calc(100% - 50px);
+      }
+    }
+
+    .is-horizontal {
+      display: none;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .svg-icon {
+      margin-right: 16px;
+    }
+
+    .el-menu {
+      border: none;
+      height: 100%;
+      width: 100% !important;
+      background: transparent !important;
+    }
+
+    .el-menu-item, .menu-title {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+      color: vars.$base-menu-color;
+      height: 50px;
+      line-height: 50px;
+      margin: 4px 8px;
+      border-radius: vars.$menu-border-radius;
+      transition: all 0.3s ease;
+      position: relative;
+      
+      // 科技感悬停效果
+      &:hover {
+        background-color: vars.$menuHover !important;
+        color: color.adjust(vars.$menuActiveText, $lightness: 10%);
+        transform: translateX(5px);
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 3px;
+          background: linear-gradient(to bottom, #667eea, #764ba2);
+          border-radius: 2px;
+        }
+      }
+      
+      // 激活状态
+      &.is-active {
+        background-color: vars.$base-sub-menu-hover !important;
+        color: vars.$menuActiveText;
+        font-weight: 600;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 6px;
+          height: 6px;
+          background: vars.$menuActiveText;
+          border-radius: 50%;
+          box-shadow: 0 0 10px rgba(102, 126, 234, 0.6);
+        }
+      }
+      
+      i {
+        color: inherit;
+        margin-right: 8px;
+        font-size: 16px;
+      }
+    }
+
+    .el-menu-item .el-menu-tooltip__trigger {
+      display: inline-block !important;
+    }
+
+    // 子菜单样式
+    .el-sub-menu {
+      margin: 4px 8px;
+      border-radius: vars.$menu-border-radius;
+      
+      .el-sub-menu__title {
+        color: vars.$base-menu-color;
+        height: 50px;
+        line-height: 50px;
+        border-radius: vars.$menu-border-radius;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: vars.$menuHover !important;
+          color: color.adjust(vars.$menuActiveText, $lightness: 10%);
+        }
+        
+        i {
+          color: inherit;
+        }
+      }
+      
+      // 子菜单项
+      .el-menu-item {
+        background: vars.$base-sub-menu-background !important;
+        margin: 2px 0;
+        border-radius: 6px;
+        
+        &.is-active {
+          background: rgba(102, 126, 234, 0.2) !important;
+        }
+      }
+    }
+
+    // menu hover
+    .sub-menu-title-noDropdown,
+    .el-sub-menu__title {
+      &:hover {
+        background-color: vars.$menuHover !important;
+      }
+    }
+
+    & .theme-dark .is-active > .el-sub-menu__title {
+      color: vars.$base-menu-color-active !important;
+    }
+
+    & .nest-menu .el-sub-menu>.el-sub-menu__title,
+    & .el-sub-menu .el-menu-item {
+      min-width: vars.$base-sidebar-width !important;
+
+      &:hover {
+        background-color: vars.$menuHover !important;
+      }
+    }
+
+    & .theme-dark .nest-menu .el-sub-menu>.el-sub-menu__title,
+    & .theme-dark .el-sub-menu .el-menu-item {
+      background-color: vars.$base-sub-menu-background;
+
+      &:hover {
+        background-color: vars.$base-sub-menu-hover !important;
+      }
+    }
+  }
+
+  .hideSidebar {
+    .sidebar-container {
+      width: 54px !important;
+    }
+
+    .main-container {
+      margin-left: 54px;
+    }
+
+    .sub-menu-title-noDropdown {
+      padding: 0 !important;
+      position: relative;
+
+      .el-tooltip {
+        padding: 0 !important;
+
+        .svg-icon {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .el-sub-menu {
+      overflow: hidden;
+
+      &>.el-sub-menu__title {
+        padding: 0 !important;
+
+        .svg-icon {
+          margin-left: 20px;
+        }
+
+      }
+    }
+
+    .el-menu--collapse {
+      .el-sub-menu {
+        &>.el-sub-menu__title {
+          &>span {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+          }
+          &>i {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .el-menu--collapse .el-menu .el-sub-menu {
+    min-width: vars.$base-sidebar-width !important;
+  }
+
+  // mobile responsive
+  .mobile {
+    .main-container {
+      margin-left: 0px;
+    }
+
+    .sidebar-container {
+      transition: transform .28s;
+      width: vars.$base-sidebar-width !important;
+    }
+
+    &.hideSidebar {
+      .sidebar-container {
+        pointer-events: none;
+        transition-duration: 0.3s;
+        transform: translate3d(-(vars.$base-sidebar-width), 0, 0);
+      }
+    }
+  }
+
+  .withoutAnimation {
+
+    .main-container,
+    .sidebar-container {
+      transition: none;
+    }
+  }
+}
+
+// when menu collapsed
+.el-menu--vertical {
+  &>.el-menu {
+    .svg-icon {
+      margin-right: 16px;
+    }
+  }
+
+  .nest-menu .el-sub-menu>.el-sub-menu__title,
+  .el-menu-item {
+    &:hover {
+      background-color: vars.$menuHover !important;
+    }
+  }
+
+  // the scroll bar appears when the sub-menu is too long
+  >.el-menu--popup {
+    max-height: 100vh;
+    overflow-y: auto;
+    background: vars.$base-menu-background !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+
+    &::-webkit-scrollbar-track-piece {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+    }
+  }
+}
+
+// 科技感滚动条样式
+.sidebar-container {
+  .el-scrollbar__thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 3px !important;
+    
+    &:hover {
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+    }
+  }
+  
+  .el-scrollbar__bar.is-vertical {
+    width: 6px !important;
+  }
+}
+```
+
+#### 2.3.2.3 更新全局样式（src/assets/styles/ruoyi.scss）
+
+```java
+/* 科技感全局样式增强 */
+.el-menu--vertical {
+  // 垂直菜单的科技感样式
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  
+  .el-menu-item {
+    color: #e2e8f0;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba(102, 126, 234, 0.1) !important;
+      color: #667eea;
+      transform: translateX(3px);
+    }
+    
+    &.is-active {
+      background: rgba(102, 126, 234, 0.15) !important;
+      color: #667eea;
+    }
+  }
+}
+
+/* 科技感滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+```
+
+#### 2.3.2.4 修改 Logo 组件（src/layout/components/Sidebar/Logo.vue）
+
+```java
+<template>
+  <div class="sidebar-logo-container" :class="{ 'collapse': collapse }">
+    <transition name="sidebarLogoFade">
+      <router-link v-if="collapse" key="collapse" class="sidebar-logo-link" to="/">
+        <img v-if="logo" :src="logo" class="sidebar-logo" />
+        <h1 v-else class="sidebar-title">
+          <div class="logo-dot">{{ title }}</div>
+        </h1>
+      </router-link>
+      <router-link v-else key="expand" class="sidebar-logo-link" to="/">
+        <img v-if="logo" :src="logo" class="sidebar-logo" />
+        <h1 class="sidebar-title">
+          <span class="tech-text">{{ title }}</span>
+        </h1>
+      </router-link>
+    </transition>
+  </div>
+</template>
+
+<script setup>
+import logo from '@/assets/logo/logo.png'
+import useSettingsStore from '@/store/modules/settings'
+import variables from '@/assets/styles/variables.module.scss'
+
+defineProps({
+  collapse: {
+    type: Boolean,
+    required: true
+  }
+})
+
+const title = import.meta.env.VITE_APP_TITLE
+const settingsStore = useSettingsStore()
+const sideTheme = computed(() => settingsStore.sideTheme)
+
+// 获取Logo背景色
+const getLogoBackground = computed(() => {
+  if (settingsStore.isDark) {
+    return 'var(--sidebar-bg)'
+  }
+  return sideTheme.value === 'theme-dark' ? variables.menuBg : variables.menuLightBg
+})
+
+// 获取Logo文字颜色
+const getLogoTextColor = computed(() => {
+  if (settingsStore.isDark) {
+    return 'var(--sidebar-text)'
+  }
+  return sideTheme.value === 'theme-dark' ? '#fff' : variables.menuLightText
+})
+</script>
+
+<style lang="scss" scoped>
+.sidebarLogoFade-enter-active {
+  transition: opacity 1.5s;
+}
+
+.sidebarLogoFade-enter,
+.sidebarLogoFade-leave-to {
+  opacity: 0;
+}
+
+.sidebar-logo-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: v-bind(getLogoBackground);
+  text-align: center;
+  overflow: hidden;
+
+  // 添加Logo区域的发光效果
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  }
+
+  & .sidebar-logo-link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+
+    & .sidebar-logo {
+      width: 36px;
+      height: 36px;
+      vertical-align: middle;
+      margin-right: 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    & .logo-placeholder {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .logo-dot {
+        width: 8px;
+        height: 8px;
+        background: #ffd89b;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #ffd89b;
+        animation: pulse 2s ease-in-out infinite;
+      }
+    }
+
+    & .sidebar-title {
+      display: inline-block;
+      margin: 0;
+      color: v-bind(getLogoTextColor);
+      font-weight: 600;
+      line-height: 50px;
+      font-size: 14px;
+      font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+      vertical-align: middle;
+
+      .tech-text {
+        background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.8) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 800;
+        font-size: 17.5px;
+        letter-spacing: -0.5px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+    .sidebar-logo {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 6px 20px rgba(255, 216, 155, 0.4);
+    }
+  }
+
+  &.collapse {
+    .sidebar-logo {
+      margin-right: 0px;
+    }
+
+    .sidebar-title {
+      .tech-text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ffd89b;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #ffd89b, 0 0 30px rgba(255, 216, 155, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ffd89b;
+  }
+}
+</style>
+```
+
+### 2.3.3 个人中心开发（src/views/system/user/profile/index.vue）
+
+![image-20251113142426954](README.assets/image-20251113142426954.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\user\profile\index.vue` 文件中填入下述代码
+
+```java
+<template>
+  <div class="profile-home">
+    <div class="main-card">
+      <el-row :gutter="30">
+        <!-- 左侧个人信息 -->
+        <el-col :span="8" :xs="24">
+          <div class="content-block profile-block">
+            <h3 class="block-title">
+              <i class="el-icon-user-solid"></i>
+              个人信息
+            </h3>
+            <div class="profile-content">
+              <div class="avatar-section">
+                <userAvatar />
+              </div>
+              <div class="info-list">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="el-icon-user"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">用户名称</span>
+                    <span class="info-value">{{ state.user.nickName || '--' }}</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="el-icon-phone"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">手机号码</span>
+                    <span class="info-value">{{ state.user.phonenumber || '--' }}</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="el-icon-message"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">用户邮箱</span>
+                    <span class="info-value">{{ state.user.email || '--' }}</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="el-icon-office-building"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">所属部门</span>
+                    <span class="info-value">
+                      {{ state.user.dept?.deptName || '--' }} / {{ state.postGroup || '--' }}
+                    </span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="el-icon-s-custom"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">所属角色</span>
+                    <span class="info-value">{{ state.roleGroup || '--' }}</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="el-icon-time"></i>
+                  </div>
+                  <div class="info-content">
+                    <span class="info-label">创建日期</span>
+                    <span class="info-value">{{ state.user.createTime || '--' }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </el-col>
+
+        <!-- 右侧基本资料 -->
+        <el-col :span="16" :xs="24">
+          <div class="content-block management-block">
+            <h3 class="block-title">
+              <i class="el-icon-setting"></i>
+              基本资料
+            </h3>
+            <div class="management-content">
+              <el-tabs v-model="selectedTab" class="custom-tabs">
+                <el-tab-pane name="userinfo">
+                  <template #label>
+                    <span class="tab-label">
+                      <i class="el-icon-edit"></i>
+                      基本资料
+                    </span>
+                  </template>
+                  <userInfo :user="state.user" />
+                </el-tab-pane>
+                <el-tab-pane name="resetPwd">
+                  <template #label>
+                    <span class="tab-label">
+                      <i class="el-icon-lock"></i>
+                      修改密码
+                    </span>
+                  </template>
+                  <resetPwd />
+                </el-tab-pane>
+              </el-tabs>
+            </div>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+  </div>
+</template>
+
+<script setup name="Profile">
+import userAvatar from "./userAvatar"
+import userInfo from "./userInfo"
+import resetPwd from "./resetPwd"
+import { getUserProfile } from "@/api/system/user"
+
+const route = useRoute()
+const selectedTab = ref("userinfo")
+const state = reactive({
+  user: {},
+  roleGroup: {},
+  postGroup: {}
+})
+
+function getUser() {
+  getUserProfile().then(response => {
+    state.user = response.data
+    state.roleGroup = response.roleGroup
+    state.postGroup = response.postGroup
+  })
+}
+
+onMounted(() => {
+  const activeTab = route.params && route.params.activeTab
+  if (activeTab) {
+    selectedTab.value = activeTab
+  }
+  getUser()
+})
+</script>
+
+<style scoped lang="scss">
+.profile-home {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 0px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1400px;
+    padding: 30px;
+    margin: 20px;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      height: 100%;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .block-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f1f5f9;
+
+        i {
+          color: #667eea;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    // 个人信息区块
+    .profile-block {
+      .profile-content {
+        .avatar-section {
+          text-align: center;
+          margin-bottom: 25px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #f1f5f9;
+        }
+
+        .info-list {
+          .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f8fafc;
+            transition: all 0.3s ease;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            &:hover {
+              transform: translateX(5px);
+              
+              .info-icon {
+                transform: scale(1.1);
+              }
+            }
+
+            .info-icon {
+              width: 36px;
+              height: 36px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              border-radius: 8px;
+              color: white;
+              font-size: 1.1rem;
+              transition: all 0.3s ease;
+            }
+
+            .info-content {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+
+              .info-label {
+                font-size: 0.85rem;
+                color: #64748b;
+                margin-bottom: 2px;
+                font-weight: 500;
+              }
+
+              .info-value {
+                font-size: 0.95rem;
+                color: #1e293b;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 资料管理区块
+    .management-block {
+      .management-content {
+        :deep(.custom-tabs) {
+          .el-tabs__header {
+            margin-bottom: 20px;
+
+            .el-tabs__nav-wrap::after {
+              background-color: #e2e8f0;
+            }
+
+            .el-tabs__active-bar {
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              height: 3px;
+              border-radius: 2px;
+            }
+
+            .el-tabs__item {
+              font-weight: 600;
+              color: #64748b;
+              padding: 0 20px;
+              height: 48px;
+              display: flex;
+              align-items: center;
+
+              &.is-active {
+                color: #667eea;
+              }
+
+              .tab-label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                i {
+                  font-size: 1.1rem;
+                }
+              }
+
+              &:hover {
+                color: #667eea;
+              }
+            }
+          }
+
+          .el-tabs__content {
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 1024px) {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .profile-home {
+      padding: 15px;
+    }
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        margin-bottom: 20px;
+        
+        .profile-content {
+          .info-list {
+            .info-item {
+              padding: 15px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .profile-home {
+      padding: 10px;
+    }
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 20px;
+      }
+    }
+  }
+}
+</style>
+```
+
+### 2.3.4 系统管理开发（src/views/system）
+
+#### 2.3.4.1 用户管理（user/index.vue）
+
+![image-20251113142503265](README.assets/image-20251113142503265.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\user\index.vue` 文件中加入下面代码
+
+```java 
+<template>
+  <div class="user-management">
+    <div class="main-card">
+      <splitpanes :horizontal="appStore.device === 'mobile'" class="default-theme">
+        <!--部门数据-->
+        <pane size="16">
+          <div class="content-block dept-block">
+            <div class="dept-content">
+              <div class="search-container">
+                <el-input 
+                  v-model="deptName" 
+                  placeholder="请输入部门名称" 
+                  clearable 
+                  prefix-icon="Search" 
+                  class="tech-input"
+                />
+              </div>
+              <div class="tree-container">
+                <el-tree 
+                  :data="deptOptions" 
+                  :props="{ label: 'label', children: 'children' }" 
+                  :expand-on-click-node="false" 
+                  :filter-node-method="filterNode" 
+                  ref="deptTreeRef" 
+                  node-key="id" 
+                  highlight-current 
+                  default-expand-all 
+                  @node-click="handleNodeClick" 
+                  class="tech-tree"
+                />
+              </div>
+            </div>
+          </div>
+        </pane>
+        
+        <!--用户数据-->
+        <pane size="84">
+          <div class="content-block user-block">   
+            <!-- 搜索区域 -->
+            <div class="search-section">
+              <el-form :model="queryParams" ref="queryRef" :inline="true" v-show="showSearch" class="search-form">
+                <el-form-item label="用户名称" prop="userName">
+                  <el-input 
+                    v-model="queryParams.userName" 
+                    placeholder="请输入用户名称" 
+                    clearable 
+                    class="tech-input"
+                    @keyup.enter="handleQuery" 
+                  />
+                </el-form-item>
+                <el-form-item label="手机号码" prop="phonenumber">
+                  <el-input 
+                    v-model="queryParams.phonenumber" 
+                    placeholder="请输入手机号码" 
+                    clearable 
+                    class="tech-input"
+                    @keyup.enter="handleQuery" 
+                  />
+                </el-form-item>
+                <el-form-item label="状态" prop="status">
+                  <el-select 
+                    v-model="queryParams.status" 
+                    placeholder="用户状态" 
+                    clearable 
+                    class="tech-select"
+                  >
+                    <el-option 
+                      v-for="dict in sys_normal_disable" 
+                      :key="dict.value" 
+                      :label="dict.label" 
+                      :value="dict.value" 
+                    />
+                  </el-select>
+                </el-form-item>
+                <el-form-item label="创建时间" class="date-range">
+                  <el-date-picker 
+                    v-model="dateRange" 
+                    value-format="YYYY-MM-DD" 
+                    type="daterange" 
+                    range-separator="-" 
+                    start-placeholder="开始日期" 
+                    end-placeholder="结束日期"
+                    class="tech-date-picker"
+                  ></el-date-picker>
+                </el-form-item>
+                <el-form-item class="search-actions">
+                  <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                  <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                </el-form-item>
+              </el-form>
+            </div>
+
+            <!-- 操作按钮 -->
+            <div class="action-section">
+              <el-row :gutter="10">
+                <el-col :span="1.5">
+                  <el-button type="primary" plain icon="Plus" @click="handleAdd" v-hasPermi="['system:user:add']" class="tech-btn primary">新增</el-button>
+                </el-col>
+                <el-col :span="1.5">
+                  <el-button type="success" plain icon="Edit" :disabled="single" @click="handleUpdate" v-hasPermi="['system:user:edit']" class="tech-btn success">修改</el-button>
+                </el-col>
+                <el-col :span="1.5">
+                  <el-button type="danger" plain icon="Delete" :disabled="multiple" @click="handleDelete" v-hasPermi="['system:user:remove']" class="tech-btn danger">删除</el-button>
+                </el-col>
+                <el-col :span="1.5">
+                  <el-button type="info" plain icon="Upload" @click="handleImport" v-hasPermi="['system:user:import']" class="tech-btn info">导入</el-button>
+                </el-col>
+                <el-col :span="1.5">
+                  <el-button type="warning" plain icon="Download" @click="handleExport" v-hasPermi="['system:user:export']" class="tech-btn warning">导出</el-button>
+                </el-col>
+                <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" :columns="columns" class="right-toolbar"></right-toolbar>
+              </el-row>
+            </div>
+
+            <!-- 用户表格 -->
+            <div class="table-section">
+              <el-table 
+                v-loading="loading" 
+                :data="userList" 
+                @selection-change="handleSelectionChange"
+                class="tech-table"
+              >
+                <el-table-column type="selection" width="50" align="center" />
+                <el-table-column label="用户编号" align="center" key="userId" prop="userId" v-if="columns.userId.visible" />
+                <el-table-column label="用户名称" align="center" key="userName" prop="userName" v-if="columns.userName.visible" :show-overflow-tooltip="true" />
+                <el-table-column label="用户昵称" align="center" key="nickName" prop="nickName" v-if="columns.nickName.visible" :show-overflow-tooltip="true" />
+                <el-table-column label="部门" align="center" key="deptName" prop="dept.deptName" v-if="columns.deptName.visible" :show-overflow-tooltip="true" />
+                <el-table-column label="手机号码" align="center" key="phonenumber" prop="phonenumber" v-if="columns.phonenumber.visible" width="120" />
+                <el-table-column label="状态" align="center" key="status" v-if="columns.status.visible">
+                  <template #default="scope">
+                    <el-switch
+                      v-model="scope.row.status"
+                      active-value="0"
+                      inactive-value="1"
+                      @change="handleStatusChange(scope.row)"
+                      class="tech-switch"
+                    ></el-switch>
+                  </template>
+                </el-table-column>
+                <el-table-column label="创建时间" align="center" prop="createTime" v-if="columns.createTime.visible" width="160">
+                  <template #default="scope">
+                    <span class="time-text">{{ parseTime(scope.row.createTime) }}</span>
+                  </template>
+                </el-table-column>
+                <el-table-column label="操作" align="center" width="150" class-name="small-padding fixed-width">
+                  <template #default="scope">
+                    <div class="action-buttons">
+                      <el-tooltip content="修改" placement="top" v-if="scope.row.userId !== 1">
+                        <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:user:edit']" class="action-btn edit"></el-button>
+                      </el-tooltip>
+                      <el-tooltip content="删除" placement="top" v-if="scope.row.userId !== 1">
+                        <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:user:remove']" class="action-btn delete"></el-button>
+                      </el-tooltip>
+                      <el-tooltip content="重置密码" placement="top" v-if="scope.row.userId !== 1">
+                        <el-button link type="primary" icon="Key" @click="handleResetPwd(scope.row)" v-hasPermi="['system:user:resetPwd']" class="action-btn reset"></el-button>
+                      </el-tooltip>
+                      <el-tooltip content="分配角色" placement="top" v-if="scope.row.userId !== 1">
+                        <el-button link type="primary" icon="CircleCheck" @click="handleAuthRole(scope.row)" v-hasPermi="['system:user:edit']" class="action-btn role"></el-button>
+                      </el-tooltip>
+                    </div>
+                  </template>
+                </el-table-column>
+              </el-table>
+              
+              <!-- 分页 -->
+              <div class="pagination-section">
+                <pagination 
+                  v-show="total > 0" 
+                  :total="total" 
+                  v-model:page="queryParams.pageNum" 
+                  v-model:limit="queryParams.pageSize" 
+                  @pagination="getList" 
+                  class="tech-pagination"
+                />
+              </div>
+            </div>
+          </div>
+        </pane>
+      </splitpanes>
+    </div>
+
+    <!-- 添加或修改用户配置对话框 -->
+    <el-dialog :title="title" v-model="open" width="600px" append-to-body class="tech-dialog">
+      <el-form :model="form" :rules="rules" ref="userRef" label-width="80px" class="tech-form">
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="用户昵称" prop="nickName">
+              <el-input v-model="form.nickName" placeholder="请输入用户昵称" maxlength="30" class="tech-input" />
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="归属部门" prop="deptId">
+              <el-tree-select 
+                v-model="form.deptId" 
+                :data="enabledDeptOptions" 
+                :props="{ value: 'id', label: 'label', children: 'children' }" 
+                value-key="id" 
+                placeholder="请选择归属部门" 
+                clearable 
+                check-strictly 
+                class="tech-tree-select"
+              />
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="手机号码" prop="phonenumber">
+              <el-input v-model="form.phonenumber" placeholder="请输入手机号码" maxlength="11" class="tech-input" />
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="邮箱" prop="email">
+              <el-input v-model="form.email" placeholder="请输入邮箱" maxlength="50" class="tech-input" />
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item v-if="form.userId == undefined" label="用户名称" prop="userName">
+              <el-input v-model="form.userName" placeholder="请输入用户名称" maxlength="30" class="tech-input" />
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item v-if="form.userId == undefined" label="用户密码" prop="password">
+              <el-input v-model="form.password" placeholder="请输入用户密码" type="password" maxlength="20" show-password class="tech-input" />
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="用户性别">
+              <el-select v-model="form.sex" placeholder="请选择" class="tech-select">
+                <el-option v-for="dict in sys_user_sex" :key="dict.value" :label="dict.label" :value="dict.value"></el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="状态">
+              <el-radio-group v-model="form.status" class="tech-radio-group">
+                <el-radio v-for="dict in sys_normal_disable" :key="dict.value" :value="dict.value" class="tech-radio">{{ dict.label }}</el-radio>
+              </el-radio-group>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="岗位">
+              <el-select v-model="form.postIds" multiple placeholder="请选择" class="tech-select">
+                <el-option v-for="item in postOptions" :key="item.postId" :label="item.postName" :value="item.postId" :disabled="item.status == 1"></el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="角色">
+              <el-select v-model="form.roleIds" multiple placeholder="请选择" class="tech-select">
+                <el-option v-for="item in roleOptions" :key="item.roleId" :label="item.roleName" :value="item.roleId" :disabled="item.status == 1"></el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="24">
+            <el-form-item label="备注">
+              <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" class="tech-textarea"></el-input>
+            </el-form-item>
+          </el-col>
+        </el-row>
+      </el-form>
+      <template #footer>
+        <div class="dialog-footer">
+          <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+          <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+        </div>
+      </template>
+    </el-dialog>
+
+    <!-- 用户导入对话框 -->
+    <el-dialog :title="upload.title" v-model="upload.open" width="400px" append-to-body class="tech-dialog">
+      <el-upload 
+        ref="uploadRef" 
+        :limit="1" 
+        accept=".xlsx, .xls" 
+        :headers="upload.headers" 
+        :action="upload.url + '?updateSupport=' + upload.updateSupport" 
+        :disabled="upload.isUploading" 
+        :on-progress="handleFileUploadProgress" 
+        :on-success="handleFileSuccess" 
+        :auto-upload="false" 
+        drag
+        class="tech-upload"
+      >
+        <el-icon class="el-icon--upload"><upload-filled /></el-icon>
+        <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+        <template #tip>
+          <div class="el-upload__tip text-center">
+            <div class="el-upload__tip">
+              <el-checkbox v-model="upload.updateSupport" class="tech-checkbox" />是否更新已经存在的用户数据
+            </div>
+            <span>仅允许导入xls、xlsx格式文件。</span>
+            <el-link type="primary" :underline="false" style="font-size: 12px; vertical-align: baseline" @click="importTemplate" class="tech-link">下载模板</el-link>
+          </div>
+        </template>
+      </el-upload>
+      <template #footer>
+        <div class="dialog-footer">
+          <el-button type="primary" @click="submitFileForm" class="tech-btn primary">确 定</el-button>
+          <el-button @click="upload.open = false" class="tech-btn secondary">取 消</el-button>
+        </div>
+      </template>
+    </el-dialog>
+  </div>
+</template>
+
+<script setup name="User">
+import { getToken } from "@/utils/auth"
+import useAppStore from '@/store/modules/app'
+import { changeUserStatus, listUser, resetUserPwd, delUser, getUser, updateUser, addUser, deptTreeSelect } from "@/api/system/user"
+import { Splitpanes, Pane } from "splitpanes"
+import "splitpanes/dist/splitpanes.css"
+
+const router = useRouter()
+const appStore = useAppStore()
+const { proxy } = getCurrentInstance()
+const { sys_normal_disable, sys_user_sex } = proxy.useDict("sys_normal_disable", "sys_user_sex")
+
+const userList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const title = ref("")
+const dateRange = ref([])
+const deptName = ref("")
+const deptOptions = ref(undefined)
+const enabledDeptOptions = ref(undefined)
+const initPassword = ref(undefined)
+const postOptions = ref([])
+const roleOptions = ref([])
+/*** 用户导入参数 */
+const upload = reactive({
+  // 是否显示弹出层（用户导入）
+  open: false,
+  // 弹出层标题（用户导入）
+  title: "",
+  // 是否禁用上传
+  isUploading: false,
+  // 是否更新已经存在的用户数据
+  updateSupport: 0,
+  // 设置上传的请求头部
+  headers: { Authorization: "Bearer " + getToken() },
+  // 上传的地址
+  url: import.meta.env.VITE_APP_BASE_API + "/system/user/importData"
+})
+// 列显隐信息
+const columns = ref({
+  userId: { label: '用户编号', visible: true },
+  userName: { label: '用户名称', visible: true },
+  nickName: { label: '用户昵称', visible: true },
+  deptName: { label: '部门', visible: true },
+  phonenumber: { label: '手机号码', visible: true },
+  status: { label: '状态', visible: true },
+  createTime: { label: '创建时间', visible: true }
+})
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    userName: undefined,
+    phonenumber: undefined,
+    status: undefined,
+    deptId: undefined
+  },
+  rules: {
+    userName: [{ required: true, message: "用户名称不能为空", trigger: "blur" }, { min: 2, max: 20, message: "用户名称长度必须介于 2 和 20 之间", trigger: "blur" }],
+    nickName: [{ required: true, message: "用户昵称不能为空", trigger: "blur" }],
+    password: [{ required: true, message: "用户密码不能为空", trigger: "blur" }, { min: 5, max: 20, message: "用户密码长度必须介于 5 和 20 之间", trigger: "blur" }, { pattern: /^[^<>"'|\\]+$/, message: "不能包含非法字符：< > \" ' \\\ |", trigger: "blur" }],
+    email: [{ type: "email", message: "请输入正确的邮箱地址", trigger: ["blur", "change"] }],
+    phonenumber: [{ pattern: /^1[3|4|5|6|7|8|9][0-9]\d{8}$/, message: "请输入正确的手机号码", trigger: "blur" }]
+  }
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 通过条件过滤节点  */
+const filterNode = (value, data) => {
+  if (!value) return true
+  return data.label.indexOf(value) !== -1
+}
+
+/** 根据名称筛选部门树 */
+watch(deptName, val => {
+  proxy.$refs["deptTreeRef"].filter(val)
+})
+
+/** 查询用户列表 */
+function getList() {
+  loading.value = true
+  listUser(proxy.addDateRange(queryParams.value, dateRange.value)).then(res => {
+    loading.value = false
+    userList.value = res.rows
+    total.value = res.total
+  })
+}
+
+/** 查询部门下拉树结构 */
+function getDeptTree() {
+  deptTreeSelect().then(response => {
+    deptOptions.value = response.data
+    enabledDeptOptions.value = filterDisabledDept(JSON.parse(JSON.stringify(response.data)))
+  })
+}
+
+/** 过滤禁用的部门 */
+function filterDisabledDept(deptList) {
+  return deptList.filter(dept => {
+    if (dept.disabled) {
+      return false
+    }
+    if (dept.children && dept.children.length) {
+      dept.children = filterDisabledDept(dept.children)
+    }
+    return true
+  })
+}
+
+/** 节点单击事件 */
+function handleNodeClick(data) {
+  queryParams.value.deptId = data.id
+  handleQuery()
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  dateRange.value = []
+  proxy.resetForm("queryRef")
+  queryParams.value.deptId = undefined
+  proxy.$refs.deptTreeRef.setCurrentKey(null)
+  handleQuery()
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const userIds = row.userId || ids.value
+  proxy.$modal.confirm('是否确认删除用户编号为"' + userIds + '"的数据项？').then(function () {
+    return delUser(userIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+/** 导出按钮操作 */
+function handleExport() {
+  proxy.download("system/user/export", {
+    ...queryParams.value,
+  },`user_${new Date().getTime()}.xlsx`)
+}
+
+/** 用户状态修改  */
+function handleStatusChange(row) {
+  let text = row.status === "0" ? "启用" : "停用"
+  proxy.$modal.confirm('确认要"' + text + '""' + row.userName + '"用户吗?').then(function () {
+    return changeUserStatus(row.userId, row.status)
+  }).then(() => {
+    proxy.$modal.msgSuccess(text + "成功")
+  }).catch(function () {
+    row.status = row.status === "0" ? "1" : "0"
+  })
+}
+
+/** 更多操作 */
+function handleCommand(command, row) {
+  switch (command) {
+    case "handleResetPwd":
+      handleResetPwd(row)
+      break
+    case "handleAuthRole":
+      handleAuthRole(row)
+      break
+    default:
+      break
+  }
+}
+
+/** 跳转角色分配 */
+function handleAuthRole(row) {
+  const userId = row.userId
+  router.push("/system/user-auth/role/" + userId)
+}
+
+/** 重置密码按钮操作 */
+function handleResetPwd(row) {
+  proxy.$prompt('请输入"' + row.userName + '"的新密码', "提示", {
+    confirmButtonText: "确定",
+    cancelButtonText: "取消",
+    closeOnClickModal: false,
+    inputPattern: /^.{5,20}$/,
+    inputErrorMessage: "用户密码长度必须介于 5 和 20 之间",
+    inputValidator: (value) => {
+      if (/<|>|"|'|\||\\/.test(value)) {
+        return "不能包含非法字符：< > \" ' \\\ |"
+      }
+    },
+  }).then(({ value }) => {
+    resetUserPwd(row.userId, value).then(response => {
+      proxy.$modal.msgSuccess("修改成功，新密码是：" + value)
+    })
+  }).catch(() => {})
+}
+
+/** 选择条数  */
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.userId)
+  single.value = selection.length != 1
+  multiple.value = !selection.length
+}
+
+/** 导入按钮操作 */
+function handleImport() {
+  upload.title = "用户导入"
+  upload.open = true
+}
+
+/** 下载模板操作 */
+function importTemplate() {
+  proxy.download("system/user/importTemplate", {
+  }, `user_template_${new Date().getTime()}.xlsx`)
+}
+
+/**文件上传中处理 */
+const handleFileUploadProgress = (event, file, fileList) => {
+  upload.isUploading = true
+}
+
+/** 文件上传成功处理 */
+const handleFileSuccess = (response, file, fileList) => {
+  upload.open = false
+  upload.isUploading = false
+  proxy.$refs["uploadRef"].handleRemove(file)
+  proxy.$alert("<div style='overflow: auto;overflow-x: hidden;max-height: 70vh;padding: 10px 20px 0;'>" + response.msg + "</div>", "导入结果", { dangerouslyUseHTMLString: true })
+  getList()
+}
+
+/** 提交上传文件 */
+function submitFileForm() {
+  proxy.$refs["uploadRef"].submit()
+}
+
+/** 重置操作表单 */
+function reset() {
+  form.value = {
+    userId: undefined,
+    deptId: undefined,
+    userName: undefined,
+    nickName: undefined,
+    password: undefined,
+    phonenumber: undefined,
+    email: undefined,
+    sex: undefined,
+    status: "0",
+    remark: undefined,
+    postIds: [],
+    roleIds: []
+  }
+  proxy.resetForm("userRef")
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 新增按钮操作 */
+function handleAdd() {
+  reset()
+  getUser().then(response => {
+    postOptions.value = response.posts
+    roleOptions.value = response.roles
+    open.value = true
+    title.value = "添加用户"
+    form.value.password = initPassword.value
+  })
+}
+
+/** 修改按钮操作 */
+function handleUpdate(row) {
+  reset()
+  const userId = row.userId || ids.value
+  getUser(userId).then(response => {
+    form.value = response.data
+    postOptions.value = response.posts
+    roleOptions.value = response.roles
+    form.value.postIds = response.postIds
+    form.value.roleIds = response.roleIds
+    open.value = true
+    title.value = "修改用户"
+    form.password = ""
+  })
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["userRef"].validate(valid => {
+    if (valid) {
+      if (form.value.userId != undefined) {
+        updateUser(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        addUser(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+onMounted(() => {
+  getDeptTree()
+  getList()
+  proxy.getConfigKey("sys.user.initPassword").then(response => {
+    initPassword.value = response.msg
+  })
+})
+</script>
+
+<style scoped lang="scss">
+.user-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1600px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto; 
+
+    :deep(.splitpanes) {
+      min-height: 700px;
+
+      .splitpanes__pane {
+        background: transparent;
+      }
+      
+      .splitpanes__splitter {
+        background: #e2e8f0;
+        border-radius: 4px;
+        margin: 0 5px;
+        
+        &:hover {
+          background: #667eea;
+        }
+      }
+    }
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      height: 100%;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .block-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f1f5f9;
+
+        i {
+          color: #667eea;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    // 部门区块样式
+    .dept-block {
+      .dept-content {
+        .search-container {
+          margin-bottom: 20px;
+        }
+
+        .tree-container {
+          max-height: 600px;
+          overflow-y: auto;
+        }
+      }
+    }
+
+    // 用户管理区块样式
+    .user-block {
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .date-range {
+            min-width: 240px;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-date-picker {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .tech-switch {
+    :deep(.el-switch__core) {
+      border-radius: 12px;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+  }
+
+  .tech-form {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+    
+    .el-form-item__label {
+      font-weight: 600;
+      color: #374151;
+    }
+  }
+
+  .tech-tree-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+    }
+  }
+
+  .tech-textarea {
+    :deep(.el-textarea__inner) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-upload {
+    :deep(.el-upload-dragger) {
+      border-radius: 12px;
+      border: 2px dashed #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-checkbox {
+    :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+    }
+  }
+
+  .tech-link {
+    color: #667eea;
+    font-weight: 500;
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .user-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .user-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+      }
+
+      .user-block {
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .user-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.4.2 角色管理（/role/index.vue）
+
+![image-20251113142521186](README.assets/image-20251113142521186.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\role\index.vue` 文件中加入下述代码
+
+```java
+<template>
+   <div class="role-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="角色名称" prop="roleName">
+                     <el-input
+                        v-model="queryParams.roleName"
+                        placeholder="请输入角色名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="权限字符" prop="roleKey">
+                     <el-input
+                        v-model="queryParams.roleKey"
+                        placeholder="请输入权限字符"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="状态" prop="status">
+                     <el-select
+                        v-model="queryParams.status"
+                        placeholder="角色状态"
+                        clearable
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_normal_disable"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item label="创建时间" class="date-range">
+                     <el-date-picker
+                        v-model="dateRange"
+                        value-format="YYYY-MM-DD"
+                        type="daterange"
+                        range-separator="-"
+                        start-placeholder="开始日期"
+                        end-placeholder="结束日期"
+                        class="tech-date-picker"
+                     ></el-date-picker>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Plus"
+                        @click="handleAdd"
+                        v-hasPermi="['system:role:add']"
+                        class="tech-btn primary"
+                     >新增</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="success"
+                        plain
+                        icon="Edit"
+                        :disabled="single"
+                        @click="handleUpdate"
+                        v-hasPermi="['system:role:edit']"
+                        class="tech-btn success"
+                     >修改</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        :disabled="multiple"
+                        @click="handleDelete"
+                        v-hasPermi="['system:role:remove']"
+                        class="tech-btn danger"
+                     >删除</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="warning"
+                        plain
+                        icon="Download"
+                        @click="handleExport"
+                        v-hasPermi="['system:role:export']"
+                        class="tech-btn warning"
+                     >导出</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table v-loading="loading" :data="roleList" @selection-change="handleSelectionChange" class="tech-table">
+                  <el-table-column type="selection" width="55" align="center" />
+                  <el-table-column label="角色编号" prop="roleId" width="120" />
+                  <el-table-column label="角色名称" prop="roleName" :show-overflow-tooltip="true" width="150" />
+                  <el-table-column label="权限字符" prop="roleKey" :show-overflow-tooltip="true" width="150" />
+                  <el-table-column label="显示顺序" prop="roleSort" width="100" />
+                  <el-table-column label="状态" align="center" width="100">
+                     <template #default="scope">
+                        <el-switch
+                           v-model="scope.row.status"
+                           active-value="0"
+                           inactive-value="1"
+                           @change="handleStatusChange(scope.row)"
+                           class="tech-switch"
+                        ></el-switch>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="创建时间" align="center" prop="createTime">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.createTime) }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" class-name="small-padding fixed-width">
+                     <template #default="scope">
+                       <div class="action-buttons">
+                         <el-tooltip content="修改" placement="top" v-if="scope.row.roleId !== 1">
+                           <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:role:edit']" class="action-btn edit"></el-button>
+                         </el-tooltip>
+                         <el-tooltip content="删除" placement="top" v-if="scope.row.roleId !== 1">
+                           <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:role:remove']" class="action-btn delete"></el-button>
+                         </el-tooltip>
+                         <el-tooltip content="数据权限" placement="top" v-if="scope.row.roleId !== 1">
+                           <el-button link type="primary" icon="CircleCheck" @click="handleDataScope(scope.row)" v-hasPermi="['system:role:edit']" class="action-btn data"></el-button>
+                         </el-tooltip>
+                         <el-tooltip content="分配用户" placement="top" v-if="scope.row.roleId !== 1">
+                           <el-button link type="primary" icon="User" @click="handleAuthUser(scope.row)" v-hasPermi="['system:role:edit']" class="action-btn user"></el-button>
+                         </el-tooltip>
+                       </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <div class="pagination-section">
+                  <pagination
+                     v-show="total > 0"
+                     :total="total"
+                     v-model:page="queryParams.pageNum"
+                     v-model:limit="queryParams.pageSize"
+                     @pagination="getList"
+                     class="tech-pagination"
+                  />
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- 添加或修改角色配置对话框 -->
+      <el-dialog :title="title" v-model="open" width="500px" append-to-body class="tech-dialog">
+         <el-form ref="roleRef" :model="form" :rules="rules" label-width="100px" class="tech-form">
+            <el-form-item label="角色名称" prop="roleName">
+               <el-input v-model="form.roleName" placeholder="请输入角色名称" class="tech-input" />
+            </el-form-item>
+            <el-form-item prop="roleKey">
+               <template #label>
+                  <span class="label-with-tooltip">
+                     <el-tooltip content="控制器中定义的权限字符，如：@PreAuthorize(`@ss.hasRole('admin')`)" placement="top">
+                        <el-icon><question-filled /></el-icon>
+                     </el-tooltip>
+                     权限字符
+                  </span>
+               </template>
+               <el-input v-model="form.roleKey" placeholder="请输入权限字符" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="角色顺序" prop="roleSort">
+               <el-input-number v-model="form.roleSort" controls-position="right" :min="0" class="tech-input-number" />
+            </el-form-item>
+            <el-form-item label="状态">
+               <el-radio-group v-model="form.status" class="tech-radio-group">
+                  <el-radio
+                     v-for="dict in sys_normal_disable"
+                     :key="dict.value"
+                     :value="dict.value"
+                     class="tech-radio"
+                  >{{ dict.label }}</el-radio>
+               </el-radio-group>
+            </el-form-item>
+            <el-form-item label="菜单权限">
+               <div class="checkbox-group">
+                  <el-checkbox v-model="menuExpand" @change="handleCheckedTreeExpand($event, 'menu')" class="tech-checkbox">展开/折叠</el-checkbox>
+                  <el-checkbox v-model="menuNodeAll" @change="handleCheckedTreeNodeAll($event, 'menu')" class="tech-checkbox">全选/全不选</el-checkbox>
+                  <el-checkbox v-model="form.menuCheckStrictly" @change="handleCheckedTreeConnect($event, 'menu')" class="tech-checkbox">父子联动</el-checkbox>
+               </div>
+               <el-tree
+                  class="tech-tree tree-border"
+                  :data="menuOptions"
+                  show-checkbox
+                  ref="menuRef"
+                  node-key="id"
+                  :check-strictly="!form.menuCheckStrictly"
+                  empty-text="加载中，请稍候"
+                  :props="{ label: 'label', children: 'children' }"
+               ></el-tree>
+            </el-form-item>
+            <el-form-item label="备注">
+               <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" class="tech-textarea"></el-input>
+            </el-form-item>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+
+      <!-- 分配角色数据权限对话框 -->
+      <el-dialog :title="title" v-model="openDataScope" width="500px" append-to-body class="tech-dialog">
+         <el-form :model="form" label-width="80px" class="tech-form">
+            <el-form-item label="角色名称">
+               <el-input v-model="form.roleName" :disabled="true" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="权限字符">
+               <el-input v-model="form.roleKey" :disabled="true" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="权限范围">
+               <el-select v-model="form.dataScope" @change="dataScopeSelectChange" class="tech-select">
+                  <el-option
+                     v-for="item in dataScopeOptions"
+                     :key="item.value"
+                     :label="item.label"
+                     :value="item.value"
+                  ></el-option>
+               </el-select>
+            </el-form-item>
+            <el-form-item label="数据权限" v-show="form.dataScope == 2">
+               <div class="checkbox-group">
+                  <el-checkbox v-model="deptExpand" @change="handleCheckedTreeExpand($event, 'dept')" class="tech-checkbox">展开/折叠</el-checkbox>
+                  <el-checkbox v-model="deptNodeAll" @change="handleCheckedTreeNodeAll($event, 'dept')" class="tech-checkbox">全选/全不选</el-checkbox>
+                  <el-checkbox v-model="form.deptCheckStrictly" @change="handleCheckedTreeConnect($event, 'dept')" class="tech-checkbox">父子联动</el-checkbox>
+               </div>
+               <el-tree
+                  class="tech-tree tree-border"
+                  :data="deptOptions"
+                  show-checkbox
+                  default-expand-all
+                  ref="deptRef"
+                  node-key="id"
+                  :check-strictly="!form.deptCheckStrictly"
+                  empty-text="加载中，请稍候"
+                  :props="{ label: 'label', children: 'children' }"
+               ></el-tree>
+            </el-form-item>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitDataScope" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancelDataScope" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Role">
+import { addRole, changeRoleStatus, dataScope, delRole, getRole, listRole, updateRole, deptTreeSelect } from "@/api/system/role"
+import { roleMenuTreeselect, treeselect as menuTreeselect } from "@/api/system/menu"
+
+const router = useRouter()
+const { proxy } = getCurrentInstance()
+const { sys_normal_disable } = proxy.useDict("sys_normal_disable")
+
+const roleList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const title = ref("")
+const dateRange = ref([])
+const menuOptions = ref([])
+const menuExpand = ref(false)
+const menuNodeAll = ref(false)
+const deptExpand = ref(true)
+const deptNodeAll = ref(false)
+const deptOptions = ref([])
+const openDataScope = ref(false)
+const menuRef = ref(null)
+const deptRef = ref(null)
+
+/** 数据范围选项*/
+const dataScopeOptions = ref([
+  { value: "1", label: "全部数据权限" },
+  { value: "2", label: "自定数据权限" },
+  { value: "3", label: "本部门数据权限" },
+  { value: "4", label: "本部门及以下数据权限" },
+  { value: "5", label: "仅本人数据权限" }
+])
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    roleName: undefined,
+    roleKey: undefined,
+    status: undefined
+  },
+  rules: {
+    roleName: [{ required: true, message: "角色名称不能为空", trigger: "blur" }],
+    roleKey: [{ required: true, message: "权限字符不能为空", trigger: "blur" }],
+    roleSort: [{ required: true, message: "角色顺序不能为空", trigger: "blur" }]
+  },
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 查询角色列表 */
+function getList() {
+  loading.value = true
+  listRole(proxy.addDateRange(queryParams.value, dateRange.value)).then(response => {
+    roleList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  dateRange.value = []
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const roleIds = row.roleId || ids.value
+  proxy.$modal.confirm('是否确认删除角色编号为"' + roleIds + '"的数据项?').then(function () {
+    return delRole(roleIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+/** 导出按钮操作 */
+function handleExport() {
+  proxy.download("system/role/export", {
+    ...queryParams.value,
+  }, `role_${new Date().getTime()}.xlsx`)
+}
+
+/** 多选框选中数据 */
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.roleId)
+  single.value = selection.length != 1
+  multiple.value = !selection.length
+}
+
+/** 角色状态修改 */
+function handleStatusChange(row) {
+  let text = row.status === "0" ? "启用" : "停用"
+  proxy.$modal.confirm('确认要"' + text + '""' + row.roleName + '"角色吗?').then(function () {
+    return changeRoleStatus(row.roleId, row.status)
+  }).then(() => {
+    proxy.$modal.msgSuccess(text + "成功")
+  }).catch(function () {
+    row.status = row.status === "0" ? "1" : "0"
+  })
+}
+
+/** 更多操作 */
+function handleCommand(command, row) {
+  switch (command) {
+    case "handleDataScope":
+      handleDataScope(row)
+      break
+    case "handleAuthUser":
+      handleAuthUser(row)
+      break
+    default:
+      break
+  }
+}
+
+/** 分配用户 */
+function handleAuthUser(row) {
+  router.push("/system/role-auth/user/" + row.roleId)
+}
+
+/** 查询菜单树结构 */
+function getMenuTreeselect() {
+  menuTreeselect().then(response => {
+    menuOptions.value = response.data
+  })
+}
+
+/** 所有部门节点数据 */
+function getDeptAllCheckedKeys() {
+  // 目前被选中的部门节点
+  let checkedKeys = deptRef.value.getCheckedKeys()
+  // 半选中的部门节点
+  let halfCheckedKeys = deptRef.value.getHalfCheckedKeys()
+  checkedKeys.unshift.apply(checkedKeys, halfCheckedKeys)
+  return checkedKeys
+}
+
+/** 重置新增的表单以及其他数据  */
+function reset() {
+  if (menuRef.value != undefined) {
+    menuRef.value.setCheckedKeys([])
+  }
+  menuExpand.value = false
+  menuNodeAll.value = false
+  deptExpand.value = true
+  deptNodeAll.value = false
+  form.value = {
+    roleId: undefined,
+    roleName: undefined,
+    roleKey: undefined,
+    roleSort: 0,
+    status: "0",
+    menuIds: [],
+    deptIds: [],
+    menuCheckStrictly: true,
+    deptCheckStrictly: true,
+    remark: undefined
+  }
+  proxy.resetForm("roleRef")
+}
+
+/** 添加角色 */
+function handleAdd() {
+  reset()
+  getMenuTreeselect()
+  open.value = true
+  title.value = "添加角色"
+}
+
+/** 修改角色 */
+function handleUpdate(row) {
+  reset()
+  const roleId = row.roleId || ids.value
+  const roleMenu = getRoleMenuTreeselect(roleId)
+  getRole(roleId).then(response => {
+    form.value = response.data
+    form.value.roleSort = Number(form.value.roleSort)
+    open.value = true
+    nextTick(() => {
+      roleMenu.then((res) => {
+        let checkedKeys = res.checkedKeys
+        checkedKeys.forEach((v) => {
+          nextTick(() => {
+            menuRef.value.setChecked(v, true, false)
+          })
+        })
+      })
+    })
+  })
+  title.value = "修改角色"
+}
+
+/** 根据角色ID查询菜单树结构 */
+function getRoleMenuTreeselect(roleId) {
+  return roleMenuTreeselect(roleId).then(response => {
+    menuOptions.value = response.menus
+    return response
+  })
+}
+
+/** 根据角色ID查询部门树结构 */
+function getDeptTree(roleId) {
+  return deptTreeSelect(roleId).then(response => {
+    deptOptions.value = response.depts
+    return response
+  })
+}
+
+/** 树权限（展开/折叠）*/
+function handleCheckedTreeExpand(value, type) {
+  if (type == "menu") {
+    let treeList = menuOptions.value
+    for (let i = 0; i < treeList.length; i++) {
+      menuRef.value.store.nodesMap[treeList[i].id].expanded = value
+    }
+  } else if (type == "dept") {
+    let treeList = deptOptions.value
+    for (let i = 0; i < treeList.length; i++) {
+      deptRef.value.store.nodesMap[treeList[i].id].expanded = value
+    }
+  }
+}
+
+/** 树权限（全选/全不选） */
+function handleCheckedTreeNodeAll(value, type) {
+  if (type == "menu") {
+    menuRef.value.setCheckedNodes(value ? menuOptions.value : [])
+  } else if (type == "dept") {
+    deptRef.value.setCheckedNodes(value ? deptOptions.value : [])
+  }
+}
+
+/** 树权限（父子联动） */
+function handleCheckedTreeConnect(value, type) {
+  if (type == "menu") {
+    form.value.menuCheckStrictly = value ? true : false
+  } else if (type == "dept") {
+    form.value.deptCheckStrictly = value ? true : false
+  }
+}
+
+/** 所有菜单节点数据 */
+function getMenuAllCheckedKeys() {
+  // 目前被选中的菜单节点
+  let checkedKeys = menuRef.value.getCheckedKeys()
+  // 半选中的菜单节点
+  let halfCheckedKeys = menuRef.value.getHalfCheckedKeys()
+  checkedKeys.unshift.apply(checkedKeys, halfCheckedKeys)
+  return checkedKeys
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["roleRef"].validate(valid => {
+    if (valid) {
+      if (form.value.roleId != undefined) {
+        form.value.menuIds = getMenuAllCheckedKeys()
+        updateRole(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        form.value.menuIds = getMenuAllCheckedKeys()
+        addRole(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 选择角色权限范围触发 */
+function dataScopeSelectChange(value) {
+  if (value !== "2") {
+    deptRef.value.setCheckedKeys([])
+  }
+}
+
+/** 分配数据权限操作 */
+function handleDataScope(row) {
+  reset()
+  const deptTreeSelect = getDeptTree(row.roleId)
+  getRole(row.roleId).then(response => {
+    form.value = response.data
+    openDataScope.value = true
+    nextTick(() => {
+      deptTreeSelect.then(res => {
+        nextTick(() => {
+          if (deptRef.value) {
+            deptRef.value.setCheckedKeys(res.checkedKeys)
+          }
+        })
+      })
+    })
+  })
+  title.value = "分配数据权限"
+}
+
+/** 提交按钮（数据权限） */
+function submitDataScope() {
+  if (form.value.roleId != undefined) {
+    form.value.deptIds = getDeptAllCheckedKeys()
+    dataScope(form.value).then(response => {
+      proxy.$modal.msgSuccess("修改成功")
+      openDataScope.value = false
+      getList()
+    })
+  }
+}
+
+/** 取消按钮（数据权限）*/
+function cancelDataScope() {
+  openDataScope.value = false
+  reset()
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.role-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1600px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .date-range {
+            min-width: 240px;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-date-picker {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .tech-switch {
+    :deep(.el-switch__core) {
+      border-radius: 12px;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+  }
+
+  .tech-form {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+    
+    .el-form-item__label {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .label-with-tooltip {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .tech-input-number {
+    :deep(.el-input-number__decrease),
+    :deep(.el-input-number__increase) {
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+    }
+  }
+
+  .tech-checkbox {
+    :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+    }
+  }
+
+  .tech-tree {
+    :deep(.el-tree-node__content) {
+      height: 36px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: #f8fafc;
+      }
+    }
+    
+    :deep(.el-checkbox) {
+      margin-right: 8px;
+    }
+  }
+
+  .tech-textarea {
+    :deep(.el-textarea__inner) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .role-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .role-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .role-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.4.3 菜单管理（/menu/index.vue）
+
+![image-20251113142539727](README.assets/image-20251113142539727.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\menu\index.vue` 加入下述代码
+
+```java
+<template>
+   <div class="menu-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="菜单名称" prop="menuName">
+                     <el-input
+                        v-model="queryParams.menuName"
+                        placeholder="请输入菜单名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="状态" prop="status">
+                     <el-select 
+                        v-model="queryParams.status" 
+                        placeholder="菜单状态" 
+                        clearable 
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_normal_disable"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Plus"
+                        @click="handleAdd"
+                        v-hasPermi="['system:menu:add']"
+                        class="tech-btn primary"
+                     >新增</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button 
+                        type="info"
+                        plain
+                        icon="Sort"
+                        @click="toggleExpandAll"
+                        class="tech-btn info"
+                     >展开/折叠</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table
+                  v-if="refreshTable"
+                  v-loading="loading"
+                  :data="menuList"
+                  row-key="menuId"
+                  :default-expand-all="isExpandAll"
+                  :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
+                  class="tech-table"
+               >
+                  <el-table-column prop="menuName" label="菜单名称" :show-overflow-tooltip="true" width="200"></el-table-column>
+                  <el-table-column prop="icon" label="图标" align="center" width="100">
+                     <template #default="scope">
+                        <div class="icon-display">
+                           <svg-icon :icon-class="scope.row.icon" />
+                        </div>
+                     </template>
+                  </el-table-column>
+                  <el-table-column prop="orderNum" label="排序" width="80" align="center"></el-table-column>
+                  <el-table-column prop="perms" label="权限标识" :show-overflow-tooltip="true"></el-table-column>
+                  <el-table-column prop="component" label="组件路径" :show-overflow-tooltip="true"></el-table-column>
+                  <el-table-column prop="status" label="状态" width="100" align="center">
+                     <template #default="scope">
+                        <dict-tag :options="sys_normal_disable" :value="scope.row.status" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="创建时间" align="center" width="180" prop="createTime">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.createTime) }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" width="240" class-name="small-padding fixed-width">
+                     <template #default="scope">
+                        <div class="action-buttons">
+                           <el-tooltip content="修改" placement="top">
+                              <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:menu:edit']" class="action-btn edit"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="新增" placement="top">
+                              <el-button link type="primary" icon="Plus" @click="handleAdd(scope.row)" v-hasPermi="['system:menu:add']" class="action-btn add"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="删除" placement="top">
+                              <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:menu:remove']" class="action-btn delete"></el-button>
+                           </el-tooltip>
+                        </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+            </div>
+         </div>
+      </div>
+
+      <!-- 添加或修改菜单对话框 -->
+      <el-dialog :title="title" v-model="open" width="680px" append-to-body class="tech-dialog">
+         <el-form ref="menuRef" :model="form" :rules="rules" label-width="100px" class="tech-form">
+            <el-row :gutter="20">
+               <el-col :span="24">
+                  <el-form-item label="上级菜单">
+                     <el-tree-select
+                        v-model="form.parentId"
+                        :data="menuOptions"
+                        :props="{ value: 'menuId', label: 'menuName', children: 'children' }"
+                        value-key="menuId"
+                        placeholder="选择上级菜单"
+                        check-strictly
+                        class="tech-tree-select"
+                     />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item label="菜单类型" prop="menuType">
+                     <el-radio-group v-model="form.menuType" class="tech-radio-group">
+                        <el-radio value="M" class="tech-radio">目录</el-radio>
+                        <el-radio value="C" class="tech-radio">菜单</el-radio>
+                        <el-radio value="F" class="tech-radio">按钮</el-radio>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType != 'F'">
+                  <el-form-item label="菜单图标" prop="icon">
+                     <el-popover
+                        placement="bottom-start"
+                        :width="540"
+                        trigger="click"
+                        class="icon-popover"
+                     >
+                        <template #reference>
+                           <el-input v-model="form.icon" placeholder="点击选择图标" @blur="showSelectIcon" readonly class="tech-input icon-input">
+                              <template #prefix>
+                                 <svg-icon
+                                    v-if="form.icon"
+                                    :icon-class="form.icon"
+                                    class="el-input__icon"
+                                    style="height: 32px;width: 16px;"
+                                 />
+                                 <el-icon v-else style="height: 32px;width: 16px;"><search /></el-icon>
+                              </template>
+                           </el-input>
+                        </template>
+                        <icon-select ref="iconSelectRef" @selected="selected" :active-icon="form.icon" />
+                     </el-popover>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="显示排序" prop="orderNum">
+                     <el-input-number v-model="form.orderNum" controls-position="right" :min="0" class="tech-input-number" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="菜单名称" prop="menuName">
+                     <el-input v-model="form.menuName" placeholder="请输入菜单名称" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType == 'C'">
+                  <el-form-item prop="routeName">
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content="默认不填则和路由地址相同：如地址为：`user`，则名称为`User`（注意：因为router会删除名称相同路由，为避免名字的冲突，特殊情况下请自定义，保证唯一性）" placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>
+                           路由名称
+                        </span>
+                     </template>
+                     <el-input v-model="form.routeName" placeholder="请输入路由名称" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType != 'F'">
+                  <el-form-item>
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content="选择是外链则路由地址需要以`http(s)://`开头" placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>是否外链
+                        </span>
+                     </template>
+                     <el-radio-group v-model="form.isFrame" class="tech-radio-group">
+                        <el-radio value="0" class="tech-radio">是</el-radio>
+                        <el-radio value="1" class="tech-radio">否</el-radio>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType != 'F'">
+                  <el-form-item prop="path">
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content="访问的路由地址，如：`user`，如外网地址需内链访问则以`http(s)://`开头" placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>
+                           路由地址
+                        </span>
+                     </template>
+                     <el-input v-model="form.path" placeholder="请输入路由地址" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType == 'C'">
+                  <el-form-item prop="component">
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content="访问的组件路径，如：`system/user/index`，默认在`views`目录下" placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>
+                           组件路径
+                        </span>
+                     </template>
+                     <el-input v-model="form.component" placeholder="请输入组件路径" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType != 'M'">
+                  <el-form-item>
+                     <el-input v-model="form.perms" placeholder="请输入权限标识" maxlength="100" class="tech-input" />
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content="控制器中定义的权限字符，如：@PreAuthorize(`@ss.hasPermi('system:user:list')`)" placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>
+                           权限字符
+                        </span>
+                     </template>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType == 'C'">
+                  <el-form-item>
+                     <el-input v-model="form.query" placeholder="请输入路由参数" maxlength="255" class="tech-input" />
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content='访问路由的默认传递参数，如：`{"id": 1, "name": "ry"}`' placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>
+                           路由参数
+                        </span>
+                     </template>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType == 'C'">
+                  <el-form-item>
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content="选择是则会被`keep-alive`缓存，需要匹配组件的`name`和地址保持一致" placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>
+                           是否缓存
+                        </span>
+                     </template>
+                     <el-radio-group v-model="form.isCache" class="tech-radio-group">
+                        <el-radio value="0" class="tech-radio">缓存</el-radio>
+                        <el-radio value="1" class="tech-radio">不缓存</el-radio>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12" v-if="form.menuType != 'F'">
+                  <el-form-item>
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content="选择隐藏则路由将不会出现在侧边栏，但仍然可以访问" placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>
+                           显示状态
+                        </span>
+                     </template>
+                     <el-radio-group v-model="form.visible" class="tech-radio-group">
+                        <el-radio
+                           v-for="dict in sys_show_hide"
+                           :key="dict.value"
+                           :value="dict.value"
+                           class="tech-radio"
+                        >{{ dict.label }}</el-radio>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item>
+                     <template #label>
+                        <span class="label-with-tooltip">
+                           <el-tooltip content="选择停用则路由将不会出现在侧边栏，也不能被访问" placement="top">
+                              <el-icon><question-filled /></el-icon>
+                           </el-tooltip>
+                           菜单状态
+                        </span>
+                     </template>
+                     <el-radio-group v-model="form.status" class="tech-radio-group">
+                        <el-radio
+                           v-for="dict in sys_normal_disable"
+                           :key="dict.value"
+                           :value="dict.value"
+                           class="tech-radio"
+                        >{{ dict.label }}</el-radio>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+            </el-row>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Menu">
+import { addMenu, delMenu, getMenu, listMenu, updateMenu } from "@/api/system/menu"
+import SvgIcon from "@/components/SvgIcon"
+import IconSelect from "@/components/IconSelect"
+
+const { proxy } = getCurrentInstance()
+const { sys_show_hide, sys_normal_disable } = proxy.useDict("sys_show_hide", "sys_normal_disable")
+
+const menuList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const title = ref("")
+const menuOptions = ref([])
+const isExpandAll = ref(false)
+const refreshTable = ref(true)
+const iconSelectRef = ref(null)
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    menuName: undefined,
+    visible: undefined
+  },
+  rules: {
+    menuName: [{ required: true, message: "菜单名称不能为空", trigger: "blur" }],
+    orderNum: [{ required: true, message: "菜单顺序不能为空", trigger: "blur" }],
+    path: [{ required: true, message: "路由地址不能为空", trigger: "blur" }]
+  },
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 查询菜单列表 */
+function getList() {
+  loading.value = true
+  listMenu(queryParams.value).then(response => {
+    menuList.value = proxy.handleTree(response.data, "menuId")
+    loading.value = false
+  })
+}
+
+/** 查询菜单下拉树结构 */
+function getTreeselect() {
+  menuOptions.value = []
+  listMenu().then(response => {
+    const menu = { menuId: 0, menuName: "主类目", children: [] }
+    menu.children = proxy.handleTree(response.data, "menuId")
+    menuOptions.value.push(menu)
+  })
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 表单重置 */
+function reset() {
+  form.value = {
+    menuId: undefined,
+    parentId: 0,
+    menuName: undefined,
+    icon: undefined,
+    menuType: "M",
+    orderNum: undefined,
+    isFrame: "1",
+    isCache: "0",
+    visible: "0",
+    status: "0"
+  }
+  proxy.resetForm("menuRef")
+}
+
+/** 展示下拉图标 */
+function showSelectIcon() {
+  iconSelectRef.value.reset()
+}
+
+/** 选择图标 */
+function selected(name) {
+  form.value.icon = name
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+/** 新增按钮操作 */
+function handleAdd(row) {
+  reset()
+  getTreeselect()
+  if (row != null && row.menuId) {
+    form.value.parentId = row.menuId
+  } else {
+    form.value.parentId = 0
+  }
+  open.value = true
+  title.value = "添加菜单"
+}
+
+/** 展开/折叠操作 */
+function toggleExpandAll() {
+  refreshTable.value = false
+  isExpandAll.value = !isExpandAll.value
+  nextTick(() => {
+    refreshTable.value = true
+  })
+}
+
+/** 修改按钮操作 */
+async function handleUpdate(row) {
+  reset()
+  await getTreeselect()
+  getMenu(row.menuId).then(response => {
+    form.value = response.data
+    open.value = true
+    title.value = "修改菜单"
+  })
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["menuRef"].validate(valid => {
+    if (valid) {
+      if (form.value.menuId != undefined) {
+        updateMenu(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        addMenu(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  proxy.$modal.confirm('是否确认删除名称为"' + row.menuName + '"的数据项?').then(function() {
+    return delMenu(row.menuId)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.menu-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1600px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .icon-display {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 24px;
+          
+          .svg-icon {
+            font-size: 18px;
+            color: #667eea;
+          }
+        }
+
+        .status-tag {
+          :deep(.el-tag) {
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+
+    &.icon-input {
+      :deep(.el-input__inner) {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .tech-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-tree-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    :deep(.el-table__indent) {
+      padding-left: 8px;
+    }
+
+    :deep(.el-table__expand-icon) {
+      color: #667eea;
+      font-weight: bold;
+      
+      &.el-table__expand-icon--expanded {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+  }
+
+  .tech-form {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+    
+    .el-form-item__label {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .label-with-tooltip {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .el-row {
+      margin-bottom: -10px;
+    }
+  }
+
+  .tech-input-number {
+    :deep(.el-input-number__decrease),
+    :deep(.el-input-number__increase) {
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+    }
+  }
+
+  .tech-radio {
+    :deep(.el-radio__input.is-checked .el-radio__inner) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+    }
+    
+    :deep(.el-radio__label) {
+      color: #374151;
+      font-weight: 500;
+    }
+  }
+
+  .icon-popover {
+    :deep(.el-popover) {
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .menu-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .tech-dialog {
+      :deep(.el-dialog) {
+        width: 95% !important;
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.4.4 部门管理（/dept/index.vue）
+
+![image-20251113142614639](README.assets/image-20251113142614639.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\dept\index.vue` 文件中加入下述代码
+
+```java
+<template>
+   <div class="dept-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="部门名称" prop="deptName">
+                     <el-input
+                        v-model="queryParams.deptName"
+                        placeholder="请输入部门名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="状态" prop="status">
+                     <el-select 
+                        v-model="queryParams.status" 
+                        placeholder="部门状态" 
+                        clearable 
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_normal_disable"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Plus"
+                        @click="handleAdd"
+                        v-hasPermi="['system:dept:add']"
+                        class="tech-btn primary"
+                     >新增</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="info"
+                        plain
+                        icon="Sort"
+                        @click="toggleExpandAll"
+                        class="tech-btn info"
+                     >展开/折叠</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table
+                  v-if="refreshTable"
+                  v-loading="loading"
+                  :data="deptList"
+                  row-key="deptId"
+                  :default-expand-all="isExpandAll"
+                  :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
+                  class="tech-table tree-table"
+               >
+                  <el-table-column prop="deptName" label="部门名称" min-width="260">
+                     <template #default="scope">
+                        <div class="dept-name-cell">
+                           <span class="dept-name">{{ scope.row.deptName }}</span>
+                           <span v-if="scope.row.leader" class="dept-leader">({{ scope.row.leader }})</span>
+                        </div>
+                     </template>
+                  </el-table-column>
+                  <el-table-column prop="orderNum" label="排序" width="120" align="center">
+                     <template #default="scope">
+                        <span class="order-badge">{{ scope.row.orderNum }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column prop="status" label="状态" width="100" align="center">
+                     <template #default="scope">
+                        <dict-tag :options="sys_normal_disable" :value="scope.row.status" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="创建时间" align="center" width="180" prop="createTime">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.createTime) }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" class-name="small-padding fixed-width" width="240">
+                     <template #default="scope">
+                        <div class="action-buttons">
+                           <el-tooltip content="修改" placement="top">
+                              <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:dept:edit']" class="action-btn edit"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="新增" placement="top">
+                              <el-button link type="primary" icon="Plus" @click="handleAdd(scope.row)" v-hasPermi="['system:dept:add']" class="action-btn add"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="删除" placement="top" v-if="scope.row.parentId != 0">
+                              <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:dept:remove']" class="action-btn delete"></el-button>
+                           </el-tooltip>
+                        </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+            </div>
+         </div>
+      </div>
+
+      <!-- 添加或修改部门对话框 -->
+      <el-dialog :title="title" v-model="open" width="600px" append-to-body class="tech-dialog">
+         <el-form ref="deptRef" :model="form" :rules="rules" label-width="100px" class="tech-form">
+            <el-row :gutter="20">
+               <el-col :span="24" v-if="form.parentId !== 0">
+                  <el-form-item label="上级部门" prop="parentId">
+                     <el-tree-select
+                        v-model="form.parentId"
+                        :data="deptOptions"
+                        :props="{ value: 'deptId', label: 'deptName', children: 'children' }"
+                        value-key="deptId"
+                        placeholder="选择上级部门"
+                        check-strictly
+                        class="tech-tree-select"
+                     />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="部门名称" prop="deptName">
+                     <el-input v-model="form.deptName" placeholder="请输入部门名称" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="显示排序" prop="orderNum">
+                     <el-input-number v-model="form.orderNum" controls-position="right" :min="0" class="tech-input-number" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="负责人" prop="leader">
+                     <el-input v-model="form.leader" placeholder="请输入负责人" maxlength="20" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="联系电话" prop="phone">
+                     <el-input v-model="form.phone" placeholder="请输入联系电话" maxlength="11" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="邮箱" prop="email">
+                     <el-input v-model="form.email" placeholder="请输入邮箱" maxlength="50" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="部门状态">
+                     <el-radio-group v-model="form.status" class="tech-radio-group">
+                        <el-radio
+                           v-for="dict in sys_normal_disable"
+                           :key="dict.value"
+                           :value="dict.value"
+                           class="tech-radio"
+                        >{{ dict.label }}</el-radio>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+            </el-row>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Dept">
+import { listDept, getDept, delDept, addDept, updateDept, listDeptExcludeChild } from "@/api/system/dept"
+
+const { proxy } = getCurrentInstance()
+const { sys_normal_disable } = proxy.useDict("sys_normal_disable")
+
+const deptList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const title = ref("")
+const deptOptions = ref([])
+const isExpandAll = ref(true)
+const refreshTable = ref(true)
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    deptName: undefined,
+    status: undefined
+  },
+  rules: {
+    parentId: [{ required: true, message: "上级部门不能为空", trigger: "blur" }],
+    deptName: [{ required: true, message: "部门名称不能为空", trigger: "blur" }],
+    orderNum: [{ required: true, message: "显示排序不能为空", trigger: "blur" }],
+    email: [{ type: "email", message: "请输入正确的邮箱地址", trigger: ["blur", "change"] }],
+    phone: [{ pattern: /^1[3|4|5|6|7|8|9][0-9]\d{8}$/, message: "请输入正确的手机号码", trigger: "blur" }]
+  },
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 查询部门列表 */
+function getList() {
+  loading.value = true
+  listDept(queryParams.value).then(response => {
+    deptList.value = proxy.handleTree(response.data, "deptId")
+    loading.value = false
+  })
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 表单重置 */
+function reset() {
+  form.value = {
+    deptId: undefined,
+    parentId: undefined,
+    deptName: undefined,
+    orderNum: 0,
+    leader: undefined,
+    phone: undefined,
+    email: undefined,
+    status: "0"
+  }
+  proxy.resetForm("deptRef")
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+/** 新增按钮操作 */
+function handleAdd(row) {
+  reset()
+  listDept().then(response => {
+    deptOptions.value = proxy.handleTree(response.data, "deptId")
+  })
+  if (row != undefined) {
+    form.value.parentId = row.deptId
+  }
+  open.value = true
+  title.value = "添加部门"
+}
+
+/** 展开/折叠操作 */
+function toggleExpandAll() {
+  refreshTable.value = false
+  isExpandAll.value = !isExpandAll.value
+  nextTick(() => {
+    refreshTable.value = true
+  })
+}
+
+/** 修改按钮操作 */
+function handleUpdate(row) {
+  reset()
+  listDeptExcludeChild(row.deptId).then(response => {
+    deptOptions.value = proxy.handleTree(response.data, "deptId")
+  })
+  getDept(row.deptId).then(response => {
+    form.value = response.data
+    open.value = true
+    title.value = "修改部门"
+  })
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["deptRef"].validate(valid => {
+    if (valid) {
+      if (form.value.deptId != undefined) {
+        updateDept(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        addDept(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  proxy.$modal.confirm('是否确认删除名称为"' + row.deptName + '"的数据项?').then(function() {
+    return delDept(row.deptId)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.dept-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1600px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .dept-name-cell {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          
+          .dept-name {
+            font-weight: 600;
+            color: #1e293b;
+          }
+          
+          .dept-leader {
+            color: #64748b;
+            font-size: 0.85rem;
+          }
+        }
+
+        .order-badge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 0.9rem;
+        }
+
+        .status-tag {
+          :deep(.el-tag) {
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-tree-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    // 树形表格特殊样式
+    &.tree-table {
+      :deep(.el-table__row) {
+        .el-table__cell {
+          padding: 12px 0;
+        }
+        
+        // 确保树形结构的缩进正确
+        .el-table__expand-icon {
+          color: #667eea;
+          font-weight: bold;
+          margin-right: 4px;
+          
+          &.el-table__expand-icon--expanded {
+            transform: rotate(90deg);
+          }
+        }
+        
+        // 确保文字内容也有正确的缩进
+        .el-table__cell:first-child {
+          .cell {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      
+      // 修复树形缩进问题
+      :deep(.el-table__indent) {
+        padding-left: 0;
+      }
+      
+      // 为每个层级添加不同的缩进
+      :deep(.level-0) .el-table__expand-icon {
+        margin-left: 8px;
+      }
+      
+      :deep(.level-1) .el-table__expand-icon {
+        margin-left: 24px;
+      }
+      
+      :deep(.level-2) .el-table__expand-icon {
+        margin-left: 40px;
+      }
+      
+      :deep(.level-3) .el-table__expand-icon {
+        margin-left: 56px;
+      }
+      
+      :deep(.level-4) .el-table__expand-icon {
+        margin-left: 72px;
+      }
+      
+      // 确保部门名称文本也有正确的缩进
+      :deep(.dept-name-cell) {
+        padding-left: 8px;
+      }
+      
+      :deep(.level-1) .dept-name-cell {
+        padding-left: 24px;
+      }
+      
+      :deep(.level-2) .dept-name-cell {
+        padding-left: 40px;
+      }
+      
+      :deep(.level-3) .dept-name-cell {
+        padding-left: 56px;
+      }
+      
+      :deep(.level-4) .dept-name-cell {
+        padding-left: 72px;
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+  }
+
+  .tech-form {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+    
+    .el-form-item__label {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .el-row {
+      margin-bottom: -10px;
+    }
+  }
+
+  .tech-input-number {
+    :deep(.el-input-number__decrease),
+    :deep(.el-input-number__increase) {
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+    }
+  }
+
+  .tech-radio {
+    :deep(.el-radio__input.is-checked .el-radio__inner) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+    }
+    
+    :deep(.el-radio__label) {
+      color: #374151;
+      font-weight: 500;
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .dept-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dept-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .tech-dialog {
+      :deep(.el-dialog) {
+        width: 95% !important;
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .dept-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.4.5 岗位管理（/post/index.vue）
+
+![image-20251113142636748](README.assets/image-20251113142636748.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\post\index.vue` 文件中加入下述代码
+
+```java
+<template>
+   <div class="post-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="岗位编码" prop="postCode">
+                     <el-input
+                        v-model="queryParams.postCode"
+                        placeholder="请输入岗位编码"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="岗位名称" prop="postName">
+                     <el-input
+                        v-model="queryParams.postName"
+                        placeholder="请输入岗位名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="状态" prop="status">
+                     <el-select 
+                        v-model="queryParams.status" 
+                        placeholder="岗位状态" 
+                        clearable 
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_normal_disable"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Plus"
+                        @click="handleAdd"
+                        v-hasPermi="['system:post:add']"
+                        class="tech-btn primary"
+                     >新增</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="success"
+                        plain
+                        icon="Edit"
+                        :disabled="single"
+                        @click="handleUpdate"
+                        v-hasPermi="['system:post:edit']"
+                        class="tech-btn success"
+                     >修改</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        :disabled="multiple"
+                        @click="handleDelete"
+                        v-hasPermi="['system:post:remove']"
+                        class="tech-btn danger"
+                     >删除</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="warning"
+                        plain
+                        icon="Download"
+                        @click="handleExport"
+                        v-hasPermi="['system:post:export']"
+                        class="tech-btn warning"
+                     >导出</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table 
+                  v-loading="loading" 
+                  :data="postList" 
+                  @selection-change="handleSelectionChange" 
+                  class="tech-table"
+               >
+                  <el-table-column type="selection" width="55" align="center" />
+                  <el-table-column label="岗位编号" align="center" prop="postId" width="180" />
+                  <el-table-column label="岗位编码" align="center" prop="postCode" width="200" />
+                  <el-table-column label="岗位名称" align="center" prop="postName" width="200" />
+                  <el-table-column label="岗位排序" align="center" prop="postSort" width="200">
+                     <template #default="scope">
+                        <span class="order-badge">{{ scope.row.postSort }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="状态" align="center" prop="status" width="200">
+                     <template #default="scope">
+                        <dict-tag :options="sys_normal_disable" :value="scope.row.status" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="创建时间" align="center" width="240" prop="createTime">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.createTime) }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" class-name="small-padding fixed-width" width="240">
+                     <template #default="scope">
+                        <div class="action-buttons">
+                           <el-tooltip content="修改" placement="top">
+                              <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:post:edit']" class="action-btn edit"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="删除" placement="top">
+                              <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:post:remove']" class="action-btn delete"></el-button>
+                           </el-tooltip>
+                        </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <pagination
+                  v-show="total > 0"
+                  :total="total"
+                  v-model:page="queryParams.pageNum"
+                  v-model:limit="queryParams.pageSize"
+                  @pagination="getList"
+                  class="tech-pagination"
+               />
+            </div>
+         </div>
+      </div>
+
+      <!-- 添加或修改岗位对话框 -->
+      <el-dialog :title="title" v-model="open" width="500px" append-to-body class="tech-dialog">
+         <el-form ref="postRef" :model="form" :rules="rules" label-width="100px" class="tech-form">
+            <el-form-item label="岗位名称" prop="postName">
+               <el-input v-model="form.postName" placeholder="请输入岗位名称" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="岗位编码" prop="postCode">
+               <el-input v-model="form.postCode" placeholder="请输入编码名称" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="岗位顺序" prop="postSort">
+               <el-input-number v-model="form.postSort" controls-position="right" :min="0" class="tech-input-number" />
+            </el-form-item>
+            <el-form-item label="岗位状态" prop="status">
+               <el-radio-group v-model="form.status" class="tech-radio-group">
+                  <el-radio
+                     v-for="dict in sys_normal_disable"
+                     :key="dict.value"
+                     :value="dict.value"
+                     class="tech-radio"
+                  >{{ dict.label }}</el-radio>
+               </el-radio-group>
+            </el-form-item>
+            <el-form-item label="备注" prop="remark">
+               <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" class="tech-textarea" />
+            </el-form-item>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Post">
+import { listPost, addPost, delPost, getPost, updatePost } from "@/api/system/post"
+
+const { proxy } = getCurrentInstance()
+const { sys_normal_disable } = proxy.useDict("sys_normal_disable")
+
+const postList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const title = ref("")
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    postCode: undefined,
+    postName: undefined,
+    status: undefined
+  },
+  rules: {
+    postName: [{ required: true, message: "岗位名称不能为空", trigger: "blur" }],
+    postCode: [{ required: true, message: "岗位编码不能为空", trigger: "blur" }],
+    postSort: [{ required: true, message: "岗位顺序不能为空", trigger: "blur" }],
+  }
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 查询岗位列表 */
+function getList() {
+  loading.value = true
+  listPost(queryParams.value).then(response => {
+    postList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 表单重置 */
+function reset() {
+  form.value = {
+    postId: undefined,
+    postCode: undefined,
+    postName: undefined,
+    postSort: 0,
+    status: "0",
+    remark: undefined
+  }
+  proxy.resetForm("postRef")
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+/** 多选框选中数据 */
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.postId)
+  single.value = selection.length != 1
+  multiple.value = !selection.length
+}
+
+/** 新增按钮操作 */
+function handleAdd() {
+  reset()
+  open.value = true
+  title.value = "添加岗位"
+}
+
+/** 修改按钮操作 */
+function handleUpdate(row) {
+  reset()
+  const postId = row.postId || ids.value
+  getPost(postId).then(response => {
+    form.value = response.data
+    open.value = true
+    title.value = "修改岗位"
+  })
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["postRef"].validate(valid => {
+    if (valid) {
+      if (form.value.postId != undefined) {
+        updatePost(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        addPost(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const postIds = row.postId || ids.value
+  proxy.$modal.confirm('是否确认删除岗位编号为"' + postIds + '"的数据项？').then(function() {
+    return delPost(postIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+/** 导出按钮操作 */
+function handleExport() {
+  proxy.download("system/post/export", {
+    ...queryParams.value
+  }, `post_${new Date().getTime()}.xlsx`)
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.post-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1600px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .order-badge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 0.9rem;
+        }
+
+        .status-tag {
+          :deep(.el-tag) {
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+  }
+
+  .tech-form {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+    
+    .el-form-item__label {
+      font-weight: 600;
+      color: #374151;
+    }
+  }
+
+  .tech-input-number {
+    :deep(.el-input-number__decrease),
+    :deep(.el-input-number__increase) {
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+    }
+  }
+
+  .tech-radio {
+    :deep(.el-radio__input.is-checked .el-radio__inner) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+    }
+    
+    :deep(.el-radio__label) {
+      color: #374151;
+      font-weight: 500;
+    }
+  }
+
+  .tech-textarea {
+    :deep(.el-textarea__inner) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-pagination {
+    margin-top: 20px;
+    
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .post-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .post-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .post-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.4.6 字典管理（/dict/index.vue）
+
+![image-20251113142658188](README.assets/image-20251113142658188.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\dict\index.vue` 文件中加入下述代码
+
+```java
+<template>
+   <div class="dict-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="字典名称" prop="dictName">
+                     <el-input
+                        v-model="queryParams.dictName"
+                        placeholder="请输入字典名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="字典类型" prop="dictType">
+                     <el-input
+                        v-model="queryParams.dictType"
+                        placeholder="请输入字典类型"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="状态" prop="status">
+                     <el-select
+                        v-model="queryParams.status"
+                        placeholder="字典状态"
+                        clearable
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_normal_disable"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item label="创建时间" class="date-range">
+                     <el-date-picker
+                        v-model="dateRange"
+                        value-format="YYYY-MM-DD"
+                        type="daterange"
+                        range-separator="-"
+                        start-placeholder="开始日期"
+                        end-placeholder="结束日期"
+                        class="tech-date-picker"
+                     ></el-date-picker>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Plus"
+                        @click="handleAdd"
+                        v-hasPermi="['system:dict:add']"
+                        class="tech-btn primary"
+                     >新增</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="success"
+                        plain
+                        icon="Edit"
+                        :disabled="single"
+                        @click="handleUpdate"
+                        v-hasPermi="['system:dict:edit']"
+                        class="tech-btn success"
+                     >修改</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        :disabled="multiple"
+                        @click="handleDelete"
+                        v-hasPermi="['system:dict:remove']"
+                        class="tech-btn danger"
+                     >删除</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="warning"
+                        plain
+                        icon="Download"
+                        @click="handleExport"
+                        v-hasPermi="['system:dict:export']"
+                        class="tech-btn warning"
+                     >导出</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="info"
+                        plain
+                        icon="Refresh"
+                        @click="handleRefreshCache"
+                        v-hasPermi="['system:dict:remove']"
+                        class="tech-btn info"
+                     >刷新缓存</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table v-loading="loading" :data="typeList" @selection-change="handleSelectionChange" class="tech-table">
+                  <el-table-column type="selection" width="55" align="center" />
+                  <el-table-column label="字典编号" align="center" prop="dictId" width="120" />
+                  <el-table-column label="字典名称" align="center" prop="dictName" :show-overflow-tooltip="true" width="240"/>
+                  <el-table-column label="字典类型" align="center" :show-overflow-tooltip="true" width="240">
+                     <template #default="scope">
+                        <router-link :to="'/system/dict-data/index/' + scope.row.dictId" class="link-type">
+                           <span class="dict-type-link">{{ scope.row.dictType }}</span>
+                        </router-link>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="状态" align="center" prop="status" width="120">
+                     <template #default="scope">
+                        <dict-tag :options="sys_normal_disable" :value="scope.row.status" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="备注" align="center" prop="remark" :show-overflow-tooltip="true" width="240" />
+                  <el-table-column label="创建时间" align="center" prop="createTime" width="240">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.createTime) }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" width="240" class-name="small-padding fixed-width">
+                     <template #default="scope">
+                        <div class="action-buttons">
+                           <el-tooltip content="修改" placement="top">
+                              <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:dict:edit']" class="action-btn edit"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="删除" placement="top">
+                              <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:dict:remove']" class="action-btn delete"></el-button>
+                           </el-tooltip>
+                        </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <div class="pagination-section">
+                  <pagination
+                     v-show="total > 0"
+                     :total="total"
+                     v-model:page="queryParams.pageNum"
+                     v-model:limit="queryParams.pageSize"
+                     @pagination="getList"
+                     class="tech-pagination"
+                  />
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- 添加或修改参数配置对话框 -->
+      <el-dialog :title="title" v-model="open" width="500px" append-to-body class="tech-dialog">
+         <el-form ref="dictRef" :model="form" :rules="rules" label-width="100px" class="tech-form">
+            <el-form-item label="字典名称" prop="dictName">
+               <el-input v-model="form.dictName" placeholder="请输入字典名称" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="字典类型" prop="dictType">
+               <el-input v-model="form.dictType" placeholder="请输入字典类型" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="状态" prop="status">
+               <el-radio-group v-model="form.status" class="tech-radio-group">
+                  <el-radio
+                     v-for="dict in sys_normal_disable"
+                     :key="dict.value"
+                     :value="dict.value"
+                     class="tech-radio"
+                  >{{ dict.label }}</el-radio>
+               </el-radio-group>
+            </el-form-item>
+            <el-form-item label="备注" prop="remark">
+               <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" class="tech-textarea"></el-input>
+            </el-form-item>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Dict">
+import useDictStore from '@/store/modules/dict'
+import { listType, getType, delType, addType, updateType, refreshCache } from "@/api/system/dict/type"
+
+const { proxy } = getCurrentInstance()
+const { sys_normal_disable } = proxy.useDict("sys_normal_disable")
+
+const typeList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const title = ref("")
+const dateRange = ref([])
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    dictName: undefined,
+    dictType: undefined,
+    status: undefined
+  },
+  rules: {
+    dictName: [{ required: true, message: "字典名称不能为空", trigger: "blur" }],
+    dictType: [{ required: true, message: "字典类型不能为空", trigger: "blur" }]
+  },
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 查询字典类型列表 */
+function getList() {
+  loading.value = true
+  listType(proxy.addDateRange(queryParams.value, dateRange.value)).then(response => {
+    typeList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 表单重置 */
+function reset() {
+  form.value = {
+    dictId: undefined,
+    dictName: undefined,
+    dictType: undefined,
+    status: "0",
+    remark: undefined
+  }
+  proxy.resetForm("dictRef")
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  dateRange.value = []
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+/** 新增按钮操作 */
+function handleAdd() {
+  reset()
+  open.value = true
+  title.value = "添加字典类型"
+}
+
+/** 多选框选中数据 */
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.dictId)
+  single.value = selection.length != 1
+  multiple.value = !selection.length
+}
+
+/** 修改按钮操作 */
+function handleUpdate(row) {
+  reset()
+  const dictId = row.dictId || ids.value
+  getType(dictId).then(response => {
+    form.value = response.data
+    open.value = true
+    title.value = "修改字典类型"
+  })
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["dictRef"].validate(valid => {
+    if (valid) {
+      if (form.value.dictId != undefined) {
+        updateType(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        addType(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const dictIds = row.dictId || ids.value
+  proxy.$modal.confirm('是否确认删除字典编号为"' + dictIds + '"的数据项？').then(function() {
+    return delType(dictIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+/** 导出按钮操作 */
+function handleExport() {
+  proxy.download("system/dict/type/export", {
+    ...queryParams.value
+  }, `dict_${new Date().getTime()}.xlsx`)
+}
+
+/** 刷新缓存按钮操作 */
+function handleRefreshCache() {
+  refreshCache().then(() => {
+    proxy.$modal.msgSuccess("刷新成功")
+    useDictStore().cleanDict()
+  })
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.dict-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1600px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .date-range {
+            min-width: 240px;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+
+        .dict-type-link {
+          color: #667eea;
+          font-weight: 500;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          
+          &:hover {
+            color: #764ba2;
+            text-decoration: underline;
+          }
+        }
+
+        .status-tag {
+          :deep(.el-tag) {
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-date-picker {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+  }
+
+  .tech-form {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+    
+    .el-form-item__label {
+      font-weight: 600;
+      color: #374151;
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+    }
+  }
+
+  .tech-radio {
+    :deep(.el-radio__input.is-checked .el-radio__inner) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+    }
+    
+    :deep(.el-radio__label) {
+      color: #374151;
+      font-weight: 500;
+    }
+  }
+
+  .tech-textarea {
+    :deep(.el-textarea__inner) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .dict-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dict-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .dict-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.4.7 参数设置（/config/index.vue）
+
+![image-20251113142717831](README.assets/image-20251113142717831.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\config\index.vue` 文件中加入下述代码
+
+```java
+<template>
+   <div class="config-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="参数名称" prop="configName">
+                     <el-input
+                        v-model="queryParams.configName"
+                        placeholder="请输入参数名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="参数键名" prop="configKey">
+                     <el-input
+                        v-model="queryParams.configKey"
+                        placeholder="请输入参数键名"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="系统内置" prop="configType">
+                     <el-select 
+                        v-model="queryParams.configType" 
+                        placeholder="系统内置" 
+                        clearable 
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_yes_no"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item label="创建时间" class="date-range">
+                     <el-date-picker
+                        v-model="dateRange"
+                        value-format="YYYY-MM-DD"
+                        type="daterange"
+                        range-separator="-"
+                        start-placeholder="开始日期"
+                        end-placeholder="结束日期"
+                        class="tech-date-picker"
+                     ></el-date-picker>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Plus"
+                        @click="handleAdd"
+                        v-hasPermi="['system:config:add']"
+                        class="tech-btn primary"
+                     >新增</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="success"
+                        plain
+                        icon="Edit"
+                        :disabled="single"
+                        @click="handleUpdate"
+                        v-hasPermi="['system:config:edit']"
+                        class="tech-btn success"
+                     >修改</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        :disabled="multiple"
+                        @click="handleDelete"
+                        v-hasPermi="['system:config:remove']"
+                        class="tech-btn danger"
+                     >删除</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="warning"
+                        plain
+                        icon="Download"
+                        @click="handleExport"
+                        v-hasPermi="['system:config:export']"
+                        class="tech-btn warning"
+                     >导出</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="info"
+                        plain
+                        icon="Refresh"
+                        @click="handleRefreshCache"
+                        v-hasPermi="['system:config:remove']"
+                        class="tech-btn info"
+                     >刷新缓存</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table v-loading="loading" :data="configList" @selection-change="handleSelectionChange" class="tech-table">
+                  <el-table-column type="selection" width="55" align="center" />
+                  <el-table-column label="参数主键" align="center" prop="configId" width="80" />
+                  <el-table-column label="参数名称" align="center" prop="configName" :show-overflow-tooltip="true" width="240" />
+                  <el-table-column label="参数键名" align="center" prop="configKey" :show-overflow-tooltip="true" width="240" />
+                  <el-table-column label="参数键值" align="center" prop="configValue" :show-overflow-tooltip="true" width="100" />
+                  <el-table-column label="系统内置" align="center" prop="configType" width="80">
+                     <template #default="scope">
+                        <dict-tag :options="sys_yes_no" :value="scope.row.configType" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="备注" align="center" prop="remark" :show-overflow-tooltip="true" width="400" />
+                  <el-table-column label="创建时间" align="center" prop="createTime" width="200">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.createTime) }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" width="100" class-name="small-padding fixed-width">
+                     <template #default="scope">
+                        <div class="action-buttons">
+                           <el-tooltip content="修改" placement="top">
+                              <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:config:edit']" class="action-btn edit"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="删除" placement="top">
+                              <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:config:remove']" class="action-btn delete"></el-button>
+                           </el-tooltip>
+                        </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <div class="pagination-section">
+                  <pagination
+                     v-show="total > 0"
+                     :total="total"
+                     v-model:page="queryParams.pageNum"
+                     v-model:limit="queryParams.pageSize"
+                     @pagination="getList"
+                     class="tech-pagination"
+                  />
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- 添加或修改参数配置对话框 -->
+      <el-dialog :title="title" v-model="open" width="500px" append-to-body class="tech-dialog">
+         <el-form ref="configRef" :model="form" :rules="rules" label-width="100px" class="tech-form">
+            <el-form-item label="参数名称" prop="configName">
+               <el-input v-model="form.configName" placeholder="请输入参数名称" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="参数键名" prop="configKey">
+               <el-input v-model="form.configKey" placeholder="请输入参数键名" class="tech-input" />
+            </el-form-item>
+            <el-form-item label="参数键值" prop="configValue">
+               <el-input v-model="form.configValue" type="textarea" placeholder="请输入参数键值" class="tech-textarea" />
+            </el-form-item>
+            <el-form-item label="系统内置" prop="configType">
+               <el-radio-group v-model="form.configType" class="tech-radio-group">
+                  <el-radio
+                     v-for="dict in sys_yes_no"
+                     :key="dict.value"
+                     :value="dict.value"
+                     class="tech-radio"
+                  >{{ dict.label }}</el-radio>
+               </el-radio-group>
+            </el-form-item>
+            <el-form-item label="备注" prop="remark">
+               <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" class="tech-textarea" />
+            </el-form-item>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Config">
+import { listConfig, getConfig, delConfig, addConfig, updateConfig, refreshCache } from "@/api/system/config"
+
+const { proxy } = getCurrentInstance()
+const { sys_yes_no } = proxy.useDict("sys_yes_no")
+
+const configList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const title = ref("")
+const dateRange = ref([])
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    configName: undefined,
+    configKey: undefined,
+    configType: undefined
+  },
+  rules: {
+    configName: [{ required: true, message: "参数名称不能为空", trigger: "blur" }],
+    configKey: [{ required: true, message: "参数键名不能为空", trigger: "blur" }],
+    configValue: [{ required: true, message: "参数键值不能为空", trigger: "blur" }]
+  }
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 查询参数列表 */
+function getList() {
+  loading.value = true
+  listConfig(proxy.addDateRange(queryParams.value, dateRange.value)).then(response => {
+    configList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 表单重置 */
+function reset() {
+  form.value = {
+    configId: undefined,
+    configName: undefined,
+    configKey: undefined,
+    configValue: undefined,
+    configType: "Y",
+    remark: undefined
+  }
+  proxy.resetForm("configRef")
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  dateRange.value = []
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+/** 多选框选中数据 */
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.configId)
+  single.value = selection.length != 1
+  multiple.value = !selection.length
+}
+
+/** 新增按钮操作 */
+function handleAdd() {
+  reset()
+  open.value = true
+  title.value = "添加参数"
+}
+
+/** 修改按钮操作 */
+function handleUpdate(row) {
+  reset()
+  const configId = row.configId || ids.value
+  getConfig(configId).then(response => {
+    form.value = response.data
+    open.value = true
+    title.value = "修改参数"
+  })
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["configRef"].validate(valid => {
+    if (valid) {
+      if (form.value.configId != undefined) {
+        updateConfig(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        addConfig(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const configIds = row.configId || ids.value
+  proxy.$modal.confirm('是否确认删除参数编号为"' + configIds + '"的数据项？').then(function () {
+    return delConfig(configIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+/** 导出按钮操作 */
+function handleExport() {
+  proxy.download("system/config/export", {
+    ...queryParams.value
+  }, `config_${new Date().getTime()}.xlsx`)
+}
+
+/** 刷新缓存按钮操作 */
+function handleRefreshCache() {
+  refreshCache().then(() => {
+    proxy.$modal.msgSuccess("刷新缓存成功")
+  })
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.config-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1600px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .date-range {
+            min-width: 240px;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+
+        .status-tag {
+          :deep(.el-tag) {
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-date-picker {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+  }
+
+  .tech-form {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+    
+    .el-form-item__label {
+      font-weight: 600;
+      color: #374151;
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+    }
+  }
+
+  .tech-radio {
+    :deep(.el-radio__input.is-checked .el-radio__inner) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+    }
+    
+    :deep(.el-radio__label) {
+      color: #374151;
+      font-weight: 500;
+    }
+  }
+
+  .tech-textarea {
+    :deep(.el-textarea__inner) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      min-height: 80px;
+      
+      &:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .config-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .config-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .config-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.4.8 通知公告（/notice/index.vue）
+
+![image-20251113142752213](README.assets/image-20251113142752213.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\system\notice\index.vue` 文件中加入下述代码
+
+```java
+<template>
+   <div class="notice-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="公告标题" prop="noticeTitle">
+                     <el-input
+                        v-model="queryParams.noticeTitle"
+                        placeholder="请输入公告标题"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="操作人员" prop="createBy">
+                     <el-input
+                        v-model="queryParams.createBy"
+                        placeholder="请输入操作人员"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="类型" prop="noticeType">
+                     <el-select 
+                        v-model="queryParams.noticeType" 
+                        placeholder="公告类型" 
+                        clearable 
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_notice_type"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Plus"
+                        @click="handleAdd"
+                        v-hasPermi="['system:notice:add']"
+                        class="tech-btn primary"
+                     >新增</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="success"
+                        plain
+                        icon="Edit"
+                        :disabled="single"
+                        @click="handleUpdate"
+                        v-hasPermi="['system:notice:edit']"
+                        class="tech-btn success"
+                     >修改</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        :disabled="multiple"
+                        @click="handleDelete"
+                        v-hasPermi="['system:notice:remove']"
+                        class="tech-btn danger"
+                     >删除</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table v-loading="loading" :data="noticeList" @selection-change="handleSelectionChange" class="tech-table">
+                  <el-table-column type="selection" width="55" align="center" />
+                  <el-table-column label="序号" align="center" prop="noticeId" width="100" />
+                  <el-table-column
+                     label="公告标题"
+                     align="center"
+                     prop="noticeTitle"
+                     :show-overflow-tooltip="true"
+                     width="450"
+                  />
+                  <el-table-column label="公告类型" align="center" prop="noticeType" width="120">
+                     <template #default="scope">
+                        <dict-tag :options="sys_notice_type" :value="scope.row.noticeType" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="状态" align="center" prop="status" width="150">
+                     <template #default="scope">
+                        <dict-tag :options="sys_notice_status" :value="scope.row.status" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="创建者" align="center" prop="createBy" width="150" />
+                  <el-table-column label="创建时间" align="center" prop="createTime" width="240">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.createTime, '{y}-{m}-{d}') }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" width="240" class-name="small-padding fixed-width">
+                     <template #default="scope">
+                        <div class="action-buttons">
+                           <el-tooltip content="修改" placement="top">
+                              <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['system:notice:edit']" class="action-btn edit"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="删除" placement="top">
+                              <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['system:notice:remove']" class="action-btn delete"></el-button>
+                           </el-tooltip>
+                        </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <div class="pagination-section">
+                  <pagination
+                     v-show="total > 0"
+                     :total="total"
+                     v-model:page="queryParams.pageNum"
+                     v-model:limit="queryParams.pageSize"
+                     @pagination="getList"
+                     class="tech-pagination"
+                  />
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- 添加或修改公告对话框 -->
+      <el-dialog :title="title" v-model="open" width="780px" append-to-body class="tech-dialog">
+         <el-form ref="noticeRef" :model="form" :rules="rules" label-width="100px" class="tech-form">
+            <el-row :gutter="20">
+               <el-col :span="12">
+                  <el-form-item label="公告标题" prop="noticeTitle">
+                     <el-input v-model="form.noticeTitle" placeholder="请输入公告标题" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="公告类型" prop="noticeType">
+                     <el-select v-model="form.noticeType" placeholder="请选择" class="tech-select">
+                        <el-option
+                           v-for="dict in sys_notice_type"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        ></el-option>
+                     </el-select>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item label="状态" class="status-radio">
+                     <el-radio-group v-model="form.status" class="tech-radio-group">
+                        <el-radio
+                           v-for="dict in sys_notice_status"
+                           :key="dict.value"
+                           :value="dict.value"
+                           class="tech-radio"
+                        >{{ dict.label }}</el-radio>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item label="内容" class="editor-item">
+                    <editor v-model="form.noticeContent" :min-height="192" class="tech-editor"/>
+                  </el-form-item>
+               </el-col>
+            </el-row>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Notice">
+import { listNotice, getNotice, delNotice, addNotice, updateNotice } from "@/api/system/notice"
+
+const { proxy } = getCurrentInstance()
+const { sys_notice_status, sys_notice_type } = proxy.useDict("sys_notice_status", "sys_notice_type")
+
+const noticeList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const title = ref("")
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    noticeTitle: undefined,
+    createBy: undefined,
+    status: undefined
+  },
+  rules: {
+    noticeTitle: [{ required: true, message: "公告标题不能为空", trigger: "blur" }],
+    noticeType: [{ required: true, message: "公告类型不能为空", trigger: "change" }]
+  },
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 查询公告列表 */
+function getList() {
+  loading.value = true
+  listNotice(queryParams.value).then(response => {
+    noticeList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 表单重置 */
+function reset() {
+  form.value = {
+    noticeId: undefined,
+    noticeTitle: undefined,
+    noticeType: undefined,
+    noticeContent: undefined,
+    status: "0"
+  }
+  proxy.resetForm("noticeRef")
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+/** 多选框选中数据 */
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.noticeId)
+  single.value = selection.length != 1
+  multiple.value = !selection.length
+}
+
+/** 新增按钮操作 */
+function handleAdd() {
+  reset()
+  open.value = true
+  title.value = "添加公告"
+}
+
+/**修改按钮操作 */
+function handleUpdate(row) {
+  reset()
+  const noticeId = row.noticeId || ids.value
+  getNotice(noticeId).then(response => {
+    form.value = response.data
+    open.value = true
+    title.value = "修改公告"
+  })
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["noticeRef"].validate(valid => {
+    if (valid) {
+      if (form.value.noticeId != undefined) {
+        updateNotice(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        addNotice(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const noticeIds = row.noticeId || ids.value
+  proxy.$modal.confirm('是否确认删除公告编号为"' + noticeIds + '"的数据项？').then(function() {
+    return delNotice(noticeIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.notice-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1600px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+
+        .status-tag {
+          :deep(.el-tag) {
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+  }
+
+  .tech-form {
+    .el-form-item {
+      margin-bottom: 20px;
+    }
+    
+    .el-form-item__label {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .status-radio {
+      margin-bottom: 10px;
+    }
+
+    .editor-item {
+      :deep(.w-e-text-container) {
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        
+        &:focus-within {
+          border-color: #667eea;
+          box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+        }
+      }
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+    }
+  }
+
+  .tech-radio {
+    :deep(.el-radio__input.is-checked .el-radio__inner) {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-color: #667eea;
+    }
+    
+    :deep(.el-radio__label) {
+      color: #374151;
+      font-weight: 500;
+    }
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .notice-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .notice-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .tech-dialog {
+      width: 95% !important;
+      margin: 10px auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .notice-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+
+    .tech-form {
+      .el-row {
+        .el-col {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.4.9 日志管理（src/views/monitor）
+
+##### 1 操作日志（/operlog/index.vue）
+
+![image-20251113142831146](README.assets/image-20251113142831146.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\operlog\index.vue` 文件中加入下述代码
+
+```java
+<template>
+   <div class="operlog-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="操作地址" prop="operIp">
+                     <el-input
+                        v-model="queryParams.operIp"
+                        placeholder="请输入操作地址"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="系统模块" prop="title">
+                     <el-input
+                        v-model="queryParams.title"
+                        placeholder="请输入系统模块"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="操作人员" prop="operName">
+                     <el-input
+                        v-model="queryParams.operName"
+                        placeholder="请输入操作人员"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="类型" prop="businessType">
+                     <el-select
+                        v-model="queryParams.businessType"
+                        placeholder="操作类型"
+                        clearable
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_oper_type"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item label="状态" prop="status">
+                     <el-select
+                        v-model="queryParams.status"
+                        placeholder="操作状态"
+                        clearable
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_common_status"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item label="操作时间" class="date-range">
+                     <el-date-picker
+                        v-model="dateRange"
+                        value-format="YYYY-MM-DD HH:mm:ss"
+                        type="daterange"
+                        range-separator="-"
+                        start-placeholder="开始日期"
+                        end-placeholder="结束日期"
+                        :default-time="[new Date(2000, 1, 1, 0, 0, 0), new Date(2000, 1, 1, 23, 59, 59)]"
+                        class="tech-date-picker"
+                     ></el-date-picker>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        :disabled="multiple"
+                        @click="handleDelete"
+                        v-hasPermi="['monitor:operlog:remove']"
+                        class="tech-btn danger"
+                     >删除</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        @click="handleClean"
+                        v-hasPermi="['monitor:operlog:remove']"
+                        class="tech-btn success"
+                     >清空</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="warning"
+                        plain
+                        icon="Download"
+                        @click="handleExport"
+                        v-hasPermi="['monitor:operlog:export']"
+                        class="tech-btn warning"
+                     >导出</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table ref="operlogRef" v-loading="loading" :data="operlogList" @selection-change="handleSelectionChange" :default-sort="defaultSort" @sort-change="handleSortChange" class="tech-table">
+                  <el-table-column type="selection" width="50" align="center" />
+                  <el-table-column label="日志编号" align="center" prop="operId" width="100" />
+                  <el-table-column label="系统模块" align="center" prop="title" :show-overflow-tooltip="true" width="150" />
+                  <el-table-column label="操作类型" align="center" prop="businessType" width="150">
+                     <template #default="scope">
+                        <dict-tag :options="sys_oper_type" :value="scope.row.businessType" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作人员" align="center" width="150" prop="operName" :show-overflow-tooltip="true" sortable="custom" :sort-orders="['descending', 'ascending']" />
+                  <el-table-column label="操作地址" align="center" prop="operIp" width="150" :show-overflow-tooltip="true" />
+                  <el-table-column label="操作状态" align="center" prop="status" width="100">
+                     <template #default="scope">
+                        <dict-tag :options="sys_common_status" :value="scope.row.status" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作日期" align="center" prop="operTime" width="300" sortable="custom" :sort-orders="['descending', 'ascending']">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.operTime) }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="消耗时间" align="center" prop="costTime" width="180" :show-overflow-tooltip="true" sortable="custom" :sort-orders="['descending', 'ascending']">
+                     <template #default="scope">
+                        <span class="cost-time">{{ scope.row.costTime }}<span class="unit">毫秒</span></span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" width="180" class-name="small-padding fixed-width">
+                     <template #default="scope">
+                        <div class="action-buttons">
+                           <el-tooltip content="详细" placement="top">
+                              <el-button link type="primary" icon="View" @click="handleView(scope.row, scope.index)" v-hasPermi="['monitor:operlog:query']" class="action-btn view"></el-button>
+                           </el-tooltip>
+                        </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <div class="pagination-section">
+                  <pagination
+                     v-show="total > 0"
+                     :total="total"
+                     v-model:page="queryParams.pageNum"
+                     v-model:limit="queryParams.pageSize"
+                     @pagination="getList"
+                     class="tech-pagination"
+                  />
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- 操作日志详细 -->
+      <el-dialog title="操作日志详细" v-model="open" width="800px" append-to-body class="tech-dialog">
+         <el-form :model="form" label-width="100px" class="detail-form">
+            <el-row :gutter="20">
+               <el-col :span="12">
+                  <el-form-item label="操作模块：" class="detail-item">
+                     <div class="detail-value">{{ form.title }} / {{ typeFormat(form) }}</div>
+                  </el-form-item>
+                  <el-form-item label="登录信息：" class="detail-item">
+                     <div class="detail-value">{{ form.operName }} / {{ form.operIp }} / {{ form.operLocation }}</div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="请求地址：" class="detail-item">
+                     <div class="detail-value url-text">{{ form.operUrl }}</div>
+                  </el-form-item>
+                  <el-form-item label="请求方式：" class="detail-item">
+                     <div class="detail-value method-tag">{{ form.requestMethod }}</div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item label="操作方法：" class="detail-item">
+                     <div class="detail-value method-text">{{ form.method }}</div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item label="请求参数：" class="detail-item">
+                     <div class="detail-value param-text">{{ form.operParam }}</div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item label="返回参数：" class="detail-item">
+                     <div class="detail-value result-text">{{ form.jsonResult }}</div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="8">
+                  <el-form-item label="操作状态：" class="detail-item">
+                     <div class="detail-value">
+                        <el-tag v-if="form.status === 0" type="success" class="status-tag">正常</el-tag>
+                        <el-tag v-else-if="form.status === 1" type="danger" class="status-tag">失败</el-tag>
+                     </div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="8">
+                  <el-form-item label="消耗时间：" class="detail-item">
+                     <div class="detail-value cost-text">{{ form.costTime }}<span class="unit">毫秒</span></div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="8">
+                  <el-form-item label="操作时间：" class="detail-item">
+                     <div class="detail-value time-text">{{ parseTime(form.operTime) }}</div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24" v-if="form.status === 1">
+                  <el-form-item label="异常信息：" class="detail-item">
+                     <div class="detail-value error-text">{{ form.errorMsg }}</div>
+                  </el-form-item>
+               </el-col>
+            </el-row>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button @click="open = false" class="tech-btn secondary">关 闭</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Operlog">
+import { list, delOperlog, cleanOperlog } from "@/api/monitor/operlog"
+
+const { proxy } = getCurrentInstance()
+const { sys_oper_type, sys_common_status } = proxy.useDict("sys_oper_type", "sys_common_status")
+
+const operlogList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const title = ref("")
+const dateRange = ref([])
+const defaultSort = ref({ prop: "operTime", order: "descending" })
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    operIp: undefined,
+    title: undefined,
+    operName: undefined,
+    businessType: undefined,
+    status: undefined
+  }
+})
+
+const { queryParams, form } = toRefs(data)
+
+/** 查询登录日志 */
+function getList() {
+  loading.value = true
+  list(proxy.addDateRange(queryParams.value, dateRange.value)).then(response => {
+    operlogList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 操作日志类型字典翻译 */
+function typeFormat(row, column) {
+  return proxy.selectDictLabel(sys_oper_type.value, row.businessType)
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  dateRange.value = []
+  proxy.resetForm("queryRef")
+  queryParams.value.pageNum = 1
+  proxy.$refs["operlogRef"].sort(defaultSort.value.prop, defaultSort.value.order)
+}
+
+/** 多选框选中数据 */
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.operId)
+  multiple.value = !selection.length
+}
+
+/** 排序触发事件 */
+function handleSortChange(column, prop, order) {
+  queryParams.value.orderByColumn = column.prop
+  queryParams.value.isAsc = column.order
+  getList()
+}
+
+/** 详细按钮操作 */
+function handleView(row) {
+  open.value = true
+  form.value = row
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const operIds = row.operId || ids.value
+  proxy.$modal.confirm('是否确认删除日志编号为"' + operIds + '"的数据项?').then(function () {
+    return delOperlog(operIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+/** 清空按钮操作 */
+function handleClean() {
+  proxy.$modal.confirm("是否确认清空所有操作日志数据项?").then(function () {
+    return cleanOperlog()
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("清空成功")
+  }).catch(() => {})
+}
+
+/** 导出按钮操作 */
+function handleExport() {
+  proxy.download("monitor/operlog/export",{
+    ...queryParams.value,
+  }, `config_${new Date().getTime()}.xlsx`)
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.operlog-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1800px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .date-range {
+            min-width: 320px;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+
+        .status-tag {
+          :deep(.el-tag) {
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+
+        .cost-time {
+          color: #10b981;
+          font-weight: 600;
+          font-size: 0.9rem;
+          
+          .unit {
+            color: #6b7280;
+            font-size: 0.8rem;
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    width: 240px;
+
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    width: 240px;
+
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-date-picker {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 20px;
+      }
+    }
+
+    .detail-form {
+      .detail-item {
+        margin-bottom: 16px;
+        
+        :deep(.el-form-item__label) {
+          font-weight: 600;
+          color: #374151;
+          font-size: 0.9rem;
+        }
+      }
+
+      .detail-value {
+        padding: 8px 12px;
+        background: #f8fafc;
+        border-radius: 6px;
+        border: 1px solid #e2e8f0;
+        font-size: 0.9rem;
+        word-break: break-all;
+      }
+
+      .url-text {
+        color: #667eea;
+        font-family: 'Monaco', 'Consolas', monospace;
+      }
+
+      .method-tag {
+        display: inline-block;
+        padding: 4px 8px;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 0.8rem;
+      }
+
+      .method-text {
+        font-family: 'Monaco', 'Consolas', monospace;
+        color: #374151;
+      }
+
+      .param-text, .result-text, .error-text {
+        font-family: 'Monaco', 'Consolas', monospace;
+        color: #6b7280;
+        max-height: 120px;
+        overflow-y: auto;
+      }
+
+      .error-text {
+        color: #ef4444;
+        background: #fef2f2;
+        border-color: #fecaca;
+      }
+
+      .cost-text {
+        color: #10b981;
+        font-weight: 600;
+        
+        .unit {
+          color: #6b7280;
+          font-size: 0.8rem;
+          margin-left: 2px;
+        }
+      }
+
+      .status-tag {
+        :deep(.el-tag) {
+          border-radius: 6px;
+          font-weight: 500;
+          min-width: 50px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .operlog-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .operlog-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+
+            .tech-input, .tech-select {
+              width: 100%;
+            }
+
+            .date-range {
+              min-width: auto;
+              width: 100%;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .tech-dialog {
+      width: 95% !important;
+      margin: 10px auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .operlog-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+
+    .detail-form {
+      .el-row {
+        .el-col {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+</style>
+```
+
+##### 2 登录日志（/logininfor/index.vue）
+
+![image-20251113142850605](README.assets/image-20251113142850605.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\logininfor\index.vue` 文件中加入下述代码
+
+```java
+<template>
+   <div class="loginlog-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="登录地址" prop="ipaddr">
+                     <el-input
+                        v-model="queryParams.ipaddr"
+                        placeholder="请输入登录地址"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="用户名称" prop="userName">
+                     <el-input
+                        v-model="queryParams.userName"
+                        placeholder="请输入用户名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="状态" prop="status">
+                     <el-select
+                        v-model="queryParams.status"
+                        placeholder="登录状态"
+                        clearable
+                        class="tech-select"
+                     >
+                        <el-option
+                           v-for="dict in sys_common_status"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item label="登录时间" class="date-range">
+                     <el-date-picker
+                        v-model="dateRange"
+                        value-format="YYYY-MM-DD HH:mm:ss"
+                        type="daterange"
+                        range-separator="-"
+                        start-placeholder="开始日期"
+                        end-placeholder="结束日期"
+                        :default-time="[new Date(2000, 1, 1, 0, 0, 0), new Date(2000, 1, 1, 23, 59, 59)]"
+                        class="tech-date-picker"
+                     ></el-date-picker>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        :disabled="multiple"
+                        @click="handleDelete"
+                        v-hasPermi="['monitor:logininfor:remove']"
+                        class="tech-btn danger"
+                     >删除</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        @click="handleClean"
+                        v-hasPermi="['monitor:logininfor:remove']"
+                        class="tech-btn danger"
+                     >清空</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Unlock"
+                        :disabled="single"
+                        @click="handleUnlock"
+                        v-hasPermi="['monitor:logininfor:unlock']"
+                        class="tech-btn primary"
+                     >解锁</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="warning"
+                        plain
+                        icon="Download"
+                        @click="handleExport"
+                        v-hasPermi="['monitor:logininfor:export']"
+                        class="tech-btn warning"
+                     >导出</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table ref="logininforRef" v-loading="loading" :data="logininforList" @selection-change="handleSelectionChange" :default-sort="defaultSort" @sort-change="handleSortChange" class="tech-table">
+                  <el-table-column type="selection" width="55" align="center" />
+                  <el-table-column label="访问编号" align="center" prop="infoId" width="100" />
+                  <el-table-column label="用户名称" align="center" prop="userName" :show-overflow-tooltip="true" sortable="custom" :sort-orders="['descending', 'ascending']" width="120" />
+                  <el-table-column label="地址" align="center" prop="ipaddr" :show-overflow-tooltip="true" width="150" />
+                  <el-table-column label="登录地点" align="center" prop="loginLocation" :show-overflow-tooltip="true" width="150" />
+                  <el-table-column label="操作系统" align="center" prop="os" :show-overflow-tooltip="true" width="180" />
+                  <el-table-column label="浏览器" align="center" prop="browser" :show-overflow-tooltip="true" width="180" />
+                  <el-table-column label="登录状态" align="center" prop="status" width="100">
+                     <template #default="scope">
+                        <dict-tag :options="sys_common_status" :value="scope.row.status" class="status-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="描述" align="center" prop="msg" :show-overflow-tooltip="true" width="200" />
+                  <el-table-column label="访问时间" align="center" prop="loginTime" sortable="custom" :sort-orders="['descending', 'ascending']" width="240">
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.loginTime) }}</span>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <div class="pagination-section">
+                  <pagination
+                     v-show="total > 0"
+                     :total="total"
+                     v-model:page="queryParams.pageNum"
+                     v-model:limit="queryParams.pageSize"
+                     @pagination="getList"
+                     class="tech-pagination"
+                  />
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</template>
+
+<script setup name="Logininfor">
+import { list, delLogininfor, cleanLogininfor, unlockLogininfor } from "@/api/monitor/logininfor"
+
+const { proxy } = getCurrentInstance()
+const { sys_common_status } = proxy.useDict("sys_common_status")
+
+const logininforList = ref([])
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const selectName = ref("")
+const total = ref(0)
+const dateRange = ref([])
+const defaultSort = ref({ prop: "loginTime", order: "descending" })
+
+// 查询参数
+const queryParams = ref({
+  pageNum: 1,
+  pageSize: 10,
+  ipaddr: undefined,
+  userName: undefined,
+  status: undefined,
+  orderByColumn: undefined,
+  isAsc: undefined
+})
+
+/** 查询登录日志列表 */
+function getList() {
+  loading.value = true
+  list(proxy.addDateRange(queryParams.value, dateRange.value)).then(response => {
+    logininforList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  dateRange.value = []
+  proxy.resetForm("queryRef")
+  queryParams.value.pageNum = 1
+  proxy.$refs["logininforRef"].sort(defaultSort.value.prop, defaultSort.value.order)
+}
+
+/** 多选框选中数据 */
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.infoId)
+  multiple.value = !selection.length
+  single.value = selection.length != 1
+  selectName.value = selection.map(item => item.userName)
+}
+
+/** 排序触发事件 */
+function handleSortChange(column, prop, order) {
+  queryParams.value.orderByColumn = column.prop
+  queryParams.value.isAsc = column.order
+  getList()
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const infoIds = row.infoId || ids.value
+  proxy.$modal.confirm('是否确认删除访问编号为"' + infoIds + '"的数据项?').then(function () {
+    return delLogininfor(infoIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+/** 清空按钮操作 */
+function handleClean() {
+  proxy.$modal.confirm("是否确认清空所有登录日志数据项?").then(function () {
+    return cleanLogininfor()
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("清空成功")
+  }).catch(() => {})
+}
+
+/** 解锁按钮操作 */
+function handleUnlock() {
+  const username = selectName.value
+  proxy.$modal.confirm('是否确认解锁用户"' + username + '"数据项?').then(function () {
+    return unlockLogininfor(username)
+  }).then(() => {
+    proxy.$modal.msgSuccess("用户" + username + "解锁成功")
+  }).catch(() => {})
+}
+
+/** 导出按钮操作 */
+function handleExport() {
+  proxy.download("monitor/logininfor/export", {
+    ...queryParams.value,
+  }, `logininfor_${new Date().getTime()}.xlsx`)
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.loginlog-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 2000px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .date-range {
+            min-width: 320px;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+
+        .status-tag {
+          :deep(.el-tag) {
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    width: 240px;
+
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    width: 240px;
+
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-date-picker {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .loginlog-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .loginlog-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+
+            .tech-input, .tech-select {
+              width: 100%;
+            }
+
+            .date-range {
+              min-width: auto;
+              width: 100%;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .loginlog-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+
+// 特殊状态样式
+.status-tag {
+  :deep(.el-tag) {
+    &.el-tag--success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border: none;
+      color: white;
+    }
+    
+    &.el-tag--danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      border: none;
+      color: white;
+    }
+    
+    &.el-tag--info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      border: none;
+      color: white;
+    }
+  }
+}
+
+// 浏览器和操作系统信息样式优化
+.tech-table {
+  :deep(.el-table__body) {
+    .browser-info, .os-info {
+      font-family: 'Monaco', 'Consolas', monospace;
+      font-size: 0.85rem;
+      color: #4b5563;
+    }
+  }
+}
+</style>
+```
+
+### 2.3.5 系统监控开发（src/views/monitor）
+
+#### 2.3.5.1 在线用户（/online/index.vue）
+
+![image-20251113142913637](README.assets/image-20251113142913637.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\online\index.vue` 文件中填入下述代码
+
+```
+<template>
+   <div class="onlinelog-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="登录地址" prop="ipaddr">
+                     <el-input
+                        v-model="queryParams.ipaddr"
+                        placeholder="请输入登录地址"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="用户名称" prop="userName">
+                     <el-input
+                        v-model="queryParams.userName"
+                        placeholder="请输入用户名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Refresh"
+                        @click="handleRefresh"
+                        class="tech-btn danger"
+                     >刷新</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table 
+                  ref="onlineRef" 
+                  v-loading="loading" 
+                  :data="onlineList" 
+                  style="width: 100%;"
+                  class="tech-table"
+                  :default-sort="{ prop: 'loginTime', order: 'descending' }"
+               >
+                  <el-table-column label="序号" width="80" type="index" align="center" class-name="index-column">
+                     <template #default="scope">
+                        <span class="index-text">{{ (pageNum - 1) * pageSize + scope.$index + 1 }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="会话编号" align="center" prop="tokenId" :show-overflow-tooltip="true" min-width="200" />
+                  <el-table-column label="登录名称" align="center" prop="userName" :show-overflow-tooltip="true" width="120" />
+                  <el-table-column label="所属部门" align="center" prop="deptName" :show-overflow-tooltip="true" width="120" />
+                  <el-table-column label="主机地址" align="center" prop="ipaddr" :show-overflow-tooltip="true" width="150" />
+                  <el-table-column label="登录地点" align="center" prop="loginLocation" :show-overflow-tooltip="true" width="150" />
+                  <el-table-column label="操作系统" align="center" prop="os" :show-overflow-tooltip="true" width="180" class-name="os-info" />
+                  <el-table-column label="浏览器" align="center" prop="browser" :show-overflow-tooltip="true" width="180" class-name="browser-info" />
+                  <el-table-column label="登录时间" align="center" prop="loginTime" width="180" sortable>
+                     <template #default="scope">
+                        <span class="time-text">{{ parseTime(scope.row.loginTime) }}</span>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" class-name="small-padding fixed-width" width="120">
+                     <template #default="scope">
+                        <el-button 
+                           link 
+                           type="danger" 
+                           icon="Delete" 
+                           @click="handleForceLogout(scope.row)" 
+                           v-hasPermi="['monitor:online:forceLogout']"
+                           class="action-btn danger"
+                        >强退</el-button>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <div class="pagination-section">
+                  <pagination 
+                     v-show="total > 0" 
+                     :total="total" 
+                     v-model:page="pageNum" 
+                     v-model:limit="pageSize" 
+                     class="tech-pagination"
+                  />
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</template>
+
+<script setup name="Online">
+import { forceLogout, list as initData } from "@/api/monitor/online"
+
+const { proxy } = getCurrentInstance()
+
+const onlineList = ref([])
+const loading = ref(true)
+const showSearch = ref(true)
+const total = ref(0)
+const pageNum = ref(1)
+const pageSize = ref(10)
+
+const queryParams = ref({
+  ipaddr: undefined,
+  userName: undefined
+})
+
+/** 查询在线用户列表 */
+function getList() {
+  loading.value = true
+  initData(queryParams.value).then(response => {
+    onlineList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  pageNum.value = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+/** 刷新按钮操作 */
+function handleRefresh() {
+  getList()
+  proxy.$modal.msgSuccess("刷新成功")
+}
+
+/** 强退按钮操作 */
+function handleForceLogout(row) {
+  proxy.$modal.confirm('是否确认强退名称为"' + row.userName + '"的用户?').then(function () {
+    return forceLogout(row.tokenId)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("强退成功")
+  }).catch(() => {})
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.onlinelog-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 2000px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+
+        .index-column {
+          .index-text {
+            font-weight: 600;
+            color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+
+        .action-btn {
+          border-radius: 6px;
+          padding: 6px 12px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          
+          &.danger {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+            color: #ef4444;
+            
+            &:hover {
+              background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+              color: white;
+              transform: translateY(-1px);
+              box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    width: 240px;
+
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    width: 240px;
+
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-date-picker {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+        border-bottom: 2px solid #e2e8f0;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background: #f8fafc;
+      }
+    }
+
+    :deep(.el-table__cell) {
+      padding: 12px 0;
+    }
+  }
+
+  .time-text {
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-family: 'Monaco', 'Consolas', monospace;
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+        transition: all 0.3s ease;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+      }
+
+      .number:not(.active):hover {
+        color: #667eea;
+        border-color: #667eea;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .onlinelog-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .onlinelog-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+
+            .tech-input, .tech-select {
+              width: 100%;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+
+        .table-section {
+          overflow-x: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .onlinelog-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+
+// 浏览器和操作系统信息样式优化
+.tech-table {
+  :deep(.el-table__body) {
+    .browser-info, .os-info {
+      font-family: 'Monaco', 'Consolas', monospace;
+      font-size: 0.85rem;
+      color: #4b5563;
+    }
+  }
+}
+
+// 在线用户状态指示器
+.online-status {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  margin-right: 6px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+// 特殊状态样式
+.status-tag {
+  :deep(.el-tag) {
+    &.el-tag--success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border: none;
+      color: white;
+    }
+    
+    &.el-tag--danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      border: none;
+      color: white;
+    }
+    
+    &.el-tag--info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      border: none;
+      color: white;
+    }
+  }
+}
+
+// 加载动画优化
+:deep(.el-loading-mask) {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  
+  .el-loading-spinner {
+    .path {
+      stroke: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+  }
+}
+
+// 表格行细节优化
+.tech-table {
+  :deep(.el-table__row) {
+    &.current-row {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+      border-left: 3px solid #667eea;
+    }
+  }
+}
+
+// 表单标签样式优化
+:deep(.el-form-item__label) {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+// 卡片标题区域
+.card-header {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+// 统计信息卡片
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+  
+  .stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
+}
+
+// 空状态样式
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  
+  .empty-icon {
+    font-size: 4rem;
+    color: #d1d5db;
+    margin-bottom: 16px;
+  }
+  
+  .empty-text {
+    color: #6b7280;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+}
+
+// 操作按钮组样式
+.action-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  
+  .action-btn {
+    transition: all 0.3s ease;
+    
+    &.small {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+    }
+    
+    &.icon-only {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+// 标签样式优化
+:deep(.el-tag) {
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  
+  &.el-tag--success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+  }
+  
+  &.el-tag--warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+  }
+  
+  &.el-tag--danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+  }
+  
+  &.el-tag--info {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+    color: white;
+  }
+}
+
+// 对话框样式优化
+:deep(.el-dialog) {
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  
+  .el-dialog__header {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px 16px 0 0;
+    padding: 20px;
+    margin: 0;
+    
+    .el-dialog__title {
+      font-weight: 600;
+      color: #374151;
+    }
+  }
+  
+  .el-dialog__body {
+    padding: 20px;
+  }
+  
+  .el-dialog__footer {
+    background: #f8fafc;
+    border-radius: 0 0 16px 16px;
+    padding: 20px;
+    margin: 0;
+  }
+}
+
+// 消息提示样式优化
+:deep(.el-message) {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: none;
+  
+  &.el-message--success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+  }
+  
+  &.el-message--warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+  }
+  
+  &.el-message--error {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+  }
+  
+  &.el-message--info {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+    color: white;
+  }
+}
+
+// 确认框样式优化
+:deep(.el-message-box) {
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  border: none;
+  
+  .el-message-box__header {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px 16px 0 0;
+    padding: 20px;
+    
+    .el-message-box__title {
+      font-weight: 600;
+      color: #374151;
+    }
+  }
+  
+  .el-message-box__content {
+    padding: 20px;
+  }
+  
+  .el-message-box__btns {
+    background: #f8fafc;
+    border-radius: 0 0 16px 16px;
+    padding: 20px;
+    margin: 0;
+  }
+}
+
+// 滚动条样式优化
+:deep(::-webkit-scrollbar) {
+  width: 6px;
+  height: 6px;
+}
+
+:deep(::-webkit-scrollbar-track) {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+:deep(::-webkit-scrollbar-thumb) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+:deep(::-webkit-scrollbar-thumb:hover) {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+// 表格滚动条样式
+.tech-table {
+  :deep(.el-table__body-wrapper::-webkit-scrollbar) {
+    height: 8px;
+  }
+  
+  :deep(.el-table__body-wrapper::-webkit-scrollbar-track) {
+    background: #f1f5f9;
+  }
+  
+  :deep(.el-table__body-wrapper::-webkit-scrollbar-thumb) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+  }
+}
+
+// 输入框聚焦效果增强
+.tech-input {
+  :deep(.el-input__wrapper) {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &.is-focus {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    }
+  }
+}
+
+// 按钮点击效果
+.tech-btn {
+  &:active {
+    transform: translateY(0) !important;
+  }
+}
+
+// 表格行进入动画
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tech-table {
+  :deep(.el-table__row) {
+    animation: fadeInUp 0.5s ease forwards;
+    
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.05}s;
+      }
+    }
+  }
+}
+
+// 响应式表格列隐藏
+@media (max-width: 1200px) {
+  .tech-table {
+    :deep(.el-table__body) {
+      .el-table__row {
+        .el-table__cell:nth-child(6),
+        .el-table__cell:nth-child(7) {
+          .cell {
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .tech-table {
+    :deep(.el-table__body) {
+      .el-table__row {
+        .el-table__cell:nth-child(4),
+        .el-table__cell:nth-child(5) {
+          .cell {
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 打印样式优化
+@media print {
+  .onlinelog-management {
+    background: white !important;
+    padding: 0 !important;
+    
+    .main-card {
+      box-shadow: none !important;
+      background: white !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      
+      .content-block {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+      }
+    }
+    
+    .search-section,
+    .action-section {
+      display: none !important;
+    }
+  }
+}
+
+// 高对比度模式支持
+@media (prefers-contrast: high) {
+  .onlinelog-management {
+    .main-card {
+      background: white;
+      border: 2px solid #000;
+      
+      .content-block {
+        border: 1px solid #000;
+      }
+    }
+    
+    .tech-btn {
+      border: 1px solid #000;
+    }
+  }
+}
+
+// 减少动画模式支持
+@media (prefers-reduced-motion: reduce) {
+  .onlinelog-management {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+// 暗色模式支持
+@media (prefers-color-scheme: dark) {
+  .onlinelog-management {
+    background: linear-gradient(135deg, #1e1b2e 0%, #2d1b69 100%);
+    color: #e2e8f0;
+    
+    .main-card {
+      background: rgba(30, 30, 30, 0.95);
+      
+      .content-block {
+        background: #1f2937;
+        border-color: #374151;
+        color: #e2e8f0;
+      }
+    }
+    
+    .action-section {
+      background: #374151;
+      border-color: #4b5563;
+    }
+    
+    .tech-table {
+      :deep(.el-table__header) {
+        th {
+          background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+          color: #e2e8f0;
+          border-color: #6b7280;
+        }
+      }
+      
+      :deep(.el-table__row:hover) {
+        background: #374151;
+      }
+    }
+  }
+}
+
+// 焦点指示器可访问性优化
+.tech-btn:focus-visible,
+.tech-input :deep(.el-input__wrapper:focus-visible),
+.tech-select :deep(.el-select__wrapper:focus-visible) {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+// 选择文本样式
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: inherit;
+}
+
+// 占位符样式优化
+:deep(::placeholder) {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+// 禁用状态样式优化
+:deep(.is-disabled) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// 最后一行样式优化
+.tech-table {
+  :deep(.el-table__row:last-child) {
+    border-bottom: none;
+  }
+}
+
+// 表格斑马纹样式
+.tech-table.striped {
+  :deep(.el-table__row--striped) {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.5) 0%, rgba(241, 245, 249, 0.5) 100%);
+    
+    &:hover {
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.8) 100%);
+    }
+  }
+}
+
+// 工具提示样式优化
+:deep(.el-tooltip__popper) {
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: none;
+  
+  &.is-dark {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+  }
+}
+
+// 下拉菜单样式优化
+:deep(.el-dropdown-menu) {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: none;
+  padding: 8px 0;
+  
+  .el-dropdown-menu__item {
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+  }
+}
+
+// 徽章样式优化
+:deep(.el-badge) {
+  .el-badge__content {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border: none;
+    font-weight: 600;
+  }
+}
+
+// 步骤条样式优化
+:deep(.el-steps) {
+  .el-step__head {
+    .el-step__icon {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      color: white;
+    }
+    
+    &.is-process {
+      .el-step__icon {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+    }
+    
+    &.is-success {
+      .el-step__icon {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      }
+    }
+    
+    &.is-wait {
+      .el-step__icon {
+        background: #d1d5db;
+      }
+    }
+  }
+}
+
+// 时间线样式优化
+:deep(.el-timeline) {
+  .el-timeline-item {
+    .el-timeline-item__node {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+    }
+    
+    .el-timeline-item__tail {
+      border-color: #e2e8f0;
+    }
+  }
+}
+
+// 骨架屏样式优化
+:deep(.el-skeleton) {
+  .el-skeleton__item {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 400% 100%;
+    animation: el-skeleton-loading 1.4s ease infinite;
+  }
+}
+
+@keyframes el-skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+// 图片预览样式优化
+:deep(.el-image-viewer) {
+  .el-image-viewer__wrapper {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .el-image-viewer__btn {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: none;
+    color: white;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+// 回到顶部样式优化
+:deep(.el-backtop) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  
+  &:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  }
+}
+
+// 无限滚动样式优化
+:deep(.el-scrollbar) {
+  .el-scrollbar__bar {
+    .el-scrollbar__thumb {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+  }
+}
+
+// 级联选择器样式优化
+:deep(.el-cascader) {
+  .el-cascader__dropdown {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: none;
+  }
+}
+
+// 颜色选择器样式优化
+:deep(.el-color-picker) {
+  .el-color-picker__trigger {
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: #667eea;
+    }
+  }
+}
+
+// 评分组件样式优化
+:deep(.el-rate) {
+  .el-rate__icon {
+    font-size: 16px;
+    
+    .el-rate__decimal {
+      color: #fbbf24;
+    }
+  }
+}
+
+// 滑块组件样式优化
+:deep(.el-slider) {
+  .el-slider__runway {
+    background: #e2e8f0;
+    
+    .el-slider__bar {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .el-slider__button {
+      border: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+    }
+  }
+}
+
+// 开关组件样式优化
+:deep(.el-switch) {
+  .el-switch__core {
+    border: none;
+    background: #d1d5db;
+    
+    .el-switch__action {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &.is-checked {
+    .el-switch__core {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+  }
+}
+
+// 上传组件样式优化
+:deep(.el-upload) {
+  .el-upload-dragger {
+    border: 2px dashed #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: #667eea;
+      background: rgba(102, 126, 234, 0.05);
+    }
+  }
+}
+
+// 树形组件样式优化
+:deep(.el-tree) {
+  .el-tree-node {
+    .el-tree-node__content {
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-current {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+        color: #667eea;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// 日历组件样式优化
+:deep(.el-calendar) {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  
+  .el-calendar__header {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px 12px 0 0;
+    padding: 16px;
+    margin: 0;
+  }
+  
+  .el-calendar__body {
+    padding: 16px;
+  }
+  
+  .el-calendar-day {
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba(102, 126, 234, 0.1);
+    }
+    
+    &.is-selected {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+  }
+}
+
+// 最终优化：性能考虑
+@media (prefers-reduced-transparency: reduce) {
+  .onlinelog-management {
+    .main-card {
+      backdrop-filter: none;
+      background: white;
+    }
+  }
+}
+
+// 打印模式下的进一步优化
+@media print {
+  .onlinelog-management {
+    * {
+      color: black !important;
+      background: white !important;
+    }
+    
+    .tech-table {
+      :deep(.el-table__header) {
+        th {
+          background: #f1f5f9 !important;
+          color: black !important;
+        }
+      }
+    }
+  }
+}
+
+// 最终样式收尾
+.onlinelog-management {
+  // 优化字体渲染
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // 确保所有过渡动画平滑
+  * {
+    box-sizing: border-box;
+  }
+  
+  // 确保在高DPI设备上清晰显示
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .main-card {
+      border: 0.5px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// 确保所有交互元素都有合适的光标
+.tech-btn,
+.action-btn,
+:deep(.el-table__row),
+:deep(.el-pagination .number),
+:deep(.el-pagination .btn-prev),
+:deep(.el-pagination .btn-next) {
+  cursor: pointer;
+}
+
+:deep(.el-table__row) {
+  &.el-table__row--striped {
+    cursor: pointer;
+  }
+}
+
+// 禁用状态的光标
+:deep(.is-disabled) {
+  cursor: not-allowed !important;
+}
+</style>
+```
+
+#### 2.3.5.2 定时任务（/job/index.vue）
+
+![image-20251113142933588](README.assets/image-20251113142933588.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\job\index.vue` 文件中填入下述代码
+
+```
+<template>
+   <div class="job-management">
+      <div class="main-card">
+         <div class="content-block">
+            <!-- 搜索区域 -->
+            <div class="search-section">
+               <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+                  <el-form-item label="任务名称" prop="jobName">
+                     <el-input
+                        v-model="queryParams.jobName"
+                        placeholder="请输入任务名称"
+                        clearable
+                        class="tech-input"
+                        @keyup.enter="handleQuery"
+                     />
+                  </el-form-item>
+                  <el-form-item label="任务组名" prop="jobGroup">
+                     <el-select v-model="queryParams.jobGroup" placeholder="请选择任务组名" clearable class="tech-select">
+                        <el-option
+                           v-for="dict in sys_job_group"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item label="任务状态" prop="status">
+                     <el-select v-model="queryParams.status" placeholder="请选择任务状态" clearable class="tech-select">
+                        <el-option
+                           v-for="dict in sys_job_status"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        />
+                     </el-select>
+                  </el-form-item>
+                  <el-form-item class="search-actions">
+                     <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+                     <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+                  </el-form-item>
+               </el-form>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-section">
+               <el-row :gutter="10">
+                  <el-col :span="1.5">
+                     <el-button
+                        type="primary"
+                        plain
+                        icon="Plus"
+                        @click="handleAdd"
+                        v-hasPermi="['monitor:job:add']"
+                        class="tech-btn primary"
+                     >新增</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="success"
+                        plain
+                        icon="Edit"
+                        :disabled="single"
+                        @click="handleUpdate"
+                        v-hasPermi="['monitor:job:edit']"
+                        class="tech-btn success"
+                     >修改</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="danger"
+                        plain
+                        icon="Delete"
+                        :disabled="multiple"
+                        @click="handleDelete"
+                        v-hasPermi="['monitor:job:remove']"
+                        class="tech-btn danger"
+                     >删除</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="warning"
+                        plain
+                        icon="Download"
+                        @click="handleExport"
+                        v-hasPermi="['monitor:job:export']"
+                        class="tech-btn warning"
+                     >导出</el-button>
+                  </el-col>
+                  <el-col :span="1.5">
+                     <el-button
+                        type="info"
+                        plain
+                        icon="Operation"
+                        @click="handleJobLog"
+                        v-hasPermi="['monitor:job:query']"
+                        class="tech-btn info"
+                     >日志</el-button>
+                  </el-col>
+                  <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+               </el-row>
+            </div>
+
+            <!-- 表格区域 -->
+            <div class="table-section">
+               <el-table 
+                  ref="jobTableRef"
+                  v-loading="loading" 
+                  :data="jobList" 
+                  @selection-change="handleSelectionChange"
+                  class="tech-table"
+                  :default-sort="{ prop: 'jobId', order: 'descending' }"
+               >
+                  <el-table-column type="selection" width="55" align="center" />
+                  <el-table-column label="任务编号" width="100" align="center" prop="jobId" class-name="id-column" />
+                  <el-table-column label="任务名称" align="center" prop="jobName" :show-overflow-tooltip="true" min-width="100" />
+                  <el-table-column label="任务组名" align="center" prop="jobGroup" width="120">
+                     <template #default="scope">
+                        <dict-tag :options="sys_job_group" :value="scope.row.jobGroup" class="group-tag" />
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="调用目标字符串" align="center" prop="invokeTarget" :show-overflow-tooltip="true" min-width="200" class-name="target-column" />
+                  <el-table-column label="cron表达式" align="center" prop="cronExpression" :show-overflow-tooltip="true" width="160" class-name="cron-column" />
+                  <el-table-column label="状态" align="center" width="120">
+                     <template #default="scope">
+                        <div class="status-switch">
+                           <el-switch
+                              v-model="scope.row.status"
+                              active-value="0"
+                              inactive-value="1"
+                              active-text="启用"
+                              inactive-text="停用"
+                              @change="handleStatusChange(scope.row)"
+                              class="tech-switch"
+                           ></el-switch>
+                        </div>
+                     </template>
+                  </el-table-column>
+                  <el-table-column label="操作" align="center" width="280" class-name="small-padding fixed-width">
+                     <template #default="scope">
+                        <div class="action-buttons">
+                           <el-tooltip content="修改" placement="top">
+                              <el-button link type="primary" icon="Edit" @click="handleUpdate(scope.row)" v-hasPermi="['monitor:job:edit']" class="action-btn primary"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="删除" placement="top">
+                              <el-button link type="danger" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['monitor:job:remove']" class="action-btn danger"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="执行一次" placement="top">
+                              <el-button link type="success" icon="CaretRight" @click="handleRun(scope.row)" v-hasPermi="['monitor:job:changeStatus']" class="action-btn success"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="任务详细" placement="top">
+                              <el-button link type="info" icon="View" @click="handleView(scope.row)" v-hasPermi="['monitor:job:query']" class="action-btn info"></el-button>
+                           </el-tooltip>
+                           <el-tooltip content="调度日志" placement="top">
+                              <el-button link type="warning" icon="Operation" @click="handleJobLog(scope.row)" v-hasPermi="['monitor:job:query']" class="action-btn warning"></el-button>
+                           </el-tooltip>
+                        </div>
+                     </template>
+                  </el-table-column>
+               </el-table>
+
+               <!-- 分页 -->
+               <div class="pagination-section">
+                  <pagination
+                     v-show="total > 0"
+                     :total="total"
+                     v-model:page="queryParams.pageNum"
+                     v-model:limit="queryParams.pageSize"
+                     @pagination="getList"
+                     class="tech-pagination"
+                  />
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- 添加或修改定时任务对话框 -->
+      <el-dialog :title="title" v-model="open" width="820px" append-to-body class="tech-dialog">
+         <el-form ref="jobRef" :model="form" :rules="rules" label-width="120px" class="tech-form">
+            <el-row :gutter="20">
+               <el-col :span="12">
+                  <el-form-item label="任务名称" prop="jobName">
+                     <el-input v-model="form.jobName" placeholder="请输入任务名称" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="任务分组" prop="jobGroup">
+                     <el-select v-model="form.jobGroup" placeholder="请选择" class="tech-select">
+                        <el-option
+                           v-for="dict in sys_job_group"
+                           :key="dict.value"
+                           :label="dict.label"
+                           :value="dict.value"
+                        ></el-option>
+                     </el-select>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item prop="invokeTarget">
+                     <template #label>
+                        <span class="form-label">
+                           调用方法
+                           <el-tooltip placement="top" class="tech-tooltip">
+                              <template #content>
+                                 <div class="tooltip-content">
+                                    <p><strong>Bean调用示例：</strong>ryTask.ryParams('ry')</p>
+                                    <p><strong>Class类调用示例：</strong>com.ruoyi.quartz.task.RyTask.ryParams('ry')</p>
+                                    <p><strong>参数说明：</strong>支持字符串，布尔类型，长整型，浮点型，整型</p>
+                                 </div>
+                              </template>
+                              <el-icon class="help-icon"><question-filled /></el-icon>
+                           </el-tooltip>
+                        </span>
+                     </template>
+                     <el-input v-model="form.invokeTarget" placeholder="请输入调用目标字符串" class="tech-input" />
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item label="cron表达式" prop="cronExpression">
+                     <el-input v-model="form.cronExpression" placeholder="请输入cron执行表达式" class="tech-input">
+                        <template #append>
+                           <el-button type="primary" @click="handleShowCron" class="cron-btn">
+                              生成表达式
+                              <i class="el-icon-time el-icon--right"></i>
+                           </el-button>
+                        </template>
+                     </el-input>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24" v-if="form.jobId !== undefined">
+                  <el-form-item label="状态">
+                     <el-radio-group v-model="form.status" class="tech-radio-group">
+                        <el-radio
+                           v-for="dict in sys_job_status"
+                           :key="dict.value"
+                           :label="dict.value"
+                           class="tech-radio"
+                        >{{ dict.label }}</el-radio>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="执行策略" prop="misfirePolicy">
+                     <el-radio-group v-model="form.misfirePolicy" class="tech-radio-group">
+                        <el-radio-button value="1" class="tech-radio-button">立即执行</el-radio-button>
+                        <el-radio-button value="2" class="tech-radio-button">执行一次</el-radio-button>
+                        <el-radio-button value="3" class="tech-radio-button">放弃执行</el-radio-button>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="是否并发" prop="concurrent">
+                     <el-radio-group v-model="form.concurrent" class="tech-radio-group">
+                        <el-radio-button value="0" class="tech-radio-button">允许</el-radio-button>
+                        <el-radio-button value="1" class="tech-radio-button">禁止</el-radio-button>
+                     </el-radio-group>
+                  </el-form-item>
+               </el-col>
+            </el-row>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button type="primary" @click="submitForm" class="tech-btn primary">确 定</el-button>
+               <el-button @click="cancel" class="tech-btn secondary">取 消</el-button>
+            </div>
+         </template>
+      </el-dialog>
+
+     <el-dialog title="Cron表达式生成器" v-model="openCron" append-to-body destroy-on-close class="tech-dialog cron-dialog">
+       <crontab ref="crontabRef" @hide="openCron=false" @fill="crontabFill" :expression="expression"></crontab>
+     </el-dialog>
+
+      <!-- 任务日志详细 -->
+      <el-dialog title="任务详细" v-model="openView" width="700px" append-to-body class="tech-dialog view-dialog">
+         <el-form :model="form" label-width="120px" class="tech-form">
+            <el-row :gutter="20">
+               <el-col :span="12">
+                  <el-form-item label="任务编号：">
+                     <span class="detail-value">{{ form.jobId }}</span>
+                  </el-form-item>
+                  <el-form-item label="任务名称：">
+                     <span class="detail-value">{{ form.jobName }}</span>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="任务分组：">
+                     <span class="detail-value">{{ jobGroupFormat(form) }}</span>
+                  </el-form-item>
+                  <el-form-item label="创建时间：">
+                     <span class="detail-value">{{ form.createTime }}</span>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="cron表达式：">
+                     <span class="detail-value cron-value">{{ form.cronExpression }}</span>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="下次执行时间：">
+                     <span class="detail-value time-value">{{ parseTime(form.nextValidTime) }}</span>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="24">
+                  <el-form-item label="调用目标方法：">
+                     <span class="detail-value target-value">{{ form.invokeTarget }}</span>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="任务状态：">
+                     <div v-if="form.status == 0" class="status-badge success">正常</div>
+                     <div v-else-if="form.status == 1" class="status-badge danger">暂停</div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="是否并发：">
+                     <div v-if="form.concurrent == 0" class="status-badge success">允许</div>
+                     <div v-else-if="form.concurrent == 1" class="status-badge warning">禁止</div>
+                  </el-form-item>
+               </el-col>
+               <el-col :span="12">
+                  <el-form-item label="执行策略：">
+                     <div v-if="form.misfirePolicy == 0" class="status-badge info">默认策略</div>
+                     <div v-else-if="form.misfirePolicy == 1" class="status-badge success">立即执行</div>
+                     <div v-else-if="form.misfirePolicy == 2" class="status-badge warning">执行一次</div>
+                     <div v-else-if="form.misfirePolicy == 3" class="status-badge danger">放弃执行</div>
+                  </el-form-item>
+               </el-col>
+            </el-row>
+         </el-form>
+         <template #footer>
+            <div class="dialog-footer">
+               <el-button @click="openView = false" class="tech-btn secondary">关 闭</el-button>
+            </div>
+         </template>
+      </el-dialog>
+   </div>
+</template>
+
+<script setup name="Job">
+import Crontab from '@/components/Crontab'
+import { listJob, getJob, delJob, addJob, updateJob, runJob, changeJobStatus } from "@/api/monitor/job"
+
+const router = useRouter()
+const { proxy } = getCurrentInstance()
+const { sys_job_group, sys_job_status } = proxy.useDict("sys_job_group", "sys_job_status")
+
+const jobList = ref([])
+const open = ref(false)
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const title = ref("")
+const openView = ref(false)
+const openCron = ref(false)
+const expression = ref("")
+
+const data = reactive({
+  form: {},
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    jobName: undefined,
+    jobGroup: undefined,
+    status: undefined
+  },
+  rules: {
+    jobName: [{ required: true, message: "任务名称不能为空", trigger: "blur" }],
+    invokeTarget: [{ required: true, message: "调用目标字符串不能为空", trigger: "blur" }],
+    cronExpression: [{ required: true, message: "cron执行表达式不能为空", trigger: "change" }]
+  }
+})
+
+const { queryParams, form, rules } = toRefs(data)
+
+/** 查询定时任务列表 */
+function getList() {
+  loading.value = true
+  listJob(queryParams.value).then(response => {
+    jobList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 任务组名字典翻译 */
+function jobGroupFormat(row, column) {
+  return proxy.selectDictLabel(sys_job_group.value, row.jobGroup)
+}
+
+/** 取消按钮 */
+function cancel() {
+  open.value = false
+  reset()
+}
+
+/** 表单重置 */
+function reset() {
+  form.value = {
+    jobId: undefined,
+    jobName: undefined,
+    jobGroup: undefined,
+    invokeTarget: undefined,
+    cronExpression: undefined,
+    misfirePolicy: 1,
+    concurrent: 1,
+    status: "0"
+  }
+  proxy.resetForm("jobRef")
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  proxy.resetForm("queryRef")
+  handleQuery()
+}
+
+// 多选框选中数据
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.jobId)
+  single.value = selection.length != 1
+  multiple.value = !selection.length
+}
+
+// 更多操作触发
+function handleCommand(command, row) {
+  switch (command) {
+    case "handleRun":
+      handleRun(row)
+      break
+    case "handleView":
+      handleView(row)
+      break
+    case "handleJobLog":
+      handleJobLog(row)
+      break
+    default:
+      break
+  }
+}
+
+// 任务状态修改
+function handleStatusChange(row) {
+  let text = row.status === "0" ? "启用" : "停用"
+  proxy.$modal.confirm('确认要"' + text + '""' + row.jobName + '"任务吗?').then(function () {
+    return changeJobStatus(row.jobId, row.status)
+  }).then(() => {
+    proxy.$modal.msgSuccess(text + "成功")
+  }).catch(function () {
+    row.status = row.status === "0" ? "1" : "0"
+  })
+}
+
+/* 立即执行一次 */
+function handleRun(row) {
+  proxy.$modal.confirm('确认要立即执行一次"' + row.jobName + '"任务吗?').then(function () {
+    return runJob(row.jobId, row.jobGroup)
+  }).then(() => {
+    proxy.$modal.msgSuccess("执行成功")})
+  .catch(() => {})
+}
+
+/** 任务详细信息 */
+function handleView(row) {
+  getJob(row.jobId).then(response => {
+    form.value = response.data
+    openView.value = true
+  })
+}
+
+/** cron表达式按钮操作 */
+function handleShowCron() {
+  expression.value = form.value.cronExpression
+  openCron.value = true
+}
+
+/** 确定后回传值 */
+function crontabFill(value) {
+  form.value.cronExpression = value
+}
+
+/** 任务日志列表查询 */
+function handleJobLog(row) {
+  const jobId = row.jobId || 0
+  router.push('/monitor/job-log/index/' + jobId)
+}
+
+/** 新增按钮操作 */
+function handleAdd() {
+  reset()
+  open.value = true
+  title.value = "添加任务"
+}
+
+/** 修改按钮操作 */
+function handleUpdate(row) {
+  reset()
+  const jobId = row.jobId || ids.value
+  getJob(jobId).then(response => {
+    form.value = response.data
+    open.value = true
+    title.value = "修改任务"
+  })
+}
+
+/** 提交按钮 */
+function submitForm() {
+  proxy.$refs["jobRef"].validate(valid => {
+    if (valid) {
+      if (form.value.jobId != undefined) {
+        updateJob(form.value).then(response => {
+          proxy.$modal.msgSuccess("修改成功")
+          open.value = false
+          getList()
+        })
+      } else {
+        addJob(form.value).then(response => {
+          proxy.$modal.msgSuccess("新增成功")
+          open.value = false
+          getList()
+        })
+      }
+    }
+  })
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const jobIds = row.jobId || ids.value
+  proxy.$modal.confirm('是否确认删除定时任务编号为"' + jobIds + '"的数据项?').then(function () {
+    return delJob(jobIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+/** 导出按钮操作 */
+function handleExport() {
+  proxy.download("monitor/job/export", {
+    ...queryParams.value,
+  }, `job_${new Date().getTime()}.xlsx`)
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.job-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 2000px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+
+        .status-switch {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .action-buttons {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        .id-column {
+          .cell {
+            font-weight: 600;
+            color: #667eea;
+          }
+        }
+
+        .target-column, .cron-column {
+          .cell {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    width: 100%;
+
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-select {
+    width: 100%;
+
+    :deep(.el-select__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-switch {
+    :deep(.el-switch__core) {
+      border-radius: 12px;
+      border: none;
+      background: #e2e8f0;
+      transition: all 0.3s ease;
+
+      .el-switch__action {
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+    }
+
+    :deep(.el-switch.is-checked .el-switch__core) {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    }
+
+    :deep(.el-switch__label) {
+      color: #6b7280;
+      font-weight: 500;
+      
+      &.is-active {
+        color: #374151;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .action-btn {
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &.primary {
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+      
+      &:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      }
+    }
+
+    &.success {
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      
+      &:hover {
+        background: #10b981;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+    }
+
+    &.danger {
+      background: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+      
+      &:hover {
+        background: #ef4444;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+      }
+    }
+
+    &.warning {
+      background: rgba(245, 158, 11, 0.1);
+      color: #f59e0b;
+      
+      &:hover {
+        background: #f59e0b;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+      }
+    }
+
+    &.info {
+      background: rgba(107, 114, 128, 0.1);
+      color: #6b7280;
+      
+      &:hover {
+        background: #6b7280;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+        border-bottom: 2px solid #e2e8f0;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background: #f8fafc;
+      }
+    }
+
+    :deep(.el-table__cell) {
+      padding: 12px 0;
+    }
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+        transition: all 0.3s ease;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+      }
+
+      .number:not(.active):hover {
+        color: #667eea;
+        border-color: #667eea;
+      }
+    }
+  }
+
+  // 对话框样式
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+      background: white;
+      
+      .el-dialog__header {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        border-radius: 16px 16px 0 0;
+        padding: 20px;
+        margin: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-size: 1.25rem;
+        }
+      }
+      
+      .el-dialog__body {
+        padding: 25px;
+      }
+      
+      .el-dialog__footer {
+        background: #f8fafc;
+        border-radius: 0 0 16px 16px;
+        padding: 20px;
+        margin: 0;
+      }
+    }
+
+    &.cron-dialog {
+      :deep(.el-dialog) {
+        width: 800px;
+        max-width: 90vw;
+      }
+    }
+
+    &.view-dialog {
+      .detail-value {
+        font-weight: 500;
+        color: #374151;
+        
+        &.cron-value {
+          font-family: 'Monaco', 'Consolas', monospace;
+          color: #667eea;
+          background: rgba(102, 126, 234, 0.1);
+          padding: 4px 8px;
+          border-radius: 4px;
+        }
+        
+        &.time-value {
+          color: #10b981;
+          font-weight: 600;
+        }
+        
+        &.target-value {
+          font-family: 'Monaco', 'Consolas', monospace;
+          background: #f8fafc;
+          padding: 8px 12px;
+          border-radius: 6px;
+          border: 1px solid #e2e8f0;
+          display: block;
+          word-break: break-all;
+        }
+      }
+      
+      .status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: white;
+        
+        &.success {
+          background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        &.danger {
+          background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+        
+        &.warning {
+          background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        
+        &.info {
+          background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        }
+      }
+    }
+  }
+
+  .tech-form {
+    .form-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      color: #374151;
+    }
+    
+    .help-icon {
+      color: #6b7280;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #667eea;
+      }
+    }
+    
+    .cron-btn {
+      border-radius: 0 6px 6px 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      color: white;
+      font-weight: 600;
+      
+      &:hover {
+        background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+      }
+    }
+  }
+
+  .tech-radio-group {
+    :deep(.el-radio) {
+      margin-right: 20px;
+      
+      .el-radio__label {
+        color: #374151;
+        font-weight: 500;
+      }
+      
+      .el-radio__input.is-checked + .el-radio__label {
+        color: #667eea;
+      }
+    }
+    
+    :deep(.el-radio-button) {
+      .el-radio-button__inner {
+        border-radius: 6px;
+        margin: 0 4px;
+        border: 1px solid #e2e8f0;
+        background: white;
+        color: #6b7280;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          color: #667eea;
+          border-color: #667eea;
+        }
+      }
+      
+      .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-color: #667eea;
+        color: white;
+        box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+      }
+    }
+  }
+
+  .group-tag {
+    :deep(.el-tag) {
+      border-radius: 6px;
+      font-weight: 500;
+      border: none;
+      
+      &.el-tag--primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+      
+      &.el-tag--success {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+      }
+      
+      &.el-tag--warning {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        color: white;
+      }
+      
+      &.el-tag--danger {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        color: white;
+      }
+      
+      &.el-tag--info {
+        background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        color: white;
+      }
+    }
+  }
+
+  .tech-tooltip {
+    .tooltip-content {
+      p {
+        margin: 4px 0;
+        line-height: 1.4;
+        
+        strong {
+          color: #667eea;
+        }
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .job-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .job-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+
+            .tech-input, .tech-select {
+              width: 100%;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+
+        .table-section {
+          overflow-x: auto;
+          
+          .action-buttons {
+            flex-wrap: wrap;
+            gap: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .job-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+  }
+}
+
+// 动画效果
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tech-table {
+  :deep(.el-table__row) {
+    animation: fadeInUp 0.5s ease forwards;
+    
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.05}s;
+      }
+    }
+  }
+}
+
+// 特殊状态样式
+.status-tag {
+  :deep(.el-tag) {
+    &.el-tag--success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border: none;
+      color: white;
+    }
+    
+    &.el-tag--danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      border: none;
+      color: white;
+    }
+    
+    &.el-tag--info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      border: none;
+      color: white;
+    }
+  }
+}
+
+// 加载动画优化
+:deep(.el-loading-mask) {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  
+  .el-loading-spinner {
+    .path {
+      stroke: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+  }
+}
+
+// 滚动条样式优化
+:deep(::-webkit-scrollbar) {
+  width: 6px;
+  height: 6px;
+}
+
+:deep(::-webkit-scrollbar-track) {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+:deep(::-webkit-scrollbar-thumb) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+:deep(::-webkit-scrollbar-thumb:hover) {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+// 表格滚动条样式
+.tech-table {
+  :deep(.el-table__body-wrapper::-webkit-scrollbar) {
+    height: 8px;
+  }
+  
+  :deep(.el-table__body-wrapper::-webkit-scrollbar-track) {
+    background: #f1f5f9;
+  }
+  
+  :deep(.el-table__body-wrapper::-webkit-scrollbar-thumb) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+  }
+}
+
+// 工具提示样式优化
+:deep(.el-tooltip__popper) {
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: none;
+  
+  &.is-dark {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+  }
+}
+
+// 最终优化确保所有交互元素都有合适的光标
+.tech-btn,
+.action-btn,
+:deep(.el-table__row),
+:deep(.el-pagination .number),
+:deep(.el-pagination .btn-prev),
+:deep(.el-pagination .btn-next),
+:deep(.el-radio),
+:deep(.el-radio-button) {
+  cursor: pointer;
+}
+
+:deep(.is-disabled) {
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+// 确保在高DPI设备上清晰显示
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .job-management {
+    .main-card {
+      border: 0.5px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// 打印样式优化
+@media print {
+  .job-management {
+    background: white !important;
+    padding: 0 !important;
+    
+    .main-card {
+      box-shadow: none !important;
+      background: white !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      
+      .content-block {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+      }
+    }
+    
+    .search-section,
+    .action-section {
+      display: none !important;
+    }
+  }
+}
+
+// 暗色模式支持
+@media (prefers-color-scheme: dark) {
+  .job-management {
+    background: linear-gradient(135deg, #1e1b2e 0%, #2d1b69 100%);
+    color: #e2e8f0;
+    
+    .main-card {
+      background: rgba(30, 30, 30, 0.95);
+      
+      .content-block {
+        background: #1f2937;
+        border-color: #374151;
+        color: #e2e8f0;
+      }
+    }
+    
+    .action-section {
+      background: #374151;
+      border-color: #4b5563;
+    }
+    
+    .tech-table {
+      :deep(.el-table__header) {
+        th {
+          background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+          color: #e2e8f0;
+          border-color: #6b7280;
+        }
+      }
+      
+      :deep(.el-table__row:hover) {
+        background: #374151;
+      }
+    }
+  }
+}
+
+// 最终样式收尾
+.job-management {
+  // 优化字体渲染
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  // 确保所有过渡动画平滑
+  * {
+    box-sizing: border-box;
+  }
+}
+</style>
+```
+
+#### 2.3.5.3 数据监控（/druid/index.vue）
+
+![image-20251113143344758](README.assets/image-20251113143344758.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\druid\index.vue` 文件弹出的输入框填入下账号和密码
+
+```
+                # 控制台管理用户名和密码
+                login-username: admin
+                login-password: admin123
+```
+
+#### 2.3.5.4 服务监控（/server/index.vue）
+
+![image-20251113143412598](README.assets/image-20251113143412598.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\server\index.vue` 文件中填入下述代码
+
+```
+<template>
+  <div class="server-monitor">
+    <div class="main-card">
+      <div class="content-block">
+        <el-row :gutter="20">
+          <!-- CPU信息卡片 -->
+          <el-col :xs="24" :sm="12" :lg="12" class="card-box">
+            <el-card class="tech-card cpu-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <Cpu class="card-icon" />
+                  <span class="card-title">CPU</span>
+                  <div class="card-usage" v-if="server.cpu">
+                    <div class="usage-percent">{{ server.cpu.used }}%</div>
+                    <div class="usage-label">使用率</div>
+                  </div>
+                </div>
+              </template>
+              <div class="info-table">
+                <div class="info-row" v-if="server.cpu">
+                  <div class="info-label">核心数</div>
+                  <div class="info-value">{{ server.cpu.cpuNum }} 核</div>
+                </div>
+                <div class="info-row" v-if="server.cpu">
+                  <div class="info-label">用户使用率</div>
+                  <div class="info-value">{{ server.cpu.used }}%</div>
+                </div>
+                <div class="info-row" v-if="server.cpu">
+                  <div class="info-label">系统使用率</div>
+                  <div class="info-value">{{ server.cpu.sys }}%</div>
+                </div>
+                <div class="info-row" v-if="server.cpu">
+                  <div class="info-label">当前空闲率</div>
+                  <div class="info-value success-text">{{ server.cpu.free }}%</div>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+
+          <!-- 内存信息卡片 -->
+          <el-col :xs="24" :sm="12" :lg="12" class="card-box">
+            <el-card class="tech-card memory-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <Tickets class="card-icon" />
+                  <span class="card-title">内存</span>
+                  <div class="card-usage" v-if="server.mem">
+                    <div class="usage-percent" :class="{'warning-text': server.mem.usage > 80, 'danger-text': server.mem.usage > 90}">
+                      {{ server.mem.usage }}%
+                    </div>
+                    <div class="usage-label">使用率</div>
+                  </div>
+                </div>
+              </template>
+              <div class="info-table">
+                <div class="info-row header-row">
+                  <div class="info-label">属性</div>
+                  <div class="info-value">系统内存</div>
+                  <div class="info-value">JVM内存</div>
+                </div>
+                <div class="info-row" v-if="server.mem && server.jvm">
+                  <div class="info-label">总内存</div>
+                  <div class="info-value">{{ server.mem.total }}G</div>
+                  <div class="info-value">{{ server.jvm.total }}M</div>
+                </div>
+                <div class="info-row" v-if="server.mem && server.jvm">
+                  <div class="info-label">已用内存</div>
+                  <div class="info-value">{{ server.mem.used }}G</div>
+                  <div class="info-value">{{ server.jvm.used }}M</div>
+                </div>
+                <div class="info-row" v-if="server.mem && server.jvm">
+                  <div class="info-label">剩余内存</div>
+                  <div class="info-value success-text">{{ server.mem.free }}G</div>
+                  <div class="info-value success-text">{{ server.jvm.free }}M</div>
+                </div>
+                <div class="info-row" v-if="server.mem && server.jvm">
+                  <div class="info-label">使用率</div>
+                  <div class="info-value" :class="{'warning-text': server.mem.usage > 80, 'danger-text': server.mem.usage > 90}">
+                    {{ server.mem.usage }}%
+                  </div>
+                  <div class="info-value" :class="{'warning-text': server.jvm.usage > 80, 'danger-text': server.jvm.usage > 90}">
+                    {{ server.jvm.usage }}%
+                  </div>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+
+          <!-- 服务器信息卡片 -->
+          <el-col :xs="24" class="card-box">
+            <el-card class="tech-card server-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <Monitor class="card-icon" />
+                  <span class="card-title">服务器信息</span>
+                </div>
+              </template>
+              <div class="info-grid">
+                <div class="info-item" v-if="server.sys">
+                  <div class="info-label">服务器名称</div>
+                  <div class="info-value">{{ server.sys.computerName }}</div>
+                </div>
+                <div class="info-item" v-if="server.sys">
+                  <div class="info-label">操作系统</div>
+                  <div class="info-value">{{ server.sys.osName }}</div>
+                </div>
+                <div class="info-item" v-if="server.sys">
+                  <div class="info-label">服务器IP</div>
+                  <div class="info-value ip-address">{{ server.sys.computerIp }}</div>
+                </div>
+                <div class="info-item" v-if="server.sys">
+                  <div class="info-label">系统架构</div>
+                  <div class="info-value">{{ server.sys.osArch }}</div>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+
+          <!-- Java虚拟机信息卡片 -->
+          <el-col :xs="24" class="card-box">
+            <el-card class="tech-card jvm-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <CoffeeCup class="card-icon" />
+                  <span class="card-title">Java虚拟机信息</span>
+                </div>
+              </template>
+              <div class="info-grid two-columns">
+                <div class="info-item" v-if="server.jvm">
+                  <div class="info-label">Java名称</div>
+                  <div class="info-value">{{ server.jvm.name }}</div>
+                </div>
+                <div class="info-item" v-if="server.jvm">
+                  <div class="info-label">Java版本</div>
+                  <div class="info-value">{{ server.jvm.version }}</div>
+                </div>
+                <div class="info-item" v-if="server.jvm">
+                  <div class="info-label">启动时间</div>
+                  <div class="info-value">{{ server.jvm.startTime }}</div>
+                </div>
+                <div class="info-item" v-if="server.jvm">
+                  <div class="info-label">运行时长</div>
+                  <div class="info-value">{{ server.jvm.runTime }}</div>
+                </div>
+                <div class="info-item full-width" v-if="server.jvm">
+                  <div class="info-label">安装路径</div>
+                  <div class="info-value path-text">{{ server.jvm.home }}</div>
+                </div>
+                <div class="info-item full-width" v-if="server.sys">
+                  <div class="info-label">项目路径</div>
+                  <div class="info-value path-text">{{ server.sys.userDir }}</div>
+                </div>
+                <div class="info-item full-width" v-if="server.jvm">
+                  <div class="info-label">运行参数</div>
+                  <div class="info-value args-text">{{ server.jvm.inputArgs }}</div>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+
+          <!-- 磁盘状态卡片 -->
+          <el-col :xs="24" class="card-box">
+            <el-card class="tech-card disk-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <MessageBox class="card-icon" />
+                  <span class="card-title">磁盘状态</span>
+                </div>
+              </template>
+              <div class="disk-table">
+                <div class="table-header">
+                  <div class="table-cell">盘符路径</div>
+                  <div class="table-cell">文件系统</div>
+                  <div class="table-cell">盘符类型</div>
+                  <div class="table-cell">总大小</div>
+                  <div class="table-cell">可用大小</div>
+                  <div class="table-cell">已用大小</div>
+                  <div class="table-cell">使用率</div>
+                </div>
+                <div class="table-body" v-if="server.sysFiles">
+                  <div class="table-row" v-for="(sysFile, index) in server.sysFiles" :key="index">
+                    <div class="table-cell path-cell">{{ sysFile.dirName }}</div>
+                    <div class="table-cell">{{ sysFile.sysTypeName }}</div>
+                    <div class="table-cell">{{ sysFile.typeName }}</div>
+                    <div class="table-cell">{{ sysFile.total }}</div>
+                    <div class="table-cell success-text">{{ sysFile.free }}</div>
+                    <div class="table-cell">{{ sysFile.used }}</div>
+                    <div class="table-cell">
+                      <div class="usage-display" :class="{'warning-text': sysFile.usage > 80, 'danger-text': sysFile.usage > 90}">
+                        {{ sysFile.usage }}%
+                        <div class="usage-bar">
+                          <div class="usage-fill" :style="{width: sysFile.usage + '%'}" :class="{'warning-fill': sysFile.usage > 80, 'danger-fill': sysFile.usage > 90}"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+        </el-row>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { getServer } from '@/api/monitor/server'
+
+const server = ref([])
+const { proxy } = getCurrentInstance()
+
+function getList() {
+  proxy.$modal.loading("正在加载服务监控数据，请稍候！")
+  getServer().then(response => {
+    server.value = response.data
+    proxy.$modal.closeLoading()
+  })
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.server-monitor {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 2000px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+      min-height: auto;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .card-box {
+    margin-bottom: 20px;
+  }
+
+  .tech-card {
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+    background: white;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    :deep(.el-card__header) {
+      border-bottom: 1px solid #f1f5f9;
+      padding: 20px;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 16px 16px 0 0;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .card-icon {
+        width: 24px;
+        height: 24px;
+        color: #667eea;
+        margin-right: 12px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1e293b;
+        flex: 1;
+      }
+
+      .card-usage {
+        text-align: center;
+        .usage-percent {
+          font-size: 1.5rem;
+          font-weight: 800;
+          color: #667eea;
+          line-height: 1;
+        }
+        .usage-label {
+          font-size: 0.8rem;
+          color: #6b7280;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    :deep(.el-card__body) {
+      padding: 20px;
+    }
+  }
+
+  // CPU卡片特殊样式
+  .cpu-card {
+    .card-header {
+      .card-usage .usage-percent {
+        color: #667eea;
+      }
+    }
+  }
+
+  // 内存卡片特殊样式
+  .memory-card {
+    .card-header {
+      .card-usage .usage-percent {
+        color: #10b981;
+        &.warning-text { color: #f59e0b; }
+        &.danger-text { color: #ef4444; }
+      }
+    }
+  }
+
+  .info-table {
+    .info-row {
+      display: flex;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f5f9;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.header-row {
+        background: #f8fafc;
+        margin: -8px 0 8px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+        color: #374151;
+      }
+
+      .info-label {
+        flex: 1;
+        color: #6b7280;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .info-value {
+        flex: 1;
+        color: #374151;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+
+  .info-grid {
+    display: grid;
+    gap: 16px;
+
+    &.two-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #f1f5f9;
+        transform: translateX(4px);
+      }
+
+      &.full-width {
+        grid-column: 1 / -1;
+      }
+
+      .info-label {
+        flex: 0 0 120px;
+        color: #6b7280;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .info-value {
+        flex: 1;
+        color: #374151;
+        font-weight: 600;
+        word-break: break-all;
+
+        &.path-text, &.args-text {
+          font-family: 'Monaco', 'Consolas', monospace;
+          font-size: 0.85rem;
+          color: #4b5563;
+        }
+
+        &.ip-address {
+          color: #667eea;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .disk-table {
+    .table-header {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 12px;
+      padding: 16px;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #374151;
+      font-size: 0.9rem;
+    }
+
+    .table-body {
+      .table-row {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 12px;
+        padding: 16px;
+        border-bottom: 1px solid #f1f5f9;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #f8fafc;
+          border-radius: 8px;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .table-cell {
+          display: flex;
+          align-items: center;
+          color: #374151;
+          font-weight: 500;
+          font-size: 0.9rem;
+
+          &.path-cell {
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: #667eea;
+          }
+
+          .usage-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+
+            .usage-bar {
+              width: 60px;
+              height: 6px;
+              background: #e2e8f0;
+              border-radius: 3px;
+              overflow: hidden;
+
+              .usage-fill {
+                height: 100%;
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                border-radius: 3px;
+                transition: all 0.3s ease;
+
+                &.warning-fill {
+                  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+                }
+
+                &.danger-fill {
+                  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 文本颜色工具类
+  .success-text {
+    color: #10b981 !important;
+    font-weight: 600;
+  }
+
+  .warning-text {
+    color: #f59e0b !important;
+    font-weight: 600;
+  }
+
+  .danger-text {
+    color: #ef4444 !important;
+    font-weight: 600;
+  }
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .server-monitor {
+    .info-grid.two-columns {
+      grid-template-columns: 1fr;
+    }
+
+    .disk-table {
+      .table-header,
+      .table-body .table-row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+        
+        .table-cell:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .server-monitor {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+      margin: 15px;
+
+      .content-block {
+        padding: 0;
+      }
+    }
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      .card-usage {
+        align-self: flex-end;
+      }
+    }
+
+    .info-table .info-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      .info-value {
+        text-align: left;
+        width: 100%;
+      }
+    }
+
+    .disk-table {
+      .table-header,
+      .table-body .table-row {
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        .table-cell:nth-child(n+4) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .server-monitor {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .info-grid .info-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      .info-label {
+        flex: none;
+      }
+    }
+
+    .disk-table {
+      .table-header,
+      .table-body .table-row {
+        grid-template-columns: 1fr 1fr;
+        
+        .table-cell:nth-child(n+3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.5.5 缓存监控（/cache/index.vue）
+
+![image-20251113143626889](README.assets/image-20251113143626889.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\cache\index.vue` 文件中填入下述代码
+
+```
+<template>
+  <div class="cache-monitor">
+    <div class="main-card">
+      <div class="content-block">
+        <el-row :gutter="20">
+          <!-- 基本信息卡片 -->
+          <el-col :xs="24" class="card-box">
+            <el-card class="tech-card info-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <Monitor class="card-icon" />
+                  <span class="card-title">Redis基本信息</span>
+                  <div class="card-status" v-if="cache.info">
+                    <div class="status-indicator" :class="{'status-online': cache.info.connected_clients > 0}"></div>
+                    <div class="status-text">{{ cache.info.connected_clients > 0 ? '运行中' : '离线' }}</div>
+                  </div>
+                </div>
+              </template>
+              <div class="info-grid three-columns">
+                <div class="info-item">
+                  <div class="info-label">Redis版本</div>
+                  <div class="info-value version-text">{{ cache.info?.redis_version }}</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">运行模式</div>
+                  <div class="info-value">
+                    <el-tag :type="cache.info?.redis_mode === 'standalone' ? 'success' : 'warning'" class="mode-tag">
+                      {{ cache.info?.redis_mode == "standalone" ? "单机" : "集群" }}
+                    </el-tag>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">端口</div>
+                  <div class="info-value">{{ cache.info?.tcp_port }}</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">客户端数</div>
+                  <div class="info-value client-count">{{ cache.info?.connected_clients }}</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">运行时间</div>
+                  <div class="info-value">{{ cache.info?.uptime_in_days }} 天</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">使用内存</div>
+                  <div class="info-value memory-usage">{{ cache.info?.used_memory_human }}</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">使用CPU</div>
+                  <div class="info-value">{{ cache.info ? parseFloat(cache.info.used_cpu_user_children).toFixed(2) : '0.00' }}</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">内存配置</div>
+                  <div class="info-value">{{ cache.info?.maxmemory_human }}</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">AOF是否开启</div>
+                  <div class="info-value">
+                    <el-tag :type="cache.info?.aof_enabled == '0' ? 'danger' : 'success'" class="feature-tag">
+                      {{ cache.info?.aof_enabled == "0" ? "否" : "是" }}
+                    </el-tag>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">RDB是否成功</div>
+                  <div class="info-value">
+                    <el-tag :type="cache.info?.rdb_last_bgsave_status === 'ok' ? 'success' : 'danger'" class="feature-tag">
+                      {{ cache.info?.rdb_last_bgsave_status }}
+                    </el-tag>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">Key数量</div>
+                  <div class="info-value key-count">{{ cache.dbSize }}</div>
+                </div>
+                <div class="info-item">
+                  <div class="info-label">网络入口/出口</div>
+                  <div class="info-value network-traffic">
+                    <div class="traffic-in">{{ cache.info?.instantaneous_input_kbps }}kps</div>
+                    <div class="traffic-out">{{ cache.info?.instantaneous_output_kbps }}kps</div>
+                  </div>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+
+          <!-- 命令统计卡片 -->
+          <el-col :xs="24" :sm="12" :lg="12" class="card-box">
+            <el-card class="tech-card command-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <PieChart class="card-icon" />
+                  <span class="card-title">命令统计</span>
+                </div>
+              </template>
+              <div class="chart-container">
+                <div ref="commandstats" class="chart" style="height: 420px" />
+              </div>
+            </el-card>
+          </el-col>
+
+          <!-- 内存信息卡片 -->
+          <el-col :xs="24" :sm="12" :lg="12" class="card-box">
+            <el-card class="tech-card memory-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <Odometer class="card-icon" />
+                  <span class="card-title">内存信息</span>
+                  <div class="memory-indicator" v-if="cache.info">
+                    <div class="memory-percent">{{ getMemoryUsagePercent() }}%</div>
+                    <div class="memory-label">使用率</div>
+                  </div>
+                </div>
+              </template>
+              <div class="chart-container">
+                <div ref="usedmemory" class="chart" style="height: 420px" />
+              </div>
+            </el-card>
+          </el-col>
+        </el-row>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup name="Cache">
+import { getCache } from '@/api/monitor/cache'
+import * as echarts from 'echarts'
+
+const cache = ref([])
+const commandstats = ref(null)
+const usedmemory = ref(null)
+const { proxy } = getCurrentInstance()
+
+// 计算内存使用百分比
+function getMemoryUsagePercent() {
+  if (!cache.value.info?.used_memory_human || !cache.value.info?.maxmemory_human) return 0
+  
+  const used = parseMemorySize(cache.value.info.used_memory_human)
+  const max = parseMemorySize(cache.value.info.maxmemory_human)
+  
+  if (max === 0) return 0
+  return Math.round((used / max) * 100)
+}
+
+// 解析内存大小字符串为字节数
+function parseMemorySize(sizeStr) {
+  if (!sizeStr) return 0
+  
+  const units = {
+    'K': 1024,
+    'M': 1024 * 1024,
+    'G': 1024 * 1024 * 1024,
+    'T': 1024 * 1024 * 1024 * 1024
+  }
+  
+  const match = sizeStr.match(/^([\d.]+)([KMGTP]?)/i)
+  if (!match) return 0
+  
+  const value = parseFloat(match[1])
+  const unit = match[2].toUpperCase()
+  
+  return value * (units[unit] || 1)
+}
+
+function getList() {
+  proxy.$modal.loading("正在加载缓存监控数据，请稍候！")
+  getCache().then(response => {
+    proxy.$modal.closeLoading()
+    cache.value = response.data
+
+    // 命令统计图表
+    const commandstatsIntance = echarts.init(commandstats.value, "macarons")
+    commandstatsIntance.setOption({
+      tooltip: {
+        trigger: "item",
+        formatter: "{a} <br/>{b} : {c} ({d}%)",
+        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+        borderColor: '#e2e8f0',
+        textStyle: {
+          color: '#374151'
+        }
+      },
+      legend: {
+        orient: 'vertical',
+        right: 10,
+        top: 'center',
+        textStyle: {
+          color: '#6b7280'
+        }
+      },
+      series: [
+        {
+          name: "命令",
+          type: "pie",
+          roseType: "radius",
+          radius: ['15%', '70%'],
+          center: ['40%', '50%'],
+          data: response.data.commandStats,
+          animationEasing: "cubicInOut",
+          animationDuration: 1000,
+          itemStyle: {
+            borderRadius: 8,
+            borderColor: '#fff',
+            borderWidth: 2
+          },
+          label: {
+            color: '#374151',
+            fontWeight: '500'
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+          }
+        }
+      ]
+    })
+
+    // 内存信息图表
+    const memoryPercent = getMemoryUsagePercent()
+    const usedmemoryInstance = echarts.init(usedmemory.value, "macarons")
+    usedmemoryInstance.setOption({
+      tooltip: {
+        formatter: '{b} <br/>{a} : ' + cache.value.info.used_memory_human,
+        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+        borderColor: '#e2e8f0',
+        textStyle: {
+          color: '#374151'
+        }
+      },
+      series: [
+        {
+          name: "内存消耗",
+          type: "gauge",
+          radius: '90%',
+          min: 0,
+          max: 100,
+          progress: {
+            show: true,
+            width: 18,
+            itemStyle: {
+              color: getMemoryColor(memoryPercent)
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              width: 18,
+              color: [
+                [0.3, '#10b981'],
+                [0.7, '#f59e0b'],
+                [1, '#ef4444']
+              ]
+            }
+          },
+          axisTick: {
+            distance: -18,
+            length: 8,
+            lineStyle: {
+              color: '#fff',
+              width: 2
+            }
+          },
+          splitLine: {
+            distance: -18,
+            length: 18,
+            lineStyle: {
+              color: '#fff',
+              width: 3
+            }
+          },
+          axisLabel: {
+            distance: -30,
+            color: '#6b7280',
+            fontSize: 12
+          },
+          anchor: {
+            show: true,
+            showAbove: true,
+            size: 18,
+            itemStyle: {
+              borderWidth: 8,
+              borderColor: getMemoryColor(memoryPercent)
+            }
+          },
+          pointer: {
+            icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+            length: '12%',
+            width: 20,
+            offsetCenter: [0, '-60%'],
+            itemStyle: {
+              color: getMemoryColor(memoryPercent)
+            }
+          },
+          detail: {
+            valueAnimation: true,
+            formatter: '{value}%',
+            color: getMemoryColor(memoryPercent),
+            fontSize: 24,
+            fontWeight: 'bold',
+            offsetCenter: [0, '30%']
+          },
+          title: {
+            offsetCenter: [0, '70%'],
+            color: '#6b7280',
+            fontSize: 14
+          },
+          data: [
+            {
+              value: memoryPercent,
+              name: '内存使用率'
+            }
+          ]
+        }
+      ]
+    })
+
+    // 窗口大小变化时重绘图表
+    window.addEventListener("resize", () => {
+      commandstatsIntance.resize()
+      usedmemoryInstance.resize()
+    })
+  })
+}
+
+// 根据内存使用率获取颜色
+function getMemoryColor(percent) {
+  if (percent < 50) return '#10b981'
+  if (percent < 80) return '#f59e0b'
+  return '#ef4444'
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.cache-monitor {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 2000px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+      min-height: auto;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .card-box {
+    margin-bottom: 20px;
+  }
+
+  .tech-card {
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+    background: white;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    :deep(.el-card__header) {
+      border-bottom: 1px solid #f1f5f9;
+      padding: 20px;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 16px 16px 0 0;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .card-icon {
+        width: 24px;
+        height: 24px;
+        color: #667eea;
+        margin-right: 12px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1e293b;
+        flex: 1;
+      }
+
+      .card-status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .status-indicator {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #ef4444;
+
+          &.status-online {
+            background: #10b981;
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+          }
+        }
+
+        .status-text {
+          font-size: 0.9rem;
+          color: #6b7280;
+          font-weight: 500;
+        }
+      }
+
+      .memory-indicator {
+        text-align: center;
+        .memory-percent {
+          font-size: 1.3rem;
+          font-weight: 800;
+          color: #667eea;
+          line-height: 1;
+        }
+        .memory-label {
+          font-size: 0.8rem;
+          color: #6b7280;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    :deep(.el-card__body) {
+      padding: 20px;
+    }
+  }
+
+  .info-grid {
+    display: grid;
+    gap: 16px;
+
+    &.three-columns {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #f1f5f9;
+        transform: translateX(4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .info-label {
+        flex: 0 0 140px;
+        color: #6b7280;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .info-value {
+        flex: 1;
+        color: #374151;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &.version-text {
+          color: #667eea;
+          font-family: 'Monaco', 'Consolas', monospace;
+        }
+
+        &.memory-usage {
+          color: #10b981;
+          font-weight: 700;
+        }
+
+        &.client-count, &.key-count {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          padding: 4px 12px;
+          border-radius: 20px;
+          font-size: 0.9rem;
+          display: inline-flex;
+          justify-content: center;
+          min-width: 40px;
+        }
+
+        .network-traffic {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          .traffic-in {
+            color: #10b981;
+            font-weight: 600;
+          }
+
+          .traffic-out {
+            color: #f59e0b;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .mode-tag, .feature-tag {
+    :deep(.el-tag) {
+      border-radius: 6px;
+      font-weight: 600;
+      border: none;
+      min-width: 50px;
+      text-align: center;
+    }
+  }
+
+  .chart-container {
+    .chart {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .cache-monitor {
+    .info-grid.three-columns {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cache-monitor {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+      margin: 15px;
+
+      .content-block {
+        padding: 0;
+      }
+    }
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      .card-status, .memory-indicator {
+        align-self: flex-end;
+      }
+    }
+
+    .info-grid.three-columns {
+      grid-template-columns: 1fr;
+    }
+
+    .info-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      .info-label {
+        flex: none;
+      }
+
+      .info-value {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cache-monitor {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .chart-container .chart {
+      height: 300px !important;
+    }
+  }
+}
+
+// ECharts 主题优化
+:deep(.macarons) {
+  .echarts-tooltip {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+</style>
+```
+
+#### 2.3.5.6 缓存列表（/cache/list.vue）
+
+![image-20251113143649942](README.assets/image-20251113143649942.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\cache\list.vue` 文件中填入下述代码
+
+```
+<template>
+  <div class="cache-management">
+    <div class="main-card">
+      <div class="content-block">
+        <el-row :gutter="20">
+          <!-- 缓存列表 -->
+          <el-col :xs="24" :md="8" class="card-box">
+            <el-card class="tech-card cache-list-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <Collection class="card-icon" />
+                  <span class="card-title">缓存列表</span>
+                  <div class="card-actions">
+                    <el-tooltip content="刷新缓存列表" placement="top">
+                      <el-button
+                        link
+                        type="primary"
+                        icon="Refresh"
+                        @click="refreshCacheNames()"
+                        class="refresh-btn"
+                      ></el-button>
+                    </el-tooltip>
+                  </div>
+                </div>
+              </template>
+              <div class="table-container">
+                <el-table
+                  v-loading="loading"
+                  :data="cacheNames"
+                  :height="tableHeight"
+                  highlight-current-row
+                  @row-click="getCacheKeys"
+                  class="tech-table"
+                >
+                  <el-table-column
+                    label="序号"
+                    width="70"
+                    type="index"
+                    align="center"
+                  >
+                    <template #default="scope">
+                      <div class="index-badge">{{ scope.$index + 1 }}</div>
+                    </template>
+                  </el-table-column>
+
+                  <el-table-column
+                    label="缓存名称"
+                    align="center"
+                    prop="cacheName"
+                    :show-overflow-tooltip="true"
+                    :formatter="nameFormatter"
+                  >
+                    <template #default="scope">
+                      <div class="cache-name">
+                        <el-tag size="small" class="cache-tag">
+                          {{ nameFormatter(scope.row) }}
+                        </el-tag>
+                      </div>
+                    </template>
+                  </el-table-column>
+
+                  <el-table-column
+                    label="备注"
+                    align="center"
+                    prop="remark"
+                    :show-overflow-tooltip="true"
+                  >
+                    <template #default="scope">
+                      <div class="remark-text">{{ scope.row.remark || '-' }}</div>
+                    </template>
+                  </el-table-column>
+                  
+                  <el-table-column
+                    label="操作"
+                    width="80"
+                    align="center"
+                    class-name="small-padding fixed-width"
+                  >
+                    <template #default="scope">
+                      <el-tooltip content="清理缓存" placement="top">
+                        <el-button
+                          link
+                          type="danger"
+                          icon="Delete"
+                          @click.stop="handleClearCacheName(scope.row)"
+                          class="action-btn delete"
+                        ></el-button>
+                      </el-tooltip>
+                    </template>
+                  </el-table-column>
+                </el-table>
+              </div>
+            </el-card>
+          </el-col>
+
+          <!-- 键名列表 -->
+          <el-col :xs="24" :md="8" class="card-box">
+            <el-card class="tech-card keys-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <Key class="card-icon" />
+                  <span class="card-title">键名列表</span>
+                  <div class="card-actions">
+                    <el-tooltip content="刷新键名列表" placement="top">
+                      <el-button
+                        link
+                        type="primary"
+                        icon="Refresh"
+                        @click="refreshCacheKeys()"
+                        class="refresh-btn"
+                      ></el-button>
+                    </el-tooltip>
+                  </div>
+                </div>
+              </template>
+              <div class="table-container">
+                <el-table
+                  v-loading="subLoading"
+                  :data="cacheKeys"
+                  :height="tableHeight"
+                  highlight-current-row
+                  @row-click="handleCacheValue"
+                  class="tech-table"
+                >
+                  <el-table-column
+                    label="序号"
+                    width="70"
+                    type="index"
+                    align="center"
+                  >
+                    <template #default="scope">
+                      <div class="index-badge">{{ scope.$index + 1 }}</div>
+                    </template>
+                  </el-table-column>
+                  
+                  <el-table-column
+                    label="缓存键名"
+                    align="center"
+                    :show-overflow-tooltip="true"
+                    :formatter="keyFormatter"
+                  >
+                    <template #default="scope">
+                      <div class="key-name">
+                        <el-tag size="small" type="info" class="key-tag">
+                          {{ keyFormatter(scope.row) }}
+                        </el-tag>
+                      </div>
+                    </template>
+                  </el-table-column>
+                  
+                  <el-table-column
+                    label="操作"
+                    width="80"
+                    align="center"
+                    class-name="small-padding fixed-width"
+                  >
+                    <template #default="scope">
+                      <el-tooltip content="删除键名" placement="top">
+                        <el-button
+                          link
+                          type="danger"
+                          icon="Delete"
+                          @click.stop="handleClearCacheKey(scope.row)"
+                          class="action-btn delete"
+                        ></el-button>
+                      </el-tooltip>
+                    </template>
+                  </el-table-column>
+                </el-table>
+              </div>
+            </el-card>
+          </el-col>
+
+          <!-- 缓存内容 -->
+          <el-col :xs="24" :md="8" class="card-box">
+            <el-card class="tech-card content-card" shadow="hover">
+              <template #header>
+                <div class="card-header">
+                  <Document class="card-icon" />
+                  <span class="card-title">缓存内容</span>
+                  <div class="card-actions">
+                    <el-tooltip content="清理全部缓存" placement="top">
+                      <el-button
+                        link
+                        type="danger"
+                        icon="Delete"
+                        @click="handleClearCacheAll()"
+                        class="clear-all-btn"
+                      >
+                        清理全部
+                      </el-button>
+                    </el-tooltip>
+                  </div>
+                </div>
+              </template>
+              <div class="cache-content">
+                <el-form :model="cacheForm" class="tech-form">
+                  <el-row :gutter="20">
+                    <el-col :span="24">
+                      <el-form-item label="缓存名称:" class="form-item">
+                        <el-input 
+                          v-model="cacheForm.cacheName" 
+                          :readonly="true" 
+                          class="tech-input readonly"
+                        />
+                      </el-form-item>
+                    </el-col>
+                    <el-col :span="24">
+                      <el-form-item label="缓存键名:" class="form-item">
+                        <el-input 
+                          v-model="cacheForm.cacheKey" 
+                          :readonly="true" 
+                          class="tech-input readonly"
+                        />
+                      </el-form-item>
+                    </el-col>
+                    <el-col :span="24">
+                      <el-form-item label="缓存内容:" class="form-item">
+                        <el-input
+                          v-model="cacheForm.cacheValue"
+                          type="textarea"
+                          :rows="10"
+                          :readonly="true"
+                          class="tech-textarea readonly"
+                          resize="none"
+                        />
+                      </el-form-item>
+                    </el-col>
+                  </el-row>
+                </el-form>
+              </div>
+            </el-card>
+          </el-col>
+        </el-row>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup name="CacheList">
+import { listCacheName, listCacheKey, getCacheValue, clearCacheName, clearCacheKey, clearCacheAll } from "@/api/monitor/cache"
+
+const { proxy } = getCurrentInstance()
+
+const cacheNames = ref([])
+const cacheKeys = ref([])
+const cacheForm = ref({})
+const loading = ref(true)
+const subLoading = ref(false)
+const nowCacheName = ref("")
+const tableHeight = ref(window.innerHeight - 200)
+
+/** 查询缓存名称列表 */
+function getCacheNames() {
+  loading.value = true
+  listCacheName().then(response => {
+    cacheNames.value = response.data
+    loading.value = false
+  })
+}
+
+/** 刷新缓存名称列表 */
+function refreshCacheNames() {
+  getCacheNames()
+  proxy.$modal.msgSuccess("刷新缓存列表成功")
+}
+
+/** 清理指定名称缓存 */
+function handleClearCacheName(row) {
+  proxy.$modal.confirm(`是否确认清理缓存名称 "${row.cacheName}"？`).then(function () {
+    return clearCacheName(row.cacheName)
+  }).then(() => {
+    proxy.$modal.msgSuccess("清理缓存名称[" + row.cacheName + "]成功")
+    getCacheKeys()
+  }).catch(() => {})
+}
+
+/** 查询缓存键名列表 */
+function getCacheKeys(row) {
+  const cacheName = row !== undefined ? row.cacheName : nowCacheName.value
+  if (cacheName === "") {
+    return
+  }
+  subLoading.value = true
+  listCacheKey(cacheName).then(response => {
+    cacheKeys.value = response.data
+    subLoading.value = false
+    nowCacheName.value = cacheName
+  })
+}
+
+/** 刷新缓存键名列表 */
+function refreshCacheKeys() {
+  getCacheKeys()
+  proxy.$modal.msgSuccess("刷新键名列表成功")
+}
+
+/** 清理指定键名缓存 */
+function handleClearCacheKey(cacheKey) {
+  proxy.$modal.confirm(`是否确认删除缓存键名 "${cacheKey}"？`).then(function () {
+    return clearCacheKey(cacheKey)
+  }).then(() => {
+    proxy.$modal.msgSuccess("清理缓存键名[" + cacheKey + "]成功")
+    getCacheKeys()
+  }).catch(() => {})
+}
+
+/** 列表前缀去除 */
+function nameFormatter(row) {
+  return row.cacheName.replace(":", "")
+}
+
+/** 键名前缀去除 */
+function keyFormatter(cacheKey) {
+  return cacheKey.replace(nowCacheName.value, "")
+}
+
+/** 查询缓存内容详细 */
+function handleCacheValue(cacheKey) {
+  getCacheValue(nowCacheName.value, cacheKey).then(response => {
+    cacheForm.value = response.data
+  })
+}
+
+/** 清理全部缓存 */
+function handleClearCacheAll() {
+  proxy.$modal.confirm("是否确认清理全部缓存？此操作不可恢复！").then(function () {
+    return clearCacheAll()
+  }).then(() => {
+    proxy.$modal.msgSuccess("清理全部缓存成功")
+    getCacheNames()
+    cacheKeys.value = []
+    cacheForm.value = {}
+  }).catch(() => {})
+}
+
+getCacheNames()
+</script>
+
+<style scoped lang="scss">
+.cache-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 2200px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+      min-height: auto;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .card-box {
+    margin-bottom: 0;
+  }
+
+  .tech-card {
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+    background: white;
+    height: calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    :deep(.el-card__header) {
+      border-bottom: 1px solid #f1f5f9;
+      padding: 20px;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 16px 16px 0 0;
+      flex-shrink: 0;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .card-icon {
+        width: 20px;
+        height: 20px;
+        color: #667eea;
+        margin-right: 12px;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1e293b;
+        flex: 1;
+      }
+
+      .card-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .refresh-btn, .clear-all-btn {
+          padding: 4px 8px;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          font-weight: 500;
+
+          &:hover {
+            background: #f1f5f9;
+            transform: scale(1.05);
+          }
+        }
+
+        .clear-all-btn {
+          color: #ef4444;
+          
+          &:hover {
+            color: #dc2626;
+            background: #fef2f2;
+          }
+        }
+      }
+    }
+
+    :deep(.el-card__body) {
+      padding: 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .table-container {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tech-table {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+        border-bottom: 1px solid #e2e8f0;
+      }
+    }
+
+    :deep(.el-table__body) {
+      tr {
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateX(2px);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        &.current-row {
+          background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        }
+      }
+    }
+
+    .index-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .cache-name, .key-name {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cache-tag, .key-tag {
+      :deep(.el-tag) {
+        border: none;
+        border-radius: 6px;
+        font-weight: 500;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .cache-tag {
+      :deep(.el-tag) {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+    }
+
+    .key-tag {
+      :deep(.el-tag) {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+      }
+    }
+
+    .remark-text {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #fef2f2;
+      }
+
+      &.delete {
+        color: #ef4444;
+      }
+    }
+  }
+
+  .cache-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tech-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .form-item {
+      margin-bottom: 20px;
+
+      :deep(.el-form-item__label) {
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .tech-input, .tech-textarea {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      background: #f8fafc;
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+    }
+
+    &.readonly {
+      :deep(.el-input__wrapper) {
+        background: #f8fafc;
+        border-color: #e2e8f0;
+        
+        .el-input__inner {
+          color: #6b7280;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .tech-textarea {
+    :deep(.el-textarea__inner) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      font-family: 'Monaco', 'Consolas', monospace;
+      font-size: 0.9rem;
+      color: #374151;
+      resize: vertical;
+      
+      &:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+
+    &.readonly {
+      :deep(.el-textarea__inner) {
+        background: #f8fafc;
+        border-color: #e2e8f0;
+        color: #6b7280;
+        cursor: not-allowed;
+        resize: none;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .cache-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+
+    .tech-card {
+      height: calc(100vh - 160px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cache-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+      margin: 15px;
+    }
+
+    .tech-card {
+      height: auto;
+      min-height: 500px;
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      .card-actions {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cache-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .table-container {
+      padding: 12px;
+    }
+
+    .cache-content {
+      padding: 15px;
+    }
+  }
+}
+
+// 加载动画优化
+:deep(.el-loading-mask) {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  
+  .el-loading-spinner {
+    .path {
+      stroke: #667eea;
+    }
+  }
+}
+</style>
+```
+
+### 2.3.6 系统工具开发（src/views/tool）
+
+#### 2.3.6.1 表单构建（/build/index.vue 和 /build/RightPanel.vue）
+
+![image-20251113143725305](README.assets/image-20251113143725305.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\tool\build\index.vue` 和 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\tool\build\RightPanel.vue` 文件中分别加入下述代码
+
+```
+<template>
+  <div class="container">
+    <div class="left-board">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <img :src="logo" alt="logo" /> MoMagTracker 表单构建器
+        </div>
+      </div>
+      <el-scrollbar class="left-scrollbar">
+        <div class="components-list">
+          <div class="components-title">
+            <svg-icon icon-class="component" />输入型组件
+          </div>
+          <draggable class="components-draggable" :list="inputComponents"
+            :group="{ name: 'componentsGroup', pull: 'clone', put: false }" :clone="cloneComponent"
+            draggable=".components-item" :sort="false" @end="onEnd" item-key="label">
+            <template #item="{ element, index }">
+              <div :key="index" class="components-item" @click="addComponent(element)">
+                <div class="components-body">
+                  <svg-icon :icon-class="element.tagIcon" />
+                  <span class="component-text">{{ element.label }}</span>
+                </div>
+              </div>
+            </template>
+          </draggable>
+          <div class="components-title">
+            <svg-icon icon-class="component" />选择型组件
+          </div>
+          <draggable class="components-draggable" :list="selectComponents"
+            :group="{ name: 'componentsGroup', pull: 'clone', put: false }" :clone="cloneComponent"
+            draggable=".components-item" :sort="false" @end="onEnd" item-key="label">
+            <template #item="{ element, index }">
+              <div :key="index" class="components-item" @click="addComponent(element)">
+                <div class="components-body">
+                  <svg-icon :icon-class="element.tagIcon" />
+                  <span class="component-text">{{ element.label }}</span>
+                </div>
+              </div>
+            </template>
+          </draggable>
+          <div class="components-title">
+            <svg-icon icon-class="component" /> 布局型组件
+          </div>
+          <draggable class="components-draggable" :list="layoutComponents"
+            :group="{ name: 'componentsGroup', pull: 'clone', put: false }" :clone="cloneComponent"
+            draggable=".components-item" :sort="false" @end="onEnd" item-key="label">
+            <template #item="{ element, index }">
+              <div :key="index" class="components-item" @click="addComponent(element)">
+                <div class="components-body">
+                  <svg-icon :icon-class="element.tagIcon" />
+                  <span class="component-text">{{ element.label }}</span>
+                </div>
+              </div>
+            </template>
+          </draggable>
+        </div>
+      </el-scrollbar>
+    </div>
+    <div class="center-board">
+      <div class="action-bar">
+        <el-button icon="Download" type="primary" text @click="download" class="tech-btn-primary">
+          导出vue文件
+        </el-button>
+        <el-button icon="DocumentCopy" type="success" text @click="copy" class="tech-btn-secondary copy-btn-main">
+          复制代码
+        </el-button>
+        <el-button icon="Delete" text @click="empty" type="danger" class="tech-btn-danger delete-btn">
+          清空
+        </el-button>
+      </div>
+      <el-scrollbar class="center-scrollbar">
+        <el-row class="center-board-row" :gutter="formConf.gutter">
+          <el-form :size="formConf.size" :label-position="formConf.labelPosition" :disabled="formConf.disabled"
+            :label-width="formConf.labelWidth + 'px'">
+            <draggable class="drawing-board" :list="drawingList" :animation="340" group="componentsGroup"
+              item-key="label">
+              <template #item="{ element, index }">
+                <draggable-item :key="element.renderKey" :drawing-list="drawingList" :element="element" :index="index"
+                  :active-id="activeId" :form-conf="formConf" @activeItem="activeFormItem" @copyItem="drawingItemCopy"
+                  @deleteItem="drawingItemDelete" />
+              </template>
+            </draggable>
+            <div v-show="!drawingList.length" class="empty-info">
+              从左侧拖入或点选组件进行表单设计
+            </div>
+          </el-form>
+        </el-row>
+      </el-scrollbar>
+    </div>
+    <right-panel :active-data="activeData" :form-conf="formConf" :show-field="!!drawingList.length"
+      @tag-change="tagChange" />
+
+    <code-type-dialog v-model="dialogVisible" title="选择生成类型" :showFileName="showFileName" @confirm="generate" />
+    <input id="copyNode" type="hidden" />
+  </div>
+</template>
+
+<script setup>
+import draggable from "vuedraggable/dist/vuedraggable.common"
+import ClipboardJS from 'clipboard'
+import beautifier from 'js-beautify'
+import logo from '@/assets/logo/logo.png'
+import { inputComponents, selectComponents, layoutComponents, formConf as formConfData } from '@/utils/generator/config'
+import { beautifierConf } from '@/utils/index'
+import drawingDefalut from '@/utils/generator/drawingDefalut'
+import { makeUpHtml, vueTemplate, vueScript, cssStyle } from '@/utils/generator/html'
+import { makeUpJs } from '@/utils/generator/js'
+import { makeUpCss } from '@/utils/generator/css'
+import Download from '@/plugins/download'
+import { ElNotification } from 'element-plus'
+import DraggableItem from './DraggableItem'
+import RightPanel from './RightPanel'
+import CodeTypeDialog from './CodeTypeDialog'
+import { onMounted, watch } from 'vue'
+
+const drawingList = ref(drawingDefalut)
+const { proxy } = getCurrentInstance()
+const dialogVisible = ref(false)
+const showFileName = ref(false)
+const operationType = ref('')
+const idGlobal = ref(100)
+const activeData = ref(drawingDefalut[0])
+const activeId = ref(drawingDefalut[0].formId)
+const generateConf = ref(null)
+const formData = ref({})
+const formConf = ref(formConfData)
+let oldActiveId
+let tempActiveData
+
+function activeFormItem(element) {
+  activeData.value = element
+  activeId.value = element.formId
+}
+function copy() {
+  dialogVisible.value = true
+  showFileName.value = false
+  operationType.value = 'copy'
+}
+function download() {
+  dialogVisible.value = true
+  showFileName.value = true
+  operationType.value = 'download'
+}
+function empty() {
+  proxy.$modal.confirm('确定要清空所有组件吗？', '提示', { type: 'warning' }).then(() => {
+      idGlobal.value = 100
+      drawingList.value = []
+    }
+  )
+}
+
+function onEnd(obj, a) {
+  if (obj.from !== obj.to) {
+    activeData.value = tempActiveData
+    activeId.value = idGlobal.value
+  }
+}
+
+function addComponent(item) {
+  const clone = cloneComponent(item)
+  drawingList.value.push(clone)
+  activeFormItem(clone)
+}
+
+function cloneComponent(origin) {
+  const clone = JSON.parse(JSON.stringify(origin))
+  clone.formId = ++idGlobal.value
+  clone.renderKey = +new Date() // 改变renderKey后可以实现强制更新组件
+  if (!clone.layout) clone.layout = 'colFormItem'
+  if (clone.layout === 'colFormItem') {
+    clone.vModel = `field${idGlobal.value}`
+    clone.span = formConf.value.span // 仅在 colFormItem 中设置 span
+    // 修正：当 placeholder 不存在时设置为 label，否则追加 label
+    if (clone.placeholder === undefined) {
+      clone.placeholder = clone.label
+    } else {
+      clone.placeholder += clone.label
+    }
+    tempActiveData = clone
+  } else if (clone.layout === 'rowFormItem') {
+    delete clone.label
+    delete clone.span // 修正：rowFormItem 不需要 span 属性
+    clone.componentName = `row${idGlobal.value}`
+    clone.gutter = formConf.value.gutter
+    tempActiveData = clone
+  }
+  return tempActiveData
+}
+
+function drawingItemCopy(item, parent) {
+  let clone = JSON.parse(JSON.stringify(item))
+  clone = createIdAndKey(clone)
+  parent.push(clone)
+  activeFormItem(clone)
+}
 
 
+function createIdAndKey(item) {
+  item.formId = ++idGlobal.value
+  item.renderKey = +new Date()
+  if (item.layout === 'colFormItem') {
+    item.vModel = `field${idGlobal.value}`
+  } else if (item.layout === 'rowFormItem') {
+    item.componentName = `row${idGlobal.value}`
+  }
+  if (Array.isArray(item.children)) {
+    item.children = item.children.map(childItem => createIdAndKey(childItem))
+  }
+  return item
+}
 
+function drawingItemDelete(index, parent) {
+  parent.splice(index, 1)
+  nextTick(() => {
+    const len = drawingList.value.length
+    if (len) {
+      activeFormItem(drawingList.value[len - 1])
+    }
+  })
+}
+
+function tagChange(newTag) {
+  newTag = cloneComponent(newTag)
+  newTag.vModel = activeData.value.vModel
+  newTag.formId = activeId.value
+  newTag.span = activeData.value.span
+  delete activeData.value.tag
+  delete activeData.value.tagIcon
+  delete activeData.value.document
+  Object.keys(newTag).forEach(key => {
+    if (activeData.value[key] !== undefined
+      && typeof activeData.value[key] === typeof newTag[key]) {
+      newTag[key] = activeData.value[key]
+    }
+  })
+  activeData.value = newTag
+  updateDrawingList(newTag, drawingList.value)
+}
+
+
+function updateDrawingList(newTag, list) {
+  const index = list.findIndex(item => item.formId === activeId.value)
+  if (index > -1) {
+    list.splice(index, 1, newTag)
+  } else {
+    list.forEach(item => {
+      if (Array.isArray(item.children)) updateDrawingList(newTag, item.children)
+    })
+  }
+}
+function generate(data) {
+  generateConf.value = data
+  nextTick(() => {
+    switch (operationType.value) {
+      case 'copy':
+        execCopy(data)
+        break
+      case 'download':
+        execDownload(data)
+        break
+      default:
+        break
+    }
+  })
+}
+
+function execDownload(data) {
+  const codeStr = generateCode()
+  const blob = new Blob([codeStr], { type: 'text/plain;charset=utf-8' })
+  Download.saveAs(blob, data.fileName)
+}
+
+function execCopy(data) {
+  document.getElementById('copyNode').click()
+}
+function AssembleFormData() {
+  formData.value = { fields: JSON.parse(JSON.stringify(drawingList.value)), ...formConf.value }
+}
+function generateCode() {
+  const { type } = generateConf.value
+  AssembleFormData()
+  const script = vueScript(makeUpJs(formData.value, type))
+  const html = vueTemplate(makeUpHtml(formData.value, type))
+  const css = cssStyle(makeUpCss(formData.value))
+  return beautifier.html(html + script + css, beautifierConf.html)
+}
+watch(() => activeData.value.label, (val, oldVal) => {
+  if (
+    activeData.value.placeholder === undefined
+    || !activeData.value.tag
+    || oldActiveId !== activeId.value
+  ) {
+    return
+  }
+  activeData.value.placeholder = activeData.value.placeholder.replace(oldVal, '') + val
+})
+watch(activeId, (val) => {
+  oldActiveId = val
+}, { immediate: true })
+
+onMounted(() => {
+  const clipboard = new ClipboardJS('#copyNode', {
+    text: trigger => {
+      const codeStr = generateCode()
+      ElNotification({ title: '成功', message: '代码已复制到剪切板，可粘贴。', type: 'success' })
+      return codeStr
+    }
+  })
+  clipboard.on('error', e => {
+    proxy.$modal.msgError('代码复制失败')
+  })
+})
+</script>
+
+<style lang='scss'>
+@use "sass:color";
+$primaryColor: #8B5FBF; // 主色调淡紫色
+$lightPurple: #E6E6FA; // 更淡的紫色
+$darkPurple: #6A4C9C; // 深紫色用于强调
+$textDark: #333333; // 深色文字
+$textLight: #666666; // 浅色文字
+$borderColor: #D8BFD8; // 边框颜色
+$white: #FFFFFF; // 白色
+$lightGray: #F5F5F5; // 浅灰色背景
+$successColor: #10b981;
+$dangerColor: #ef4444;
+$warningColor: #f59e0b;
+
+.container {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(circle at center, $white 0%, $lightPurple 70%, color.adjust($primaryColor, $lightness: 20%) 100%);
+  height: calc(100vh - 50px - 40px);
+  overflow: hidden;
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: $textDark;
+
+  .left-board {
+    width: 260px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: calc(100vh - 50px - 40px);
+    background: rgba($white, 0.95);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid $borderColor;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+
+    .logo-wrapper {
+      position: relative;
+      height: 42px;
+      border-bottom: 1px solid $borderColor;
+      box-sizing: border-box;
+      background: linear-gradient(135deg, $lightPurple 0%, $white 100%);
+
+      .logo {
+        position: absolute;
+        left: 12px;
+        top: 6px;
+        line-height: 30px;
+        color: $darkPurple;
+        font-weight: 600;
+        font-size: 15px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        >img {
+          width: 30px;
+          height: 30px;
+          vertical-align: top;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    .left-scrollbar {
+      .el-scrollbar__wrap {
+        box-sizing: border-box;
+        overflow-x: hidden !important;
+        margin-bottom: 0 !important;
+
+        .components-list {
+          padding: 8px;
+          box-sizing: border-box;
+          height: 100%;
+
+          .components-title {
+            font-size: 14px;
+            color: $darkPurple;
+            margin: 12px 2px 8px 2px;
+            padding: 8px 10px;
+            background: rgba($lightPurple, 0.5);
+            border-radius: 6px;
+            border-left: 3px solid $primaryColor;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            line-height: 1.2;
+            text-align: left;
+
+            .svg-icon {
+              color: $primaryColor;
+              font-size: 16px;
+              flex-shrink: 0;
+              line-height: 1;
+            }
+          }
+
+          .components-draggable {
+            padding-bottom: 20px;
+
+            .components-item {
+              display: inline-block;
+              width: 48%;
+              margin: 1%;
+              transition: transform 0.2s ease !important;
+
+              .components-body {
+                display: flex;
+                align-items: center;
+                padding: 12px 8px;
+                background: $white;
+                font-size: 12px;
+                cursor: move;
+                border: 1px solid $borderColor;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                color: $textDark;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+                line-height: 1;
+                min-height: 40px;
+                width: 100%;
+                box-sizing: border-box;
+                position: relative;
+
+                .svg-icon {
+                  color: $primaryColor;
+                  font-size: 16px;
+                  flex-shrink: 0;
+                  line-height: 1;
+                  width: 16px;
+                  position: absolute;
+                  left: 13px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+
+                .component-text {
+                  flex: 1;
+                  text-align: center;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  padding: 0 10px;
+                }
+
+                &:hover {
+                  border: 1px solid $primaryColor;
+                  background: rgba($lightPurple, 0.3);
+                  transform: translateY(-2px);
+                  box-shadow: 0 4px 12px rgba(139, 95, 191, 0.2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .center-board {
+    height: calc(100vh - 50px - 40px);
+    width: auto;
+    margin: 0 350px 0 260px;
+    box-sizing: border-box;
+    background: rgba($white, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    .action-bar {
+      position: relative;
+      height: 42px;
+      padding: 0 15px;
+      box-sizing: border-box;
+      border-bottom: 1px solid $borderColor;
+      border-top: none;
+      border-left: none;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background: linear-gradient(135deg, $lightPurple 0%, $white 100%);
+    }
+
+    .center-scrollbar {
+      height: calc(100vh - 50px - 40px - 42px);
+      overflow: hidden;
+      border-left: 1px solid $borderColor;
+      border-right: 1px solid $borderColor;
+      box-sizing: border-box;
+
+      .el-scrollbar__view {
+        overflow-x: hidden;
+      }
+
+      .center-board-row {
+        padding: 12px 12px 15px 12px;
+        box-sizing: border-box;
+
+        &>.el-form {
+          height: calc(100vh - 50px - 40px - 69px);
+          flex: 1;
+
+          .drawing-board {
+            height: 100%;
+            position: relative;
+
+            .components-body {
+              padding: 0;
+              margin: 0;
+              font-size: 0;
+            }
+
+            .sortable-ghost {
+              position: relative;
+              display: block;
+              overflow: hidden;
+
+              &::before {
+                content: " ";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 3px;
+                background: $primaryColor;
+                z-index: 2;
+              }
+            }
+
+            .components-item.sortable-ghost {
+              width: 100%;
+              height: 60px;
+              background: rgba($lightPurple, 0.3);
+            }
+
+            .active-from-item {
+              &>.el-form-item {
+                background: rgba($lightPurple, 0.2);
+                border-radius: 8px;
+                border: 1px dashed $primaryColor;
+              }
+
+              &>.drawing-item-copy,
+              &>.drawing-item-delete {
+                display: initial;
+              }
+
+              &>.component-name {
+                color: $primaryColor;
+              }
+
+              .el-input__wrapper {
+                box-shadow: 0 0 0 1px $primaryColor inset;
+              }
+            }
+
+            .el-form-item {
+              margin-bottom: 15px;
+              background: $white;
+              border-radius: 6px;
+              padding: 8px;
+              border: 1px solid transparent;
+              transition: all 0.3s ease;
+              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+              &:hover {
+                border-color: $borderColor;
+              }
+            }
+          }
+
+          .drawing-item {
+            position: relative;
+            cursor: move;
+
+            &.unfocus-bordered:not(.activeFromItem)>div:first-child {
+              border: 1px dashed $borderColor;
+            }
+
+            .el-form-item {
+              padding: 12px 10px;
+            }
+          }
+
+          .drawing-row-item {
+            position: relative;
+            cursor: move;
+            box-sizing: border-box;
+            border: 1px dashed $borderColor;
+            border-radius: 6px;
+            padding: 0 2px;
+            margin-bottom: 15px;
+            background: $white;
+
+            .drawing-row-item {
+              margin-bottom: 2px;
+            }
+
+            .el-col {
+              margin-top: 22px;
+            }
+
+            .el-form-item {
+              margin-bottom: 0;
+            }
+
+            .drag-wrapper {
+              min-height: 80px;
+              flex: 1;
+              display: flex;
+              flex-wrap: wrap;
+            }
+
+            &.active-from-item {
+              border: 1px dashed $primaryColor;
+              background: rgba($lightPurple, 0.1);
+            }
+
+            .component-name {
+              position: absolute;
+              top: 0;
+              left: 0;
+              font-size: 12px;
+              color: $textDark;
+              display: inline-block;
+              padding: 0 6px;
+              background: rgba($lightPurple, 0.3);
+              border-radius: 0 0 6px 0;
+            }
+          }
+
+          .drawing-item,
+          .drawing-row-item {
+            &:hover {
+              &>.el-form-item {
+                background: rgba($lightPurple, 0.1);
+                border-radius: 6px;
+              }
+
+              &>.drawing-item-copy,
+              &>.drawing-item-delete {
+                display: initial;
+              }
+            }
+
+            &>.drawing-item-copy,
+            &>.drawing-item-delete {
+              display: none;
+              position: absolute;
+              top: -10px;
+              width: 24px;
+              height: 24px;
+              line-height: 24px;
+              text-align: center;
+              border-radius: 50%;
+              font-size: 12px;
+              border: 1px solid;
+              cursor: pointer;
+              z-index: 1;
+              transition: all 0.3s ease;
+            }
+
+            &>.drawing-item-copy {
+              right: 56px;
+              border-color: $primaryColor;
+              color: $primaryColor;
+              background: $white;
+
+              &:hover {
+                background: $primaryColor;
+                color: #fff;
+                transform: scale(1.1);
+              }
+            }
+
+            &>.drawing-item-delete {
+              right: 24px;
+              border-color: $dangerColor;
+              color: $dangerColor;
+              background: $white;
+
+              &:hover {
+                background: $dangerColor;
+                color: #fff;
+                transform: scale(1.1);
+              }
+            }
+          }
+
+          .empty-info {
+            position: absolute;
+            top: 46%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 16px;
+            color: $textLight;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 科技感按钮样式
+.tech-btn-primary,
+.tech-btn-secondary,
+.tech-btn-danger {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 13px;
+  backdrop-filter: blur(10px);
+}
+
+.tech-btn-primary {
+  background: rgba($lightPurple, 0.7);
+  color: $darkPurple;
+  border: 1px solid rgba($primaryColor, 0.3);
+  box-shadow: 0 2px 8px rgba(139, 95, 191, 0.15);
+
+  &:hover {
+    transform: translateY(-1px);
+    background: rgba($lightPurple, 0.9);
+    box-shadow: 0 4px 15px rgba(139, 95, 191, 0.25);
+    color: $darkPurple;
+  }
+
+  &:active {
+    transform: translateY(0);
+    background: rgba($primaryColor, 0.1);
+  }
+}
+
+.tech-btn-secondary {
+  background: rgba($white, 0.8);
+  border: 1px solid rgba($borderColor, 0.6);
+  color: $textDark;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: rgba($primaryColor, 0.4);
+    background: rgba($white, 0.95);
+    color: $primaryColor;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.tech-btn-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
+
+  &:hover {
+    transform: translateY(-1px);
+    background: rgba(239, 68, 68, 0.15);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+    color: #dc2626;
+  }
+
+  &:active {
+    transform: translateY(0);
+    background: rgba(239, 68, 68, 0.2);
+  }
+}
+
+// 美化滚动条
+.el-scrollbar {
+  .el-scrollbar__bar {
+    &.is-vertical {
+      width: 6px;
+    }
+    
+    .el-scrollbar__thumb {
+      background: rgba(139, 95, 191, 0.3);
+      border-radius: 3px;
+      
+      &:hover {
+        background: rgba(139, 95, 191, 0.5);
+      }
+    }
+  }
+}
+
+// 美化表单元素
+.el-form-item {
+  .el-form-item__label {
+    color: $textDark;
+    font-weight: 500;
+  }
+}
+
+// 美化输入框
+.el-input {
+  .el-input__wrapper {
+    background: $white;
+    border: 1px solid $borderColor;
+    border-radius: 6px;
+    box-shadow: none;
+    
+    &:hover {
+      border-color: $primaryColor;
+    }
+    
+    &.is-focus {
+      border-color: $primaryColor;
+      box-shadow: 0 0 0 1px $primaryColor;
+    }
+  }
+  
+  .el-input__inner {
+    color: $textDark;
+    
+    &::placeholder {
+      color: $textLight;
+    }
+  }
+}
+</style>
+<template>
+  <div class="right-board">
+    <el-tabs v-model="currentTab" stretch class="center-tabs">
+      <el-tab-pane label="组件属性" name="field" />
+      <el-tab-pane label="表单属性" name="form" />
+    </el-tabs>
+    <div class="field-box">
+      <a class="document-link" target="_blank" :href="documentLink" title="查看组件文档">
+        <el-icon>
+          <Link />
+        </el-icon>
+      </a>
+      <el-scrollbar class="right-scrollbar">
+        <!-- 组件属性 -->
+        <el-form v-show="currentTab === 'field' && showField" size="default" label-width="90px" label-position="top"
+          style="">
+          <el-form-item v-if="activeData.changeTag" label="组件类型">
+            <el-select v-model="activeData.tagIcon" placeholder="请选择组件类型" :style="{ width: '100%' }" @change="tagChange">
+              <el-option-group v-for="group in tagList" :key="group.label" :label="group.label">
+                <el-option v-for="item in group.options" :key="item.label" :label="item.label" :value="item.tagIcon">
+                  <svg-icon class="node-icon" :icon-class="item.tagIcon" style="margin-right: 10px;" />
+                  <span> {{ item.label }}</span>
+                </el-option>
+              </el-option-group>
+            </el-select>
+          </el-form-item>
+          <el-form-item v-if="activeData.vModel !== undefined" label="字段名">
+            <el-input v-model="activeData.vModel" placeholder="请输入字段名（v-model）" />
+          </el-form-item>
+          <el-form-item v-if="activeData.componentName !== undefined" label="组件名">
+            {{ activeData.componentName }}
+          </el-form-item>
+          <el-form-item v-if="activeData.label !== undefined" label="标题">
+            <el-input v-model="activeData.label" placeholder="请输入标题" />
+          </el-form-item>
+          <el-form-item v-if="activeData.placeholder !== undefined" label="占位提示">
+            <el-input v-model="activeData.placeholder" placeholder="请输入占位提示" />
+          </el-form-item>
+          <el-form-item v-if="activeData['start-placeholder'] !== undefined" label="开始占位">
+            <el-input v-model="activeData['start-placeholder']" placeholder="请输入占位提示" />
+          </el-form-item>
+          <el-form-item v-if="activeData['end-placeholder'] !== undefined" label="结束占位">
+            <el-input v-model="activeData['end-placeholder']" placeholder="请输入占位提示" />
+          </el-form-item>
+          <el-form-item v-if="activeData.span !== undefined" label="表单栅格">
+            <el-slider v-model="activeData.span" :max="24" :min="1" :marks="{ 12: '' }" @change="spanChange" />
+          </el-form-item>
+          <el-form-item v-if="activeData.layout === 'rowFormItem'" label="栅格间隔">
+            <el-input-number v-model="activeData.gutter" :min="0" placeholder="栅格间隔" />
+          </el-form-item>
+
+          <el-form-item v-if="activeData.justify !== undefined" label="水平排列">
+            <el-select v-model="activeData.justify" placeholder="请选择水平排列" :style="{ width: '100%' }">
+              <el-option v-for="(item, index) in justifyOptions" :key="index" :label="item.label" :value="item.value" />
+            </el-select>
+          </el-form-item>
+          <el-form-item v-if="activeData.align !== undefined" label="垂直排列">
+            <el-radio-group v-model="activeData.align">
+              <el-radio-button label="top" />
+              <el-radio-button label="middle" />
+              <el-radio-button label="bottom" />
+            </el-radio-group>
+          </el-form-item>
+          <el-form-item v-if="activeData.labelWidth !== undefined" label="标签宽度">
+            <el-input v-model.number="activeData.labelWidth" type="number" placeholder="请输入标签宽度" />
+          </el-form-item>
+          <el-form-item v-if="activeData.style && activeData.style.width !== undefined" label="组件宽度">
+            <el-input v-model="activeData.style.width" placeholder="请输入组件宽度" clearable />
+          </el-form-item>
+          <el-form-item v-if="activeData.vModel !== undefined" label="默认值">
+            <el-input :value="setDefaultValue(activeData.defaultValue)" placeholder="请输入默认值"
+              @input="onDefaultValueInput" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-checkbox-group'" label="至少应选">
+            <el-input-number :value="activeData.min" :min="0" placeholder="至少应选"
+              @input="$set(activeData, 'min', $event ? $event : undefined)" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-checkbox-group'" label="最多可选">
+            <el-input-number :value="activeData.max" :min="0" placeholder="最多可选"
+              @input="$set(activeData, 'max', $event ? $event : undefined)" />
+          </el-form-item>
+          <el-form-item v-if="activeData.prepend !== undefined" label="前缀">
+            <el-input v-model="activeData.prepend" placeholder="请输入前缀" />
+          </el-form-item>
+          <el-form-item v-if="activeData.append !== undefined" label="后缀">
+            <el-input v-model="activeData.append" placeholder="请输入后缀" />
+          </el-form-item>
+          <el-form-item v-if="activeData['prefix-icon'] !== undefined" label="前图标">
+            <el-input v-model="activeData['prefix-icon']" placeholder="请输入前图标名称">
+              <template #append>
+                <el-button icon="Pointer" @click="openIconsDialog('prefix-icon')">
+                  选择
+                </el-button>
+              </template>
+            </el-input>
+          </el-form-item>
+          <el-form-item v-if="activeData['suffix-icon'] !== undefined" label="后图标">
+            <el-input v-model="activeData['suffix-icon']" placeholder="请输入后图标名称">
+              <template #append>
+                <el-button icon="Pointer" @click="openIconsDialog('suffix-icon')">
+                  选择
+                </el-button>
+              </template>
+            </el-input>
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-cascader'" label="选项分隔符">
+            <el-input v-model="activeData.separator" placeholder="请输入选项分隔符" />
+          </el-form-item>
+          <el-form-item v-if="activeData.autosize !== undefined" label="最小行数">
+            <el-input-number v-model="activeData.autosize.minRows" :min="1" placeholder="最小行数" />
+          </el-form-item>
+          <el-form-item v-if="activeData.autosize !== undefined" label="最大行数">
+            <el-input-number v-model="activeData.autosize.maxRows" :min="1" placeholder="最大行数" />
+          </el-form-item>
+          <el-form-item v-if="activeData.min !== undefined" label="最小值">
+            <el-input-number v-model="activeData.min" placeholder="最小值" />
+          </el-form-item>
+          <el-form-item v-if="activeData.max !== undefined" label="最大值">
+            <el-input-number v-model="activeData.max" placeholder="最大值" />
+          </el-form-item>
+          <el-form-item v-if="activeData.step !== undefined" label="步长">
+            <el-input-number v-model="activeData.step" placeholder="步数" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-input-number'" label="精度">
+            <el-input-number v-model="activeData.precision" :min="0" placeholder="精度" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-input-number'" label="按钮位置">
+            <el-radio-group v-model="activeData['controls-position']">
+              <el-radio-button label="">
+                默认
+              </el-radio-button>
+              <el-radio-button label="right">
+                右侧
+              </el-radio-button>
+            </el-radio-group>
+          </el-form-item>
+          <el-form-item v-if="activeData.maxlength !== undefined" label="最多输入">
+            <el-input v-model="activeData.maxlength" placeholder="请输入字符长度">
+              <template slot="append">
+                个字符
+              </template>
+            </el-input>
+          </el-form-item>
+          <el-form-item v-if="activeData['active-text'] !== undefined" label="开启提示">
+            <el-input v-model="activeData['active-text']" placeholder="请输入开启提示" />
+          </el-form-item>
+          <el-form-item v-if="activeData['inactive-text'] !== undefined" label="关闭提示">
+            <el-input v-model="activeData['inactive-text']" placeholder="请输入关闭提示" />
+          </el-form-item>
+          <el-form-item v-if="activeData['active-value'] !== undefined" label="开启值">
+            <el-input :value="setDefaultValue(activeData['active-value'])" placeholder="请输入开启值"
+              @input="onSwitchValueInput($event, 'active-value')" />
+          </el-form-item>
+          <el-form-item v-if="activeData['inactive-value'] !== undefined" label="关闭值">
+            <el-input :value="setDefaultValue(activeData['inactive-value'])" placeholder="请输入关闭值"
+              @input="onSwitchValueInput($event, 'inactive-value')" />
+          </el-form-item>
+          <el-form-item v-if="activeData.type !== undefined && 'el-date-picker' === activeData.tag" label="时间类型">
+            <el-select v-model="activeData.type" placeholder="请选择时间类型" :style="{ width: '100%' }"
+              @change="dateTypeChange">
+              <el-option v-for="(item, index) in dateOptions" :key="index" :label="item.label" :value="item.value" />
+            </el-select>
+          </el-form-item>
+          <el-form-item v-if="activeData.name !== undefined" label="文件字段名">
+            <el-input v-model="activeData.name" placeholder="请输入上传文件字段名" />
+          </el-form-item>
+          <el-form-item v-if="activeData.accept !== undefined" label="文件类型">
+            <el-select v-model="activeData.accept" placeholder="请选择文件类型" :style="{ width: '100%' }" clearable>
+              <el-option label="图片" value="image/*" />
+              <el-option label="视频" value="video/*" />
+              <el-option label="音频" value="audio/*" />
+              <el-option label="excel" value=".xls,.xlsx" />
+              <el-option label="word" value=".doc,.docx" />
+              <el-option label="pdf" value=".pdf" />
+              <el-option label="txt" value=".txt" />
+            </el-select>
+          </el-form-item>
+          <el-form-item v-if="activeData.fileSize !== undefined" label="文件大小">
+            <el-input v-model.number="activeData.fileSize" placeholder="请输入文件大小">
+              <el-select slot="append" v-model="activeData.sizeUnit" :style="{ width: '66px' }">
+                <el-option label="KB" value="KB" />
+                <el-option label="MB" value="MB" />
+                <el-option label="GB" value="GB" />
+              </el-select>
+            </el-input>
+          </el-form-item>
+          <el-form-item v-if="activeData.action !== undefined" label="上传地址">
+            <el-input v-model="activeData.action" placeholder="请输入上传地址" clearable />
+          </el-form-item>
+          <el-form-item v-if="activeData['list-type'] !== undefined" label="列表类型">
+            <el-radio-group v-model="activeData['list-type']" size="small">
+              <el-radio-button label="text">
+                text
+              </el-radio-button>
+              <el-radio-button label="picture">
+                picture
+              </el-radio-button>
+              <el-radio-button label="picture-card">
+                picture-card
+              </el-radio-button>
+            </el-radio-group>
+          </el-form-item>
+          <el-form-item v-if="activeData.buttonText !== undefined" v-show="'picture-card' !== activeData['list-type']"
+            label="按钮文字">
+            <el-input v-model="activeData.buttonText" placeholder="请输入按钮文字" />
+          </el-form-item>
+          <el-form-item v-if="activeData['range-separator'] !== undefined" label="分隔符">
+            <el-input v-model="activeData['range-separator']" placeholder="请输入分隔符" />
+          </el-form-item>
+          <el-form-item v-if="activeData['picker-options'] !== undefined" label="时间段">
+            <el-input v-model="activeData['picker-options'].selectableRange" placeholder="请输入时间段" />
+          </el-form-item>
+          <el-form-item v-if="activeData.format !== undefined" label="时间格式">
+            <el-input :value="activeData.format" placeholder="请输入时间格式" @input="setTimeValue($event)" />
+          </el-form-item>
+          <template v-if="['el-checkbox-group', 'el-radio-group', 'el-select'].indexOf(activeData.tag) > -1">
+            <el-divider>选项</el-divider>
+            <draggable :list="activeData.options" :animation="340" group="selectItem" handle=".option-drag"
+              item-key="label">
+              <template #item="{ element, index }">
+                <div :key="index" class="select-item">
+                  <div class="select-line-icon option-drag">
+                    <i class="el-icon-s-operation" />
+                  </div>
+                  <el-input v-model="element.label" placeholder="选项名" size="small" />
+                  <el-input placeholder="选项值" size="small" :value="element.value"
+                    @input="setOptionValue(element, $event)" />
+                  <div class="close-btn select-line-icon" @click="activeData.options.splice(index, 1)">
+                    <el-icon>
+                      <Remove />
+                    </el-icon>
+                  </div>
+                </div>
+              </template>
+            </draggable>
+            <div>
+              <el-button icon="CirclePlus" style="margin-left: 8px; margin-top: 10px;" text bg type="primary"
+                @click="addSelectItem">
+                添加选项
+              </el-button>
+            </div>
+            <el-divider />
+          </template>
+
+          <template v-if="['el-cascader'].indexOf(activeData.tag) > -1">
+            <el-divider>选项</el-divider>
+            <el-form-item label="数据类型">
+              <el-radio-group v-model="activeData.dataType" size="small">
+                <el-radio-button label="dynamic">
+                  动态数据
+                </el-radio-button>
+                <el-radio-button label="static">
+                  静态数据
+                </el-radio-button>
+              </el-radio-group>
+            </el-form-item>
+
+            <template v-if="activeData.dataType === 'dynamic'">
+              <el-form-item label="标签键名">
+                <el-input v-model="activeData.labelKey" placeholder="请输入标签键名" />
+              </el-form-item>
+              <el-form-item label="值键名">
+                <el-input v-model="activeData.valueKey" placeholder="请输入值键名" />
+              </el-form-item>
+              <el-form-item label="子级键名">
+                <el-input v-model="activeData.childrenKey" placeholder="请输入子级键名" />
+              </el-form-item>
+            </template>
+
+            <el-tree v-if="activeData.dataType === 'static'" draggable :data="activeData.options" node-key="id"
+              :expand-on-click-node="false" :render-content="renderContent" />
+            <div v-if="activeData.dataType === 'static'">
+              <el-button icon="CirclePlus" style="margin-left: 0; margin-top: 10px;" type="primary" text bg
+                @click="addTreeItem">
+                添加父级
+              </el-button>
+            </div>
+            <el-divider />
+          </template>
+
+          <el-form-item v-if="activeData.optionType !== undefined" label="选项样式">
+            <el-radio-group v-model="activeData.optionType">
+              <el-radio-button label="default">
+                默认
+              </el-radio-button>
+              <el-radio-button label="button">
+                按钮
+              </el-radio-button>
+            </el-radio-group>
+          </el-form-item>
+          <el-form-item v-if="activeData['active-color'] !== undefined" label="开启颜色">
+            <el-color-picker v-model="activeData['active-color']" />
+          </el-form-item>
+          <el-form-item v-if="activeData['inactive-color'] !== undefined" label="关闭颜色">
+            <el-color-picker v-model="activeData['inactive-color']" />
+          </el-form-item>
+
+          <el-form-item v-if="activeData['allow-half'] !== undefined" label="允许半选">
+            <el-switch v-model="activeData['allow-half']" />
+          </el-form-item>
+          <el-form-item v-if="activeData['show-text'] !== undefined" label="辅助文字">
+            <el-switch v-model="activeData['show-text']" @change="rateTextChange" />
+          </el-form-item>
+          <el-form-item v-if="activeData['show-score'] !== undefined" label="显示分数">
+            <el-switch v-model="activeData['show-score']" @change="rateScoreChange" />
+          </el-form-item>
+          <el-form-item v-if="activeData['show-stops'] !== undefined" label="显示间断点">
+            <el-switch v-model="activeData['show-stops']" />
+          </el-form-item>
+          <el-form-item v-if="activeData.range !== undefined" label="范围选择">
+            <el-switch v-model="activeData.range" @change="rangeChange" />
+          </el-form-item>
+          <el-form-item v-if="activeData.border !== undefined && activeData.optionType === 'default'" label="是否带边框">
+            <el-switch v-model="activeData.border" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-color-picker'" label="颜色格式">
+            <el-select v-model="activeData['color-format']" placeholder="请选择颜色格式" :style="{ width: '100%' }"
+              @change="colorFormatChange">
+              <el-option v-for="(item, index) in colorFormatOptions" :key="index" :label="item.label"
+                :value="item.value" />
+            </el-select>
+          </el-form-item>
+          <el-form-item v-if="activeData.size !== undefined &&
+            (activeData.optionType === 'button' ||
+              activeData.border ||
+              activeData.tag === 'el-color-picker')" label="选项尺寸">
+            <el-radio-group v-model="activeData.size">
+              <el-radio-button label="large">
+                较大
+              </el-radio-button>
+              <el-radio-button label="default">
+                默认
+              </el-radio-button>
+              <el-radio-button label="small">
+                较小
+              </el-radio-button>
+            </el-radio-group>
+          </el-form-item>
+          <el-form-item v-if="activeData['show-word-limit'] !== undefined" label="输入统计">
+            <el-switch v-model="activeData['show-word-limit']" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-input-number'" label="严格步数">
+            <el-switch v-model="activeData['step-strictly']" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-cascader'" label="是否多选">
+            <el-switch v-model="activeData.props.props.multiple" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-cascader'" label="展示全路径">
+            <el-switch v-model="activeData['show-all-levels']" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-cascader'" label="可否筛选">
+            <el-switch v-model="activeData.filterable" />
+          </el-form-item>
+          <el-form-item v-if="activeData.clearable !== undefined" label="能否清空">
+            <el-switch v-model="activeData.clearable" />
+          </el-form-item>
+          <el-form-item v-if="activeData.showTip !== undefined" label="显示提示">
+            <el-switch v-model="activeData.showTip" />
+          </el-form-item>
+          <el-form-item v-if="activeData.multiple !== undefined" label="多选文件">
+            <el-switch v-model="activeData.multiple" />
+          </el-form-item>
+          <el-form-item v-if="activeData['auto-upload'] !== undefined" label="自动上传">
+            <el-switch v-model="activeData['auto-upload']" />
+          </el-form-item>
+          <el-form-item v-if="activeData.readonly !== undefined" label="是否只读">
+            <el-switch v-model="activeData.readonly" />
+          </el-form-item>
+          <el-form-item v-if="activeData.disabled !== undefined" label="是否禁用">
+            <el-switch v-model="activeData.disabled" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-select'" label="是否可搜索">
+            <el-switch v-model="activeData.filterable" />
+          </el-form-item>
+          <el-form-item v-if="activeData.tag === 'el-select'" label="是否多选">
+            <el-switch v-model="activeData.multiple" @change="multipleChange" />
+          </el-form-item>
+          <el-form-item v-if="activeData.required !== undefined" label="是否必填">
+            <el-switch v-model="activeData.required" />
+          </el-form-item>
+
+          <template v-if="activeData.layoutTree">
+            <el-divider>布局结构树</el-divider>
+            <el-tree :data="[activeData]" :props="layoutTreeProps" node-key="renderKey" default-expand-all draggable>
+              <template #default="{ node, data }">
+                <span class="node-label">
+                  <svg-icon class="node-icon" :icon-class="data.tagIcon" style="margin-right: 5px;" />
+                  {{ node.label }}
+                </span>
+              </template>
+            </el-tree>
+          </template>
+
+          <template v-if="activeData.layout === 'colFormItem'">
+            <el-divider>正则校验</el-divider>
+            <div v-for="(item, index) in activeData.regList" :key="index" class="reg-item">
+              <span class="close-btn" @click="activeData.regList.splice(index, 1)">
+                <el-icon>
+                  <Close />
+                </el-icon>
+              </span>
+              <el-form-item label="表达式">
+                <el-input v-model="item.pattern" placeholder="请输入正则" />
+              </el-form-item>
+              <el-form-item label="错误提示" style="margin-bottom:0">
+                <el-input v-model="item.message" placeholder="请输入错误提示" />
+              </el-form-item>
+            </div>
+            <div>
+              <el-button icon="CirclePlus" style="margin-left: 0; margin-top: 10px;" type="primary" text bg
+                @click="addReg">
+                添加规则
+              </el-button>
+            </div>
+          </template>
+        </el-form>
+        <!-- 表单属性 -->
+        <el-form v-show="currentTab === 'form'" label-width="90px" label-position="top">
+          <el-form-item label="表单名">
+            <el-input v-model="formConf.formRef" placeholder="请输入表单名（ref）" />
+          </el-form-item>
+          <el-form-item label="表单模型">
+            <el-input v-model="formConf.formModel" placeholder="请输入数据模型" />
+          </el-form-item>
+          <el-form-item label="校验模型">
+            <el-input v-model="formConf.formRules" placeholder="请输入校验模型" />
+          </el-form-item>
+          <el-form-item label="表单尺寸">
+            <el-radio-group v-model="formConf.size">
+              <el-radio-button label="large" value="较大" />
+              <el-radio-button label="default" value="默认" />
+              <el-radio-button label="small" value="较小" />
+            </el-radio-group>
+          </el-form-item>
+          <el-form-item label="标签对齐">
+            <el-radio-group v-model="formConf.labelPosition">
+              <el-radio-button label="left" value="左对齐" />
+              <el-radio-button label="right" value="右对齐" />
+              <el-radio-button label="top" value="顶部对齐" />
+            </el-radio-group>
+          </el-form-item>
+          <el-form-item label="标签宽度">
+            <el-input-number v-model="formConf.labelWidth" placeholder="标签宽度" />
+          </el-form-item>
+          <el-form-item label="栅格间隔">
+            <el-input-number v-model="formConf.gutter" :min="0" placeholder="栅格间隔" />
+          </el-form-item>
+          <el-form-item label="禁用表单">
+            <el-switch v-model="formConf.disabled" />
+          </el-form-item>
+          <el-form-item label="表单按钮">
+            <el-switch v-model="formConf.formBtns" />
+          </el-form-item>
+          <el-form-item label="显示未选中组件边框">
+            <el-switch v-model="formConf.unFocusedComponentBorder" />
+          </el-form-item>
+        </el-form>
+      </el-scrollbar>
+    </div>
+    <icons-dialog v-model="iconsVisible" :current="activeData[currentIconModel]" @select="setIcon" />
+    <treeNode-dialog v-model="dialogVisible" @commit="addNode" />
+
+  </div>
+</template>
+
+<script setup>
+import draggable from "vuedraggable/dist/vuedraggable.common"
+import { isNumberStr } from '@/utils/index'
+import IconsDialog from './IconsDialog'
+import TreeNodeDialog from './TreeNodeDialog'
+import { inputComponents, selectComponents } from '@/utils/generator/config'
+
+const { proxy } = getCurrentInstance()
+const dateTimeFormat = {
+  date: 'YYYY-MM-DD',
+  week: 'YYYY 第 ww 周',
+  month: 'YYYY-MM',
+  year: 'YYYY',
+  datetime: 'YYYY-MM-DD HH:mm:ss',
+  daterange: 'YYYY-MM-DD',
+  monthrange: 'YYYY-MM',
+  datetimerange: 'YYYY-MM-DD HH:mm:ss'
+}
+const props = defineProps({
+  showField: Boolean,
+  activeData: Object,
+  formConf: Object
+})
+
+const data = reactive({
+  currentTab: 'field',
+  currentNode: null,
+  dialogVisible: false,
+  iconsVisible: false,
+  currentIconModel: null,
+  dateTypeOptions: [
+    {
+      label: '日(date)',
+      value: 'date'
+    },
+    {
+      label: '周(week)',
+      value: 'week'
+    },
+    {
+      label: '月(month)',
+      value: 'month'
+    },
+    {
+      label: '年(year)',
+      value: 'year'
+    },
+    {
+      label: '日期时间(datetime)',
+      value: 'datetime'
+    }
+  ],
+  dateRangeTypeOptions: [
+    {
+      label: '日期范围(daterange)',
+      value: 'daterange'
+    },
+    {
+      label: '月范围(monthrange)',
+      value: 'monthrange'
+    },
+    {
+      label: '日期时间范围(datetimerange)',
+      value: 'datetimerange'
+    }
+  ],
+  colorFormatOptions: [
+    {
+      label: 'hex',
+      value: 'hex'
+    },
+    {
+      label: 'rgb',
+      value: 'rgb'
+    },
+    {
+      label: 'rgba',
+      value: 'rgba'
+    },
+    {
+      label: 'hsv',
+      value: 'hsv'
+    },
+    {
+      label: 'hsl',
+      value: 'hsl'
+    }
+  ],
+  justifyOptions: [
+    {
+      label: 'start',
+      value: 'start'
+    },
+    {
+      label: 'end',
+      value: 'end'
+    },
+    {
+      label: 'center',
+      value: 'center'
+    },
+    {
+      label: 'space-around',
+      value: 'space-around'
+    },
+    {
+      label: 'space-between',
+      value: 'space-between'
+    }
+  ],
+  layoutTreeProps: {
+    label(data, node) {
+      return data.componentName || `${data.label}: ${data.vModel}`
+    }
+  }
+})
+
+const { currentTab, currentNode, dialogVisible, iconsVisible, currentIconModel, dateTypeOptions, dateRangeTypeOptions, colorFormatOptions, justifyOptions, layoutTreeProps } = toRefs(data)
+
+const documentLink = computed(() => props.activeData.document || 'https://element-plus.org/zh-CN/guide/installation')
+
+const dateOptions = computed(() => {
+  if (props.activeData.type !== undefined && props.activeData.tag === 'el-date-picker') {
+    if (props.activeData['start-placeholder'] === undefined) {
+      return dateTypeOptions.value
+    }
+    return dateRangeTypeOptions.value
+  }
+  return []
+})
+
+const tagList = ref([
+  {
+    label: '输入型组件',
+    options: inputComponents
+  },
+  {
+    label: '选择型组件',
+    options: selectComponents
+  }
+])
+
+const emit = defineEmits(['tag-change'])
+
+function addReg() {
+  props.activeData.regList.push({
+    pattern: '',
+    message: ''
+  })
+}
+function addSelectItem() {
+  props.activeData.options.push({
+    label: '',
+    value: ''
+  })
+}
+
+function addTreeItem() {
+  ++proxy.idGlobal
+  dialogVisible.value = true
+  currentNode.value = props.activeData.options
+}
+
+function renderContent(h, { node, data, store }) {
+  return h('div', {
+    class: "custom-tree-node"
+  }, [
+    h('span', node.label),
+    h('span', {
+      class: "node-operation"
+    }, [
+      h(resolveComponent('el-link'), {
+        type: "primary",
+        icon: "Plus",
+        underline: false,
+        onClick: () => {
+          append(data)
+
+        }
+      }),
+      h(resolveComponent('el-link'), {
+        type: "danger",
+        icon: "Delete",
+        underline: false,
+        style: "margin-left: 5px;",
+        onClick: () => {
+          remove(node, data)
+        }
+      })
+    ])
+  ])
+}
+function append(data) {
+  if (!data.children) {
+    data.children = []
+  }
+  dialogVisible.value = true
+  currentNode.value = data.children
+}
+function remove(node, data) {
+  const { parent } = node
+  const children = parent.data.children || parent.data
+  const index = children.findIndex(d => d.id === data.id)
+  children.splice(index, 1)
+}
+function addNode(data) {
+  currentNode.value.push(data)
+}
+
+function setOptionValue(item, val) {
+  item.value = isNumberStr(val) ? +val : val
+}
+function setDefaultValue(val) {
+  if (Array.isArray(val)) {
+    return val.join(',')
+  }
+  if (['string', 'number'].indexOf(val) > -1) {
+    return val
+  }
+  if (typeof val === 'boolean') {
+    return `${val}`
+  }
+  return val
+}
+
+function onDefaultValueInput(str) {
+  if (Array.isArray(props.activeData.defaultValue)) {
+    // 数组
+    props.activeData.defaultValue = str.split(',').map(val => (isNumberStr(val) ? +val : val))
+  } else if (['true', 'false'].indexOf(str) > -1) {
+    // 布尔
+    props.activeData.defaultValue = JSON.parse(str)
+  } else {
+    // 字符串和数字
+    props.activeData.defaultValue = isNumberStr(str) ? +str : str
+  }
+}
+
+function onSwitchValueInput(val, name) {
+  if (['true', 'false'].indexOf(val) > -1) {
+    props.activeData[name] = JSON.parse(val)
+  } else {
+    props.activeData[name] = isNumberStr(val) ? +val : val
+  }
+}
+
+function setTimeValue(val, type) {
+  const valueFormat = type === 'week' ? dateTimeFormat.date : val
+  props.activeData.defaultValue = null
+  props.activeData['value-format'] = valueFormat
+  props.activeData.format = val
+}
+
+function spanChange(val) {
+  props.formConf.span = val
+}
+
+function multipleChange(val) {
+  props.activeData.defaultValue = val ? [] : ''
+}
+
+function dateTypeChange(val) {
+  setTimeValue(dateTimeFormat[val], val)
+}
+
+function rangeChange(val) {
+  props.activeData.defaultValue = val ? [props.activeData.min, props.activeData.max] : props.activeData.min
+}
+
+function rateTextChange(val) {
+  if (val) props.activeData['show-score'] = false
+}
+
+function rateScoreChange(val) {
+  if (val) props.activeData['show-text'] = false
+}
+
+function colorFormatChange(val) {
+  props.activeData.defaultValue = null
+  props.activeData['show-alpha'] = val.indexOf('a') > -1
+  props.activeData.renderKey = +new Date() // 更新renderKey,重新渲染该组件
+}
+
+function openIconsDialog(model) {
+  iconsVisible.value = true
+  currentIconModel.value = model
+}
+
+function setIcon(val) {
+  props.activeData[currentIconModel.value] = val
+}
+
+function tagChange(tagIcon) {
+  let target = inputComponents.find(item => item.tagIcon === tagIcon)
+  if (!target) target = selectComponents.find(item => item.tagIcon === tagIcon)
+  emit('tag-change', target)
+}
+</script>
+
+<style lang="scss" scoped>
+// 定义颜色变量
+$primaryColor: #8B5FBF;
+$lightPurple: #E6E6FA;
+$darkPurple: #6A4C9C;
+$textDark: #333333;
+$textLight: #666666;
+$borderColor: #D8BFD8;
+$white: #FFFFFF;
+$lightGray: #F5F5F5;
+
+.right-board {
+  width: 350px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 3px;
+  background: rgba($white, 0.95);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid $borderColor;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 50px - 40px);
+
+  &:deep() {
+    .el-tabs__header {
+      margin: 0;
+      background: linear-gradient(135deg, $lightPurple 0%, $white 100%);
+    }
+
+    .el-tabs__nav-wrap::after {
+      background-color: $borderColor;
+    }
+
+    .el-tabs__item {
+      color: $textDark;
+      font-weight: 500;
+      
+      &.is-active {
+        color: $primaryColor;
+      }
+      
+      &:hover {
+        color: $darkPurple;
+      }
+    }
+
+    .el-tabs__active-bar {
+      background-color: $primaryColor;
+    }
+
+    .el-input-group__append .el-button {
+      display: inline-flex;
+    }
+  }
+
+  .field-box {
+    position: relative;
+    height: calc(100vh - 50px - 40px - 42px);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .el-scrollbar {
+    height: 100%;
+
+    &:deep() {
+      .el-scrollbar__view {
+        padding: 20px;
+        background: $white;
+      }
+
+      .el-scrollbar__bar {
+        &.is-vertical {
+          width: 6px;
+        }
+        
+        .el-scrollbar__thumb {
+          background: rgba(139, 95, 191, 0.3);
+          border-radius: 3px;
+          
+          &:hover {
+            background: rgba(139, 95, 191, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 表单样式
+:deep(.el-form) {
+  .el-form-item {
+    margin-bottom: 16px;
+    background: $white;
+    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      border-color: $borderColor;
+    }
+
+    .el-form-item__label {
+      color: $textDark;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+  }
+
+  .el-divider {
+    border-color: $borderColor;
+    
+    .el-divider__text {
+      background: $white;
+      color: $darkPurple;
+      font-weight: 600;
+    }
+  }
+}
+
+// 输入框样式
+:deep(.el-input) {
+  .el-input__wrapper {
+    background: $white;
+    border: 1px solid $borderColor;
+    border-radius: 6px;
+    box-shadow: none;
+    
+    &:hover {
+      border-color: $primaryColor;
+    }
+    
+    &.is-focus {
+      border-color: $primaryColor;
+      box-shadow: 0 0 0 1px $primaryColor;
+    }
+  }
+  
+  .el-input__inner {
+    color: $textDark;
+    
+    &::placeholder {
+      color: $textLight;
+    }
+  }
+}
+
+// 按钮样式
+:deep(.el-button) {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &.is-text {
+    background: transparent;
+    border: 1px solid $borderColor;
+    color: $textDark;
+
+    &:hover {
+      border-color: $primaryColor;
+      color: $primaryColor;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.reg-item {
+  padding: 12px;
+  background: rgba($lightPurple, 0.3);
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid $borderColor;
+
+  .close-btn {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: #ef4444;
+    border-radius: 50%;
+    color: $white;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      background: #dc2626;
+    }
+  }
+}
+
+.select-item {
+  display: flex;
+  border: 1px dashed $borderColor;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: $white;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+
+  & .close-btn {
+    cursor: pointer;
+    color: #ef4444;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      color: #dc2626;
+    }
+  }
+
+  & .el-input + .el-input {
+    margin-left: 8px;
+  }
+}
+
+.select-item + .select-item {
+  margin-top: 4px;
+}
+
+.select-item.sortable-chosen {
+  border: 1px dashed $primaryColor;
+  background: rgba($lightPurple, 0.1);
+}
+
+.select-line-icon {
+  line-height: 32px;
+  font-size: 16px;
+  padding: 0 8px;
+  color: $textLight;
+}
+
+.option-drag {
+  cursor: move;
+  color: $primaryColor;
+}
+
+.time-range {
+  .el-date-editor {
+    width: 227px;
+  }
+
+  :deep() {
+    .el-icon-time {
+      display: none;
+    }
+  }
+}
+
+.document-link {
+  position: absolute;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background: linear-gradient(135deg, $primaryColor 0%, $darkPurple 100%);
+  z-index: 1;
+  border-radius: 0 0 8px 0;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-size: 18px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(139, 95, 191, 0.3);
+  }
+}
+
+.node-label {
+  font-size: 14px;
+  color: $textDark;
+}
+
+.node-icon {
+  color: $primaryColor;
+}
+
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+  color: $textDark;
+}
+
+// 美化滑块
+:deep(.el-slider) {
+  .el-slider__runway {
+    background: $borderColor;
+  }
+  
+  .el-slider__bar {
+    background: $primaryColor;
+  }
+  
+  .el-slider__button {
+    border: 2px solid $primaryColor;
+    background: $white;
+  }
+}
+
+// 美化开关
+:deep(.el-switch) {
+  &.is-checked {
+    .el-switch__core {
+      background: $primaryColor;
+      border-color: $primaryColor;
+    }
+  }
+}
+
+// 美化单选/复选框
+:deep(.el-radio-group),
+:deep(.el-checkbox-group) {
+  .el-radio-button,
+  .el-checkbox-button {
+    .el-radio-button__inner,
+    .el-checkbox-button__inner {
+      border: 1px solid $borderColor;
+      color: $textDark;
+      
+      &:hover {
+        border-color: $primaryColor;
+        color: $primaryColor;
+      }
+    }
+    
+    &.is-active {
+      .el-radio-button__inner,
+      .el-checkbox-button__inner {
+        background: $primaryColor;
+        border-color: $primaryColor;
+        color: $white;
+      }
+    }
+  }
+}
+
+// 美化数字输入框
+:deep(.el-input-number) {
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    background: $lightGray;
+    border: 1px solid $borderColor;
+    color: $textDark;
+    
+    &:hover {
+      border-color: $primaryColor;
+      color: $primaryColor;
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.6.2 代码生成（/gen/index.vue）
+
+![image-20251113143747513](README.assets/image-20251113143747513.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\tool\gen\index.vue` 文件中加入下述代码
+
+```
+<template>
+  <div class="gen-management">
+    <div class="main-card">
+      <div class="content-block">
+        <!-- 搜索区域 -->
+        <div class="search-section">
+          <el-form :model="queryParams" ref="queryRef" v-show="showSearch" :inline="true" class="search-form">
+            <el-form-item label="表名称" prop="tableName">
+              <el-input
+                v-model="queryParams.tableName"
+                placeholder="请输入表名称"
+                clearable
+                class="tech-input"
+                @keyup.enter="handleQuery"
+              />
+            </el-form-item>
+            <el-form-item label="表描述" prop="tableComment">
+              <el-input
+                v-model="queryParams.tableComment"
+                placeholder="请输入表描述"
+                clearable
+                class="tech-input"
+                @keyup.enter="handleQuery"
+              />
+            </el-form-item>
+            <el-form-item label="创建时间" class="date-range">
+              <el-date-picker
+                v-model="dateRange"
+                value-format="YYYY-MM-DD"
+                type="daterange"
+                range-separator="-"
+                start-placeholder="开始日期"
+                end-placeholder="结束日期"
+                class="tech-date-picker"
+              ></el-date-picker>
+            </el-form-item>
+            <el-form-item class="search-actions">
+              <el-button type="primary" icon="Search" @click="handleQuery" class="tech-btn primary">搜索</el-button>
+              <el-button icon="Refresh" @click="resetQuery" class="tech-btn secondary">重置</el-button>
+            </el-form-item>
+          </el-form>
+        </div>
+
+        <!-- 操作按钮区域 -->
+        <div class="action-section">
+          <el-row :gutter="10">
+            <el-col :span="1.5">
+              <el-button
+                type="primary"
+                plain
+                icon="Download"
+                :disabled="multiple"
+                @click="handleGenTable"
+                v-hasPermi="['tool:gen:code']"
+                class="tech-btn warning"
+              >生成</el-button>
+            </el-col>
+            <el-col :span="1.5">
+              <el-button
+                type="primary"
+                plain
+                icon="Plus"
+                @click="openCreateTable"
+                v-hasRole="['admin']"
+                class="tech-btn primary"
+              >创建</el-button>
+            </el-col>
+            <el-col :span="1.5">
+              <el-button
+                type="info"
+                plain
+                icon="Upload"
+                @click="openImportTable"
+                v-hasPermi="['tool:gen:import']"
+                class="tech-btn info"
+              >导入</el-button>
+            </el-col>
+            <el-col :span="1.5">
+              <el-button
+                type="success"
+                plain
+                icon="Edit"
+                :disabled="single"
+                @click="handleEditTable"
+                v-hasPermi="['tool:gen:edit']"
+                class="tech-btn success"
+              >修改</el-button>
+            </el-col>
+            <el-col :span="1.5">
+              <el-button
+                type="danger"
+                plain
+                icon="Delete"
+                :disabled="multiple"
+                @click="handleDelete"
+                v-hasPermi="['tool:gen:remove']"
+                class="tech-btn danger"
+              >删除</el-button>
+            </el-col>
+            <right-toolbar v-model:showSearch="showSearch" @queryTable="getList" class="right-toolbar"></right-toolbar>
+          </el-row>
+        </div>
+
+        <!-- 表格区域 -->
+        <div class="table-section">
+          <el-table ref="genRef" v-loading="loading" :data="tableList" @selection-change="handleSelectionChange" :default-sort="defaultSort" @sort-change="handleSortChange" class="tech-table">
+            <el-table-column type="selection" align="center" width="55"></el-table-column>
+            <el-table-column label="序号" type="index" width="70" align="center">
+              <template #default="scope">
+                <div class="index-badge">{{(queryParams.pageNum - 1) * queryParams.pageSize + scope.$index + 1}}</div>
+              </template>
+            </el-table-column>
+            <el-table-column label="表名称" align="center" prop="tableName" :show-overflow-tooltip="true" width="180" />
+            <el-table-column label="表描述" align="center" prop="tableComment" :show-overflow-tooltip="true" width="200" />
+            <el-table-column label="实体" align="center" prop="className" :show-overflow-tooltip="true" width="180" />
+            <el-table-column label="创建时间" align="center" prop="createTime" width="180" sortable="custom" :sort-orders="['descending', 'ascending']">
+              <template #default="scope">
+                <span class="time-text">{{ scope.row.createTime }}</span>
+              </template>
+            </el-table-column>
+            <el-table-column label="更新时间" align="center" prop="updateTime" width="180" sortable="custom" :sort-orders="['descending', 'ascending']">
+              <template #default="scope">
+                <span class="time-text">{{ scope.row.updateTime }}</span>
+              </template>
+            </el-table-column>
+            <el-table-column label="操作" align="center" width="380" class-name="small-padding fixed-width">
+              <template #default="scope">
+                <div class="action-buttons">
+                  <el-tooltip content="预览" placement="top">
+                    <el-button link type="primary" icon="View" @click="handlePreview(scope.row)" v-hasPermi="['tool:gen:preview']" class="action-btn preview"></el-button>
+                  </el-tooltip>
+                  <el-tooltip content="编辑" placement="top">
+                    <el-button link type="primary" icon="Edit" @click="handleEditTable(scope.row)" v-hasPermi="['tool:gen:edit']" class="action-btn edit"></el-button>
+                  </el-tooltip>
+                  <el-tooltip content="删除" placement="top">
+                    <el-button link type="primary" icon="Delete" @click="handleDelete(scope.row)" v-hasPermi="['tool:gen:remove']" class="action-btn delete"></el-button>
+                  </el-tooltip>
+                  <el-tooltip content="同步" placement="top">
+                    <el-button link type="primary" icon="Refresh" @click="handleSynchDb(scope.row)" v-hasPermi="['tool:gen:edit']" class="action-btn sync"></el-button>
+                  </el-tooltip>
+                  <el-tooltip content="生成代码" placement="top">
+                    <el-button link type="primary" icon="Download" @click="handleGenTable(scope.row)" v-hasPermi="['tool:gen:code']" class="action-btn download"></el-button>
+                  </el-tooltip>
+                </div>
+              </template>
+            </el-table-column>
+          </el-table>
+
+          <!-- 分页 -->
+          <div class="pagination-section">
+            <pagination
+              v-show="total>0"
+              :total="total"
+              v-model:page="queryParams.pageNum"
+              v-model:limit="queryParams.pageSize"
+              @pagination="getList"
+              class="tech-pagination"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 预览界面 -->
+    <el-dialog :title="preview.title" v-model="preview.open" width="80%" top="5vh" append-to-body class="tech-dialog preview-dialog scrollbar">
+      <el-tabs v-model="preview.activeName" class="preview-tabs">
+        <el-tab-pane
+          v-for="(value, key) in preview.data"
+          :label="key.substring(key.lastIndexOf('/')+1,key.indexOf('.vm'))"
+          :name="key.substring(key.lastIndexOf('/')+1,key.indexOf('.vm'))"
+          :key="value"
+        >
+          <div class="code-header">
+            <el-tag type="info" class="file-tag">{{ key.substring(key.lastIndexOf('/')+1,key.indexOf('.vm')) }}</el-tag>
+            <el-link :underline="false" icon="DocumentCopy" v-copyText="value" v-copyText:callback="copyTextSuccess" class="copy-btn">
+              &nbsp;复制代码
+            </el-link>
+          </div>
+          <div class="code-container">
+            <pre class="code-content">{{ value }}</pre>
+          </div>
+        </el-tab-pane>
+      </el-tabs>
+    </el-dialog>
+
+    <import-table ref="importRef" @ok="handleQuery" />
+    <create-table ref="createRef" @ok="handleQuery" />
+  </div>
+</template>
+
+<script setup name="Gen">
+import { listTable, previewTable, delTable, genCode, synchDb } from "@/api/tool/gen"
+import router from "@/router"
+import importTable from "./importTable"
+import createTable from "./createTable"
+
+const route = useRoute()
+const { proxy } = getCurrentInstance()
+
+const tableList = ref([])
+const loading = ref(true)
+const showSearch = ref(true)
+const ids = ref([])
+const single = ref(true)
+const multiple = ref(true)
+const total = ref(0)
+const tableNames = ref([])
+const dateRange = ref([])
+const uniqueId = ref("")
+const defaultSort = ref({ prop: "createTime", order: "descending" })
+
+const data = reactive({
+  queryParams: {
+    pageNum: 1,
+    pageSize: 10,
+    tableName: undefined,
+    tableComment: undefined,
+    orderByColumn: defaultSort.value.prop,
+    isAsc: defaultSort.value.order
+  },
+  preview: {
+    open: false,
+    title: "代码预览",
+    data: {},
+    activeName: "domain.java"
+  }
+})
+
+const { queryParams, preview } = toRefs(data)
+
+onActivated(() => {
+  const time = route.query.t
+  if (time != null && time != uniqueId.value) {
+    uniqueId.value = time
+    queryParams.value.pageNum = Number(route.query.pageNum)
+    dateRange.value = []
+    proxy.resetForm("queryForm")
+    getList()
+  }
+})
+
+/** 查询表集合 */
+function getList() {
+  loading.value = true
+  listTable(proxy.addDateRange(queryParams.value, dateRange.value)).then(response => {
+    tableList.value = response.rows
+    total.value = response.total
+    loading.value = false
+  })
+}
+
+/** 搜索按钮操作 */
+function handleQuery() {
+  queryParams.value.pageNum = 1
+  getList()
+}
+
+/** 生成代码操作 */
+function handleGenTable(row) {
+  const tbNames = row.tableName || tableNames.value
+  if (tbNames == "") {
+    proxy.$modal.msgError("请选择要生成的数据")
+    return
+  }
+  if (row.genType === "1") {
+    genCode(row.tableName).then(response => {
+      proxy.$modal.msgSuccess("成功生成到自定义路径：" + row.genPath)
+    })
+  } else {
+    proxy.$download.zip("/tool/gen/batchGenCode?tables=" + tbNames, "ruoyi.zip")
+  }
+}
+
+/** 同步数据库操作 */
+function handleSynchDb(row) {
+  const tableName = row.tableName
+  proxy.$modal.confirm('确认要强制同步"' + tableName + '"表结构吗？').then(function () {
+    return synchDb(tableName)
+  }).then(() => {
+    proxy.$modal.msgSuccess("同步成功")
+  }).catch(() => {})
+}
+
+/** 打开导入表弹窗 */
+function openImportTable() {
+  proxy.$refs["importRef"].show()
+}
+
+/** 打开创建表弹窗 */
+function openCreateTable() {
+  proxy.$refs["createRef"].show()
+}
+
+/** 重置按钮操作 */
+function resetQuery() {
+  dateRange.value = []
+  proxy.resetForm("queryRef")
+  queryParams.value.pageNum = 1
+  proxy.$refs["genRef"].sort(defaultSort.value.prop, defaultSort.value.order)
+}
+
+/** 预览按钮 */
+function handlePreview(row) {
+  previewTable(row.tableId).then(response => {
+    preview.value.data = response.data
+    preview.value.open = true
+    preview.value.activeName = "domain.java"
+  })
+}
+
+/** 复制代码成功 */
+function copyTextSuccess() {
+  proxy.$modal.msgSuccess("复制成功")
+}
+
+// 多选框选中数据
+function handleSelectionChange(selection) {
+  ids.value = selection.map(item => item.tableId)
+  tableNames.value = selection.map(item => item.tableName)
+  single.value = selection.length != 1
+  multiple.value = !selection.length
+}
+
+/** 排序触发事件 */
+function handleSortChange(column, prop, order) {
+  queryParams.value.orderByColumn = column.prop
+  queryParams.value.isAsc = column.order
+  getList()
+}
+
+/** 修改按钮操作 */
+function handleEditTable(row) {
+  const tableId = row.tableId || ids.value[0]
+  const tableName = row.tableName || tableNames.value[0]
+  const params = { pageNum: queryParams.value.pageNum }
+  proxy.$tab.openPage("修改[" + tableName + "]生成配置", '/tool/gen-edit/index/' + tableId, params)
+}
+
+/** 删除按钮操作 */
+function handleDelete(row) {
+  const tableIds = row.tableId || ids.value
+  proxy.$modal.confirm('是否确认删除表编号为"' + tableIds + '"的数据项？').then(function () {
+    return delTable(tableIds)
+  }).then(() => {
+    getList()
+    proxy.$modal.msgSuccess("删除成功")
+  }).catch(() => {})
+}
+
+getList()
+</script>
+
+<style scoped lang="scss">
+.gen-management {
+  font-family: "Inter", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .main-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 1800px;
+    padding: 30px;
+    margin: 20px;
+    min-height: auto;
+    height: auto;
+
+    .content-block {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      min-height: 700px;
+      height: auto;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      // 搜索区域
+      .search-section {
+        margin-bottom: 20px;
+        
+        .search-form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          align-items: flex-end;
+
+          .el-form-item {
+            margin-bottom: 0;
+          }
+
+          .date-range {
+            min-width: 240px;
+          }
+
+          .search-actions {
+            margin-left: auto;
+          }
+        }
+      }
+
+      // 操作按钮区域
+      .action-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+
+        .right-toolbar {
+          margin-left: auto;
+        }
+      }
+
+      // 表格区域
+      .table-section {
+        .pagination-section {
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #e2e8f0;
+        }
+      }
+    }
+  }
+
+  // 科技感组件样式
+  .tech-input {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      
+      &:hover {
+        border-color: #667eea;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+      }
+      
+      &.is-focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+      }
+    }
+  }
+
+  .tech-date-picker {
+    :deep(.el-input__wrapper) {
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        border-color: #667eea;
+      }
+    }
+  }
+
+  .tech-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    
+    &.primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.secondary {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: #667eea;
+        color: #667eea;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      }
+    }
+
+    &.danger {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+      }
+    }
+
+    &.warning {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+      }
+    }
+
+    &.info {
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+      }
+    }
+  }
+
+  .tech-table {
+    :deep(.el-table__header) {
+      th {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #374151;
+        font-weight: 600;
+      }
+    }
+
+    :deep(.el-table__row) {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .index-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .time-text {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: #f1f5f9;
+      }
+    }
+  }
+
+  .tech-pagination {
+    :deep(.el-pagination) {
+      .btn-prev, .btn-next, .number, .more {
+        border-radius: 6px;
+        margin: 0 2px;
+      }
+      
+      .number.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+      }
+    }
+  }
+
+  // 预览对话框样式
+  .preview-dialog {
+    :deep(.el-dialog__body) {
+      padding: 0;
+    }
+
+    .preview-tabs {
+      :deep(.el-tabs__header) {
+        margin: 0;
+        padding: 0 20px;
+        background: #f8fafc;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      :deep(.el-tabs__content) {
+        padding: 0;
+      }
+
+      .code-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        background: #f8fafc;
+        border-bottom: 1px solid #e2e8f0;
+
+        .file-tag {
+          border-radius: 6px;
+          font-weight: 600;
+          border: none;
+        }
+
+        .copy-btn {
+          color: #667eea;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #764ba2;
+            transform: translateY(-1px);
+          }
+        }
+      }
+
+      .code-container {
+        background: #1e293b;
+        border-radius: 0 0 8px 8px;
+        overflow: hidden;
+
+        .code-content {
+          color: #e2e8f0;
+          font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+          font-size: 0.9rem;
+          line-height: 1.5;
+          margin: 0;
+          padding: 20px;
+          overflow-x: auto;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+
+  .tech-dialog {
+    :deep(.el-dialog) {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      
+      .el-dialog__header {
+        border-bottom: 1px solid #e2e8f0;
+        margin-right: 0;
+        
+        .el-dialog__title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .gen-management {
+    .main-card {
+      padding: 25px;
+      margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gen-management {
+    padding: 15px;
+
+    .main-card {
+      padding: 20px;
+
+      .content-block {
+        padding: 20px;
+        min-height: 400px;
+
+        .search-section {
+          .search-form {
+            flex-direction: column;
+            align-items: stretch;
+            
+            .search-actions {
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+
+        .action-section {
+          .el-col {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .preview-dialog {
+      width: 95% !important;
+      margin: 10px auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .gen-management {
+    padding: 10px;
+
+    .main-card {
+      padding: 15px;
+      margin: 10px;
+
+      .content-block {
+        padding: 15px;
+        min-height: 350px;
+      }
+    }
+
+    .action-buttons {
+      gap: 4px;
+
+      .action-btn {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
+</style>
+```
+
+#### 2.3.6.3 系统接口（/swagger/index.vue）
+
+![image-20251113143810478](README.assets/image-20251113143810478.png)
+
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\core\config\SwaggerConfig.java` 文件中修改下述内容
+
+```
+package tracker.web.core.config;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import tracker.common.config.RuoYiConfig;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.models.auth.In;
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.ApiKey;
+import springfox.documentation.service.AuthorizationScope;
+import springfox.documentation.service.Contact;
+import springfox.documentation.service.SecurityReference;
+import springfox.documentation.service.SecurityScheme;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spi.service.contexts.SecurityContext;
+import springfox.documentation.spring.web.plugins.Docket;
+
+/**
+ * Swagger2的接口配置
+ * 
+ * @author tangjiawei
+ */
+@Configuration
+public class SwaggerConfig
+{
+    /** 系统基础配置 */
+    @Autowired
+    private RuoYiConfig ruoyiConfig;
+
+    /** 是否开启swagger */
+    @Value("${swagger.enabled}")
+    private boolean enabled;
+
+    /** 设置请求的统一前缀 */
+    @Value("${swagger.pathMapping}")
+    private String pathMapping;
+
+    /**
+     * 创建API
+     */
+    @Bean
+    public Docket createRestApi()
+    {
+        return new Docket(DocumentationType.OAS_30)
+                // 是否启用Swagger
+                .enable(enabled)
+                // 用来创建该API的基本信息，展示在文档的页面中（自定义展示的信息）
+                .apiInfo(apiInfo())
+                // 设置哪些接口暴露给Swagger展示
+                .select()
+                // 扫描所有有注解的api，用这种方式更灵活
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                // 扫描指定包中的swagger注解
+                // .apis(RequestHandlerSelectors.basePackage("tracker.project.tool.swagger"))
+                // 扫描所有 .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build()
+                /* 设置安全模式，swagger可以设置访问token */
+                .securitySchemes(securitySchemes())
+                .securityContexts(securityContexts())
+                .pathMapping(pathMapping);
+    }
+
+    /**
+     * 安全模式，这里指定token通过Authorization头请求头传递
+     */
+    private List<SecurityScheme> securitySchemes()
+    {
+        List<SecurityScheme> apiKeyList = new ArrayList<SecurityScheme>();
+        apiKeyList.add(new ApiKey("Authorization", "Authorization", In.HEADER.toValue()));
+        return apiKeyList;
+    }
+
+    /**
+     * 安全上下文
+     */
+    private List<SecurityContext> securityContexts()
+    {
+        List<SecurityContext> securityContexts = new ArrayList<>();
+        securityContexts.add(
+                SecurityContext.builder()
+                        .securityReferences(defaultAuth())
+                        .operationSelector(o -> o.requestMappingPattern().matches("/.*"))
+                        .build());
+        return securityContexts;
+    }
+
+    /**
+     * 默认的安全上引用
+     */
+    private List<SecurityReference> defaultAuth()
+    {
+        AuthorizationScope authorizationScope = new AuthorizationScope("global", "accessEverything");
+        AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
+        authorizationScopes[0] = authorizationScope;
+        List<SecurityReference> securityReferences = new ArrayList<>();
+        securityReferences.add(new SecurityReference("Authorization", authorizationScopes));
+        return securityReferences;
+    }
+
+    /**
+     * 添加摘要信息
+     */
+    private ApiInfo apiInfo()
+    {
+        // 用ApiInfoBuilder进行定制
+        return new ApiInfoBuilder()
+                // 设置标题
+                .title("标题：MoMagTracker 系统接口文档")
+                // 描述
+                .description("描述：用于 MoMagTracker 系统的 API 接口文档开发")
+                // 作者信息
+                .contact(new Contact(ruoyiConfig.getName(), null, null))
+                // 版本
+                .version("版本号:" + ruoyiConfig.getVersion())
+                .build();
+    }
+}
+```
+
+### 2.3.7 推送至远程仓库
+
+```
+ls -a
+
+git status
+
+git add .
+
+git status
+
+git commit -m "第三次提交，修改总体概括 README.md 文件，开发系统整体的首页样式和侧边栏样式，以及新增个人中心、系统管理、系统监控和系统工具功能页面"
+
+git push -u origin master
+```
 
 
 

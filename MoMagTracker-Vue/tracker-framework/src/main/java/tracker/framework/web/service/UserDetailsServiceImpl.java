@@ -35,23 +35,32 @@ public class UserDetailsServiceImpl implements UserDetailsService
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
     {
+        log.info("=== UserDetailsServiceImpl 开始加载用户 ===");
+        log.info("查询用户名: {}", username);
         SysUser user = userService.selectUserByUserName(username);
+
         if (StringUtils.isNull(user))
         {
-            log.info("登录用户：{} 不存在.", username);
+            log.error("❌ 登录用户：{} 不存在.", username);
             throw new UsernameNotFoundException("登录用户：" + username + " 不存在");
         }
-        else if (UserStatus.DELETED.getCode().equals(user.getDelFlag()))
+
+        log.info("✅ 用户查询成功 - 用户ID: {}, 用户名: {}, 密码哈希: {}",
+                user.getUserId(), user.getUserName(), user.getPassword());
+        log.info("用户状态 - status: {}, delFlag: {}", user.getStatus(), user.getDelFlag());
+
+        if (UserStatus.DELETED.getCode().equals(user.getDelFlag()))
         {
-            log.info("登录用户：{} 已被删除.", username);
+            log.error("❌ 登录用户：{} 已被删除.", username);
             throw new BaseException("对不起，您的账号：" + username + " 已被删除");
         }
         else if (UserStatus.DISABLE.getCode().equals(user.getStatus()))
         {
-            log.info("登录用户：{} 已被停用.", username);
+            log.error("❌ 登录用户：{} 已被停用.", username);
             throw new BaseException("对不起，您的账号：" + username + " 已停用");
         }
 
+        log.info("✅ 用户状态检查通过，创建 LoginUser");
         return createLoginUser(user);
     }
 

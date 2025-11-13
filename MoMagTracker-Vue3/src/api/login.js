@@ -2,6 +2,12 @@ import request from '@/utils/request'
 
 // 登录方法
 export function login(username, password, code, uuid) {
+  console.log('API调用参数:', { username, password, code, uuid })
+  console.log('参数 - username:', username)
+  console.log('参数 - password:', password)
+  console.log('参数 - code:', code)
+  console.log('参数 - uuid:', uuid)
+  
   const data = {
     username,
     password,

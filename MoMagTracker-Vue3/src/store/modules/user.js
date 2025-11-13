@@ -21,12 +21,23 @@ const useUserStore = defineStore(
     actions: {
       // 登录
       login(userInfo) {
+        console.log('=== 调用 userStore.login ===')
+        console.log('接收到的用户信息:', {
+          username: userInfo.username,
+          password: '***', // 不打印真实密码
+          code: userInfo.code,
+          uuid: userInfo.uuid
+        })
+        
         const username = userInfo.username.trim()
         const password = userInfo.password
         const code = userInfo.code
         const uuid = userInfo.uuid
+
         return new Promise((resolve, reject) => {
           login(username, password, code, uuid).then(res => {
+            console.log('✅ 登录API调用成功，响应:', res)
+
             // 存储 token 到本地
             setToken(res.token)
             this.token = res.token
@@ -39,15 +50,29 @@ const useUserStore = defineStore(
               resolve()
             })
           }).catch(error => {
+            console.error('❌ 登录API调用失败:')
+            console.error('错误对象:', error)
+            console.error('错误信息:', error.message)
+            console.error('响应数据:', error.response?.data)
+            console.error('状态码:', error.response?.status)
+            
             reject(error)
           })
         })
       },
       // 邮箱登录
       emailLogin(userInfo) { 
+        console.log('=== 调用 userStore.login ===')
+        console.log('接收到的用户信息:', {
+          email: userInfo.email,
+          emailCode: userInfo.emailCode,
+          uuid: userInfo.uuid
+        })
+
         const email = userInfo.email.trim()
         const emailCode = userInfo.emailCode
         const uuid = userInfo.uuid
+
         return new Promise((resolve, reject) => {
           apiEmailLogin(email, emailCode, uuid).then(res => {
             setToken(res.token)

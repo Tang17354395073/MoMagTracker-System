@@ -8,11 +8,11 @@ $tiffany: #4AB7BD;
 $yellow: #FEC171;
 $panGreen: #30B08F;
 
-// 默认主题变量
-$menuText: #bfcbd9;
-$menuActiveText: #409eff;
-$menuBg: #304156;
-$menuHover: #263445;
+// 科技感主题变量
+$menuText: #e2e8f0;
+$menuActiveText: #667eea;
+$menuBg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+$menuHover: rgba(102, 126, 234, 0.1);
 
 // 浅色主题theme-light
 $menuLightBg: #ffffff;
@@ -24,19 +24,23 @@ $menuLightActiveText: #409EFF;
 $base-sidebar-width: 200px;
 $sideBarWidth: 200px;
 
-// 菜单暗色变量
-$base-menu-color: #bfcbd9;
-$base-menu-color-active: #f4f4f5;
-$base-menu-background: #304156;
-$base-sub-menu-background: #1f2d3d;
-$base-sub-menu-hover: #001528;
+// 菜单科技感变量
+$base-menu-color: #e2e8f0;
+$base-menu-color-active: #667eea;
+$base-menu-background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+$base-sub-menu-background: rgba(255, 255, 255, 0.05);
+$base-sub-menu-hover: rgba(102, 126, 234, 0.15);
 
-// 组件变量
-$--color-primary: #409EFF;
-$--color-success: #67C23A;
-$--color-warning: #E6A23C;
-$--color-danger: #F56C6C;
-$--color-info: #909399;
+// 组件变量 - 调整为科技感配色
+$--color-primary: #667eea;
+$--color-success: #10b981;
+$--color-warning: #F59E0B;
+$--color-danger: #EF4444;
+$--color-info: #6B7280;
+
+// 科技感阴影和边框
+$sidebar-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+$menu-border-radius: 8px;
 
 :export {
   menuText: $menuText;
@@ -71,6 +75,7 @@ $--color-info: #909399;
   --sidebar-bg: #{$menuBg};
   --sidebar-text: #{$menuText};
   --menu-hover: #{$menuHover};
+  --menu-active-text: #{$menuActiveText};
   
   --navbar-bg: #ffffff;
   --navbar-text: #303133;
@@ -80,51 +85,51 @@ $--color-info: #909399;
 
 }
 
-// 暗黑模式变量
+// 暗黑模式变量 - 增强科技感
 html.dark {
   /* 默认通用 */
-  --el-bg-color: #141414;
-  --el-bg-color-overlay: #1d1e1f;
-  --el-text-color-primary: #ffffff;
-  --el-text-color-regular: #d0d0d0;
-  --el-border-color: #434343;
-  --el-border-color-light: #434343;
+  --el-bg-color: #0f172a;
+  --el-bg-color-overlay: #1e293b;
+  --el-text-color-primary: #f1f5f9;
+  --el-text-color-regular: #cbd5e1;
+  --el-border-color: #334155;
+  --el-border-color-light: #334155;
 
   /* 侧边栏 */
-  --sidebar-bg: #141414;
-  --sidebar-text: #ffffff;
-  --menu-hover: #2d2d2d;
+  --sidebar-bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  --sidebar-text: #e2e8f0;
+  --menu-hover: rgba(102, 126, 234, 0.15);
   --menu-active-text: #{$menuActiveText};
 
   /* 顶部导航栏 */
-  --navbar-bg: #141414;
-  --navbar-text: #ffffff;
-  --navbar-hover: #141414;
+  --navbar-bg: #0f172a;
+  --navbar-text: #f1f5f9;
+  --navbar-hover: #1e293b;
 
   /* 标签栏 */
-  --tags-bg: #141414;
-  --tags-item-bg: #1d1e1f;
-  --tags-item-border: #303030;
-  --tags-item-text: #d0d0d0;
-  --tags-item-hover: #2d2d2d;
-  --tags-close-hover: #64666a;
+  --tags-bg: #0f172a;
+  --tags-item-bg: #1e293b;
+  --tags-item-border: #334155;
+  --tags-item-text: #cbd5e1;
+  --tags-item-hover: #334155;
+  --tags-close-hover: #64748b;
 
   /* splitpanes 组件暗黑模式变量 */
-  --splitpanes-bg: #141414;
-  --splitpanes-border: #303030;
-  --splitpanes-splitter-bg: #1d1e1f;
-  --splitpanes-splitter-hover-bg: #2d2d2d;
+  --splitpanes-bg: #0f172a;
+  --splitpanes-border: #334155;
+  --splitpanes-splitter-bg: #1e293b;
+  --splitpanes-splitter-hover-bg: #334155;
 
   /* blockquote 暗黑模式变量 */
-  --blockquote-bg: #1d1e1f;
-  --blockquote-border: #303030;
-  --blockquote-text: #d0d0d0;
+  --blockquote-bg: #1e293b;
+  --blockquote-border: #334155;
+  --blockquote-text: #cbd5e1;
   
   /* Cron 时间表达式 模式变量 */
-  --cron-border: #303030;
+  --cron-border: #334155;
 
   /* splitpanes default-theme 暗黑模式变量 */
-  --splitpanes-default-bg: #141414;
+  --splitpanes-default-bg: #0f172a;
 
   /* 侧边栏菜单覆盖 */
    .sidebar-container {
@@ -216,6 +221,4 @@ html.dark {
   .popup-result .title {
     background: var(--cron-border);
   }
-
 }
-

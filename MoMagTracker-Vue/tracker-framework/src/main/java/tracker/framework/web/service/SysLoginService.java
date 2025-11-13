@@ -8,6 +8,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import tracker.common.constant.CacheConstants;
 import tracker.common.constant.Constants;
@@ -71,21 +72,63 @@ public class SysLoginService
      */
     public String login(String username, String password, String code, String uuid)
     {
+        // 添加详细的调试日志
+        logger.info("=== 开始用户登录验证 ===");
+        logger.info("用户名: {}, 密码: {}, 密码长度: {}, 验证码: {}, UUID: {}",
+                username, password, (password != null ? password.length() : "null"), code, uuid);
+
+        // 查询用户信息
+        SysUser user = userService.selectUserByUserName(username);
+        logger.info("查询到的用户信息: {}", (user != null ?
+                "用户ID=" + user.getUserId() + ", 状态=" + user.getStatus() + ", 删除标志=" + user.getDelFlag() + ", 密码哈希=" + user.getPassword()
+                : "null"));
+
         // 验证码校验
         validateCaptcha(username, code, uuid);
         // 登录前置校验
         loginPreCheck(username, password);
+
+        // 在认证前手动验证密码
+        if (user != null) {
+            logger.info("=== 手动密码验证开始 ===");
+            logger.info("输入密码: '{}'", password);
+            logger.info("数据库密码哈希: '{}'", user.getPassword());
+            logger.info("密码哈希长度: {}", user.getPassword().length());
+
+            // 使用BCrypt手动验证
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+            boolean manualMatch = encoder.matches(password, user.getPassword());
+            logger.info("手动密码验证结果: {}", manualMatch ? "✅ 匹配" : "❌ 不匹配");
+
+            if (!manualMatch) {
+                // 测试常见密码
+                String[] commonPasswords = {"123456", "admin", "password", "admin123", "tang2001"};
+                for (String commonPwd : commonPasswords) {
+                    boolean testMatch = encoder.matches(commonPwd, user.getPassword());
+                    logger.info("测试密码 '{}': {}", commonPwd, testMatch ? "✅ 匹配" : "❌ 不匹配");
+                    if (testMatch) {
+                        logger.info("🎯 找到匹配密码: {}", commonPwd);
+                        break;
+                    }
+                }
+            }
+            logger.info("=== 手动密码验证结束 ===");
+        }
+
         // 用户验证
         Authentication authentication = null;
         try
         {
+            logger.info("开始Spring Security认证...");
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username, password);
             AuthenticationContextHolder.setContext(authenticationToken);
             // 该方法会去调用UserDetailsServiceImpl.loadUserByUsername
             authentication = authenticationManager.authenticate(authenticationToken);
+            logger.info("Spring Security认证成功");
         }
         catch (Exception e)
         {
+            logger.error("Spring Security认证失败: {}", e.getMessage(), e);
             if (e instanceof BadCredentialsException)
             {
                 AsyncManager.me().execute(AsyncFactory.recordLogininfor(username, Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match")));

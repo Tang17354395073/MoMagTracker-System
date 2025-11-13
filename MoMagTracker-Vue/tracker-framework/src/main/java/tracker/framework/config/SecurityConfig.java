@@ -1,5 +1,6 @@
 package tracker.framework.config;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -35,6 +36,9 @@ import java.util.Arrays;
 @EnableMethodSecurity(prePostEnabled = true, securedEnabled = true)
 @Configuration
 public class SecurityConfig {
+    // 添加日志
+    private static final Logger log = LoggerFactory.getLogger(SecurityConfig.class);
+
     /**
      * 自定义用户认证逻辑
      */
@@ -82,6 +86,9 @@ public class SecurityConfig {
      */
     @Bean
     public AuthenticationManager authenticationManager() {
+        log.info("=== 创建 AuthenticationManager ===");
+        log.info("使用的 UserDetailsService: {}", userDetailsService.getClass().getSimpleName());
+
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setUserDetailsService(userDetailsService);
         daoAuthenticationProvider.setPasswordEncoder(bCryptPasswordEncoder());
@@ -150,6 +157,7 @@ public class SecurityConfig {
      */
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        log.info("创建 BCryptPasswordEncoder");
         return new BCryptPasswordEncoder();
     }
 }

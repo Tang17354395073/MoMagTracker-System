@@ -3,11 +3,15 @@
     <transition name="sidebarLogoFade">
       <router-link v-if="collapse" key="collapse" class="sidebar-logo-link" to="/">
         <img v-if="logo" :src="logo" class="sidebar-logo" />
-        <h1 v-else class="sidebar-title">{{ title }}</h1>
+        <h1 v-else class="sidebar-title">
+          <div class="logo-dot">{{ title }}</div>
+        </h1>
       </router-link>
       <router-link v-else key="expand" class="sidebar-logo-link" to="/">
         <img v-if="logo" :src="logo" class="sidebar-logo" />
-        <h1 class="sidebar-title">{{ title }}</h1>
+        <h1 class="sidebar-title">
+          <span class="tech-text">{{ title }}</span>
+        </h1>
       </router-link>
     </transition>
   </div>
@@ -65,15 +69,52 @@ const getLogoTextColor = computed(() => {
   text-align: center;
   overflow: hidden;
 
+  // 添加Logo区域的发光效果
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  }
+
   & .sidebar-logo-link {
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
 
     & .sidebar-logo {
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       vertical-align: middle;
       margin-right: 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    & .logo-placeholder {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .logo-dot {
+        width: 8px;
+        height: 8px;
+        background: #ffd89b;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #ffd89b;
+        animation: pulse 2s ease-in-out infinite;
+      }
     }
 
     & .sidebar-title {
@@ -85,6 +126,25 @@ const getLogoTextColor = computed(() => {
       font-size: 14px;
       font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
       vertical-align: middle;
+
+      .tech-text {
+        background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.8) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 800;
+        font-size: 17.5px;
+        letter-spacing: -0.5px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+    .sidebar-logo {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 6px 20px rgba(255, 216, 155, 0.4);
     }
   }
 
@@ -92,6 +152,27 @@ const getLogoTextColor = computed(() => {
     .sidebar-logo {
       margin-right: 0px;
     }
+
+    .sidebar-title {
+      .tech-text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ffd89b;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #ffd89b, 0 0 30px rgba(255, 216, 155, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ffd89b;
   }
 }
 </style>

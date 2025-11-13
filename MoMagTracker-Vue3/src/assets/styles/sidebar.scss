@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use './variables.module.scss' as vars;
 
 #app {
@@ -24,8 +25,10 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
-    -webkit-box-shadow: 2px 0 6px rgba(0,21,41,.35);
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    background: vars.$base-menu-background;
+    box-shadow: vars.$sidebar-shadow;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 
     // reset element-ui css
     .horizontal-collapse-transition {
@@ -68,23 +71,109 @@
       border: none;
       height: 100%;
       width: 100% !important;
+      background: transparent !important;
     }
 
     .el-menu-item, .menu-title {
       overflow: hidden !important;
       text-overflow: ellipsis !important;
       white-space: nowrap !important;
+      color: vars.$base-menu-color;
+      height: 50px;
+      line-height: 50px;
+      margin: 4px 8px;
+      border-radius: vars.$menu-border-radius;
+      transition: all 0.3s ease;
+      position: relative;
+      
+      // 科技感悬停效果
+      &:hover {
+        background-color: vars.$menuHover !important;
+        color: color.adjust(vars.$menuActiveText, $lightness: 10%);
+        transform: translateX(5px);
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 3px;
+          background: linear-gradient(to bottom, #667eea, #764ba2);
+          border-radius: 2px;
+        }
+      }
+      
+      // 激活状态
+      &.is-active {
+        background-color: vars.$base-sub-menu-hover !important;
+        color: vars.$menuActiveText;
+        font-weight: 600;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 6px;
+          height: 6px;
+          background: vars.$menuActiveText;
+          border-radius: 50%;
+          box-shadow: 0 0 10px rgba(102, 126, 234, 0.6);
+        }
+      }
+      
+      i {
+        color: inherit;
+        margin-right: 8px;
+        font-size: 16px;
+      }
     }
 
     .el-menu-item .el-menu-tooltip__trigger {
       display: inline-block !important;
     }
 
+    // 子菜单样式
+    .el-sub-menu {
+      margin: 4px 8px;
+      border-radius: vars.$menu-border-radius;
+      
+      .el-sub-menu__title {
+        color: vars.$base-menu-color;
+        height: 50px;
+        line-height: 50px;
+        border-radius: vars.$menu-border-radius;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: vars.$menuHover !important;
+          color: color.adjust(vars.$menuActiveText, $lightness: 10%);
+        }
+        
+        i {
+          color: inherit;
+        }
+      }
+      
+      // 子菜单项
+      .el-menu-item {
+        background: vars.$base-sub-menu-background !important;
+        margin: 2px 0;
+        border-radius: 6px;
+        
+        &.is-active {
+          background: rgba(102, 126, 234, 0.2) !important;
+        }
+      }
+    }
+
     // menu hover
     .sub-menu-title-noDropdown,
     .el-sub-menu__title {
       &:hover {
-        background-color: rgba(0, 0, 0, 0.06) !important;
+        background-color: vars.$menuHover !important;
       }
     }
 
@@ -97,7 +186,7 @@
       min-width: vars.$base-sidebar-width !important;
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.06) !important;
+        background-color: vars.$menuHover !important;
       }
     }
 
@@ -212,8 +301,7 @@
   .nest-menu .el-sub-menu>.el-sub-menu__title,
   .el-menu-item {
     &:hover {
-      // you can use $sub-menuHover
-      background-color: rgba(0, 0, 0, 0.06) !important;
+      background-color: vars.$menuHover !important;
     }
   }
 
@@ -221,9 +309,13 @@
   >.el-menu--popup {
     max-height: 100vh;
     overflow-y: auto;
+    background: vars.$base-menu-background !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
 
     &::-webkit-scrollbar-track-piece {
-      background: #d3dce6;
+      background: rgba(255, 255, 255, 0.1);
     }
 
     &::-webkit-scrollbar {
@@ -231,8 +323,24 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #99a9bf;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       border-radius: 20px;
     }
+  }
+}
+
+// 科技感滚动条样式
+.sidebar-container {
+  .el-scrollbar__thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 3px !important;
+    
+    &:hover {
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+    }
+  }
+  
+  .el-scrollbar__bar.is-vertical {
+    width: 6px !important;
   }
 }

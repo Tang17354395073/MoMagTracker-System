@@ -763,16 +763,53 @@ function tagChange(tagIcon) {
 </script>
 
 <style lang="scss" scoped>
+// 定义颜色变量
+$primaryColor: #8B5FBF;
+$lightPurple: #E6E6FA;
+$darkPurple: #6A4C9C;
+$textDark: #333333;
+$textLight: #666666;
+$borderColor: #D8BFD8;
+$white: #FFFFFF;
+$lightGray: #F5F5F5;
+
 .right-board {
   width: 350px;
   position: absolute;
   right: 0;
   top: 0;
   padding-top: 3px;
+  background: rgba($white, 0.95);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid $borderColor;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 50px - 40px);
 
   &:deep() {
     .el-tabs__header {
       margin: 0;
+      background: linear-gradient(135deg, $lightPurple 0%, $white 100%);
+    }
+
+    .el-tabs__nav-wrap::after {
+      background-color: $borderColor;
+    }
+
+    .el-tabs__item {
+      color: $textDark;
+      font-weight: 500;
+      
+      &.is-active {
+        color: $primaryColor;
+      }
+      
+      &:hover {
+        color: $darkPurple;
+      }
+    }
+
+    .el-tabs__active-bar {
+      background-color: $primaryColor;
     }
 
     .el-input-group__append .el-button {
@@ -792,18 +829,114 @@ function tagChange(tagIcon) {
 
     &:deep() {
       .el-scrollbar__view {
-        padding: 30px 20px;
+        padding: 20px;
+        background: $white;
       }
 
+      .el-scrollbar__bar {
+        &.is-vertical {
+          width: 6px;
+        }
+        
+        .el-scrollbar__thumb {
+          background: rgba(139, 95, 191, 0.3);
+          border-radius: 3px;
+          
+          &:hover {
+            background: rgba(139, 95, 191, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 表单样式
+:deep(.el-form) {
+  .el-form-item {
+    margin-bottom: 16px;
+    background: $white;
+    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      border-color: $borderColor;
+    }
+
+    .el-form-item__label {
+      color: $textDark;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+  }
+
+  .el-divider {
+    border-color: $borderColor;
+    
+    .el-divider__text {
+      background: $white;
+      color: $darkPurple;
+      font-weight: 600;
+    }
+  }
+}
+
+// 输入框样式
+:deep(.el-input) {
+  .el-input__wrapper {
+    background: $white;
+    border: 1px solid $borderColor;
+    border-radius: 6px;
+    box-shadow: none;
+    
+    &:hover {
+      border-color: $primaryColor;
+    }
+    
+    &.is-focus {
+      border-color: $primaryColor;
+      box-shadow: 0 0 0 1px $primaryColor;
+    }
+  }
+  
+  .el-input__inner {
+    color: $textDark;
+    
+    &::placeholder {
+      color: $textLight;
+    }
+  }
+}
+
+// 按钮样式
+:deep(.el-button) {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &.is-text {
+    background: transparent;
+    border: 1px solid $borderColor;
+    color: $textDark;
+
+    &:hover {
+      border-color: $primaryColor;
+      color: $primaryColor;
+      transform: translateY(-1px);
     }
   }
 }
 
 .reg-item {
-  padding: 12px 6px;
-  background: var(--el-border-color-extra-light);
+  padding: 12px;
+  background: rgba($lightPurple, 0.3);
   position: relative;
-  border-radius: 4px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid $borderColor;
 
   .close-btn {
     position: absolute;
@@ -812,50 +945,70 @@ function tagChange(tagIcon) {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-    background: rgba(0, 0, 0, .2);
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: #ef4444;
     border-radius: 50%;
-    color: #fff;
+    color: $white;
     z-index: 1;
     cursor: pointer;
     font-size: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      background: #dc2626;
+    }
   }
 }
 
 .select-item {
   display: flex;
-  border: 1px dashed #fff;
+  border: 1px dashed $borderColor;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: $white;
+  align-items: center;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 
   & .close-btn {
     cursor: pointer;
-    color: #f56c6c;
+    color: #ef4444;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      color: #dc2626;
+    }
   }
 
-  & .el-input+.el-input {
-    margin-left: 4px;
+  & .el-input + .el-input {
+    margin-left: 8px;
   }
 }
 
-.select-item+.select-item {
+.select-item + .select-item {
   margin-top: 4px;
 }
 
 .select-item.sortable-chosen {
-  border: 1px dashed #409eff;
+  border: 1px dashed $primaryColor;
+  background: rgba($lightPurple, 0.1);
 }
 
 .select-line-icon {
   line-height: 32px;
-  font-size: 22px;
-  padding: 0 4px;
-  color: #777;
+  font-size: 16px;
+  padding: 0 8px;
+  color: $textLight;
 }
 
 .option-drag {
   cursor: move;
+  color: $primaryColor;
 }
 
 .time-range {
@@ -873,26 +1026,33 @@ function tagChange(tagIcon) {
 .document-link {
   position: absolute;
   display: flex;
-  width: 26px;
-  height: 26px;
+  width: 32px;
+  height: 32px;
   top: 0;
   left: 0;
   cursor: pointer;
-  background: #409eff;
+  background: linear-gradient(135deg, $primaryColor 0%, $darkPurple 100%);
   z-index: 1;
-  border-radius: 0 0 6px 0;
+  border-radius: 0 0 8px 0;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: $white;
   font-size: 18px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(139, 95, 191, 0.3);
+  }
 }
 
 .node-label {
   font-size: 14px;
+  color: $textDark;
 }
 
 .node-icon {
-  color: #bebfc3;
+  color: $primaryColor;
 }
 
 .custom-tree-node {
@@ -902,5 +1062,74 @@ function tagChange(tagIcon) {
   justify-content: space-between;
   font-size: 14px;
   padding-right: 8px;
+  color: $textDark;
+}
+
+// 美化滑块
+:deep(.el-slider) {
+  .el-slider__runway {
+    background: $borderColor;
+  }
+  
+  .el-slider__bar {
+    background: $primaryColor;
+  }
+  
+  .el-slider__button {
+    border: 2px solid $primaryColor;
+    background: $white;
+  }
+}
+
+// 美化开关
+:deep(.el-switch) {
+  &.is-checked {
+    .el-switch__core {
+      background: $primaryColor;
+      border-color: $primaryColor;
+    }
+  }
+}
+
+// 美化单选/复选框
+:deep(.el-radio-group),
+:deep(.el-checkbox-group) {
+  .el-radio-button,
+  .el-checkbox-button {
+    .el-radio-button__inner,
+    .el-checkbox-button__inner {
+      border: 1px solid $borderColor;
+      color: $textDark;
+      
+      &:hover {
+        border-color: $primaryColor;
+        color: $primaryColor;
+      }
+    }
+    
+    &.is-active {
+      .el-radio-button__inner,
+      .el-checkbox-button__inner {
+        background: $primaryColor;
+        border-color: $primaryColor;
+        color: $white;
+      }
+    }
+  }
+}
+
+// 美化数字输入框
+:deep(.el-input-number) {
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    background: $lightGray;
+    border: 1px solid $borderColor;
+    color: $textDark;
+    
+    &:hover {
+      border-color: $primaryColor;
+      color: $primaryColor;
+    }
+  }
 }
 </style>

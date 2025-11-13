@@ -244,13 +244,23 @@ function getCookie() {
 async function handleLogin() {
   console.log('=== 开始登录流程 ===')
   console.log('当前登录方式:', isEmailLogin.value ? '邮箱登录' : '账号密码登录')
-  // 详细检查表单数据
-  console.log('表单数据详情:')
-  console.log('  - email:', loginForm.value.email)
-  console.log('  - emailCode:', loginForm.value.emailCode)
-  console.log('  - uuid:', loginForm.value.uuid)
-  console.log('  - emailCode 类型:', typeof loginForm.value.emailCode)
-  console.log('  - emailCode 长度:', loginForm.value.emailCode ? loginForm.value.emailCode.length : 0)
+
+  // 根据当前登录方式显示相应的表单数据
+  if (isEmailLogin.value) {
+    console.log('邮箱登录表单数据详情:')
+    console.log('  - email:', loginForm.value.email)
+    console.log('  - emailCode:', loginForm.value.emailCode)
+    console.log('  - uuid:', loginForm.value.uuid)
+    console.log('  - emailCode 类型:', typeof loginForm.value.emailCode)
+    console.log('  - emailCode 长度:', loginForm.value.emailCode ? loginForm.value.emailCode.length : 0)
+  } else {
+    console.log('账号密码登录表单数据详情:')
+    console.log('  - username:', loginForm.value.username)
+    console.log('  - password:', '***') // 不显示真实密码
+    console.log('  - code:', loginForm.value.code)
+    console.log('  - uuid:', loginForm.value.uuid)
+    console.log('  - password 长度:', loginForm.value.password ? loginForm.value.password.length : 0)
+  }
   
   loginFormRef.value.validate(async valid => {
     console.log('表单验证结果:', valid ? '通过' : '失败')
@@ -333,6 +343,15 @@ async function handleLogin() {
       } else {
         console.log('进入账号密码登录分支')
 
+        // 账号密码登录的参数
+        const loginParams = {
+          username: loginForm.value.username,
+          password: loginForm.value.password,
+          code: loginForm.value.code,
+          uuid: loginForm.value.uuid
+        }
+        console.log('发送的账号密码登录参数:', loginParams)
+
         loading.value = true
         if (loginForm.value.rememberMe) {
           Cookies.set("username", loginForm.value.username, { expires: 30 })
@@ -346,7 +365,12 @@ async function handleLogin() {
         
         try {
           // 执行账号密码登录
-          await userStore.login(loginForm.value)
+          await userStore.login({
+            username: loginForm.value.username,
+            password: loginForm.value.password,
+            code: loginForm.value.code,
+            uuid: loginForm.value.uuid
+          })
           
           console.log('账号密码登录成功，准备跳转')
           ElMessage.success('登录成功')
@@ -368,7 +392,23 @@ async function handleLogin() {
         } catch (error) {
           loading.value = false
           console.error('账号密码登录失败:', error)
-          ElMessage.error(error.message || '登录失败，请检查账号和密码')
+
+          // 更详细的错误信息
+          console.error('错误响应:', error.response)
+          console.error('错误状态:', error.response?.status)
+          console.error('错误数据:', error.response?.data)
+          
+          // 根据错误类型显示不同的提示信息
+          if (error.response?.data?.message) {
+            ElMessage.error('登录失败: ' + error.response.data.message)
+          } else if (error.message.includes('用户不存在/密码错误')) {
+            ElMessage.error('用户名或密码错误，请检查后重试')
+          } else if (error.message.includes('验证码')) {
+            ElMessage.error('验证码错误或已过期，请刷新验证码')
+          } else {
+            ElMessage.error(error.message || '登录失败，请检查网络连接')
+          }
+          
           getCode()
         }
       }
