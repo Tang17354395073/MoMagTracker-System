@@ -2196,7 +2196,7 @@ public class SysLoginController
 
 - 结果
 
-![image-20251027092558037](C:/Users/17354/Desktop/InSpur Project/项目 MoMagTracker-System.assets/image-20251027092558037.png)
+![image-20251027092558037](../../Information/InSpur Project/项目 MoMagTracker-System.assets/image-20251027092558037.png)
 
 ##### 3 网易邮箱配置
 
@@ -2700,7 +2700,7 @@ public class SysLoginService
 
 - 结果
 
-![image-20251017171831450](C:/Users/17354/Desktop/InSpur Project/项目 MoMagTracker-System.assets/image-20251017171831450.png)
+![image-20251017171831450](../../Information/InSpur Project/项目 MoMagTracker-System.assets/image-20251017171831450.png)
 
 ##### 2 增加短信配置
 
@@ -5091,7 +5091,7 @@ password：tang2001
 
 ![image-20251113141652552](README.assets/image-20251113141652552.png)
 
-### 2.5 推送至远程仓库
+### 2.4 推送至远程仓库
 
 ```shell
 ls -a
@@ -5102,9 +5102,9 @@ git add .
 
 git status
 
-git commit -m "第二次提交，修改总体概括 README.md 文件，在原来的账号密码登录功能之外，新增邮箱登录功能"
+git commit -m "第二次提交，修改总体概括 README.md 文件，在原来的账号密码登录功能之外新增邮箱登录功能"
 
-git push -u origin dev
+git push -u origin master
 ```
 
 - 结果
@@ -5286,7 +5286,7 @@ branch 'master' set up to track 'origin/master'.
 
 ## 2.3 系统功能开发（前端页面）
 
-```
+```java
 账号：admin
 密码：admin123
     
@@ -5298,7 +5298,7 @@ branch 'master' set up to track 'origin/master'.
 
 ![image-20251113141816232](README.assets/image-20251113141816232.png)
 
-```
+```java
 <template>
   <div class="app-container home">
     <div class="main-card">
@@ -6025,11 +6025,11 @@ function goTarget(url) {
 
 ### 2.3.2 侧边栏开发
 
-<img src="README.assets/image-20251113142319083.png" alt="image-20251113142319083" style="zoom: 80%;" />
+![image-20251113142319083](README.assets/image-20251113142319083.png)
 
 #### 2.3.2.1 修改侧边栏样式变量（src/assets/styles/variables.module.scss）
 
-```
+```java
 // base color
 $blue: #324157;
 $light-blue: #333c46;
@@ -15489,7 +15489,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\online\index.vue` 文件中填入下述代码
 
-```
+```java
 <template>
    <div class="onlinelog-management">
       <div class="main-card">
@@ -16916,7 +16916,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\job\index.vue` 文件中填入下述代码
 
-```
+```java
 <template>
    <div class="job-management">
       <div class="main-card">
@@ -18335,7 +18335,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\druid\index.vue` 文件弹出的输入框填入下账号和密码
 
-```
+```java
                 # 控制台管理用户名和密码
                 login-username: admin
                 login-password: admin123
@@ -18347,7 +18347,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\server\index.vue` 文件中填入下述代码
 
-```
+```java
 <template>
   <div class="server-monitor">
     <div class="main-card">
@@ -18982,7 +18982,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\cache\index.vue` 文件中填入下述代码
 
-```
+```java
 <template>
   <div class="cache-monitor">
     <div class="main-card">
@@ -19626,7 +19626,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\cache\list.vue` 文件中填入下述代码
 
-```
+```java
 <template>
   <div class="cache-management">
     <div class="main-card">
@@ -20350,7 +20350,7 @@ getCacheNames()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\tool\build\index.vue` 和 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\tool\build\RightPanel.vue` 文件中分别加入下述代码
 
-```
+```java
 <template>
   <div class="container">
     <div class="left-board">
@@ -21188,6 +21188,9 @@ $warningColor: #f59e0b;
   }
 }
 </style>
+```
+
+```shell
 <template>
   <div class="right-board">
     <el-tabs v-model="currentTab" stretch class="center-tabs">
@@ -22331,7 +22334,7 @@ $lightGray: #F5F5F5;
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\tool\gen\index.vue` 文件中加入下述代码
 
-```
+```java
 <template>
   <div class="gen-management">
     <div class="main-card">
@@ -23114,7 +23117,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\core\config\SwaggerConfig.java` 文件中修改下述内容
 
-```
+```java
 package tracker.web.core.config;
 
 import java.util.ArrayList;
@@ -23240,11 +23243,12 @@ public class SwaggerConfig
                 .build();
     }
 }
+
 ```
 
 ### 2.3.7 推送至远程仓库
 
-```
+```shell
 ls -a
 
 git status
@@ -23253,14 +23257,2580 @@ git add .
 
 git status
 
-git commit -m "第三次提交，修改总体概括 README.md 文件，开发系统整体的首页样式和侧边栏样式，以及新增个人中心、系统管理、系统监控和系统工具功能页面"
+git commit -m "第三次提交，修改 README.md 文件，开发系统整体的首页样式和侧边栏样式，以及新增个人中心、系统管理、系统监控和系统工具功能页面"
 
 git push -u origin master
+```
+
+- 结果
+
+```shell
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ ls -a
+./   .git/              MoMagTracker-Vue3/  README.md
+../  MoMagTracker-Vue/  README.assets/
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/config/RuoYiConfig.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/core/config/SwaggerConfig.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application-druid.yml
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/config/RuoYiConfig.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/config/SecurityConfig.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/SysLoginService.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/UserDetailsServiceImpl.java
+        modified:   MoMagTracker-Vue3/src/api/login.js
+        modified:   MoMagTracker-Vue3/src/assets/styles/ruoyi.scss
+        modified:   MoMagTracker-Vue3/src/assets/styles/sidebar.scss
+        modified:   MoMagTracker-Vue3/src/assets/styles/variables.module.scss
+        modified:   MoMagTracker-Vue3/src/layout/components/Sidebar/Logo.vue
+        modified:   MoMagTracker-Vue3/src/store/modules/user.js
+        modified:   MoMagTracker-Vue3/src/views/index.vue
+        modified:   MoMagTracker-Vue3/src/views/login.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/cache/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/cache/list.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/job/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/logininfor/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/online/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/operlog/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/server/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/config/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/dept/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/dict/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/menu/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/notice/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/post/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/role/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/user/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/user/profile/index.vue
+        modified:   MoMagTracker-Vue3/src/views/tool/build/RightPanel.vue
+        modified:   MoMagTracker-Vue3/src/views/tool/build/index.vue
+        modified:   MoMagTracker-Vue3/src/views/tool/gen/index.vue
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MoMagTracker-Vue3/src/assets/images/alipay.jpg
+        MoMagTracker-Vue3/src/assets/images/wechat.jpg
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git add .
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/core/config/SwaggerConfig.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application-druid.yml
+        modified:   MoMagTracker-Vue/tracker-common/src/main/java/tracker/common/config/RuoYiConfig.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/config/SecurityConfig.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/SysLoginService.java
+        modified:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/web/service/UserDetailsServiceImpl.java
+        modified:   MoMagTracker-Vue3/src/api/login.js
+        new file:   MoMagTracker-Vue3/src/assets/images/alipay.jpg
+        new file:   MoMagTracker-Vue3/src/assets/images/wechat.jpg
+        modified:   MoMagTracker-Vue3/src/assets/styles/ruoyi.scss
+        modified:   MoMagTracker-Vue3/src/assets/styles/sidebar.scss
+        modified:   MoMagTracker-Vue3/src/assets/styles/variables.module.scss
+        modified:   MoMagTracker-Vue3/src/layout/components/Sidebar/Logo.vue
+        modified:   MoMagTracker-Vue3/src/store/modules/user.js
+        modified:   MoMagTracker-Vue3/src/views/index.vue
+        modified:   MoMagTracker-Vue3/src/views/login.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/cache/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/cache/list.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/job/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/logininfor/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/online/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/operlog/index.vue
+        modified:   MoMagTracker-Vue3/src/views/monitor/server/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/config/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/dept/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/dict/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/menu/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/notice/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/post/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/role/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/user/index.vue
+        modified:   MoMagTracker-Vue3/src/views/system/user/profile/index.vue
+        modified:   MoMagTracker-Vue3/src/views/tool/build/RightPanel.vue
+        modified:   MoMagTracker-Vue3/src/views/tool/build/index.vue
+        modified:   MoMagTracker-Vue3/src/views/tool/gen/index.vue
+        new file:   README.assets/image-20251113141626420.png
+        new file:   README.assets/image-20251113141652552.png
+        new file:   README.assets/image-20251113141816232.png
+        new file:   README.assets/image-20251113142319083.png
+        new file:   README.assets/image-20251113142426954.png
+        new file:   README.assets/image-20251113142503265.png
+        new file:   README.assets/image-20251113142521186.png
+        new file:   README.assets/image-20251113142539727.png
+        new file:   README.assets/image-20251113142614639.png
+        new file:   README.assets/image-20251113142636748.png
+        new file:   README.assets/image-20251113142658188.png
+        new file:   README.assets/image-20251113142717831.png
+        new file:   README.assets/image-20251113142752213.png
+        new file:   README.assets/image-20251113142831146.png
+        new file:   README.assets/image-20251113142850605.png
+        new file:   README.assets/image-20251113142913637.png
+        new file:   README.assets/image-20251113142933588.png
+        new file:   README.assets/image-20251113143344758.png
+        new file:   README.assets/image-20251113143412598.png
+        new file:   README.assets/image-20251113143626889.png
+        new file:   README.assets/image-20251113143649942.png
+        new file:   README.assets/image-20251113143725305.png
+        new file:   README.assets/image-20251113143747513.png
+        new file:   README.assets/image-20251113143810478.png
+        modified:   README.md
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git commit -m "第三次提交，修改 README.md 文件，开发系统整体的首页样式和侧边栏样式，以及新增个人中心、系统管理、系统监控和系统工具功能页面"
+[master a826a4f] 第三次提交，修改 README.md 文件，开发系统整体的首页样式和侧边栏样式，以及新增个人中心、系统管理、系统监控和系统工具功能页面
+ 60 files changed, 30831 insertions(+), 3679 deletions(-)
+ create mode 100644 MoMagTracker-Vue3/src/assets/images/alipay.jpg
+ create mode 100644 MoMagTracker-Vue3/src/assets/images/wechat.jpg
+ create mode 100644 README.assets/image-20251113141626420.png
+ create mode 100644 README.assets/image-20251113141652552.png
+ create mode 100644 README.assets/image-20251113141816232.png
+ create mode 100644 README.assets/image-20251113142319083.png
+ create mode 100644 README.assets/image-20251113142426954.png
+ create mode 100644 README.assets/image-20251113142503265.png
+ create mode 100644 README.assets/image-20251113142521186.png
+ create mode 100644 README.assets/image-20251113142539727.png
+ create mode 100644 README.assets/image-20251113142614639.png
+ create mode 100644 README.assets/image-20251113142636748.png
+ create mode 100644 README.assets/image-20251113142658188.png
+ create mode 100644 README.assets/image-20251113142717831.png
+ create mode 100644 README.assets/image-20251113142752213.png
+ create mode 100644 README.assets/image-20251113142831146.png
+ create mode 100644 README.assets/image-20251113142850605.png
+ create mode 100644 README.assets/image-20251113142913637.png
+ create mode 100644 README.assets/image-20251113142933588.png
+ create mode 100644 README.assets/image-20251113143344758.png
+ create mode 100644 README.assets/image-20251113143412598.png
+ create mode 100644 README.assets/image-20251113143626889.png
+ create mode 100644 README.assets/image-20251113143649942.png
+ create mode 100644 README.assets/image-20251113143725305.png
+ create mode 100644 README.assets/image-20251113143747513.png
+ create mode 100644 README.assets/image-20251113143810478.png
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git push -u origin master
+Enumerating objects: 211, done.
+Counting objects: 100% (211/211), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (100/100), done.
+Writing objects: 100% (121/121), 7.97 MiB | 2.18 MiB/s, done.
+Total 121 (delta 45), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (45/45), completed with 33 local objects.
+To 17354395073_github_account:Tang17354395073/MoMagTracker-System.git
+   c729ef1..a826a4f  master -> master
+branch 'master' set up to track 'origin/master'.
+```
+
+## 3 子系统功能开发（Dify）
+
+`Dify` 登录地址：`http://localhost:18080/apps`
+
+前后端登录地址：`http://localhost:81/index`
+
+### 3.1 DockerDesktop 基础环境配置
+
+##### 3.1.1  Hyper-V 虚拟化环境
+
+- 打开 `控制面板 - 程序 - 程序与功能 - 启用或关闭 Windows 功能` 
+
+```python
+# 快捷键
+再次按下 Win + R 键，输入 OptionalFeatures 并回车。
+```
+
+- 启动 Hyper-V
+
+##### Q：如果没有发现 Hyper-V，解决办法如下：
+
+- 在 `Win11` 搜索框，`PowerShell` 中输入 `systeminfo` 命令
+
+```python
+C:\Users\17354>systeminfo
+
+主机名:             LAPTOP-3CJQNHQH
+OS 名称:            Microsoft Windows 11 家庭中文版
+OS 版本:            10.0.26100 暂缺 Build 26100
+OS 制造商:          Microsoft Corporation
+OS 配置:            独立工作站
+OS 构建类型:        Multiprocessor Free
+注册的所有人:       17354395073@163.com
+注册的组织:
+产品 ID:            00326-60000-00000-AA285
+初始安装日期:       2024/12/7, 14:10:48
+系统启动时间:       2025/7/3, 8:11:27
+系统制造商:         LENOVO
+系统型号:           81Q5
+系统类型:           x64-based PC
+处理器:             安装了 1 个处理器。
+                    [01]: Intel64 Family 6 Model 158 Stepping 10 GenuineIntel ~2400 Mhz
+BIOS 版本:          LENOVO BHCN26WW, 2019/5/5
+Windows 目录:       C:\WINDOWS
+系统目录:           C:\WINDOWS\system32
+启动设备:           \Device\HarddiskVolume1
+系统区域设置:       zh-cn;中文(中国)
+输入法区域设置:     zh-cn;中文(中国)
+时区:               (UTC+08:00) 北京，重庆，香港特别行政区，乌鲁木齐
+物理内存总量:       16,304 MB
+可用的物理内存:     5,286 MB
+虚拟内存: 最大值:   30,128 MB
+虚拟内存: 可用:     15,950 MB
+虚拟内存: 使用中:   14,178 MB
+页面文件位置:       C:\pagefile.sys
+域:                 WORKGROUP
+登录服务器:         \\LAPTOP-3CJQNHQH
+修补程序:           安装了 3 个修补程序。
+                    [01]: KB5054979
+                    [02]: KB5060842
+                    [03]: KB5059502
+网卡:               安装了 5 个 NIC。
+                    [01]: Sangfor aTrust VNIC
+                        连接名:      本地连接
+                        启用 DHCP:   否
+                        IP 地址
+                          [01]: 2.0.0.1
+                          [02]: fe80::e8a9:97d4:5acb:ef8
+                    [02]: Intel(R) Wireless-AC 9560 160MHz
+                        连接名:      WLAN
+                        启用 DHCP:   是
+                        DHCP 服务器: 172.20.10.1
+                        IP 地址
+                          [01]: 172.20.10.4
+                          [02]: fe80::6335:ddbb:4ed0:41b7
+                          [03]: 240e:446:50:878f:107b:4af2:4314:5ccf
+                          [04]: 240e:446:50:878f:d62:41f8:2cfd:5c64
+                    [03]: Realtek PCIe GbE Family Controller
+                        连接名:      以太网
+                        状态:        媒体连接已中断
+                    [04]: Bluetooth Device (Personal Area Network)
+                        连接名:      蓝牙网络连接
+                        状态:        媒体连接已中断
+                    [05]: Microsoft Wi-Fi Direct Virtual Adapter
+                        连接名:      本地连接* 2
+                        启用 DHCP:   否
+                        IP 地址
+                          [01]: 192.168.137.1
+                          [02]: fe80::3dd6:e77c:773a:81bb
+基于虚拟化的安全性: 状态： 未启用
+                    App Control for Business policy: 强制
+                    App Control for Business user mode policy: 关
+                    已启用安全功能:
+Hyper-V 要求:       虚拟机监视器模式扩展: 是
+                    固件中已启用虚拟化: 是
+                    二级地址转换: 是
+                    数据执行保护可用: 是
+```
+
+能够看到出现了很多处理器的信息，最末尾有个 `Hyper-V` 要求，如果四个全为 “是”，则表示支持 `Hyper-V` 功能。
+
+- 桌面新建一个记事本文件，复制下面的代码粘贴到记事本文件，保存后将它的后缀改成 `cmd` 或 `bat`，右键选择以管理员身份运行。代码执行结束后，重启电脑就可以了。
+
+```python
+pushd "%~dp0"
+
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
+
+for /f %%i in ('findstr /i . hyper-v.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+
+del hyper-v.txt
+
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+```
+
+- 运行结果如下（运行预计 `10-20` 分钟）
+
+```python
+C:\Windows\System32>pushd "C:\Users\17354\Desktop\"
+
+C:\Users\17354\Desktop>dir /b C:\WINDOWS\servicing\Packages\*Hyper-V*.mum  1>hyper-v.txt
+
+C:\Users\17354\Desktop>for /F %i in ('findstr /i . hyper-v.txt 2>nul') do dism /online /norestart /add-package:"C:\WINDOWS\servicing\Packages\%i"
+
+C:\Users\17354\Desktop>dism /online /norestart /add-package:"C:\WINDOWS\servicing\Packages\Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~en-US~10.0.26100.1591.mum"
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+正在处理 1 (共 1) - 正在添加程序包 Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~en-US~10.0.26100.1591
+[==========================100.0%==========================]
+操作成功完成。
+
+C:\Users\17354\Desktop>dism /online /norestart /add-package:"C:\WINDOWS\servicing\Packages\Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~en-US~10.0.26100.4343.mum"
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+正在处理 1 (共 1) - 正在添加程序包 Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~en-US~10.0.26100.4343
+[==========================100.0%==========================]
+操作成功完成。
+
+C:\Users\17354\Desktop>dism /online /norestart /add-package:"C:\WINDOWS\servicing\Packages\Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~zh-CN~10.0.26100.1591.mum"
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+正在处理 1 (共 1) - 正在添加程序包 Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~zh-CN~10.0.26100.1591
+[==========================100.0%==========================]
+操作成功完成。
+
+C:\Users\17354\Desktop>dism /online /norestart /add-package:"C:\WINDOWS\servicing\Packages\Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~zh-CN~10.0.26100.4343.mum"
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+正在处理 1 (共 1) - 正在添加程序包 Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~zh-CN~10.0.26100.4343
+[==========================100.0%==========================]
+操作成功完成。
+
+C:\Users\17354\Desktop>dism /online /norestart /add-package:"C:\WINDOWS\servicing\Packages\Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~~10.0.26100.1742.mum"
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+正在处理 1 (共 1) - 正在添加程序包 Microsoft-Hyper-V-ClientEdition-Package~31bf3856ad364e35~amd64~~10.0.26100.1742
+[==========================100.0%==========================]
+
+正在处理 1 (共 1) - 正在添加程序包 Microsoft-Hyper-V-Services-Package~31bf3856ad364e35~amd64~~10.0.26100.1742
+[==========================100.0%==========================]
+操作成功完成。
+
+..........................................................................................................
+
+C:\Users\17354\Desktop>dism /online /norestart /add-package:"C:\WINDOWS\servicing\Packages\Microsoft-Hyper-V-Services-Package~31bf3856ad364e35~amd64~~10.0.26100.4343.mum"
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+正在处理 1 (共 1) - 正在添加程序包 Microsoft-Hyper-V-Services-Package~31bf3856ad364e35~amd64~~10.0.26100.4343
+[==========================100.0%==========================]
+操作成功完成。
+
+C:\Users\17354\Desktop>del hyper-v.txt
+
+C:\Users\17354\Desktop>Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+启用一个或多个功能
+[==========================100.0%==========================]
+操作成功完成。
+重新启动 Windows 以完成该操作。
+是否立即重新启动计算机? (Y/N)
+```
+
+- 重启后开启 `Hyper-V` 服务结果如下
+
+![image-20250703103005764](README.assets/image-20250703103005764.png)
+
+##### 3.1.2 配置 WSL（Windows Subsystem for Linux, 适用于 Linux 的 Windows 子系统） 优化使用性能
+
+###### 1 安装 WSL
+
+- 列出可用的分发
+
+```python
+C:\Windows\System32>wsl.exe --list --online
+以下是可安装的有效分发的列表。
+使用“wsl.exe --install <Distro>”安装。
+
+NAME                            FRIENDLY NAME
+AlmaLinux-8                     AlmaLinux OS 8
+AlmaLinux-9                     AlmaLinux OS 9
+AlmaLinux-Kitten-10             AlmaLinux OS Kitten 10
+AlmaLinux-10                    AlmaLinux OS 10
+Debian                          Debian GNU/Linux
+FedoraLinux-42                  Fedora Linux 42
+SUSE-Linux-Enterprise-15-SP6    SUSE Linux Enterprise 15 SP6
+SUSE-Linux-Enterprise-15-SP7    SUSE Linux Enterprise 15 SP7
+Ubuntu                          Ubuntu
+Ubuntu-24.04                    Ubuntu 24.04 LTS
+archlinux                       Arch Linux
+kali-linux                      Kali Linux Rolling
+openSUSE-Tumbleweed             openSUSE Tumbleweed
+openSUSE-Leap-15.6              openSUSE Leap 15.6
+Ubuntu-18.04                    Ubuntu 18.04 LTS
+Ubuntu-20.04                    Ubuntu 20.04 LTS
+Ubuntu-22.04                    Ubuntu 22.04 LTS
+OracleLinux_7_9                 Oracle Linux 7.9
+OracleLinux_8_7                 Oracle Linux 8.7
+OracleLinux_9_1                 Oracle Linux 9.1
+```
+
+- 安装命令
+
+```python
+PowerShell 中输入 wsl --install --web-download 命令
+```
+
+```python
+C:\Windows\System32>wsl --install --web-download
+正在安装 Windows 可选组件: VirtualMachinePlatform
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+启用一个或多个功能
+[==========================100.0%==========================]
+操作成功完成。
+请求的操作成功。直到重新启动系统前更改将不会生效。
+```
+
+- 检查版本状态，下载最新版本的 Linux 内核更新包
+
+```python
+C:\Windows\System32>wsl.exe --update
+正在检查更新。
+已安装最新版本的适用于 Linux 的 Windows 子系统。
+```
+
+###### Q：如果出现安装失败？
+
+```python
+# 失败情况
+C:\Windows\System32>wsl --install --web-download
+正在下载: 适用于 Linux 的 Windows 子系统 2.5.9
+与服务器的连接被重置       25.1%                           ]
+```
+
+```python
+点击链接 https://github.com/microsoft/WSL/releases
+```
+
+- 下载最新版 WSL 离线脚本安装
+
+![1751507227515](README.assets/1751507227515.jpg)
+
+- 安装界面
+
+![image-20250703100702397](README.assets/image-20250703100702397.png)
+
+安装后继续执行 `wsl --install --web-download` 操作，并通过 `wsl.exe --update` 检查是否下载完毕
+
+###### 2 启动 WSL
+
+````python
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+````
+
+```python
+C:\Windows\System32>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+部署映像服务和管理工具
+版本: 10.0.26100.1150
+
+映像版本: 10.0.26100.4349
+
+启用一个或多个功能
+[==========================100.0%==========================]
+操作成功完成。
+```
+
+###### 3 设置 WSL2 为默认版本
+
+重新以管理员身份打开 Powershell 并运行以下命令
+
+```python
+wsl --set-default-version 2
+```
+
+```python
+C:\Windows\System32>wsl --set-default-version 2
+有关与 WSL 2 关键区别的信息，请访问 https://aka.ms/wsl2
+
+操作成功完成。
+```
+
+### 3.2 DockerDesktop 的下载与安装
+
+#### 1 下载
+
+```python
+网址 https://docs.docker.com/get-started/get-docker/ 中点击 Docker Desktop for Windows
+```
+
+![image-20250703104237574](README.assets/image-20250703104237574.png)
+
+```python
+点击 Docker Desktop for Windows -x86 64
+```
+
+![image-20250703104331547](README.assets/image-20250703104331547.png)
+
+下载后执行以下步骤：
+
+- 下载完成后，双击 `DockerDesktopInsta1ler.exe` 运行安装程序。默认情况下，``Docker Desktop` 安装在 `C:\Program Files\Docker\Docker`
+- 按照安装向导的提示进行安装即可
+- 安装完成后，系统会提示 `Close and log out` 重启计算机 
+
+- 验证安装成功需要打开 `cmd` 输入 `docker --version` 查看 `Docker` 版本
+
+```python
+C:\Users\17354>docker --version
+Docker version 28.2.2, build e6534b4
+```
+
+#### 2 配置 Docker 镜像源及存储位置
+
+- 在 `Docker Desktop` 中设置 `Docker` 下载的镜像源，加快下载速度
+
+```python
+"registry-mirrors":[
+    "https://docker.m.daocloud.io",
+    "https://docker.rainbond.cc",
+    "https://docker.1mirror.top"
+]
+```
+
+- 打开 `Docker` 的设置，找到 `Docker Engine`，在末尾添加上述代码
+
+```python
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "registry-mirrors": [
+    "https://docker.m.daocloud.io",
+    "https://docker.rainbond.cc",
+    "https://docker.1mirror.top"
+  ]
+}
+```
+
+#### 3 设置 Docker 下载 image 后存放的位置
+
+默认为 `C:\Users\17354\VAppData\Local\Doder\ws1` 路径，可以改为磁盘空间充足的路径。
+
+- 打开 `Docker` 的设置，找到 `Resources`
+
+![image-20250703114902293](README.assets/image-20250703114902293.png)
+
+### 3.3 Dify
+
+`Dify` 是一款创新的智能生活助手应用，旨在为您提供便捷、高效的服务。通过人工智能技术，`Dify` 可以实现语音助手、智能家居控制、日程管理等功能，助您轻松应对生活琐事，享受智慧生活。简约的界面设计，让操作更加便捷；丰富的应用场景，满足您多样化的需求。`Dify`，让生活更简单!
+
+#### 3.3.1 源码下载
+
+```python
+https://github.com/langgenius/dify
+```
+
+#### 3.3.2 配置 Docker
+
+进入到下载完的 `dify\docker` 目录，将 `.env.example` 复制并粘贴一份文件，并改名为 `.env`。
+
+#### 3.3.3 创建 Dify 运行需要的容器
+
+```python
+在 dify\docker 目录下打开终端 cmd 中输入：docker compose up -d
+```
+
+- 加载中页面
+
+```python
+PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
+[+] Running 34/81
+ - ssrf_proxy [⠀⠀⠀] Pulling                                           								250.2s
+ - worker [⣿⣿⣿⣿⣿⣿⣿⠀⣿⣿⠀⠀] Pulling                                    							  250.2s
+ - sandbox [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling                                       								250.2s
+ ✔ nginx Pulled                                                        								 197.2s
+ - db [⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀] Pulling                                           								250.2s
+ - api Pulling                                                         								 250.2s
+ - plugin_daemon [⠀⠀⠀⠀⠀] Pulling                                       								 250.2s
+ ✔ weaviate Pulled                                                     								 146.1s
+ - redis [⠀⠀⠀⠀⠀⠀] Pulling                                              								 250.2s
+ - web [⣿⣦⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿] 158.2MB / 175.5MB Pulling 												  250.2s
+```
+
+- 加载完页面
+
+```python
+PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
+[+] Running 81/81
+ ✔ ssrf_proxy Pulled                                                                                  280.2s
+ ✔ worker Pulled                                                                                      842.0s
+ ✔ sandbox Pulled                                                                                     367.6s
+ ✔ nginx Pulled                                                                                       197.2s
+ ✔ db Pulled                                                                                          649.6s
+ ✔ api Pulled                                                                                         842.0s
+ ✔ plugin_daemon Pulled                                                                               593.4s
+ ✔ weaviate Pulled                                                                                    146.1s
+ ✔ redis Pulled                                                                                       284.1s
+ ✔ web Pulled                                                                                         693.8s
+```
+
+```python
+PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
+[+] Running 10/10
+ ✔ Container docker-redis-1          Running                                                            0.0s
+ ✔ Container docker-weaviate-1       Running                                                            0.0s
+ ✔ Container docker-db-1             Healthy                                                            0.5s
+ ✔ Container docker-web-1            Running                                                            0.0s
+ ✔ Container docker-ssrf_proxy-1     Running                                                            0.0s
+ ✔ Container docker-sandbox-1        Running                                                            0.0s
+ ✔ Container docker-worker-1         Running                                                            0.0s
+ ✔ Container docker-api-1            Running                                                            0.0s
+ ✔ Container docker-plugin_daemon-1  Running                                                            0.0s
+ ✔ Container docker-nginx-1          Running                                                            0.0s
+```
+
+#### 3.3.4 验证 Docker 是否启动
+
+```python
+在 dify\docker 目录下打开终端 cmd 中输入：docker ps
+```
+
+```python
+PS E:\inSpur\LLaMA\dify\docker> docker ps
+CONTAINER ID   IMAGE                                       COMMAND                   CREATED         STATUS                   PORTS                                                                          NAMES
+daf8fd073e29   nginx:latest                                "sh -c 'cp /docker-e…"   5 minutes ago   Up 4 minutes             0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp   docker-nginx-1
+ee7624342976   langgenius/dify-api:1.5.1               e    "/bin/bash /entrypoi…"   5 minutes ago   Up 4 minutes             5001/tcp                                                                       docker-api-1
+aab51ffcd37e   langgenius/dify-api:1.5.1                   "/bin/bash /entrypoi…"   5 minutes ago   Up 4 minutes             5001/tcp                                                                       docker-worker-1
+dbe175c2a122   langgenius/dify-plugin-daemon:0.1.3-local   "/bin/bash -c /app/e…"   5 minutes ago   Up 4 minutes             0.0.0.0:5003->5003/tcp, [::]:5003->5003/tcp                                    docker-plugin_daemon-1
+a204a1606605   redis:6-alpine                              "docker-entrypoint.s…"   5 minutes ago   Up 5 minutes (healthy)   6379/tcp                                                                       docker-redis-1
+c6612618ceaf   postgres:15-alpine                          "docker-entrypoint.s…"   5 minutes ago   Up 5 minutes (healthy)   5432/tcp                                                                       docker-db-1
+44731921073a   semitechnologies/weaviate:1.19.0            "/bin/weaviate --hos…"   5 minutes ago   Up 5 minutes                                                                                            docker-weaviate-1
+51c7f3a1c9fc   langgenius/dify-web:1.5.1                   "/bin/sh ./entrypoin…"   5 minutes ago   Up 5 minutes             3000/tcp                                                                       docker-web-1
+2cebe3306e46   ubuntu/squid:latest                         "sh -c 'cp /docker-e…"   5 minutes ago   Up 5 minutes             3128/tcp                                                                       docker-ssrf_proxy-1
+3174fef21b1d   langgenius/dify-sandbox:0.2.12              "/main"                   5 minutes ago   Up 5 minutes (healthy)                                                                                  docker-sandbox-1
+```
+
+- ### docker ps 输出列解析
+
+|       列名       |                             说明                             | 示例分析（以第一行为例）                                     |
+| :--------------: | :----------------------------------------------------------: | :----------------------------------------------------------- |
+| **CONTAINER ID** | 容器的唯一标识（前12位），用于操作容器（如 `docker stop daf8fd073e29`）。 | `daf8fd073e29`                                               |
+|    **IMAGE**     |                  容器使用的镜像名称及版本。                  | `nginx:latest`（表示使用最新版的 Nginx 官方镜像）。          |
+|   **COMMAND**    |                  容器启动时执行的初始命令。                  | `sh -c 'cp /docker-e…'`（启动时运行 Shell 脚本复制配置文件）。 |
+|   **CREATED**    |                 容器创建的时间（相对时间）。                 | `5 minutes ago`（5分钟前创建）。                             |
+|    **STATUS**    |             容器当前状态（运行中、健康状态等）。             | `Up 4 minutes`（已运行4分钟，括号内可能显示健康状态，如 `(healthy)`）。 |
+|    **PORTS**     |         容器暴露的端口映射（主机端口 -> 容器端口）。         | `0.0.0.0:80->80/tcp`（主机的80端口映射到容器的80端口，`::`表示IPv6）。 |
+|    **NAMES**     |     容器的自定义名称（可通过 `--name` 指定或自动生成）。     | `docker-nginx-1`（由 `docker-compose` 自动生成，格式为`项目名-服务名-序号`）。 |
+
+#### 3.3.5 Docker 中运行 Dify 
+
+在浏览器上访问 `http://127.0.0.1`，弹出如下页面。
+
+![image-20250703142055726](README.assets/image-20250703142055726.png)
+
+- 登录页面
+
+![image-20251212113035905](README.assets/image-20251212113035905.png)
+
+### 3.4 Dify 关联 Ollama 模型
+
+#### 1 下载 Ollama 模型
+
+![image-20250703145705947](README.assets/image-20250703145705947.png)
+
+```python
+点击 `模型供应商` -> 下载 `Ollama` 模型
+```
+
+<img src="README.assets/image-20250703150156046.png" alt="image-20250703150156046" style="zoom:80%;" />
+
+```python
+完成安装 Ollama 模型后得到 `待配置模型`
+```
+
+![image-20250703150400498](README.assets/image-20250703150400498.png)
+
+#### 2 设置 docker env 环境变量配置
+
+`Dify`是通过 `Docker` 部署的，`ollama` 运行在本地电脑，要使 `dify` 能够访问 `ollama` 部署的模型服务，需要获取到本地电脑的内网`IP`。
+
+```python
+cmd 中输入 ipconfig 命令查看本地 IPv4 地址
+```
+
+```python
+无线局域网适配器 WLAN:
+
+   连接特定的 DNS 后缀 . . . . . . . :
+   IPv6 地址 . . . . . . . . . . . . : 240e:446:50:878f:d62:41f8:2cfd:5c64
+   临时 IPv6 地址. . . . . . . . . . : 240e:446:50:878f:b1d7:7b24:4a89:5f01
+   本地链接 IPv6 地址. . . . . . . . : fe80::6335:ddbb:4ed0:41b7%14
+   IPv4 地址 . . . . . . . . . . . . : 172.20.10.4
+   子网掩码  . . . . . . . . . . . . : 255.255.255.240
+   默认网关. . . . . . . . . . . . . : fe80::dc45:b8ff:fea2:364%14
+                                       172.20.10.1
+```
+
+找到 `E:\inSpur\LLaMA\dify\docker` 中的 `.env` 文件，在底部添加下述代码
+
+```python
+# 启用自定义模型
+CUSTOM_MODEL_ENABLED=true
+
+# 指定 Ollama 的 API 地址（根据部署环境调整 IP）
+# host.docker.internal 可以替换为公网地址
+# OLLAMA_API_BASE_URL=http://10.206.37.54:11434
+OLLAMA_API_BASE_URL=host.docker.internal:11434
+```
+
+#### 3 设置加载模型参数
+
+- 模型类型
+
+```python
+选择 LLM
+```
+
+- 模型名称 
+
+```python
+deepseek-r1:1.5b
+```
+
+- 基础 `URL`
+
+```python
+http://host.docker.internal:11434
+```
+
+### 3.5 系统搭载原生 Dify
+
+#### 3.5.1 前端 
+
+##### 1 .env.production 和 .env.development
+
+###### .env.production
+
+```shell
+# 页面标题
+VITE_APP_TITLE = 结构健康监测系统
+
+# 生产环境配置
+VITE_APP_ENV = 'production'
+
+# 若依管理系统/生产环境
+VITE_APP_BASE_API = '/prod-api'
+
+# 是否在打包时开启压缩，支持 gzip 和 brotli
+VITE_BUILD_COMPRESS = gzip
+
+# 生产环境Dify系统基础URL
+VITE_APP_BASE_DIFY = 'http://8.141.94.106:21777'
+```
+
+###### .env.development
+
+```shell
+# 页面标题
+VITE_APP_TITLE = 结构健康监测系统
+
+# 开发环境配置
+VITE_APP_ENV = 'development'
+
+# 若依管理系统/开发环境
+VITE_APP_BASE_API = '/dev-api'
+
+# 生产环境Dify系统基础URL
+VITE_APP_BASE_DIFY = 'http://8.141.94.106:21777'
+```
+
+##### 2 iframeMixin.js
+
+创建 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\utils\iframeMixin.js` 文件
+
+```shell
+import { getAutoToken } from '@/api/intelligentAgentFactory'
+import { ElMessage } from 'element-plus'
+
+export default {
+  data() {
+    return {
+      iframeUrl: '',
+    }
+  },
+  methods: {
+    /**
+     * 从API获取token并将其存储在sessionStorage中。
+     * 返回一个在成功时解析token或在失败时拒绝的promise。
+     */
+    fetchAndStoreToken() {
+      console.log('开始获取Dify令牌...')
+      return new Promise((resolve, reject) => {
+        getAutoToken().then((res) => {
+          console.log('Dify令牌响应:', res)
+          
+          let accessToken, refreshToken;
+          
+          // 情况1: 若依标准返回格式
+          if (res.code === 200 && res.data) {
+            console.log('响应格式: 若依标准格式')
+            accessToken = res.data.access_token || res.data.accessToken;
+            refreshToken = res.data.refresh_token || res.data.refreshToken;
+          } 
+          // 情况2: 直接返回token对象
+          else if (res.data && (res.data.access_token || res.data.accessToken)) {
+            console.log('响应格式: 直接token格式')
+            accessToken = res.data.access_token || res.data.accessToken;
+            refreshToken = res.data.refresh_token || res.data.refreshToken;
+          }
+          // 情况3: 其他格式
+          else if (res.access_token || res.accessToken) {
+            console.log('响应格式: 简单对象格式')
+            accessToken = res.access_token || res.accessToken;
+            refreshToken = res.refresh_token || res.refreshToken;
+          }
+          
+          console.log('解析出的token:', { accessToken, refreshToken })
+          
+          if (accessToken && refreshToken) {
+            const tokens = {
+              consoleToken: accessToken,
+              difyToken: refreshToken,
+            }
+            sessionStorage.setItem('consoletoken', tokens.consoleToken)
+            sessionStorage.setItem('refreshtoken', tokens.difyToken)
+            console.log('Dify令牌已存储到sessionStorage')
+            resolve(tokens)
+          } else {
+            ElMessage({
+              message: '获取Dify令牌失败，请检查配置！',
+              type: 'error',
+            })
+            console.error('获取Dify令牌失败，响应数据:', res)
+            reject(new Error('Token fetch failed'))
+          }
+        }).catch(error => {
+          console.error('获取Dify令牌失败:', error)
+          ElMessage({
+            message: '获取Dify令牌失败：' + (error.message || '未知错误'),
+            type: 'error',
+          })
+          reject(error)
+        })
+      })
+    },
+
+    /**
+     * 使用存储的token构造完整的iframe URL。
+     * @param {string} path - iframe的具体路径 (例如, `/app/123/workflow`).
+     * @returns {string|null} - 如果token存在，则返回完整的URL；否则返回null。
+     */
+    getIframeUrl(path) {
+      console.log('开始构建Dify iframe URL...')
+      
+      // Vue3中使用import.meta.env访问环境变量
+      const baseUrl = import.meta.env.VITE_APP_BASE_DIFY
+      console.log('Dify基础URL:', baseUrl)
+      
+      if (!baseUrl) {
+        console.error('环境变量VITE_APP_BASE_DIFY未配置')
+        ElMessage({
+          message: 'Dify系统配置错误，请联系管理员',
+          type: 'error',
+        })
+        return null
+      }
+      
+      const consoleToken = sessionStorage.getItem('consoletoken')
+      const difyToken = sessionStorage.getItem('refreshtoken')
+      
+      console.log('从sessionStorage获取的令牌:', { 
+        consoleToken: consoleToken ? '已存在' : '不存在',
+        difyToken: difyToken ? '已存在' : '不存在'
+      })
+      
+      if (consoleToken && difyToken) {
+        // 构造URL - 注意参数名称要和Dify系统匹配
+        const url = `${baseUrl}${path}?console_token=${consoleToken}&refresh_token=${difyToken}&isInternalJump=false`
+        console.log('构建的Dify URL:', url)
+        return url
+      } else {
+        console.warn('Dify令牌不存在，无法构建URL')
+        ElMessage({
+          message: 'Dify令牌失效，请重新登录或联系管理员！',
+          type: 'error',
+        })
+        return null
+      }
+    },
+
+    /**
+     * 用于获取token并立即设置iframeUrl。
+     * @param {string} path - iframe的具体路径 (例如, '/apps').
+     */
+    async initializeIframe(path) {
+      console.log('初始化Dify iframe，路径:', path)
+      console.log('当前路由:', this.$route)
+      
+      try {
+        await this.fetchAndStoreToken()
+        console.log('Dify令牌获取成功，开始构建URL')
+        const url = this.getIframeUrl(path)
+        if (url) {
+          console.log('设置iframeUrl:', url)
+          this.iframeUrl = url
+        } else {
+          console.error('构建Dify URL失败')
+        }
+      } catch (error) {
+        console.error('初始化Dify iframe失败:', error)
+      }
+    },
+  },
+}
 ```
 
 
 
 
+
+
+
+找到文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\vite.config.js`，检查 `server` 下的 `proxy`  代理部分，然后端口 `port` 修改为要访问的端口，即要使用 `Nginx` 代理的接口，默认是 `80` 端口。
+
+```shell
+import { defineConfig, loadEnv } from 'vite'
+import path from 'path'
+import createVitePlugins from './vite/plugins'
+
+const baseUrl = 'http://localhost:8080' // 后端接口
+
+// https://vitejs.dev/config/
+export default defineConfig(({ mode, command }) => {
+  const env = loadEnv(mode, process.cwd())
+  const { VITE_APP_ENV } = env
+  return {
+    // 部署生产环境和开发环境下的URL。
+    // 默认情况下，vite 会假设你的应用是被部署在一个域名的根路径上
+    // 例如 https://www.ruoyi.vip/。如果应用被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 https://www.ruoyi.vip/admin/，则设置 baseUrl 为 /admin/。
+    base: VITE_APP_ENV === 'production' ? '/' : '/',
+    plugins: createVitePlugins(env, command === 'build'),
+    resolve: {
+      // https://cn.vitejs.dev/config/#resolve-alias
+      alias: {
+        // 设置路径
+        '~': path.resolve(__dirname, './'),
+        // 设置别名
+        '@': path.resolve(__dirname, './src')
+      },
+      // https://cn.vitejs.dev/config/#resolve-extensions
+      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
+    },
+    // 打包配置
+    build: {
+      // https://vite.dev/config/build-options.html
+      sourcemap: command === 'build' ? false : 'inline',
+      outDir: 'dist',
+      assetsDir: 'assets',
+      chunkSizeWarningLimit: 2000,
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'static/js/[name]-[hash].js',
+          entryFileNames: 'static/js/[name]-[hash].js',
+          assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+        }
+      }
+    },
+    // vite 相关配置
+    server: {
+      port: 80,
+      host: true,
+      open: true,
+      proxy: {
+        // https://cn.vitejs.dev/config/#server-proxy
+        '/dev-api': {
+          target: baseUrl,
+          changeOrigin: true,
+          rewrite: (p) => p.replace(/^\/dev-api/, '')
+        },
+         // springdoc proxy
+         '^/v3/api-docs/(.*)': {
+          target: baseUrl,
+          changeOrigin: true,
+        }
+      }
+    },
+    css: {
+      postcss: {
+        plugins: [
+          {
+            postcssPlugin: 'internal:charset-removal',
+            AtRule: {
+              charset: (atRule) => {
+                if (atRule.name === 'charset') {
+                  atRule.remove()
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+})
+```
+
+##### 3 vite.config.js
+
+修改文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\vite.config.js`
+
+```shell
+import { defineConfig, loadEnv } from 'vite'
+import path from 'path'
+import createVitePlugins from './vite/plugins'
+
+const baseUrl = 'http://localhost:8080' // 后端接口
+
+// https://vitejs.dev/config/
+export default defineConfig(({ mode, command }) => {
+  const env = loadEnv(mode, process.cwd())
+  const { VITE_APP_ENV } = env
+  
+  return {
+    // 部署生产环境和开发环境下的URL。
+    base: VITE_APP_ENV === 'production' ? '/' : '/',
+    plugins: createVitePlugins(env, command === 'build'),
+    resolve: {
+      // https://cn.vitejs.dev/config/#resolve-alias
+      alias: {
+        // 设置路径
+        '~': path.resolve(__dirname, './'),
+        // 设置别名
+        '@': path.resolve(__dirname, './src')
+      },
+      // https://cn.vitejs.dev/config/#resolve-extensions
+      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
+    },
+    // 打包配置
+    build: {
+      // https://vite.dev/config/build-options.html
+      sourcemap: command === 'build' ? false : 'inline',
+      outDir: 'dist',
+      assetsDir: 'assets',
+      chunkSizeWarningLimit: 2000,
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'static/js/[name]-[hash].js',
+          entryFileNames: 'static/js/[name]-[hash].js',
+          assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+        }
+      }
+    },
+    // vite 相关配置
+    server: {
+      port: 81,
+      host: true,
+      open: true,
+      proxy: {
+        // https://cn.vitejs.dev/config/#server-proxy
+        // 开发环境代理配置
+        '/dev-api': {
+          target: baseUrl,
+          changeOrigin: true,
+          rewrite: (p) => p.replace(/^\/dev-api/, '')
+        },
+        
+        // Dify代理配置（开发环境）
+        '/dify-api': {
+          target: 'http://8.141.94.106:21777',
+          changeOrigin: true,
+          rewrite: (p) => p.replace(/^\/dify-api/, ''),
+          configure: (proxy, options) => {
+            // 移除或修改X-Frame-Options头（开发环境）
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              // 移除原有的X-Frame-Options头
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+              
+              // 添加允许同源访问的头
+              res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+              res.setHeader('Content-Security-Policy', "frame-ancestors 'self' http://localhost:*")
+            })
+          }
+        },
+        
+        // Dify的静态资源代理
+        '^/assets/': {
+          target: 'http://8.141.94.106:21777',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // Dify的API路径代理
+        '^/api/': {
+          target: 'http://8.141.94.106:21777',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // Dify的控制台API代理
+        '^/console/': {
+          target: 'http://localhost:80',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // springdoc proxy
+        '^/v3/api-docs/(.*)': {
+          target: baseUrl,
+          changeOrigin: true,
+        }
+      }
+    },
+    css: {
+      postcss: {
+        plugins: [
+          {
+            postcssPlugin: 'internal:charset-removal',
+            AtRule: {
+              charset: (atRule) => {
+                if (atRule.name === 'charset') {
+                  atRule.remove()
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+})
+```
+
+- 修改后
+
+```shell
+import { defineConfig, loadEnv } from 'vite'
+import path from 'path'
+import createVitePlugins from './vite/plugins'
+
+const baseUrl = 'http://localhost:8080' // 后端接口
+
+// https://vitejs.dev/config/
+export default defineConfig(({ mode, command }) => {
+  const env = loadEnv(mode, process.cwd())
+  const { VITE_APP_ENV } = env
+  
+  return {
+    // 部署生产环境和开发环境下的URL。
+    base: VITE_APP_ENV === 'production' ? '/' : '/',
+    plugins: createVitePlugins(env, command === 'build'),
+    resolve: {
+      // https://cn.vitejs.dev/config/#resolve-alias
+      alias: {
+        // 设置路径
+        '~': path.resolve(__dirname, './'),
+        // 设置别名
+        '@': path.resolve(__dirname, './src')
+      },
+      // https://cn.vitejs.dev/config/#resolve-extensions
+      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
+    },
+    // 打包配置
+    build: {
+      // https://vite.dev/config/build-options.html
+      sourcemap: command === 'build' ? false : 'inline',
+      outDir: 'dist',
+      assetsDir: 'assets',
+      chunkSizeWarningLimit: 2000,
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'static/js/[name]-[hash].js',
+          entryFileNames: 'static/js/[name]-[hash].js',
+          assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+        }
+      }
+    },
+    // vite 相关配置
+    server: {
+      port: 81,
+      host: true,
+      open: true,
+      proxy: {
+        // https://cn.vitejs.dev/config/#server-proxy
+        // 开发环境代理配置
+        '/dev-api': {
+          target: baseUrl,
+          changeOrigin: true,
+          rewrite: (p) => p.replace(/^\/dev-api/, '')
+        },
+        
+        // Dify代理配置（开发环境）
+        '/dify-api': {
+          target: 'http://localhost:80',
+          changeOrigin: true,
+          rewrite: (p) => p.replace(/^\/dify-api/, ''),
+          configure: (proxy, options) => {
+            // 移除或修改X-Frame-Options头（开发环境）
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              // 移除原有的X-Frame-Options头
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+              
+              // 添加允许同源访问的头
+              res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+              res.setHeader('Content-Security-Policy', "frame-ancestors 'self' http://localhost:*")
+            })
+          }
+        },
+        
+        // Dify的静态资源代理
+        '^/assets/': {
+          target: 'http://localhost:80',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // Dify的API路径代理
+        '^/api/': {
+          target: 'http://localhost:80',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // Dify的控制台API代理
+        '^/console/': {
+          target: 'http://localhost:80',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // springdoc proxy
+        '^/v3/api-docs/(.*)': {
+          target: baseUrl,
+          changeOrigin: true,
+        }
+      }
+    },
+    css: {
+      postcss: {
+        plugins: [
+          {
+            postcssPlugin: 'internal:charset-removal',
+            AtRule: {
+              charset: (atRule) => {
+                if (atRule.name === 'charset') {
+                  atRule.remove()
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+})
+```
+
+##### 4 index.js
+
+文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\api\intelligentAgentFactory\index.js`
+
+```shell
+import request from "@/utils/request";
+
+// 获取Dify访问令牌
+export function getAutoToken() {
+  return request({
+    url: '/dify/getAutoToken',
+    method: 'get',
+  })
+}
+
+// 获取Dify应用列表 - 对应"应用创建"菜单
+export function getApps(query) {
+  return request({
+    url: '/dify/applicationCreation',
+    method: 'get',
+    params: query || {
+      page: 1,
+      limit: 30,
+      is_created_by_me: false,
+      name: ''
+    }
+  })
+}
+
+// 获取Dify数据集 - 对应"数据管理"菜单
+export function getDatasets(query) {
+  return request({
+    url: '/dify/knowledgeManagement',
+    method: 'get',
+    params: query || {
+      page: 1,
+      limit: 30
+    }
+  })
+}
+
+// 获取Dify工具列表 - 对应"工具调用"菜单
+export function getTools(query) {
+  return request({
+    url: '/dify/toolInvoker',
+    method: 'get',
+    params: query || {
+      page: 1,
+      limit: 30,
+      name: ''
+    }
+  })
+}
+```
+
+##### 5 intelligentAgentFactory
+
+创建文件夹 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\intelligentAgentFactory`
+
+###### 应用创建页面 applicationCreation.vue
+
+![image-20251218163808324](README.assets/image-20251218163808324.png)
+
+```shell
+<template>
+  <div class="iframe-container">
+    <iframe 
+      v-if="iframeUrl" 
+      :src="iframeUrl" 
+      frameborder="0" 
+      allowfullscreen
+      @load="onIframeLoad"
+      @error="onIframeError"
+    ></iframe>
+    <div v-else class="loading-container">
+      <div class="loading-content">
+        <el-icon class="loading-icon"><Loading /></el-icon>
+        <div class="loading-text">正在加载Dify应用创建页面...</div>
+        <div v-if="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import iframeMixin from '@/utils/iframeMixin'
+import { ElMessage } from 'element-plus'
+import { Loading } from '@element-plus/icons-vue'
+
+export default {
+  name: 'ApplicationCreation',
+  components: {
+    Loading
+  },
+  mixins: [iframeMixin],
+  data() {
+    return {
+      errorMessage: '',
+      hasShownSuccessMessage: false,
+    }
+  },
+  created() {
+    console.log('ApplicationCreation组件已创建')
+    console.log('当前路由路径:', this.$route.path)
+    console.log('当前路由参数:', this.$route.params)
+    this.initializeIframe('/apps')
+  },
+  mounted() {
+    console.log('ApplicationCreation组件已挂载')
+  },
+  methods: {
+    onIframeLoad() {
+      console.log('Dify iframe加载完成')
+      if (!this.hasShownSuccessMessage) {
+        ElMessage.success('应用创建页面加载成功') // 更新消息文本
+      this.hasShownSuccessMessage = true
+    }
+    },
+    onIframeError() {
+      console.error('Dify iframe加载失败')
+      this.errorMessage = 'Dify页面加载失败，请检查网络连接或联系管理员'
+      ElMessage.error('Dify页面加载失败')
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.iframe-container {
+  width: 100%;
+  height: calc(100vh - 50px); /* 减去顶部导航栏高度 */
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 600px;
+  position: relative;
+}
+
+.iframe-container iframe {
+  flex: 1;
+  width: 100%;
+  min-height: 600px;
+  border: none;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #f5f7fa;
+}
+
+.loading-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.loading-icon {
+  font-size: 48px;
+  color: #409eff;
+  margin-bottom: 16px;
+  animation: rotate 2s linear infinite;
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #606266;
+  margin-bottom: 8px;
+}
+
+.error-message {
+  color: #f56c6c;
+  font-size: 14px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #fef0f0;
+  border-radius: 4px;
+  border: 1px solid #fde2e2;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
+```
+
+###### 数据管理页面 knowledgeManagement.vue
+
+![image-20251218162854410](README.assets/image-20251218162854410.png)
+
+```shell
+<template>
+  <div class="iframe-container">
+    <iframe 
+      v-if="iframeUrl" 
+      :src="iframeUrl" 
+      frameborder="0" 
+      allowfullscreen
+      @load="onIframeLoad"
+      @error="onIframeError"
+    ></iframe>
+    <div v-else class="loading-container">
+      <div class="loading-content">
+        <el-icon class="loading-icon"><Loading /></el-icon>
+        <div class="loading-text">正在加载Dify数据管理页面...</div>
+        <div v-if="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import iframeMixin from '@/utils/iframeMixin'
+import { ElMessage } from 'element-plus'
+import { Loading } from '@element-plus/icons-vue'
+
+export default {
+  name: 'KnowledgeManagement',
+  components: {
+    Loading
+  },
+  mixins: [iframeMixin],
+  data() {
+    return {
+      errorMessage: '',
+      hasShownSuccessMessage: false,
+    }
+  },
+  created() {
+    console.log('KnowledgeManagement组件已创建')
+    console.log('当前路由路径:', this.$route.path)
+    console.log('当前路由参数:', this.$route.params)
+    this.initializeIframe('/datasets')
+  },
+  mounted() {
+    console.log('KnowledgeManagement组件已挂载')
+  },
+  methods: {
+    onIframeLoad() {
+      console.log('Dify数据管理页面iframe加载完成')
+      if (!this.hasShownSuccessMessage) {
+        ElMessage.success('数据管理页面加载成功') // 更新消息文本
+        this.hasShownSuccessMessage = true
+      }
+    },
+    onIframeError() {
+      console.error('Dify数据管理页面iframe加载失败')
+      this.errorMessage = 'Dify数据管理页面加载失败，请检查网络连接或联系管理员'
+      ElMessage.error('Dify数据管理页面加载失败')
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.iframe-container {
+  width: 100%;
+  height: calc(100vh - 50px); /* 减去顶部导航栏高度 */
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 600px;
+  position: relative;
+}
+
+.iframe-container iframe {
+  flex: 1;
+  width: 100%;
+  min-height: 600px;
+  border: none;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #f5f7fa;
+}
+
+.loading-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.loading-icon {
+  font-size: 48px;
+  color: #409eff;
+  margin-bottom: 16px;
+  animation: rotate 2s linear infinite;
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #606266;
+  margin-bottom: 8px;
+}
+
+.error-message {
+  color: #f56c6c;
+  font-size: 14px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #fef0f0;
+  border-radius: 4px;
+  border: 1px solid #fde2e2;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
+```
+
+###### 工具调用页面 toolInvoker.vue
+
+![image-20251218162920730](README.assets/image-20251218162920730.png)
+
+```shell
+<template>
+  <div class="iframe-container">
+    <iframe 
+      v-if="iframeUrl" 
+      :src="iframeUrl" 
+      frameborder="0" 
+      allowfullscreen
+      @load="onIframeLoad"
+      @error="onIframeError"
+    ></iframe>
+    <div v-else class="loading-container">
+      <div class="loading-content">
+        <el-icon class="loading-icon"><Loading /></el-icon>
+        <div class="loading-text">正在加载Dify工具调用页面...</div>
+        <div v-if="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import iframeMixin from '@/utils/iframeMixin'
+import { ElMessage } from 'element-plus'
+import { Loading } from '@element-plus/icons-vue'
+
+export default {
+  name: 'ToolInvoker',
+  components: {
+    Loading
+  },
+  mixins: [iframeMixin],
+  data() {
+    return {
+      errorMessage: '',
+      hasShownSuccessMessage: false,
+    }
+  },
+  created() {
+    console.log('ToolInvoker组件已创建')
+    console.log('当前路由路径:', this.$route.path)
+    console.log('当前路由参数:', this.$route.params)
+    this.initializeIframe('/tools')
+  },
+  mounted() {
+    console.log('ToolInvoker组件已挂载')
+  },
+  methods: {
+    onIframeLoad() {
+      console.log('Dify工具调用页面iframe加载完成')
+      if (!this.hasShownSuccessMessage) {
+        ElMessage.success('工具调用页面加载成功') // 更新消息文本
+        this.hasShownSuccessMessage = true
+      }
+    },
+    onIframeError() {
+      console.error('Dify工具调用页面iframe加载失败')
+      this.errorMessage = 'Dify工具调用页面加载失败，请检查网络连接或联系管理员'
+      ElMessage.error('Dify工具调用页面加载失败')
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.iframe-container {
+  width: 100%;
+  height: calc(100vh - 50px); /* 减去顶部导航栏高度 */
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 600px;
+  position: relative;
+}
+
+.iframe-container iframe {
+  flex: 1;
+  width: 100%;
+  min-height: 600px;
+  border: none;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #f5f7fa;
+}
+
+.loading-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.loading-icon {
+  font-size: 48px;
+  color: #409eff;
+  margin-bottom: 16px;
+  animation: rotate 2s linear infinite;
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #606266;
+  margin-bottom: 8px;
+}
+
+.error-message {
+  color: #f56c6c;
+  font-size: 14px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #fef0f0;
+  border-radius: 4px;
+  border: 1px solid #fde2e2;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
+```
+
+#### 3.5.2 后端
+
+##### 1 DifyController.java
+
+创建 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\dify\DifyController.java`
+
+```shell
+package tracker.web.controller.dify;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import tracker.common.core.controller.BaseController;
+import tracker.common.core.domain.AjaxResult;
+import tracker.system.service.IDifyAuthService;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Dify接口控制器
+ */
+@RestController
+@RequestMapping("/dify")
+public class DifyController extends BaseController {
+
+    @Autowired
+    private IDifyAuthService difyAuthService;
+
+    /**
+     * 获取Dify访问令牌
+     */
+    @GetMapping("/getAutoToken")
+    public AjaxResult getAutoToken() {
+        try {
+            Map<String, String> token = difyAuthService.getAutoToken();
+            return success(token);
+        } catch (Exception e) {
+            return error("获取Dify令牌失败: " + e.getMessage());
+        }
+    }
+
+    /**
+     * 获取Dify应用列表 - 对应"应用创建"菜单
+     * 路由地址改为: /dify/applicationCreation
+     */
+    @GetMapping("/applicationCreation")
+    public AjaxResult getApps(
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "limit", defaultValue = "30") int limit,
+            @RequestParam(value = "is_created_by_me", defaultValue = "false") boolean isCreatedByMe,
+            @RequestParam(value = "name", defaultValue = "") String name) {
+
+        try {
+            Map<String, Object> params = new HashMap<>();
+            params.put("page", page);
+            params.put("limit", limit);
+            params.put("is_created_by_me", isCreatedByMe);
+            params.put("name", name);
+
+            Map<String, Object> result = difyAuthService.getApps(params);
+            return success(result);
+        } catch (Exception e) {
+            return error("获取Dify应用列表失败: " + e.getMessage());
+        }
+    }
+
+    /**
+     * 获取Dify数据集 - 对应"数据管理"菜单
+     * 路由地址改为: /dify/knowledgeManagement
+     */
+    @GetMapping("/knowledgeManagement")
+    public AjaxResult getDatasets(
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "limit", defaultValue = "30") int limit) {
+        try {
+            Map<String, Object> params = new HashMap<>();
+            params.put("page", page);
+            params.put("limit", limit);
+
+            Map<String, Object> result = difyAuthService.getDatasets(params);
+            return success(result);
+        } catch (Exception e) {
+            return error("获取Dify数据集失败: " + e.getMessage());
+        }
+    }
+
+    /**
+     * 获取Dify工具列表 - 对应"工具调用"菜单
+     * 路由地址改为: /dify/toolInvoker
+     */
+    @GetMapping("/toolInvoker")
+    public AjaxResult getTools(
+            @RequestParam(value = "page", defaultValue = "1") int page,
+            @RequestParam(value = "limit", defaultValue = "30") int limit,
+            @RequestParam(value = "name", defaultValue = "") String name) {
+
+        try {
+            Map<String, Object> params = new HashMap<>();
+            params.put("page", page);
+            params.put("limit", limit);
+            params.put("name", name);
+
+            Map<String, Object> result = difyAuthService.getTools(params);
+            return success(result);
+        } catch (Exception e) {
+            return error("获取Dify工具列表失败: " + e.getMessage());
+        }
+    }
+}
+```
+
+##### 2 RestTemplateConfig.java
+
+创建 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-framework\src\main\java\tracker\framework\config\RestTemplateConfig.java`
+
+```shell
+package tracker.framework.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class RestTemplateConfig {
+
+    @Bean
+    public RestTemplate restTemplate() {
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        // 设置连接超时时间为30秒（30000毫秒）
+        factory.setConnectTimeout(30000);
+        // 设置读取超时时间为30秒（30000毫秒）
+        factory.setReadTimeout(30000);
+        return new RestTemplate(factory);
+    }
+}
+```
+
+##### 3 IDifyAuthService.java
+
+创建 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-system\src\main\java\tracker\system\service\IDifyAuthService.java`
+
+```shell
+package tracker.system.service;
+
+import java.util.Map;
+
+/**
+ * Dify认证服务接口
+ */
+public interface IDifyAuthService {
+    /**
+     * 获取Dify访问令牌
+     */
+    Map<String, String> getAutoToken();
+
+    /**
+     * 获取Dify应用列表 - 对应"应用创建"菜单
+     */
+    Map<String, Object> getApps(Map<String, Object> params);
+
+    /**
+     * 获取Dify数据集 - 对应"数据管理"菜单
+     */
+    Map<String, Object> getDatasets(Map<String, Object> params);
+
+    /**
+     * 获取Dify工具列表 - 对应"工具调用"菜单
+     */
+    Map<String, Object> getTools(Map<String, Object> params);
+}
+```
+
+##### 4 DifyAuthServiceImpl
+
+创建 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-system\src\main\java\tracker\system\service\impl\DifyAuthServiceImpl.java`
+
+```shell
+package tracker.system.service.impl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.*;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import tracker.common.utils.StringUtils;
+import tracker.system.service.IDifyAuthService;
+import tracker.common.core.redis.RedisCache;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+@Service
+public class DifyAuthServiceImpl implements IDifyAuthService {
+
+    private static final Logger log = LoggerFactory.getLogger(DifyAuthServiceImpl.class);
+
+    @Autowired
+    private RedisCache redisCache;
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    // Dify配置
+    @Value("${dify.api.url:http://8.141.94.106:21777}")
+    private String difyApiUrl;
+
+    @Value("${dify.api.key:}")
+    private String difyApiKey;
+
+    @Value("${dify.username:admin}")
+    private String difyUsername;
+
+    @Value("${dify.password:password}")
+    private String difyPassword;
+
+    @Override
+    public Map<String, String> getAutoToken() {
+        Map<String, String> result = new HashMap<>();
+        String cacheKey = "dify:auth:token"; // Redis缓存键
+
+        // 1. 首先尝试从Redis缓存获取有效令牌
+        Map<String, String> cachedToken = redisCache.getCacheObject(cacheKey);
+        if (cachedToken != null && cachedToken.containsKey("access_token")) {
+            log.info("从缓存获取Dify令牌成功");
+            return cachedToken;
+        }
+
+        log.info("开始获取Dify令牌，API URL: {}", difyApiUrl);
+
+        // 2. 如果配置了API Key，优先使用（但注意API Key可能无法访问/console/api/）
+        if (StringUtils.isNotBlank(difyApiKey)) {
+            log.warn("使用API Key获取Dify令牌（注意：API Key可能无法访问管理后台）");
+            result.put("access_token", difyApiKey);
+            result.put("refresh_token", "fixed_refresh_token");
+            // 将模拟token存入缓存，有效期55分钟
+            redisCache.setCacheObject(cacheKey, result, 55, TimeUnit.MINUTES);
+            return result;
+        }
+
+        // 3. 核心修改：使用Dify管理账号密码登录，获取真正的JWT令牌
+        if (StringUtils.isNotBlank(difyUsername) && StringUtils.isNotBlank(difyPassword)) {
+            try {
+                log.info("使用用户名密码登录Dify获取令牌: {}", difyUsername);
+
+                // 构建登录请求体
+                Map<String, String> loginBody = new HashMap<>();
+                loginBody.put("email", difyUsername); // Dify登录接口通常使用`email`字段
+                loginBody.put("password", difyPassword);
+
+                HttpHeaders headers = new HttpHeaders();
+                headers.setContentType(MediaType.APPLICATION_JSON);
+
+                HttpEntity<Map<String, String>> requestEntity = new HttpEntity<>(loginBody, headers);
+
+                // 调用Dify登录API（常见路径为 /console/api/login）
+                String loginUrl = difyApiUrl + "/console/api/login";
+                log.info("调用Dify登录接口: {}", loginUrl);
+
+                ResponseEntity<Map> response = restTemplate.postForEntity(
+                        loginUrl, requestEntity, Map.class);
+
+                if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
+                    Map<String, Object> responseBody = response.getBody();
+
+                    // 解析Dify登录响应，获取JWT令牌
+                    // Dify的实际响应格式是嵌套的 {"result":"success","data":{"access_token":"...","refresh_token":"..."}}
+                    String resultStatus = (String) responseBody.get("result");
+
+                    if ("success".equals(resultStatus)) {
+                        // 从data字段中获取token
+                        Map<String, Object> data = (Map<String, Object>) responseBody.get("data");
+                        if (data != null) {
+                            String accessToken = (String) data.get("access_token");
+                            String refreshToken = (String) data.get("refresh_token");
+
+                            if (StringUtils.isNotBlank(accessToken)) {
+                                result.put("access_token", accessToken);
+                                result.put("refresh_token", refreshToken != null ? refreshToken : "");
+
+                                // 将真实token存入缓存，有效期55分钟（JWT通常1小时过期）
+                                redisCache.setCacheObject(cacheKey, result, 55, TimeUnit.MINUTES);
+                                log.info("Dify令牌获取成功，已缓存");
+                                return result;
+                            }
+                        }
+                    }
+
+                    log.error("Dify登录响应异常，响应体: {}", response.getBody());
+                    throw new RuntimeException("Dify登录失败，响应异常");
+                }
+
+                log.error("Dify登录HTTP状态码异常: {}", response.getStatusCode());
+                throw new RuntimeException("Dify登录失败，HTTP状态码: " + response.getStatusCode());
+
+            } catch (Exception e) {
+                log.error("获取Dify令牌失败: ", e);
+                throw new RuntimeException("获取Dify令牌失败: " + e.getMessage());
+            }
+        }
+
+        // 4. 降级方案：返回模拟token（仅用于测试，无法真正访问管理后台）
+        log.warn("未配置有效Dify认证信息，返回模拟token（仅用于测试，功能受限）");
+        result.put("access_token", "test_access_token_" + System.currentTimeMillis());
+        result.put("refresh_token", "test_refresh_token_" + System.currentTimeMillis());
+        return result;
+    }
+
+    @Override
+    public Map<String, Object> getApps(Map<String, Object> params) {
+        try {
+            log.info("获取Dify应用列表，参数: {}", params);
+
+            // 获取token
+            Map<String, String> token = getAutoToken();
+
+            // 构建请求头
+            HttpHeaders headers = new HttpHeaders();
+            headers.set("Authorization", "Bearer " + token.get("access_token"));
+
+            HttpEntity<String> entity = new HttpEntity<>(headers);
+
+            // 调用Dify应用列表API - 路径保持不变
+            String appsUrl = difyApiUrl + "/console/api/apps";
+
+            // 添加查询参数
+            StringBuilder urlBuilder = new StringBuilder(appsUrl);
+            urlBuilder.append("?page=").append(params.getOrDefault("page", 1))
+                    .append("&limit=").append(params.getOrDefault("limit", 30))
+                    .append("&is_created_by_me=").append(params.getOrDefault("is_created_by_me", false))
+                    .append("&name=").append(params.getOrDefault("name", ""));
+
+            ResponseEntity<Map> response = restTemplate.exchange(
+                    urlBuilder.toString(), HttpMethod.GET, entity, Map.class);
+
+            log.info("Dify应用列表获取成功");
+            return response.getBody() != null ? response.getBody() : new HashMap<>();
+
+        } catch (Exception e) {
+            log.error("获取Dify应用列表失败: ", e);
+            Map<String, Object> errorResult = new HashMap<>();
+            errorResult.put("error", "获取Dify应用列表失败: " + e.getMessage());
+            return errorResult;
+        }
+    }
+
+    @Override
+    public Map<String, Object> getDatasets(Map<String, Object> params) {
+        try {
+            log.info("获取Dify数据集");
+
+            // 获取token
+            Map<String, String> token = getAutoToken();
+
+            // 构建请求头
+            HttpHeaders headers = new HttpHeaders();
+            headers.set("Authorization", "Bearer " + token.get("access_token"));
+            headers.setContentType(MediaType.APPLICATION_JSON);
+
+            HttpEntity<String> entity = new HttpEntity<>(headers);
+
+            // 调用Dify数据集API - 路径保持不变
+            String datasetsUrl = difyApiUrl + "/console/api/datasets";
+            ResponseEntity<Map> response = restTemplate.exchange(
+                    datasetsUrl, HttpMethod.GET, entity, Map.class);
+
+            log.info("Dify数据集获取成功");
+            return response.getBody() != null ? response.getBody() : new HashMap<>();
+
+        } catch (Exception e) {
+            log.error("获取Dify数据集失败: ", e);
+            Map<String, Object> errorResult = new HashMap<>();
+            errorResult.put("error", "获取Dify数据集失败: " + e.getMessage());
+            return errorResult;
+        }
+    }
+
+    @Override
+    public Map<String, Object> getTools(Map<String, Object> params) {
+        try {
+            log.info("获取Dify工具列表，参数: {}", params);
+
+            // 获取token
+            Map<String, String> token = getAutoToken();
+
+            // 构建请求头
+            HttpHeaders headers = new HttpHeaders();
+            headers.set("Authorization", "Bearer " + token.get("access_token"));
+            headers.setContentType(MediaType.APPLICATION_JSON);
+
+            HttpEntity<String> entity = new HttpEntity<>(headers);
+
+            // 调用Dify工具API - 路径保持不变
+            String toolsUrl = difyApiUrl + "/console/api/tools";
+
+            // 添加查询参数（如果Dify工具API支持分页）
+            StringBuilder urlBuilder = new StringBuilder(toolsUrl);
+            urlBuilder.append("?page=").append(params.getOrDefault("page", 1))
+                    .append("&limit=").append(params.getOrDefault("limit", 30));
+
+            // 可以根据需要添加更多查询参数
+            if (params.containsKey("name")) {
+                urlBuilder.append("&name=").append(params.get("name"));
+            }
+
+            ResponseEntity<Map> response = restTemplate.exchange(
+                    urlBuilder.toString(), HttpMethod.GET, entity, Map.class);
+
+            log.info("Dify工具列表获取成功");
+            return response.getBody() != null ? response.getBody() : new HashMap<>();
+
+        } catch (Exception e) {
+            log.error("获取Dify工具列表失败: ", e);
+            Map<String, Object> errorResult = new HashMap<>();
+            errorResult.put("error", "获取Dify工具列表失败: " + e.getMessage());
+            return errorResult;
+        }
+    }
+}
+```
+
+#### 3.5.2 系统助手侧边栏图标
+
+文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\assets\icons\svg` 下创建图标
+
+##### 1 应用创建 applicationCreation.svg
+
+```shell
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1766039641201" class="icon" viewBox="0 0 1048 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="36631" xmlns:xlink="http://www.w3.org/1999/xlink" width="262" height="256"><path d="M884.571161 574.878595H986.037073c34.761054 0 62.938537 28.172488 62.938537 62.938537V961.061463c0 34.761054-28.177483 62.938537-62.938537 62.938537h-324.328273c-34.761054 0-62.938537-28.177483-62.938537-62.938537v-23.901658l285.800898-20.100371v-342.180839z" fill="#ffffff" p-id="36632"></path><path d="M899.876215 503.018771h-350.098108c-27.498146 0-50.051122 22.498029-50.051122 49.931239v349.258927c0 27.43321 22.552976 49.931239 50.051122 49.931239h350.098108c27.503141 0 50.051122-22.498029 50.051122-49.931239v-349.258927c0-27.43321-22.54798-49.931239-50.051122-49.931239z m-150.158361 249.391453v74.836917a25.025561 25.025561 0 0 1-50.051122 0V752.41522h-75.14162a24.96562 24.96562 0 0 1 0-49.93124h75.14162V627.637073a25.025561 25.025561 0 1 1 50.051122 0v74.836917h75.141619a24.96562 24.96562 0 1 1 0 49.931239H749.717854z" fill="#ffffff" p-id="36633"></path><path d="M499.726985 0m62.938537 0l324.328273 0q62.938537 0 62.938537 62.938537l0 323.244331q0 62.938537-62.938537 62.938537l-324.328273 0q-62.938537 0-62.938537-62.938537l0-323.244331q0-62.938537 62.938537-62.938537Z" fill="#ffffff" p-id="36634"></path><path d="M389.619512 952.140176H65.291239c-34.761054 0-62.938537-28.177483-62.938537-62.938537v-323.244332c0-34.761054 28.177483-62.938537 62.938537-62.938536H389.619512c34.761054 0 62.938537 28.177483 62.938537 62.938536v323.244332c0 34.761054-28.177483 62.938537-62.938537 62.938537z m0-59.941464a2.997073 2.997073 0 0 0 2.997073-2.997073v-323.244332a2.997073 2.997073 0 0 0-2.997073-2.997073H65.291239a2.997073 2.997073 0 0 0-2.997073 2.997073v323.244332a2.997073 2.997073 0 0 0 2.997073 2.997073H389.619512z" fill="#ffffff" p-id="36635"></path><path d="M452.563044 449.121405m-62.938537 0l-324.328273 0q-62.938537 0-62.938536-62.938537l0-323.244331q0-62.938537 62.938536-62.938537l324.328273 0q62.938537 0 62.938537 62.938537l0 323.244331q0 62.938537-62.938537 62.938537Z" fill="#ffffff" p-id="36636"></path></svg>
+```
+
+##### 2 数据管理 knowledgeManagement.svg
+
+```shell
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1766039723563" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="38546" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256"><path d="M168.228571 888.539429a42.934857 42.934857 0 0 0 43.446858-43.446858 42.934857 42.934857 0 0 0-43.373715-43.373714 42.934857 42.934857 0 0 0-43.446857 43.373714c0 24.356571 19.090286 43.446857 43.446857 43.446858z m-12.580571-43.446858a13.165714 13.165714 0 0 1 12.653714-12.580571 13.165714 13.165714 0 0 1 12.580572 12.580571 13.165714 13.165714 0 0 1-12.580572 12.653715 13.165714 13.165714 0 0 1-12.653714-12.653715z m12.653714-695.881142a42.934857 42.934857 0 0 0-43.446857 43.373714c0 24.283429 19.090286 43.373714 43.446857 43.373714a42.934857 42.934857 0 0 0 43.373715-43.373714 42.934857 42.934857 0 0 0-43.373715-43.373714z m12.580572 43.373714a13.165714 13.165714 0 0 1-12.580572 12.580571 13.165714 13.165714 0 0 1-12.653714-12.580571 13.165714 13.165714 0 0 1 12.653714-12.580572 13.165714 13.165714 0 0 1 12.580572 12.580572zM168.301714 470.308571a42.934857 42.934857 0 0 0-43.446857 43.373715c0 24.283429 19.090286 43.373714 43.446857 43.373714a42.934857 42.934857 0 0 0 43.373715-43.373714 42.934857 42.934857 0 0 0-43.373715-43.373715z m12.580572 43.373715a13.165714 13.165714 0 0 1-12.580572 12.580571 13.165714 13.165714 0 0 1-12.653714-12.580571 13.165714 13.165714 0 0 1 12.653714-12.653715 13.165714 13.165714 0 0 1 12.580572 12.653715z" fill="#ffffff" p-id="38547"></path><path d="M943.396571 1.170286h-863.085714c-43.885714 0-79.725714 35.766857-79.725714 79.725714v862.939429c0 43.958857 35.84 79.725714 79.725714 79.725714h862.939429c43.958857 0 79.725714-35.766857 79.725714-79.725714V80.896a79.725714 79.725714 0 0 0-79.579429-79.725714zM57.490286 689.737143H966.217143v239.689143a40.594286 40.594286 0 0 1-40.521143 40.594285H98.011429a40.594286 40.594286 0 0 1-40.594286-40.594285V689.810286z m0-60.269714V375.661714H966.217143v254.025143H57.490286v-0.146286zM966.217143 315.392H57.490286V91.136c0-20.041143 16.237714-36.278857 36.278857-36.278857h831.926857c22.381714 0 40.521143 18.212571 40.521143 40.594286v219.940571z" fill="#ffffff" p-id="38548"></path></svg>
+```
+
+##### 3 工具调用 toolInvoker.svg
+
+```shell
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1766039801484" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="42359" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256"><path d="M899.072 197.632L1024 72.192 951.808 0l-125.44 124.928a256 256 0 0 0-365.568 0L431.104 153.6 358.4 226.304l73.728 72.704 35.328 35.84-72.704 74.752 72.704 70.144 72.192-70.144 77.312 77.312-72.704 72.192 72.704 72.704 72.192-72.704 35.84 35.328 72.704 71.168 102.4-102.4a256 256 0 0 0 0-366.08z m-83.968 307.2l-17.408 16.896-35.84-35.84-72.704-76.288-74.752-74.752-74.752-72.704-35.84-35.84 16.896-17.408a173.056 173.056 0 0 1 244.736 0l51.2 51.2a173.056 173.056 0 0 1-1.536 243.2zM592.384 724.48L299.52 431.616 226.304 358.4 153.6 431.104 124.928 460.8a259.072 259.072 0 0 0 0 366.08L0 951.808 72.192 1024l125.44-125.44a259.072 259.072 0 0 0 366.08 0l28.672-29.184 73.216-71.68-73.216-73.216z m-88.576 90.112a173.568 173.568 0 0 1-245.248 0l-51.2-51.2a173.568 173.568 0 0 1 0-245.248l16.896-16.896 294.4 294.4z" fill="#ffffff" p-id="42360"></path></svg>
+```
+
+##### 4 系统助手 intelligentAgentFactory.svg
+
+```shell
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1766039370994" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15467" width="256" height="256" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M808.720485 803.767298c16.662779 0 32.056914 0.284025 47.337439-0.284025 2.347937 0 5.377533-3.61658 6.646177-6.248542 9.297073-19.200065 24.104224-31.28058 44.932697-35.976453 40.047474-8.918374 76.345822 22.551556 77.6334 59.512628 1.079294 32.587093-20.279359 58.130375-46.01199 65.117381-30.7504 8.350324-65.193121-4.544394-78.485475-40.161083-0.321895-0.852074-0.662724-1.704148-1.249708-3.200011h-67.919758c-15.318395 0-21.642677-6.210672-21.661612-21.510132V659.539588H532.269841v10.603587c0 72.577762 0.170415 145.155523-0.246155 217.75222 0 7.706535 2.878116 11.114831 8.956243 14.087622 41.656946 20.430839 49.230937 79.659443 8.29352 109.519899-21.245043 15.469875-46.201341 16.681714-69.661776 3.048531-20.222554-11.777555-30.90188-29.765782-31.753954-53.907876-1.022489-28.497138 17.041478-54.11616 45.178852-63.204948V659.634263H253.925698v10.527847c0 49.230937 0.132545 98.461873 0 147.69281 0 20.828473-8.217779 25.770502-24.179964 25.013103-21.699482-1.041424-43.550444-0.26509-65.382471-0.26509-8.179909 23.70659-24.104224 38.66522-48.075903 44.251038a64.378917 64.378917 0 0 1-32.549223-124.28918c26.187071-8.009495 60.326832 1.136099 75.739903 32.606028 3.332556 6.797656 7.57399 9.221333 15.14798 8.842634 13.121938-0.681659 26.319616-0.18935 40.009604-0.18935v-142.523562c-21.548002-5.850907-42.906655-10.887611-63.772998-17.476982-23.384695-7.403575-43.682989-20.563384-62.48542-36.411959-32.776443-27.682934-53.604916-62.48542-61.519736-104.142366-7.157421-37.358707-4.582264-74.584869 10.111277-110.371973 22.721971-55.498414 60.838077-94.958903 118.722298-113.988553 2.764506-0.908879 5.831973-5.320728 6.210672-8.388195 6.665111-55.801373 30.295961-102.097389 77.6334-133.756668 35.408404-23.63085 75.171853-30.655726 117.207499-24.198899 10.660391 1.628408 21.188238 4.165695 30.409571 6.021323 14.845021-17.136153 28.402463-35.16225 44.421453-50.783605a230.514394 230.514394 0 0 1 122.603967-63.072404c54.72208-9.884057 107.929361-4.809484 157.917697 20.260424 19.503025 9.808317 37.301902 23.574045 54.5706 37.188292 28.402463 22.419011 48.587148 51.730354 63.621519 84.336382 11.49353 24.880558 20.014269 50.87828 21.926701 78.504409 0.719529 10.433172 5.453273 15.394135 15.432006 19.711309 68.298457 29.557497 112.814585 80.454712 128.13298 153.562653 13.443833 64.132763 0.833139 123.891546-39.498359 176.776933-33.590647 44.042753-78.447604 69.90793-131.976781 81.685485-15.52668 3.408296-15.56455 3.237881-15.56455 18.707756v128.265525z m-296.786808-189.311887c84.544666 0 169.089333 0.18935 253.728674-0.170414a322.235416 322.235416 0 0 0 49.420286-3.88167 157.728347 157.728347 0 0 0 86.059465-43.30429c35.446274-34.310176 53.415566-76.118602 52.866452-126.239483-0.492309-45.879446-17.514852-84.336382-48.681823-116.582645a155.664435 155.664435 0 0 0-77.387245-44.459323c-12.099449-2.821311-17.571657-11.171636-18.234382-23.630849a312.748993 312.748993 0 0 0-3.673385-33.344492q-12.894718-79.337548-75.152919-130.348373c-46.76939-38.456936-100.355371-51.749288-159.52717-43.228549-68.771832 9.921927-118.248923 47.621464-151.479805 107.929361-7.081681 12.856848-18.934976 17.174023-32.511353 11.45566-22.286466-9.334943-44.819087-15.26159-69.623906-11.701815-27.455715 3.938475-51.389524 14.390582-71.062963 33.590647-26.660446 26.035592-39.422619 58.281855-40.047474 95.470147-0.34083 20.828473-6.513632 32.322003-28.061634 34.518461-7.57399 0.757399-14.863956 4.392914-21.869897 7.57399-58.698425 26.9066-96.719856 96.038197-84.620406 164.204109 10.338497 58.37653 52.563492 96.738791 106.698588 112.75778 28.781163 8.520739 58.433335 9.259203 88.047637 9.353878 81.647615 0.208285 163.37097 0.03787 245.11326 0.03787z m-408.67358 234.793699a25.050973 25.050973 0 0 0 24.804818-24.937363 25.713697 25.713697 0 1 0-26.508966 24.937363z m842.776832-25.107778c0-15.034371-10.035537-24.899493-25.050973-25.183518-13.254483-0.246155-25.032038 9.940862-25.069908 25.619022a24.350379 24.350379 0 0 0 24.066354 24.615469h0.946749c15.147981 0.056805 25.107778-9.902992 25.107778-25.050973z m-434.519822 159.546105c15.147981 0 25.391802-9.846187 25.524347-24.615469a25.088843 25.088843 0 0 0-24.615468-25.562217h-0.492309a24.615468 24.615468 0 0 0-25.032038 24.198899v0.53018c-0.170415 15.091176 9.884057 25.410737 24.615468 25.448607z" p-id="15468" fill="#ffffff"></path><path d="M551.432036 472.556704a21.434392 21.434392 0 0 1-3.048531 0.681659c-12.913653 0-28.648618 4.279305-37.869951-1.590538-8.615414-5.472208-11.039091-21.585872-14.807151-33.477037-2.859181-8.956243-7.119551-12.307734-16.757454-11.929035-20.468709 0.795269-40.975287 0.435504-61.462931 0.132545-6.002387 0-9.031983 1.893498-10.887611 7.72547-3.61658 11.360985-7.87695 22.570491-12.364539 33.647452-0.927814 2.310067-3.95741 5.244988-6.115997 5.339663-12.516019 0.511244-25.050973 0.246155-38.93031 0.246155 7.83908-20.411904 15.26159-39.763449 22.721971-58.98245 17.211893-44.932697 34.537396-89.80859 51.446329-134.854896 2.518352-6.702981 5.850907-9.467488 13.008328-9.107724 9.107723 0.530179 18.291186 0.321895 27.417845 0 5.377533-0.15148 8.444999 1.495863 10.584651 6.930202q37.566992 95.242928 75.645228 190.258635c0.435504 1.457993 0.776334 2.934921 1.420123 4.979899z m-100.866615-152.843124l-2.669832 0.132545-26.111331 72.577762h56.236877c-9.372813-24.861623-18.423731-48.795432-27.455714-72.710307zM633.704505 472.878598h-37.775276c-0.208285-3.181076-0.624854-6.475762-0.624854-9.789382 0-60.497247 0.132545-120.994495-0.22722-181.491742 0-8.729024 2.537287-11.9101 11.171636-11.209506 7.214226 0.605919 14.560996-0.397634 21.699482 0.473375 2.556222 0.30296 6.684046 4.03315 6.702981 6.210672 0.321895 64.265307 0.208285 128.54955 0.11361 192.833792a10.925481 10.925481 0 0 1-1.060359 2.972791z" p-id="15469" fill="#ffffff"></path></svg>
+```
+
+#### 3.5.3 Dify-Nginx 代理
+
+##### 1 安装 Nginx
+
+下载链接：选择 `Stable version` 版本的 `[ nginx/Windows-1.28.0][pgp]`
+
+```shell
+https://nginx.org/en/download.html 
+```
+
+##### 2 Nginx 代理配置
+
+###### nginx.conf
+
+找到文件 `"E:\Nginx\nginx-1.28.0\conf\nginx.conf"`，添加代码
+
+```shell
+#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+    }
+	
+	# 引入 dify-nginx.conf，让它成为独立的 server 块
+	include dify-nginx.conf;
+
+    # another virtual host using mix of IP-, name-, and port-based configuration
+    #
+    #server {
+    #    listen       8000;
+    #    listen       somename:8080;
+    #    server_name  somename  alias  another.alias;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+
+    # HTTPS server
+    #
+    #server {
+    #    listen       443 ssl;
+    #    server_name  localhost;
+
+    #    ssl_certificate      cert.pem;
+    #    ssl_certificate_key  cert.key;
+
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+}
+```
+
+###### dify-nginx.conf
+
+找到文件 `"E:\Nginx\nginx-1.28.0\conf\nginx.conf"`，添加 `dify-nginx.conf` 代理。
+
+```shell
+# dify集成代理配置
+
+server {
+    # 统一入口：所有流量通过本Nginx的8090端口进入
+    listen       8090;
+    server_name  localhost;
+
+    # 1. 代理前端 (Vite开发服务器，运行在81端口)
+    location / {
+        proxy_pass http://localhost:81/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # 2. 代理后端API (Spring Boot，运行在8080端口)
+    # 匹配Vite配置中 /dev-api 的转发规则
+    location /dev-api/ {
+        # 注意末尾的斜杠，它会去除 `/dev-api` 前缀
+        proxy_pass http://localhost:8080/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # 3. 代理Dify服务（解决X-Frame-Options问题的核心）
+    # 所有 /dify-api/ 开头的请求转发到Dify（Docker运行在18080端口）
+    location /dify-api/ {
+        # 代理到Docker内部的Nginx（18080端口）
+        proxy_pass http://localhost:18080/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_hide_header X-Frame-Options;
+    }
+    
+    # 修改1：去掉 proxy_pass 中的斜杠
+    location ~* ^/(_next/|static/|assets/|images/|fonts/|favicon\.ico) {
+        proxy_pass http://localhost:80;  # 去掉末尾的斜杠
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_hide_header X-Frame-Options;
+    }
+    
+    # 修改2：去掉 proxy_pass 中的斜杠
+    location ~* ^/?(api|console|datasets|tools|app|files)/ {
+        proxy_pass http://localhost:80;  # 去掉末尾的斜杠
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+        proxy_hide_header X-Frame-Options;
+    }
+}
+```
+
+##### 3 Nginx 代理测试
+
+```shell
+# 1. 停止 Nginx（如果正在运行）
+.\nginx -s stop
+
+# 2. 检查是否还有 Nginx 进程残留
+taskkill /F /IM nginx.exe 2>$null
+
+# 3. 删除 PID 文件
+Remove-Item E:\Nginx\nginx-1.28.0\logs\nginx.pid -Force -ErrorAction SilentlyContinue
+
+# 4. 启动 Nginx
+.\nginx
+
+# 5. 验证启动
+.\nginx -t
+tasklist | findstr nginx
+
+# 6. 重新加载配置（如果需要）
+.\nginx -s reload
+```
+
+- 结果
+
+```shell
+PS E:\Nginx\nginx-1.28.0> .\nginx -t
+nginx: the configuration file E:\Nginx\nginx-1.28.0/conf/nginx.conf syntax is ok
+nginx: configuration file E:\Nginx\nginx-1.28.0/conf/nginx.conf test is successful
+
+PS E:\Nginx\nginx-1.28.0> tasklist | findstr nginx
+nginx.exe                    15544 Console                    1      9,848 K
+nginx.exe                    12220 Console                    1     10,116 K
+```
+
+##### 4 代理结果
+
+你现在可以通过以下地址访问：
+
+###### 前端应用
+
+- **前端链接**：`http://localhost:8090/`
+    - 这会代理到 `http://localhost:81`（你的 Vite 前端）
+- **结果图**
+
+![image-20251215092204498](README.assets/image-20251215092204498.png)
+
+###### 后端 API 
+
+- **后端 API 链接**：`http://localhost:8090/dev-api/`
+    - 这会代理到 `http://localhost:8080/`（你的 Spring Boot 后端）
+- **结果图**
+
+<img src="README.assets/image-20251215092114437.png" alt="image-20251215092114437" style="zoom:80%;" />
+
+###### Dify 服务
+
+- **Dify 链接**：`http://localhost:8090/dify-api/`
+    - 这会代理到 `http://localhost:80/`（Dify 服务）
+- **结果图**
+
+![image-20251215092052265](README.assets/image-20251215092052265.png)
+
+```shell
+PS E:\Nginx\nginx-1.28.0> tasklist | findstr nginx
+nginx.exe                    15544 Console                    1      9,844 K
+nginx.exe                    12220 Console                    1     10,500 K
+PS E:\Nginx\nginx-1.28.0> netstat -ano | findstr :8090
+  TCP    0.0.0.0:8090           0.0.0.0:0              LISTENING       12220
+  TCP    127.0.0.1:8090         127.0.0.1:49461        FIN_WAIT_2      12220
+  TCP    127.0.0.1:8090         127.0.0.1:50060        FIN_WAIT_2      12220
+  TCP    127.0.0.1:8090         127.0.0.1:50593        FIN_WAIT_2      12220
+  TCP    127.0.0.1:8090         127.0.0.1:53963        FIN_WAIT_2      12220
+  TCP    127.0.0.1:8090         127.0.0.1:55869        FIN_WAIT_2      12220
+  TCP    127.0.0.1:8090         127.0.0.1:58473        FIN_WAIT_2      12220
+  TCP    127.0.0.1:49461        127.0.0.1:8090         CLOSE_WAIT      27548
+  TCP    127.0.0.1:50060        127.0.0.1:8090         CLOSE_WAIT      27548
+  TCP    127.0.0.1:50593        127.0.0.1:8090         CLOSE_WAIT      27548
+  TCP    127.0.0.1:53963        127.0.0.1:8090         CLOSE_WAIT      27548
+  TCP    127.0.0.1:55869        127.0.0.1:8090         CLOSE_WAIT      27548
+  TCP    127.0.0.1:58473        127.0.0.1:8090         CLOSE_WAIT      27548
+```
+
+### 3.6 推送至远程仓库
+
+```shell
+ls -a
+
+git status
+
+git add .
+
+git status
+
+git commit -m "第四次提交，修改 README.md 文件，开发系统助手模块，新增应用创建模块、数据管理模块和工具调用模块"
+
+git push -u origin master
+```
 
 
 

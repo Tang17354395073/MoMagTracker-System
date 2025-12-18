@@ -45,6 +45,14 @@ user:
     # 密码锁定时间（默认10分钟）
     lockTime: 10
 
+# Dify配置
+dify:
+  api:
+    url: http://8.141.94.106:21777  # Dify系统地址
+    key: # 如果有API Key，填写在这里
+  username: 15948660043@163.com    # Dify登录用户名
+  password: tang2001 # Dify登录密码
+
 # Spring 配置
 spring:
   # 邮件配置 - 新增网易邮箱配置

@@ -8,10 +8,9 @@ const baseUrl = 'http://localhost:8080' // 后端接口
 export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, process.cwd())
   const { VITE_APP_ENV } = env
+  
   return {
     // 部署生产环境和开发环境下的URL。
-    // 默认情况下，vite 会假设你的应用是被部署在一个域名的根路径上
-    // 例如 https://www.ruoyi.vip/。如果应用被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 https://www.ruoyi.vip/admin/，则设置 baseUrl 为 /admin/。
     base: VITE_APP_ENV === 'production' ? '/' : '/',
     plugins: createVitePlugins(env, command === 'build'),
     resolve: {
@@ -42,18 +41,75 @@ export default defineConfig(({ mode, command }) => {
     },
     // vite 相关配置
     server: {
-      port: 80,
+      port: 81,
       host: true,
       open: true,
       proxy: {
         // https://cn.vitejs.dev/config/#server-proxy
+        // 开发环境代理配置
         '/dev-api': {
           target: baseUrl,
           changeOrigin: true,
           rewrite: (p) => p.replace(/^\/dev-api/, '')
         },
-         // springdoc proxy
-         '^/v3/api-docs/(.*)': {
+        
+        // Dify代理配置（开发环境）
+        '/dify-api': {
+          target: 'http://8.141.94.106:21777',
+          changeOrigin: true,
+          rewrite: (p) => p.replace(/^\/dify-api/, ''),
+          configure: (proxy, options) => {
+            // 移除或修改X-Frame-Options头（开发环境）
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              // 移除原有的X-Frame-Options头
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+              
+              // 添加允许同源访问的头
+              res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+              res.setHeader('Content-Security-Policy', "frame-ancestors 'self' http://localhost:*")
+            })
+          }
+        },
+        
+        // Dify的静态资源代理
+        '^/assets/': {
+          target: 'http://8.141.94.106:21777',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // Dify的API路径代理
+        '^/api/': {
+          target: 'http://8.141.94.106:21777',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // Dify的控制台API代理
+        '^/console/': {
+          target: 'http://localhost:80',
+          changeOrigin: true,
+          configure: (proxy, options) => {
+            proxy.on('proxyRes', (proxyRes, req, res) => {
+              delete proxyRes.headers['x-frame-options']
+              delete proxyRes.headers['X-Frame-Options']
+            })
+          }
+        },
+        
+        // springdoc proxy
+        '^/v3/api-docs/(.*)': {
           target: baseUrl,
           changeOrigin: true,
         }
