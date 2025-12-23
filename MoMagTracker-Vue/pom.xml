@@ -204,11 +204,32 @@
                 <version>${tracker.version}</version>
             </dependency>
 
-            <!-- 系统模块-->
+            <!-- 系统模块 - 新增-->
             <dependency>
                 <groupId>tracker</groupId>
                 <artifactId>tracker-system</artifactId>
                 <version>${tracker.version}</version>
+            </dependency>
+
+            <!-- OpenCV 视频处理 - 新增 -->
+            <dependency>
+                <groupId>org.openpnp</groupId>
+                <artifactId>opencv</artifactId>
+                <version>4.5.5-1</version>
+            </dependency>
+
+            <!-- JavaCV - 新增 -->
+            <dependency>
+                <groupId>org.bytedeco</groupId>
+                <artifactId>javacv-platform</artifactId>
+                <version>1.5.7</version>
+            </dependency>
+
+            <!-- FFmpeg - 新增 -->
+            <dependency>
+                <groupId>org.bytedeco</groupId>
+                <artifactId>ffmpeg-platform</artifactId>
+                <version>4.4-1.5.7</version>
             </dependency>
 
             <!-- 通用工具-->

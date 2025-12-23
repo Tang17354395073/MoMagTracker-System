@@ -25,9 +25,9 @@ import io.swagger.annotations.ApiOperation;
 /**
  * swagger 用户测试方法
  * 
- * @author ruoyi
+ * @author tangjiawei
  */
-@Api("用户信息管理")
+@Api(tags = "用户信息管理接口")  // 添加中文标签
 @RestController
 @RequestMapping("/test/user")
 public class TestController extends BaseController

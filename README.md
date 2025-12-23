@@ -6,7 +6,7 @@
 
 进入到 `E:\RuoYiProject\MoMagTracker-System` 文件夹，打开 `git`，输入下述命令
 
-```shell
+```
 git init
 
 touch README.md
@@ -2009,7 +2009,7 @@ public class SysGenerateEmail {
 
 ##### 2 添加手机号登录映射 
 
-在 ` E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\system\SysLoginController.java` 文件中添加下述代码
+在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\system\SysLoginController.java` 文件中添加下述代码
 
 ```java
 package tracker.web.controller.system;
@@ -2196,7 +2196,7 @@ public class SysLoginController
 
 - 结果
 
-![image-20251027092558037](../../Information/InSpur Project/项目 MoMagTracker-System.assets/image-20251027092558037.png)
+![image-20251027092558037](项目 MoMagTracker-System.assets/image-20251027092558037.png)
 
 ##### 3 网易邮箱配置
 
@@ -2700,7 +2700,7 @@ public class SysLoginService
 
 - 结果
 
-![image-20251017171831450](../../Information/InSpur Project/项目 MoMagTracker-System.assets/image-20251017171831450.png)
+![image-20251017171831450](项目 MoMagTracker-System.assets/image-20251017171831450.png)
 
 ##### 2 增加短信配置
 
@@ -21188,9 +21188,6 @@ $warningColor: #f59e0b;
   }
 }
 </style>
-```
-
-```shell
 <template>
   <div class="right-board">
     <el-tabs v-model="currentTab" stretch class="center-tabs">
@@ -22334,7 +22331,7 @@ $lightGray: #F5F5F5;
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\tool\gen\index.vue` 文件中加入下述代码
 
-```java
+```
 <template>
   <div class="gen-management">
     <div class="main-card">
@@ -23117,7 +23114,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\core\config\SwaggerConfig.java` 文件中修改下述内容
 
-```java
+```
 package tracker.web.core.config;
 
 import java.util.ArrayList;
@@ -23243,12 +23240,35 @@ public class SwaggerConfig
                 .build();
     }
 }
+```
+
+###### 1 修改 SysLoginController 英文显示问题
+
+文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\system\SysLoginController.java`
 
 ```
+@Api(tags = "系统登录接口")  // 添加中文标签
+@RestController
+public class SysLoginController
+```
+
+###### 2 修改 TestController 英文显示问题
+
+文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\tool\TestController.java`
+
+```
+@Api(tags = "用户信息管理接口")  // 添加中文标签
+@RestController
+@RequestMapping("/test/user")
+```
+
+- 结果
+
+![image-20251223155431978](README.assets/image-20251223155431978.png)
 
 ### 2.3.7 推送至远程仓库
 
-```shell
+```
 ls -a
 
 git status
@@ -23264,7 +23284,7 @@ git push -u origin master
 
 - 结果
 
-```shell
+```
 17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
 $ ls -a
 ./   .git/              MoMagTracker-Vue3/  README.md
@@ -23439,7 +23459,9 @@ branch 'master' set up to track 'origin/master'.
 
 ## 3 子系统功能开发（Dify）
 
-`Dify` 登录地址：`http://localhost:18080/apps`
+```
+Dify` 登录地址：`http://localhost:18080/apps
+```
 
 前后端登录地址：`http://localhost:81/index`
 
@@ -23690,9 +23712,6 @@ OracleLinux_9_1                 Oracle Linux 9.1
 
 ```python
 PowerShell 中输入 wsl --install --web-download 命令
-```
-
-```python
 C:\Windows\System32>wsl --install --web-download
 正在安装 Windows 可选组件: VirtualMachinePlatform
 
@@ -23722,9 +23741,6 @@ C:\Windows\System32>wsl.exe --update
 C:\Windows\System32>wsl --install --web-download
 正在下载: 适用于 Linux 的 Windows 子系统 2.5.9
 与服务器的连接被重置       25.1%                           ]
-```
-
-```python
 点击链接 https://github.com/microsoft/WSL/releases
 ```
 
@@ -23740,11 +23756,8 @@ C:\Windows\System32>wsl --install --web-download
 
 ###### 2 启动 WSL
 
-````python
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-````
-
 ```python
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 C:\Windows\System32>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
 部署映像服务和管理工具
@@ -23763,9 +23776,6 @@ C:\Windows\System32>dism.exe /online /enable-feature /featurename:VirtualMachine
 
 ```python
 wsl --set-default-version 2
-```
-
-```python
 C:\Windows\System32>wsl --set-default-version 2
 有关与 WSL 2 关键区别的信息，请访问 https://aka.ms/wsl2
 
@@ -23793,7 +23803,6 @@ C:\Windows\System32>wsl --set-default-version 2
 - 下载完成后，双击 `DockerDesktopInsta1ler.exe` 运行安装程序。默认情况下，``Docker Desktop` 安装在 `C:\Program Files\Docker\Docker`
 - 按照安装向导的提示进行安装即可
 - 安装完成后，系统会提示 `Close and log out` 重启计算机 
-
 - 验证安装成功需要打开 `cmd` 输入 `docker --version` 查看 `Docker` 版本
 
 ```python
@@ -23892,9 +23901,6 @@ PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
  ✔ weaviate Pulled                                                                                    146.1s
  ✔ redis Pulled                                                                                       284.1s
  ✔ web Pulled                                                                                         693.8s
-```
-
-```python
 PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
 [+] Running 10/10
  ✔ Container docker-redis-1          Running                                                            0.0s
@@ -23913,9 +23919,6 @@ PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
 
 ```python
 在 dify\docker 目录下打开终端 cmd 中输入：docker ps
-```
-
-```python
 PS E:\inSpur\LLaMA\dify\docker> docker ps
 CONTAINER ID   IMAGE                                       COMMAND                   CREATED         STATUS                   PORTS                                                                          NAMES
 daf8fd073e29   nginx:latest                                "sh -c 'cp /docker-e…"   5 minutes ago   Up 4 minutes             0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp   docker-nginx-1
@@ -23962,7 +23965,7 @@ c6612618ceaf   postgres:15-alpine                          "docker-entrypoint.s�
 点击 `模型供应商` -> 下载 `Ollama` 模型
 ```
 
-<img src="README.assets/image-20250703150156046.png" alt="image-20250703150156046" style="zoom:80%;" />
+![image-20250703150156046](README.assets/image-20250703150156046.png)
 
 ```python
 完成安装 Ollama 模型后得到 `待配置模型`
@@ -23976,9 +23979,6 @@ c6612618ceaf   postgres:15-alpine                          "docker-entrypoint.s�
 
 ```python
 cmd 中输入 ipconfig 命令查看本地 IPv4 地址
-```
-
-```python
 无线局域网适配器 WLAN:
 
    连接特定的 DNS 后缀 . . . . . . . :
@@ -24643,7 +24643,7 @@ export function getTools(query) {
 
 ###### 应用创建页面 applicationCreation.vue
 
-![image-20251218163808324](README.assets/image-20251218163808324.png)
+![image-20251218164006419](README.assets/image-20251218164006419.png)
 
 ```shell
 <template>
@@ -24788,7 +24788,7 @@ export default {
 
 ###### 数据管理页面 knowledgeManagement.vue
 
-![image-20251218162854410](README.assets/image-20251218162854410.png)
+![image-20251218164028995](README.assets/image-20251218164028995.png)
 
 ```shell
 <template>
@@ -24933,7 +24933,7 @@ export default {
 
 ###### 工具调用页面 toolInvoker.vue
 
-![image-20251218162920730](README.assets/image-20251218162920730.png)
+![image-20251218164051178](README.assets/image-20251218164051178.png)
 
 ```shell
 <template>
@@ -25075,6 +25075,8 @@ export default {
 }
 </style>
 ```
+
+
 
 #### 3.5.2 后端
 
@@ -25786,7 +25788,7 @@ nginx.exe                    12220 Console                    1     10,116 K
     - 这会代理到 `http://localhost:8080/`（你的 Spring Boot 后端）
 - **结果图**
 
-<img src="README.assets/image-20251215092114437.png" alt="image-20251215092114437" style="zoom:80%;" />
+![image-20251215092114437](README.assets/image-20251215092114437.png)
 
 ###### Dify 服务
 
@@ -25796,7 +25798,7 @@ nginx.exe                    12220 Console                    1     10,116 K
 
 ![image-20251215092052265](README.assets/image-20251215092052265.png)
 
-```shell
+```
 PS E:\Nginx\nginx-1.28.0> tasklist | findstr nginx
 nginx.exe                    15544 Console                    1      9,844 K
 nginx.exe                    12220 Console                    1     10,500 K
@@ -25818,9 +25820,7 @@ PS E:\Nginx\nginx-1.28.0> netstat -ano | findstr :8090
 
 ### 3.6 推送至远程仓库
 
-```shell
-ls -a
-
+```
 git status
 
 git add .
@@ -25832,7 +25832,2356 @@ git commit -m "第四次提交，修改 README.md 文件，开发系统助手模
 git push -u origin master
 ```
 
+- 结果
 
+```
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application.yml
+        modified:   MoMagTracker-Vue/tracker-system/pom.xml
+        modified:   MoMagTracker-Vue/tracker-ui/.env.development
+        modified:   MoMagTracker-Vue/tracker-ui/.env.production
+        modified:   MoMagTracker-Vue3/.env.development
+        modified:   MoMagTracker-Vue3/.env.production
+        modified:   MoMagTracker-Vue3/vite.config.js
+        modified:   README.md
 
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/dify/
+        MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/config/RestTemplateConfig.java
+        MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/IDifyAuthService.java
+        MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/DifyAuthServiceImpl.java
+        MoMagTracker-Vue3/src/api/intelligentAgentFactory/
+        MoMagTracker-Vue3/src/assets/icons/svg/applicationCreation.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/intelligentAgentFactory.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/knowledgeManagement.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/toolInvoker.svg
+        MoMagTracker-Vue3/src/utils/iframeMixin.js
+        MoMagTracker-Vue3/src/views/intelligentAgentFactory/
+        README.assets/1751507227515.jpg
+        README.assets/image-20250703100702397.png
+        README.assets/image-20250703103005764.png
+        README.assets/image-20250703104237574.png
+        README.assets/image-20250703104331547.png
+        README.assets/image-20250703114902293.png
+        README.assets/image-20250703142055726.png
+        README.assets/image-20250703145705947.png
+        README.assets/image-20250703150156046.png
+        README.assets/image-20250703150400498.png
+        README.assets/image-20251212113035905.png
+        README.assets/image-20251215092052265.png
+        README.assets/image-20251215092114437.png
+        README.assets/image-20251215092204498.png
+        README.assets/image-20251218162854410.png
+        README.assets/image-20251218162920730.png
+        README.assets/image-20251218163808324.png
 
+no changes added to commit (use "git add" and/or "git commit -a")
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git add .
+warning: in the working copy of 'MoMagTracker-Vue3/src/api/intelligentAgentFactory/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'MoMagTracker-Vue3/src/views/intelligentAgentFactory/applicationCreation.vue', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'MoMagTracker-Vue3/src/views/intelligentAgentFactory/knowledgeManagement.vue', LF will be replaced by CRLF the next time Git touches it
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/dify/DifyController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application.yml
+        new file:   MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/config/RestTemplateConfig.java
+        modified:   MoMagTracker-Vue/tracker-system/pom.xml
+        new file:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/IDifyAuthService.java
+        new file:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/DifyAuthServiceImpl.java
+        modified:   MoMagTracker-Vue/tracker-ui/.env.development
+        modified:   MoMagTracker-Vue/tracker-ui/.env.production
+        modified:   MoMagTracker-Vue3/.env.development
+        modified:   MoMagTracker-Vue3/.env.production
+        new file:   MoMagTracker-Vue3/src/api/intelligentAgentFactory/index.js
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/applicationCreation.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/intelligentAgentFactory.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/knowledgeManagement.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/toolInvoker.svg
+        new file:   MoMagTracker-Vue3/src/utils/iframeMixin.js
+        new file:   MoMagTracker-Vue3/src/views/intelligentAgentFactory/applicationCreation.vue
+        new file:   MoMagTracker-Vue3/src/views/intelligentAgentFactory/knowledgeManagement.vue
+        new file:   MoMagTracker-Vue3/src/views/intelligentAgentFactory/toolInvoker.vue
+        modified:   MoMagTracker-Vue3/vite.config.js
+        new file:   README.assets/1751507227515.jpg
+        new file:   README.assets/image-20250703100702397.png
+        new file:   README.assets/image-20250703103005764.png
+        new file:   README.assets/image-20250703104237574.png
+        new file:   README.assets/image-20250703104331547.png
+        new file:   README.assets/image-20250703114902293.png
+        new file:   README.assets/image-20250703142055726.png
+        new file:   README.assets/image-20250703145705947.png
+        new file:   README.assets/image-20250703150156046.png
+        new file:   README.assets/image-20250703150400498.png
+        new file:   README.assets/image-20251212113035905.png
+        new file:   README.assets/image-20251215092052265.png
+        new file:   README.assets/image-20251215092114437.png
+        new file:   README.assets/image-20251215092204498.png
+        new file:   README.assets/image-20251218162854410.png
+        new file:   README.assets/image-20251218162920730.png
+        new file:   README.assets/image-20251218163808324.png
+        modified:   README.md
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git commit -m "第四次提交，修改 README.md 文件，开发系统助手模块，新增应用创建模块、数据管理模块和工具调用模块"
+[master e2ae73e] 第四次提交，修改 README.md 文件，开发系统助手模块，新增应用创建模块、数据管理模块和工具调用模块
+ 38 files changed, 3679 insertions(+), 27 deletions(-)
+ create mode 100644 MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/dify/DifyController.java
+ create mode 100644 MoMagTracker-Vue/tracker-framework/src/main/java/tracker/framework/config/RestTemplateConfig.java
+ create mode 100644 MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/IDifyAuthService.java
+ create mode 100644 MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/DifyAuthServiceImpl.java
+ create mode 100644 MoMagTracker-Vue3/src/api/intelligentAgentFactory/index.js
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/applicationCreation.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/intelligentAgentFactory.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/knowledgeManagement.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/toolInvoker.svg
+ create mode 100644 MoMagTracker-Vue3/src/utils/iframeMixin.js
+ create mode 100644 MoMagTracker-Vue3/src/views/intelligentAgentFactory/applicationCreation.vue
+ create mode 100644 MoMagTracker-Vue3/src/views/intelligentAgentFactory/knowledgeManagement.vue
+ create mode 100644 MoMagTracker-Vue3/src/views/intelligentAgentFactory/toolInvoker.vue
+ create mode 100644 README.assets/1751507227515.jpg
+ create mode 100644 README.assets/image-20250703100702397.png
+ create mode 100644 README.assets/image-20250703103005764.png
+ create mode 100644 README.assets/image-20250703104237574.png
+ create mode 100644 README.assets/image-20250703104331547.png
+ create mode 100644 README.assets/image-20250703114902293.png
+ create mode 100644 README.assets/image-20250703142055726.png
+ create mode 100644 README.assets/image-20250703145705947.png
+ create mode 100644 README.assets/image-20250703150156046.png
+ create mode 100644 README.assets/image-20250703150400498.png
+ create mode 100644 README.assets/image-20251212113035905.png
+ create mode 100644 README.assets/image-20251215092052265.png
+ create mode 100644 README.assets/image-20251215092114437.png
+ create mode 100644 README.assets/image-20251215092204498.png
+ create mode 100644 README.assets/image-20251218162854410.png
+ create mode 100644 README.assets/image-20251218162920730.png
+ create mode 100644 README.assets/image-20251218163808324.png
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git push -u origin master
+Enumerating objects: 114, done.
+Counting objects: 100% (114/114), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (65/65), done.
+Writing objects: 100% (77/77), 1.78 MiB | 3.53 MiB/s, done.
+Total 77 (delta 28), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (28/28), completed with 23 local objects.
+To 17354395073_github_account:Tang17354395073/MoMagTracker-System.git
+   a826a4f..e2ae73e  master -> master
+branch 'master' set up to track 'origin/master'.
+```
+
+## 4 子系统功能开发（视频监控）
+
+### 4.1 前端
+
+#### 4.1.1 整体开发框架
+
+```
+E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\
+├── src/
+│   ├── api/
+│   │   └── data/
+│   │       └── index.js                    # API 接口文件
+│   ├── assets/
+│   │   └── icons/
+│   │       └── svg/
+│   │           └── video-source.svg - 视频源选择图标
+│   │           └── upload.svg - 上传图标
+│   │           └── camera-connect.svg - 连接摄像头图标
+│   │           └── camera-disconnect.svg - 断开摄像头图标
+│   │           └── start-process.svg - 开始处理图标
+│   │           └── loading.svg - 加载中图标
+│   │           └── algorithm.svg - 算法设置图标
+│   │           └── lagrangian-icon.svg - 拉格朗日算法图标
+│   │           └── eulerian-icon.svg - 欧拉算法图标
+│   │           └── deeplearning-icon.svg - 深度学习算法图标
+│   │           └── check.svg - 选中图标
+│   │           └── parameter.svg - 参数设置图标
+│   │           └── video-status.svg - 视频状态图标
+│   │           └── video-play.svg - 视频播放图标
+│   │           └── video-pause.svg - 视频暂停图标
+│   │           └── camera.svg - 摄像头图标
+│   │           └── file.svg - 文件图标
+│   │           └── camera-recording.svg - 录制中摄像头图标
+│   │           └── video-preview.svg - 视频预览区图标
+│   │           └── record-start.svg - 开始录制图标
+│   │           └── record-stop.svg - 停止录制图标
+│   │           └── screenshot.svg - 截图图标
+│   │           └── camera-placeholder.svg - 摄像头占位图标
+│   │           └── progress.svg - 处理进度图标
+│   │           └── success.svg - 成功图标
+│   │           └── result.svg - 处理结果图标
+│   │           └── download.svg - 下载图标
+│   │           └── share.svg - 分享图标
+│   ├── views/
+│   │   └── monitor/
+│   │       └── data/
+│   │           └── index.vue               # 视频监控主页面
+```
+
+#### 4.1.2 API 接口文件
+
+创建文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\api\data\index.js`
+
+```
+import request from '@/utils/request'
+
+// 视频处理相关API
+
+/**
+ * 处理视频文件
+ * @param {FormData} data 表单数据，包含video文件、algorithm算法、amplification放大倍数等
+ * @returns Promise
+ */
+export function processVideo(data) {
+  return request({
+    url: '/video/process',
+    method: 'post',
+    data,
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    },
+    timeout: 300000 // 5分钟超时，视频处理需要较长时间
+  })
+}
+
+/**
+ * 获取视频处理进度
+ * @param {string} taskId 任务ID
+ * @returns Promise
+ */
+export function getProcessProgress(taskId) {
+  return request({
+    url: `/video/progress/${taskId}`,
+    method: 'get'
+  })
+}
+
+/**
+ * 开始实时视频处理
+ * @param {Object} data 参数对象
+ * @returns Promise
+ */
+export function startRealtimeProcess(data) {
+  return request({
+    url: '/video/realtime/start',
+    method: 'post',
+    data
+  })
+}
+
+/**
+ * 停止实时视频处理
+ * @returns Promise
+ */
+export function stopRealtimeProcess() {
+  return request({
+    url: '/video/realtime/stop',
+    method: 'post'
+  })
+}
+
+/**
+ * 下载处理结果
+ * @param {string} taskId 任务ID
+ * @returns Promise
+ */
+export function downloadResult(taskId) {
+  return request({
+    url: `/video/download/${taskId}`,
+    method: 'get',
+    responseType: 'blob'
+  })
+}
+
+/**
+ * 获取摄像头列表
+ * @returns Promise
+ */
+export function getCameraList() {
+  return request({
+    url: '/video/cameras',
+    method: 'get'
+  })
+}
+
+/**
+ * 获取处理历史记录
+ * @param {Object} params 查询参数
+ * @returns Promise
+ */
+export function getProcessHistory(params) {
+  return request({
+    url: '/video/history',
+    method: 'get',
+    params
+  })
+}
+
+/**
+ * 删除处理记录
+ * @param {string} taskId 任务ID
+ * @returns Promise
+ */
+export function deleteProcessRecord(taskId) {
+  return request({
+    url: `/video/history/${taskId}`,
+    method: 'delete'
+  })
+}
+
+/**
+ * 批量删除处理记录
+ * @param {Array} taskIds 任务ID数组
+ * @returns Promise
+ */
+export function batchDeleteProcessRecord(taskIds) {
+  return request({
+    url: '/video/history/batch',
+    method: 'delete',
+    data: taskIds
+  })
+}
+
+/**
+ * 获取视频处理算法列表
+ * @returns Promise
+ */
+export function getAlgorithmList() {
+  return request({
+    url: '/video/algorithms',
+    method: 'get'
+  })
+}
+
+/**
+ * 获取视频信息（分辨率、时长等）
+ * @param {FormData} formData 包含视频文件
+ * @returns Promise
+ */
+export function getVideoInfo(formData) {
+  return request({
+    url: '/video/info',
+    method: 'post',
+    data: formData,
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  })
+}
+
+/**
+ * 上传视频切片（用于大文件分片上传）
+ * @param {FormData} formData 包含chunk切片文件
+ * @returns Promise
+ */
+export function uploadVideoChunk(formData) {
+  return request({
+    url: '/video/upload/chunk',
+    method: 'post',
+    data: formData,
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  })
+}
+
+/**
+ * 合并视频切片
+ * @param {Object} data 包含fileHash文件哈希、fileName文件名等信息
+ * @returns Promise
+ */
+export function mergeVideoChunks(data) {
+  return request({
+    url: '/video/upload/merge',
+    method: 'post',
+    data
+  })
+}
+
+/**
+ * 验证视频文件是否已上传
+ * @param {string} fileHash 文件哈希
+ * @returns Promise
+ */
+export function verifyVideoFile(fileHash) {
+  return request({
+    url: `/video/upload/verify/${fileHash}`,
+    method: 'get'
+  })
+}
+
+/**
+ * 获取实时处理状态
+ * @returns Promise
+ */
+export function getRealtimeStatus() {
+  return request({
+    url: '/video/realtime/status',
+    method: 'get'
+  })
+}
+
+/**
+ * 获取视频截图
+ * @param {string} taskId 任务ID
+ * @param {number} timestamp 时间戳（秒）
+ * @returns Promise
+ */
+export function getVideoScreenshot(taskId, timestamp) {
+  return request({
+    url: `/video/screenshot/${taskId}`,
+    method: 'get',
+    params: { timestamp },
+    responseType: 'blob'
+  })
+}
+
+/**
+ * 保存视频处理配置模板
+ * @param {Object} data 配置模板数据
+ * @returns Promise
+ */
+export function saveConfigTemplate(data) {
+  return request({
+    url: '/video/config/template',
+    method: 'post',
+    data
+  })
+}
+
+/**
+ * 获取配置模板列表
+ * @returns Promise
+ */
+export function getConfigTemplates() {
+  return request({
+    url: '/video/config/templates',
+    method: 'get'
+  })
+}
+
+/**
+ * 应用配置模板
+ * @param {string} templateId 模板ID
+ * @returns Promise
+ */
+export function applyConfigTemplate(templateId) {
+  return request({
+    url: `/video/config/template/${templateId}`,
+    method: 'post'
+  })
+}
+
+/**
+ * 获取系统状态（CPU、内存、磁盘等）
+ * @returns Promise
+ */
+export function getSystemStatus() {
+  return request({
+    url: '/video/system/status',
+    method: 'get'
+  })
+}
+
+/**
+ * 测试算法效果
+ * @param {Object} data 测试参数
+ * @returns Promise
+ */
+export function testAlgorithm(data) {
+  return request({
+    url: '/video/test/algorithm',
+    method: 'post',
+    data
+  })
+}
+
+/**
+ * 批量处理视频
+ * @param {FormData} formData 包含多个视频文件
+ * @returns Promise
+ */
+export function batchProcessVideos(formData) {
+  return request({
+    url: '/video/batch/process',
+    method: 'post',
+    data: formData,
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    },
+    timeout: 600000 // 10分钟超时
+  })
+}
+```
+
+#### 4.1.3 视频监测主页面
+
+创建文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\data\index.vue`
+
+```
+<template>
+  <div class="app-container video-monitor">
+    <!-- 顶部操作栏 -->
+    <div class="top-action-bar">
+      <div class="left-actions">
+        <!-- 视频源选择 -->
+        <div class="video-source-group">
+          <div class="section-header">
+            <!-- 自定义SVG图标 -->
+            <svg-icon icon-class="video-source" class-name="header-icon custom-svg-icon"></svg-icon>
+            <span class="section-label">视频源选择</span>
+          </div>
+          <div class="action-buttons">
+            <el-upload
+              class="upload-action"
+              :show-file-list="false"
+              :before-upload="handleVideoUpload"
+              accept="video/*"
+            >
+              <el-button class="source-btn upload-btn">
+                <svg-icon icon-class="upload" class-name="btn-svg-icon"></svg-icon>
+                上传本地视频
+              </el-button>
+            </el-upload>
+            
+            <el-button 
+              v-if="!cameraConnected"
+              class="source-btn camera-btn"
+              @click="connectCamera"
+            >
+              <svg-icon icon-class="camera-connect" class-name="btn-svg-icon"></svg-icon>
+              连接摄像头
+            </el-button>
+            
+            <el-button 
+              v-else
+              class="source-btn disconnect-btn"
+              @click="disconnectCamera"
+            >
+              <svg-icon icon-class="camera-disconnect" class-name="btn-svg-icon"></svg-icon>
+              断开摄像头
+            </el-button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="right-actions">
+        <!-- 开始处理按钮 -->
+        <el-button 
+          class="process-btn"
+          :class="{ 'processing': processing }"
+          @click="startProcessing"
+          :loading="processing"
+          :disabled="!videoSrc && !cameraConnected"
+          size="large"
+        >
+          <svg-icon v-if="!processing" icon-class="start-process" class-name="process-svg-icon"></svg-icon>
+          <svg-icon v-else icon-class="loading" class-name="process-svg-icon loading-icon"></svg-icon>
+          {{ processing ? '处理中...' : '开始处理' }}
+        </el-button>
+      </div>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+      <!-- 左侧控制面板 -->
+      <div class="control-panel">
+        <el-card class="panel-card" shadow="never">
+          <!-- 算法设置 -->
+          <div class="panel-header-section">
+            <div class="panel-header">
+              <!-- 自定义SVG图标 -->
+              <svg-icon icon-class="algorithm" class-name="header-icon custom-svg-icon"></svg-icon>
+              <span class="header-title">算法设置</span>
+            </div>
+          </div>
+          
+          <div class="section-block algorithm-section">
+            <div class="algorithm-options">
+              <div 
+                v-for="algo in algorithmOptions" 
+                :key="algo.value"
+                class="algorithm-item"
+                :class="{ 'algorithm-active': algorithm === algo.value }"
+                @click="algorithm = algo.value"
+              >
+                <div class="algorithm-icon" :style="{ background: algo.color }">
+                  <svg-icon :icon-class="algo.icon" class-name="algo-svg-icon"></svg-icon>
+                </div>
+                <div class="algorithm-info">
+                  <div class="algorithm-name">{{ algo.label }}</div>
+                  <div class="algorithm-desc">{{ algo.desc }}</div>
+                </div>
+                <div v-if="algorithm === algo.value" class="algorithm-check">
+                  <svg-icon icon-class="check" class-name="check-svg-icon"></svg-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 参数设置 -->
+          <div class="panel-header-section">
+            <div class="panel-header">
+              <!-- 自定义SVG图标 -->
+              <svg-icon icon-class="parameter" class-name="header-icon custom-svg-icon"></svg-icon>
+              <span class="header-title">参数设置</span>
+            </div>
+          </div>
+          
+          <div class="section-block param-section">
+            <!-- 参数项保持不变 -->
+            <div class="param-item">
+              <div class="param-header">
+                <span class="param-label">放大倍数</span>
+                <div class="param-value-group">
+                  <span class="param-value" :style="{ color: getAmplificationColor() }">{{ amplification }}x</span>
+                  <span class="param-range">(1-100)</span>
+                </div>
+              </div>
+              <el-slider
+                v-model="amplification"
+                :min="1"
+                :max="100"
+                :step="1"
+                :show-tooltip="true"
+                @change="onAmplificationChange"
+              />
+            </div>
+            
+            <div class="param-item">
+              <div class="param-header">
+                <span class="param-label">上限阈值</span>
+                <div class="param-value-group">
+                  <span class="param-value" :style="{ color: getUpperThresholdColor() }">{{ upperThreshold.toFixed(1) }}</span>
+                  <span class="param-range">(0-1)</span>
+                </div>
+              </div>
+              <el-slider
+                v-model="upperThreshold"
+                :min="0"
+                :max="1"
+                :step="0.1"
+                :show-tooltip="true"
+                @change="onUpperThresholdChange"
+              />
+            </div>
+            
+            <div class="param-item">
+              <div class="param-header">
+                <span class="param-label">下限阈值</span>
+                <div class="param-value-group">
+                  <span class="param-value" :style="{ color: getLowerThresholdColor() }">{{ lowerThreshold.toFixed(2) }}</span>
+                  <span class="param-range">(0-0.1)</span>
+                </div>
+              </div>
+              <el-slider
+                v-model="lowerThreshold"
+                :min="0"
+                :max="0.1"
+                :step="0.01"
+                :show-tooltip="true"
+                @change="onLowerThresholdChange"
+              />
+            </div>
+          </div>
+
+          <!-- 视频状态 -->
+          <div class="panel-header-section">
+            <div class="panel-header">
+              <!-- 自定义SVG图标 -->
+              <svg-icon icon-class="video-status" class-name="header-icon custom-svg-icon"></svg-icon>
+              <span class="header-title">视频状态</span>
+            </div>
+          </div>
+
+          <div class="section-block status-section">
+            <div class="status-info">
+              <div class="status-item">
+                <div class="status-icon" :class="getStatusIconClass()">
+                  <svg-icon :icon-class="getStatusIcon()" class-name="status-svg-icon"></svg-icon>
+                </div>
+                <div class="status-content">
+                  <div class="status-label">当前源</div>
+                  <div class="status-value" :class="getStatusClass()">
+                    {{ getVideoStatus() }}
+                  </div>
+                </div>
+              </div>
+              
+              <div v-if="videoSrc && !cameraConnected" class="status-item">
+                <div class="status-icon status-icon-file">
+                  <svg-icon icon-class="file" class-name="status-svg-icon"></svg-icon>
+                </div>
+                <div class="status-content">
+                  <div class="status-label">文件大小</div>
+                  <div class="status-value">
+                    {{ videoFile ? formatFileSize(videoFile.size) : '未知' }}
+                  </div>
+                </div>
+              </div>
+              
+              <div v-if="cameraConnected" class="status-item">
+                <div class="status-icon" :class="{ 'status-icon-recording': isRecording }">
+                  <svg-icon v-if="!isRecording" icon-class="camera" class-name="status-svg-icon"></svg-icon>
+                  <svg-icon v-else icon-class="camera-recording" class-name="status-svg-icon"></svg-icon>
+                </div>
+                <div class="status-content">
+                  <div class="status-label">录制状态</div>
+                  <div class="status-value recording-status" :class="{ 'recording': isRecording }">
+                    {{ isRecording ? '录制中' : '待录制' }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </el-card>
+      </div>
+
+      <!-- 右侧视频预览区 -->
+      <div class="video-panel">
+        <el-card class="panel-card" shadow="never">
+          <!-- 视频预览区标题 -->
+          <div class="panel-header-section">
+            <div class="panel-header">
+              <!-- 自定义SVG图标 -->
+              <svg-icon icon-class="video-preview" class-name="header-icon custom-svg-icon"></svg-icon>
+              <span class="header-title">视频预览区</span>
+            </div>
+          </div>
+          
+          <!-- 视频显示区域 -->
+          <div class="video-container">
+            <div v-if="videoSrc && !cameraConnected" class="video-player">
+              <video
+                ref="videoElement"
+                :src="videoSrc"
+                controls
+                class="video-element"
+              ></video>
+            </div>
+            
+            <div v-else-if="cameraConnected" class="camera-preview">
+              <video ref="cameraElement" autoplay class="camera-element"></video>
+              <div class="camera-controls">
+                <el-button-group>
+                  <el-button 
+                    class="camera-action-btn"
+                    :class="{ 'recording': isRecording }"
+                    @click="toggleRecording"
+                    size="small"
+                  >
+                    <svg-icon v-if="!isRecording" icon-class="record-start" class-name="camera-svg-icon"></svg-icon>
+                    <svg-icon v-else icon-class="record-stop" class-name="camera-svg-icon"></svg-icon>
+                    {{ isRecording ? '停止录制' : '开始录制' }}
+                  </el-button>
+                  <el-button 
+                    class="camera-action-btn" 
+                    @click="captureFrame"
+                    size="small"
+                  >
+                    <svg-icon icon-class="screenshot" class-name="camera-svg-icon"></svg-icon>
+                    截图
+                  </el-button>
+                </el-button-group>
+              </div>
+            </div>
+            
+            <div v-else class="video-placeholder">
+              <div class="placeholder-icon">
+                <svg-icon icon-class="camera-placeholder" class-name="placeholder-svg-icon"></svg-icon>
+              </div>
+              <div class="placeholder-text">
+                <p class="placeholder-title">等待视频输入</p>
+                <p class="placeholder-hint">请在上方选择视频源</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 处理进度 -->
+          <div v-if="processing" class="progress-section">
+            <div class="panel-header-section">
+              <div class="panel-header">
+                <svg-icon v-if="processingProgress < 100" icon-class="progress" class-name="header-icon custom-svg-icon loading-icon"></svg-icon>
+                <svg-icon v-else icon-class="success" class-name="header-icon custom-svg-icon"></svg-icon>
+                <span class="header-title">处理进度</span>
+              </div>
+            </div>
+            <div class="progress-content">
+              <div class="progress-header">
+                <span class="progress-percent" :style="{ color: getProgressColor() }">
+                  {{ processingProgress }}%
+                </span>
+                <span class="progress-status">
+                  {{ formatProgress(processingProgress) }}
+                </span>
+              </div>
+              <el-progress 
+                :percentage="processingProgress" 
+                :stroke-width="10"
+                :format="formatProgress"
+                :color="getProgressColor()"
+                class="custom-progress"
+              />
+            </div>
+          </div>
+
+          <!-- 处理结果 -->
+          <div v-if="processedVideo" class="result-section">
+            <div class="panel-header-section">
+              <div class="panel-header">
+                <svg-icon icon-class="result" class-name="header-icon custom-svg-icon"></svg-icon>
+                <span class="header-title">处理结果</span>
+              </div>
+            </div>
+            <div class="result-content">
+              <div class="result-video-container">
+                <video :src="processedVideo" controls class="result-video"></video>
+              </div>
+              <div class="result-actions">
+                <el-button class="download-btn" @click="downloadResult">
+                  <svg-icon icon-class="download-white" class-name="btn-svg-icon"></svg-icon>
+                  下载处理结果
+                </el-button>
+                <el-button class="share-btn" @click="shareResult">
+                  <svg-icon icon-class="share" class-name="btn-svg-icon"></svg-icon>
+                  分享
+                </el-button>
+              </div>
+            </div>
+          </div>
+        </el-card>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import * as videoApi from '@/api/data'
+
+export default {
+  name: 'VideoMonitor',
+  data() {
+    return {
+      algorithm: 'lagrangian',
+      amplification: 20,
+      upperThreshold: 0.5,
+      lowerThreshold: 0.03,
+      videoSrc: '',
+      cameraConnected: false,
+      processing: false,
+      processingProgress: 0,
+      processedVideo: '',
+      videoFile: null,
+      mediaStream: null,
+      isRecording: false,
+      mediaRecorder: null,
+      recordedChunks: [],
+      currentTaskId: null,
+      algorithmOptions: [
+        {
+          value: 'lagrangian',
+          label: '拉格朗日视角视频运动放大',
+          desc: '通过跟踪像素点的运动轨迹来实现运动放大，适合处理较大的运动',
+          icon: 'lagrangian-icon', // 修改为自定义SVG图标名称
+          color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+        },
+        {
+          value: 'eulerian',
+          label: '欧拉视角视频运动放大',
+          desc: '通过分析像素值的变化来放大运动，适合处理细微的运动',
+          icon: 'eulerian-icon', // 修改为自定义SVG图标名称
+          color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+        },
+        {
+          value: 'deeplearning',
+          label: '深度学习视频运动放大',
+          desc: '使用神经网络学习运动模式，能够处理复杂的运动场景',
+          icon: 'deeplearning-icon', // 修改为自定义SVG图标名称
+          color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+        }
+      ]
+    }
+  },
+  mounted() {
+    this.progressTimer = null
+  },
+  beforeDestroy() {
+    this.stopProgressPolling()
+    if (this.mediaStream) {
+      this.disconnectCamera()
+    }
+  },
+  methods: {
+    getVideoStatus() {
+      if (this.cameraConnected) return '摄像头已连接'
+      if (this.videoSrc) return '视频已加载'
+      return '未选择'
+    },
+    
+    getStatusIcon() {
+      if (this.cameraConnected) return 'camera'
+      if (this.videoSrc) return 'video-play'
+      return 'video-pause'
+    },
+    
+    getStatusIconClass() {
+      if (this.cameraConnected) return 'status-icon-camera'
+      if (this.videoSrc) return 'status-icon-video'
+      return 'status-icon-none'
+    },
+    
+    getStatusClass() {
+      if (this.cameraConnected) return 'status-connected'
+      if (this.videoSrc) return 'status-uploaded'
+      return 'status-none'
+    },
+    
+    getProgressColor() {
+      if (this.processingProgress < 30) return '#667eea'
+      if (this.processingProgress < 70) return '#f093fb'
+      return '#4facfe'
+    },
+    
+    getAmplificationColor() {
+      if (this.amplification < 20) return '#4cd964'
+      if (this.amplification < 50) return '#ff9500'
+      if (this.amplification < 80) return '#ff3b30'
+      return '#8e44ad'
+    },
+    
+    getUpperThresholdColor() {
+      if (this.upperThreshold < 0.3) return '#4cd964'
+      if (this.upperThreshold < 0.7) return '#ff9500'
+      return '#ff3b30'
+    },
+    
+    getLowerThresholdColor() {
+      if (this.lowerThreshold < 0.03) return '#4cd964'
+      if (this.lowerThreshold < 0.07) return '#ff9500'
+      return '#ff3b30'
+    },
+    
+    onAmplificationChange(value) {
+      console.log('放大倍数改变:', value)
+    },
+    
+    onUpperThresholdChange(value) {
+      console.log('上限阈值改变:', value)
+    },
+    
+    onLowerThresholdChange(value) {
+      console.log('下限阈值改变:', value)
+    },
+    
+    formatFileSize(bytes) {
+      if (bytes === 0) return '0 B'
+      const k = 1024
+      const sizes = ['B', 'KB', 'MB', 'GB']
+      const i = Math.floor(Math.log(bytes) / Math.log(k))
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
+    },
+    
+    async startProcessing() {
+      if (!this.videoFile && !this.cameraConnected) {
+        this.$message.warning('请先选择视频源')
+        return
+      }
+
+      this.processing = true
+      this.processingProgress = 0
+      
+      try {
+        const formData = new FormData()
+        if (this.videoFile) {
+          formData.append('video', this.videoFile)
+        }
+        formData.append('algorithm', this.algorithm)
+        formData.append('amplification', this.amplification)
+        formData.append('upperThreshold', this.upperThreshold)
+        formData.append('lowerThreshold', this.lowerThreshold)
+        
+        const response = await videoApi.processVideo(formData)
+        
+        if (response.code === 200) {
+          this.currentTaskId = response.data
+          this.startProgressPolling(this.currentTaskId)
+          this.$message.success('视频处理任务已提交')
+        }
+      } catch (error) {
+        this.$message.error('处理失败：' + error.message)
+        this.processing = false
+      }
+    },
+    
+    startProgressPolling(taskId) {
+      this.stopProgressPolling()
+      this.progressTimer = setInterval(async () => {
+        try {
+          const response = await videoApi.getProcessProgress(taskId)
+          if (response.code === 200) {
+            this.processingProgress = response.data
+            if (this.processingProgress >= 100) {
+              this.processing = false
+              this.stopProgressPolling()
+              this.downloadProcessedVideo(taskId)
+            }
+          }
+        } catch (error) {
+          console.error('获取进度失败:', error)
+        }
+      }, 1000)
+    },
+    
+    stopProgressPolling() {
+      if (this.progressTimer) {
+        clearInterval(this.progressTimer)
+        this.progressTimer = null
+      }
+    },
+    
+    async downloadProcessedVideo(taskId) {
+      try {
+        const response = await videoApi.downloadResult(taskId, {
+          responseType: 'blob'
+        })
+        const url = window.URL.createObjectURL(new Blob([response]))
+        this.processedVideo = url
+        this.$message.success('视频处理完成')
+      } catch (error) {
+        this.$message.error('下载处理结果失败：' + error.message)
+      }
+    },
+    
+    downloadResult() {
+      if (!this.processedVideo) {
+        this.$message.warning('没有可下载的结果')
+        return
+      }
+      
+      const a = document.createElement('a')
+      a.href = this.processedVideo
+      a.download = `processed_video_${new Date().getTime()}.mp4`
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+    },
+    
+    shareResult() {
+      this.$message.info('分享功能开发中')
+    },
+    
+    formatProgress(percentage) {
+      return percentage === 100 ? '处理完成' : `处理中 ${percentage}%`
+    },
+    
+    handleVideoUpload(file) {
+      this.videoFile = file
+      this.videoSrc = URL.createObjectURL(file)
+      this.cameraConnected = false
+      if (this.mediaStream) {
+        this.disconnectCamera()
+      }
+      return false
+    },
+    
+    async connectCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: {
+            width: { ideal: 1280 },
+            height: { ideal: 720 },
+            facingMode: 'environment'
+          },
+          audio: false
+        })
+        
+        this.mediaStream = stream
+        this.cameraConnected = true
+        
+        if (this.$refs.cameraElement) {
+          this.$refs.cameraElement.srcObject = stream
+        }
+        
+        this.$message.success('摄像头连接成功')
+      } catch (error) {
+        this.$message.error('无法访问摄像头：' + error.message)
+      }
+    },
+    
+    disconnectCamera() {
+      if (this.mediaStream) {
+        this.mediaStream.getTracks().forEach(track => track.stop())
+        this.mediaStream = null
+      }
+      if (this.isRecording) {
+        this.stopRecording()
+      }
+      this.cameraConnected = false
+      this.$message.info('摄像头已断开')
+    },
+    
+    toggleRecording() {
+      if (this.isRecording) {
+        this.stopRecording()
+      } else {
+        this.startRecording()
+      }
+    },
+    
+    startRecording() {
+      if (!this.mediaStream) return
+      
+      this.recordedChunks = []
+      this.mediaRecorder = new MediaRecorder(this.mediaStream)
+      
+      this.mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          this.recordedChunks.push(event.data)
+        }
+      }
+      
+      this.mediaRecorder.onstop = () => {
+        const blob = new Blob(this.recordedChunks, { type: 'video/webm' })
+        this.videoFile = new File([blob], 'recorded_video.webm', { type: 'video/webm' })
+        this.videoSrc = URL.createObjectURL(blob)
+        this.$message.success('录制完成')
+      }
+      
+      this.mediaRecorder.start()
+      this.isRecording = true
+      this.$message.info('开始录制视频')
+    },
+    
+    stopRecording() {
+      if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
+        this.mediaRecorder.stop()
+      }
+      this.isRecording = false
+    },
+    
+    captureFrame() {
+      if (!this.mediaStream || !this.$refs.cameraElement) return
+      
+      const canvas = document.createElement('canvas')
+      canvas.width = this.$refs.cameraElement.videoWidth
+      canvas.height = this.$refs.cameraElement.videoHeight
+      const ctx = canvas.getContext('2d')
+      ctx.drawImage(this.$refs.cameraElement, 0, 0, canvas.width, canvas.height)
+      
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = 'screenshot_' + new Date().getTime() + '.png'
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+        URL.revokeObjectURL(url)
+        this.$message.success('截图已保存')
+      }, 'image/png')
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.app-container {
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: calc(100vh - 84px);
+}
+
+/* SVG图标样式 */
+.custom-svg-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  font-size: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text; /* 标准属性 /
+  -webkit-background-clip: text; / 带前缀的属性 */
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-svg-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.process-svg-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  
+  &.loading-icon {
+    animation: rotate 2s linear infinite;
+  }
+}
+
+.algo-svg-icon {
+  width: 22px;
+  height: 22px;
+  color: white;
+}
+
+.check-svg-icon {
+  width: 22px;
+  height: 22px;
+  color: #4cd964;
+}
+
+.status-svg-icon {
+  width: 22px;
+  height: 22px;
+  color: white;
+}
+
+.camera-svg-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.placeholder-svg-icon {
+  width: 80px;
+  height: 80px;
+  color: #667eea;
+  opacity: 0.8;
+}
+
+/* 旋转动画 */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 顶部操作栏 */
+.top-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  
+  .left-actions {
+    .video-source-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        .section-label {
+          font-weight: 700;
+          color: #2c3e50;
+          font-size: 18px;
+        }
+      }
+      
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+      }
+    }
+  }
+  
+  .right-actions {
+    .process-btn {
+      padding: 14px 36px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      transition: all 0.3s ease;
+      
+      &:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+      }
+      
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      
+      &.processing {
+        background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+      }
+    }
+  }
+}
+
+/* 主内容区 */
+.main-content {
+  display: flex;
+  gap: 20px;
+  
+  .control-panel {
+    flex: 0 0 380px;
+    
+    .panel-card {
+      border-radius: 12px;
+      padding: 0;
+      border: none;
+      
+      :deep(.el-card__body) {
+        padding: 0;
+      }
+    }
+  }
+  
+  .video-panel {
+    flex: 1;
+    
+    .panel-card {
+      border-radius: 12px;
+      padding: 0;
+      border: none;
+      
+      :deep(.el-card__body) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+/* 统一的标题栏样式 */
+.panel-header-section {
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 2px solid #e2e8f0;
+  
+  .panel-header {
+    display: flex;
+    align-items: center;
+    
+    .header-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+  }
+}
+
+/* 内容区块样式 */
+.section-block {
+  padding: 24px;
+  
+  &.algorithm-section {
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  &.param-section {
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  &.status-section {
+    border-bottom: none;
+  }
+}
+
+/* 算法选择 */
+.algorithm-options {
+  .algorithm-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    &.algorithm-active {
+      border-color: transparent;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+    }
+    
+    .algorithm-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+    
+    .algorithm-info {
+      flex: 1;
+      
+      .algorithm-name {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 6px;
+        font-size: 15px;
+      }
+      
+      .algorithm-desc {
+        color: #718096;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+/* 参数设置 */
+.param-item {
+  margin-bottom: 28px;
+  
+  .param-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    
+    .param-label {
+      color: #4a5568;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    
+    .param-value-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      
+      .param-value {
+        font-weight: 700;
+        font-size: 18px;
+      }
+      
+      .param-range {
+        color: #a0aec0;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  :deep(.el-slider) {
+    .el-slider__runway {
+      background-color: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+    }
+    
+    .el-slider__bar {
+      height: 8px;
+      border-radius: 4px;
+    }
+    
+    .el-slider__button {
+      width: 20px;
+      height: 20px;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+/* 视频状态 */
+.status-section {
+  .status-info {
+    .status-item {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      .status-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        
+        &.status-icon-camera {
+          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        &.status-icon-video {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        &.status-icon-none {
+          background: linear-gradient(135deg, #a0aec0 0%, #718096 100%);
+        }
+        
+        &.status-icon-file {
+          background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        &.status-icon-recording {
+          background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+        }
+      }
+      
+      .status-content {
+        .status-label {
+          color: #718096;
+          font-size: 13px;
+          margin-bottom: 4px;
+        }
+        
+        .status-value {
+          font-weight: 700;
+          font-size: 16px;
+          
+          &.status-connected {
+            color: #4cd964;
+          }
+          
+          &.status-uploaded {
+            color: #667eea;
+          }
+          
+          &.status-none {
+            color: #a0aec0;
+          }
+          
+          &.recording-status {
+            &.recording {
+              color: #ff3b30;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 视频预览区 */
+.video-container {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  background: linear-gradient(135deg, #000 0%, #1a202c 100%);
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .video-player,
+  .camera-preview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .video-element,
+  .camera-element {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .camera-controls {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    
+    .camera-action-btn {
+      background: rgba(255, 255, 255, 0.95);
+      color: #2c3e50;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 0 5px;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      &.recording {
+        background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+        color: white;
+      }
+    }
+  }
+  
+  .video-placeholder {
+    text-align: center;
+    color: #a0aec0;
+    
+    .placeholder-text {
+      .placeholder-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+        font-weight: 700;
+        color: #e2e8f0;
+      }
+      
+      .placeholder-hint {
+        font-size: 15px;
+        opacity: 0.8;
+        color: #a0aec0;
+      }
+    }
+  }
+}
+
+/* 处理进度 */
+.progress-section {
+  border-top: 2px solid #e2e8f0;
+  
+  .progress-content {
+    padding: 24px;
+    
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      
+      .progress-percent {
+        font-weight: 800;
+        font-size: 28px;
+      }
+      
+      .progress-status {
+        color: #4a5568;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    
+    .custom-progress {
+      :deep(.el-progress-bar__outer) {
+        background-color: #e2e8f0;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      :deep(.el-progress-bar__inner) {
+        border-radius: 8px;
+        transition: width 0.6s ease;
+      }
+      
+      :deep(.el-progress__text) {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-left: 15px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* 处理结果 */
+.result-section {
+  border-top: 2px solid #e2e8f0;
+  
+  .result-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    .result-video-container {
+      width: 100%;
+      max-width: 700px;
+      
+      .result-video {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+    }
+    
+    .result-actions {
+      display: flex;
+      gap: 16px;
+      
+      .download-btn {
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #4cd964 0%, #2ecc71 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 25px rgba(76, 217, 100, 0.4);
+        }
+      }
+      
+      .share-btn {
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+      }
+    }
+  }
+}
+
+/* 按钮样式 */
+.source-btn {
+  padding: 12px 24px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  
+  &.upload-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(102, 126, 234, 0.3);
+    }
+  }
+  
+  &.camera-btn {
+    background: linear-gradient(135deg, #4cd964 0%, #2ecc71 100%);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(76, 217, 100, 0.3);
+    }
+  }
+  
+  &.disconnect-btn {
+    background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(255, 149, 0, 0.3);
+    }
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .main-content {
+    flex-direction: column;
+    
+    .control-panel {
+      flex: none;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+  
+  .top-action-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    
+    .left-actions {
+      width: 100%;
+      
+      .video-source-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        
+        .action-buttons {
+          width: 100%;
+          flex-wrap: wrap;
+          
+          .source-btn {
+            flex: 1;
+            min-width: 120px;
+          }
+        }
+      }
+    }
+    
+    .right-actions {
+      width: 100%;
+      
+      .process-btn {
+        width: 100%;
+      }
+    }
+  }
+  
+  .video-container {
+    min-height: 350px;
+    
+    .camera-controls {
+      bottom: 15px;
+      
+      .camera-action-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+    }
+    
+    .video-placeholder {
+      .placeholder-svg-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  
+  .algorithm-options .algorithm-item {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .top-action-bar {
+    padding: 12px;
+    
+    .video-source-group .section-header {
+      .section-label {
+        font-size: 16px;
+      }
+    }
+  }
+  
+  .video-container {
+    min-height: 300px;
+    
+    .camera-controls {
+      flex-direction: column;
+      gap: 8px;
+      bottom: 10px;
+      
+      .camera-action-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    .video-placeholder {
+      .placeholder-svg-icon {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .placeholder-text .placeholder-title {
+        font-size: 18px;
+      }
+    }
+  }
+}
+</style>
+```
+
+- 结果
+
+![image-20251223155821546](README.assets/image-20251223155821546.png)
+
+### 4.2 后端
+
+#### 4.2.1 整体开发框架
+
+```
+E:\RuoYiProject\MoMagTracker-Compare\
+├── tracker-admin/
+│   └── src/main/java/tracker/web/controller/monitor/
+│       └── VideoMonitorController.java     # 视频监控控制器
+├── tracker-system/
+│   └── src/main/java/tracker/system/service/
+│       ├── IVideoProcessService.java       # 服务接口
+│       └── impl/
+│           └── VideoProcessServiceImpl.java # 服务实现
+└── pom.xml                                  # Maven依赖配置
+```
+
+#### 4.2.1 控制器类
+
+创建文件 `E:\RuoYiProject\MoMagTracker-Compare\tracker-admin\src\main\java\tracker\web\controller\monitor\VideoMonitorController.java`
+
+```
+package tracker.web.controller.monitor;
+
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import tracker.common.core.controller.BaseController;
+import tracker.common.core.domain.AjaxResult;
+import tracker.common.core.domain.R;
+import tracker.system.service.IVideoProcessService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.nio.file.Files;
+
+@Api(tags = "视频监控处理接口")
+@RestController
+@RequestMapping("/video")
+public class VideoMonitorController extends BaseController {
+
+    private static final Logger log = LoggerFactory.getLogger(VideoMonitorController.class);
+
+    @Resource
+    private IVideoProcessService videoProcessService;
+
+    @ApiOperation("处理视频")
+    @PostMapping("/process")
+    public R<Object> processVideo(
+            @RequestParam("video") MultipartFile videoFile,
+            @RequestParam("algorithm") String algorithm,
+            @RequestParam("amplification") Double amplification,
+            @RequestParam("upperThreshold") Double upperThreshold,
+            @RequestParam("lowerThreshold") Double lowerThreshold) {
+
+        try {
+            String taskId = videoProcessService.processVideo(
+                    videoFile,
+                    algorithm,
+                    amplification,
+                    upperThreshold,
+                    lowerThreshold
+            );
+            return R.ok(taskId);
+        } catch (Exception e) {
+            log.error("视频处理失败", e);
+            return R.fail("视频处理失败：" + e.getMessage());
+        }
+    }
+
+    @ApiOperation("获取处理进度")
+    @GetMapping("/progress/{taskId}")
+    public R<Object> getProgress(@PathVariable String taskId) {
+        try {
+            Double progress = videoProcessService.getProgress(taskId);
+            return R.ok(progress);
+        } catch (Exception e) {
+            return R.fail("获取进度失败");
+        }
+    }
+
+    @ApiOperation("开始实时处理")
+    @PostMapping("/realtime/start")
+    public R<Object> startRealtimeProcess(@RequestBody RealtimeParams params) {
+        try {
+            videoProcessService.startRealtimeProcess(
+                    params.getAlgorithm(),
+                    params.getAmplification(),
+                    params.getUpperThreshold(),
+                    params.getLowerThreshold()
+            );
+            return R.ok("实时处理已启动");
+        } catch (Exception e) {
+            return R.fail("启动失败：" + e.getMessage());
+        }
+    }
+
+    @ApiOperation("停止实时处理")
+    @PostMapping("/realtime/stop")
+    public R<Object> stopRealtimeProcess() {
+        try {
+            videoProcessService.stopRealtimeProcess();
+            return R.ok("实时处理已停止");
+        } catch (Exception e) {
+            return R.fail("停止失败：" + e.getMessage());
+        }
+    }
+
+    @ApiOperation("下载处理结果")
+    @GetMapping("/download/{taskId}")
+    public void downloadResult(@PathVariable String taskId, HttpServletResponse response) {
+        try {
+            File resultFile = videoProcessService.getResultFile(taskId);
+            response.setContentType("video/mp4");
+            response.setHeader("Content-Disposition",
+                    "attachment; filename=\"processed_video.mp4\"");
+            Files.copy(resultFile.toPath(), response.getOutputStream());
+        } catch (Exception e) {
+            log.error("下载失败", e);
+        }
+    }
+
+    public static class RealtimeParams {
+        private String algorithm;
+        private Double amplification;
+        private Double upperThreshold;
+        private Double lowerThreshold;
+
+        // getters and setters
+        public String getAlgorithm() { return algorithm; }
+        public void setAlgorithm(String algorithm) { this.algorithm = algorithm; }
+        public Double getAmplification() { return amplification; }
+        public void setAmplification(Double amplification) { this.amplification = amplification; }
+        public Double getUpperThreshold() { return upperThreshold; }
+        public void setUpperThreshold(Double upperThreshold) { this.upperThreshold = upperThreshold; }
+        public Double getLowerThreshold() { return lowerThreshold; }
+        public void setLowerThreshold(Double lowerThreshold) { this.lowerThreshold = lowerThreshold; }
+    }
+}
+```
+
+#### 4.2.2 服务接口
+
+创建文件 `E:\RuoYiProject\MoMagTracker-Compare\tracker-system\src\main\java\tracker\system\service\IVideoProcessService.java`
+
+```
+package tracker.system.service;
+
+import org.springframework.web.multipart.MultipartFile;
+import java.io.File;
+
+public interface IVideoProcessService {
+
+    /**
+     * 处理视频文件
+     */
+    String processVideo(MultipartFile videoFile,
+                        String algorithm,
+                        Double amplification,
+                        Double upperThreshold,
+                        Double lowerThreshold) throws Exception;
+
+    /**
+     * 获取处理进度
+     */
+    Double getProgress(String taskId);
+
+    /**
+     * 开始实时处理
+     */
+    void startRealtimeProcess(String algorithm,
+                              Double amplification,
+                              Double upperThreshold,
+                              Double lowerThreshold) throws Exception;
+
+    /**
+     * 停止实时处理
+     */
+    void stopRealtimeProcess();
+
+    /**
+     * 获取处理结果文件
+     */
+    File getResultFile(String taskId) throws Exception;
+}
+```
+
+#### 4.2.3 服务实现类
+
+创建文件 `E:\RuoYiProject\MoMagTracker-Compare\tracker-system\src\main\java\tracker\system\service\impl\VideoProcessServiceImpl.java`
+
+```
+package tracker.system.service.impl;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import tracker.system.service.IVideoProcessService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.annotation.PostConstruct;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.UUID;
+import java.util.concurrent.*;
+
+@Service
+public class VideoProcessServiceImpl implements IVideoProcessService {
+
+    private static final Logger log = LoggerFactory.getLogger(VideoProcessServiceImpl.class);
+
+    private final ExecutorService executorService = Executors.newFixedThreadPool(3);
+    private final ConcurrentHashMap<String, Double> progressMap = new ConcurrentHashMap<>();
+    private final String UPLOAD_DIR = "uploads/video/";
+    private final String OUTPUT_DIR = "output/video/";
+
+    @PostConstruct
+    public void init() {
+        try {
+            new File(UPLOAD_DIR).mkdirs();
+            new File(OUTPUT_DIR).mkdirs();
+            log.info("视频处理服务初始化完成，上传目录：{}，输出目录：{}", UPLOAD_DIR, OUTPUT_DIR);
+        } catch (Exception e) {
+            log.error("初始化视频目录失败", e);
+        }
+    }
+
+    @Override
+    public String processVideo(MultipartFile videoFile,
+                               String algorithm,
+                               Double amplification,
+                               Double upperThreshold,
+                               Double lowerThreshold) throws Exception {
+
+        String taskId = UUID.randomUUID().toString();
+        String originalFilename = videoFile.getOriginalFilename();
+        String extension = "";
+        if (originalFilename != null && originalFilename.contains(".")) {
+            extension = originalFilename.substring(originalFilename.lastIndexOf("."));
+        }
+
+        String inputPath = UPLOAD_DIR + taskId + extension;
+        String outputPath = OUTPUT_DIR + taskId + "_processed.mp4";
+
+        // 保存上传的文件
+        Path uploadPath = Paths.get(inputPath);
+        Files.copy(videoFile.getInputStream(), uploadPath);
+
+        // 提交处理任务
+        executorService.submit(() -> {
+            try {
+                processVideoTask(taskId, inputPath, outputPath, algorithm,
+                        amplification, upperThreshold, lowerThreshold);
+            } catch (Exception e) {
+                log.error("视频处理任务失败", e);
+                progressMap.put(taskId, -1.0);
+            }
+        });
+
+        log.info("视频处理任务已提交，任务ID：{}，算法：{}，放大倍数：{}",
+                taskId, algorithm, amplification);
+        return taskId;
+    }
+
+    private void processVideoTask(String taskId, String inputPath, String outputPath,
+                                  String algorithm, Double amplification,
+                                  Double upperThreshold, Double lowerThreshold) throws Exception {
+
+        // 模拟视频处理过程（实际项目中应集成OpenCV或其他视频处理库）
+        progressMap.put(taskId, 0.0);
+
+        // 模拟处理步骤
+        for (int i = 0; i <= 100; i += 10) {
+            Thread.sleep(1000); // 模拟处理时间
+            progressMap.put(taskId, (double) i);
+
+            // 根据算法处理
+            switch (algorithm) {
+                case "lagrangian":
+                    // 模拟拉格朗日视角处理
+                    log.debug("使用拉格朗日视角算法处理，放大倍数：{}", amplification);
+                    break;
+                case "eulerian":
+                    // 模拟欧拉视角处理
+                    log.debug("使用欧拉视角算法处理，阈值范围：[{}, {}]", lowerThreshold, upperThreshold);
+                    break;
+                case "deeplearning":
+                    // 模拟深度学习处理
+                    log.debug("使用深度学习算法处理");
+                    break;
+                default:
+                    log.warn("未知算法：{}，使用默认处理", algorithm);
+            }
+        }
+
+        // 模拟处理完成，创建输出文件
+        File outputFile = new File(outputPath);
+        if (!outputFile.exists()) {
+            // 实际项目中这里应该是真实的处理结果
+            // 这里我们复制输入文件作为示例
+            Files.copy(Paths.get(inputPath), outputFile.toPath());
+        }
+
+        progressMap.put(taskId, 100.0);
+        log.info("视频处理完成：{}", taskId);
+    }
+
+    private void processLagrangian(File inputFile, File outputFile,
+                                   Double amplification, Double upperThreshold,
+                                   Double lowerThreshold) {
+        // TODO: 实现拉格朗日视角视频运动放大
+        log.info("执行拉格朗日视角运动放大，放大倍数：{}", amplification);
+    }
+
+    private void processEulerian(File inputFile, File outputFile,
+                                 Double amplification, Double upperThreshold,
+                                 Double lowerThreshold) {
+        // TODO: 实现欧拉视角视频运动放大
+        log.info("执行欧拉视角运动放大，阈值范围：[{}, {}]", lowerThreshold, upperThreshold);
+    }
+
+    private void processDeepLearning(File inputFile, File outputFile,
+                                     Double amplification, Double upperThreshold,
+                                     Double lowerThreshold) {
+        // TODO: 实现深度学习视频运动放大
+        log.info("执行深度学习运动放大");
+    }
+
+    @Override
+    public Double getProgress(String taskId) {
+        return progressMap.getOrDefault(taskId, 0.0);
+    }
+
+    @Override
+    public void startRealtimeProcess(String algorithm, Double amplification,
+                                     Double upperThreshold, Double lowerThreshold) {
+        log.info("开始实时视频处理，算法：{}，参数：[{}, {}, {}]",
+                algorithm, amplification, lowerThreshold, upperThreshold);
+        // TODO: 实现实时处理逻辑
+    }
+
+    @Override
+    public void stopRealtimeProcess() {
+        log.info("停止实时视频处理");
+        // TODO: 实现停止实时处理逻辑
+    }
+
+    @Override
+    public File getResultFile(String taskId) throws Exception {
+        File resultFile = new File(OUTPUT_DIR + taskId + "_processed.mp4");
+        if (!resultFile.exists()) {
+            throw new FileNotFoundException("处理结果不存在：" + taskId);
+        }
+        return resultFile;
+    }
+}
+```
+
+#### 4.2.4 在 pom.xml 中添加依赖
+
+在文件 `E:\RuoYiProject\MoMagTracker-Compare\pom.xml` 中添加代码
+
+```
+<!-- OpenCV 视频处理 -->
+<dependency>
+    <groupId>org.openpnp</groupId>
+    <artifactId>opencv</artifactId>
+    <version>4.5.5-1</version>
+</dependency>
+
+<!-- JavaCV -->
+<dependency>
+    <groupId>org.bytedeco</groupId>
+    <artifactId>javacv-platform</artifactId>
+    <version>1.5.7</version>
+</dependency>
+
+<!-- FFmpeg -->
+<dependency>
+    <groupId>org.bytedeco</groupId>
+    <artifactId>ffmpeg-platform</artifactId>
+    <version>4.4-1.5.7</version>
+</dependency>
+```
+
+#### 4.2.5 添加数据库菜单记录
+
+在 `MySQL` 数据库的 `sys_menu` 表中添加菜单记录：
+
+```
+-- 插入视频监测菜单
+INSERT INTO sys_menu (
+    menu_id, menu_name, parent_id, order_num, path, component, is_frame, 
+    menu_type, visible, status, perms, icon, create_by, create_time, 
+    update_by, update_time, remark
+) VALUES (
+    110, '视频监测', 2, 2, 'data', 'monitor/data/index', 1, 
+    'C', '0', '0', 'monitor:data:list', 'monitor-data', 
+    'admin', now(), 'admin', now(), '视频监测菜单'
+);
+```
+
+### 4.3 修改默认视频上传文件大小配置
+
+修改文件 `E:\RuoYiProject\MoMagTracker-Compare\tracker-admin\src\main\resources\application.yml`
+
+```
+# 视频处理配置
+video:
+  upload:
+    max-size: 1024MB
+    allowed-extensions: .mp4,.avi,.mov,.mkv,.flv
+    
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+      enabled: true
+```
+
+### 4.4 推送至远程仓库
+
+```
+git status
+
+git add .
+
+git status
+
+git commit -m "第五次提交，修改 README.md 文件和系统接口英文显示问题，开发视频监控模块，并融合多种视频运动放大算法，实现视频选择、视频处理前后对比结果视频基础版本"
+
+git push -u origin master
+```

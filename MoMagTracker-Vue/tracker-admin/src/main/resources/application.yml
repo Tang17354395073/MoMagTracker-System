@@ -53,6 +53,12 @@ dify:
   username: 15948660043@163.com    # Dify登录用户名
   password: tang2001 # Dify登录密码
 
+# 视频处理配置
+video:
+  upload:
+    max-size: 1024MB
+    allowed-extensions: .mp4,.avi,.mov,.mkv,.flv
+
 # Spring 配置
 spring:
   # 邮件配置 - 新增网易邮箱配置
@@ -85,9 +91,10 @@ spring:
   servlet:
     multipart:
       # 单个文件大小
-      max-file-size: 10MB
+      max-file-size: 1024MB
       # 设置总上传的文件大小
-      max-request-size: 20MB
+      max-request-size: 1024MB
+      enabled: true
   # 服务模块
   devtools:
     restart:

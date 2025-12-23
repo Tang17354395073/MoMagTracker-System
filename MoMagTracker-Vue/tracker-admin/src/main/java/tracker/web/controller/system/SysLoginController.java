@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +34,7 @@ import tracker.system.service.ISysMenuService;
  * 
  * @author tangjiawei
  */
+@Api(tags = "系统登录接口")  // 添加中文标签
 @RestController
 public class SysLoginController
 {
