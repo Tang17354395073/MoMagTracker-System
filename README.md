@@ -1,4 +1,151 @@
-# 项目 MoMagTracker
+<img src="README.assets/logo.png" alt="logo" style="zoom:10%;" />
+
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">结构健康监测系统 v2.0.0</h1>
+
+<h2>📋 系统简介</h2>
+
+<ul>
+    <li><strong>前端代码仓库地址</strong>：<a href="https://github.com/Tang17354395073/MoMagTracker-System/tree/master/MoMagTracker-Vue3" target="_blank">MoMagTracker-Vue3</a></li>
+    <li><strong>后端代码仓库地址</strong>：<a href="https://github.com/Tang17354395073/MoMagTracker-System/tree/master/MoMagTracker-Vue" target="_blank">MoMagTracker-Vue</a></li>
+    <li><strong>前端技术栈</strong>：<a href="https://v3.cn.vuejs.org" target="_blank">Vue3</a> + <a href="https://element-plus.org/zh-CN" target="_blank">Element Plus</a> + <a href="https://cn.vitejs.dev" target="_blank">Vite</a></li>
+    <li><strong>后端技术栈</strong>：<a href="https://spring.io/projects/spring-boot/" target="_blank">SpringBoot</a> + <a href="https://docs.springframework.org.cn/spring-security/reference/index.html" target="_blank">Spring Security</a> + <a href="https://www.redis.io/" target="_blank">Redis</a> + <a href="https://jwt.io/" target="_blank">JWT</a></li>
+    <li><strong>权限认证</strong>：使用 <code>JWT</code>，支持多终端认证系统</li>
+    <li><strong>动态权限</strong>：支持加载动态权限菜单，多方式轻松权限控制</li>
+    <li><strong>高效开发</strong>：使用代码生成器可以一键生成前后端代码</li>
+</ul>
+
+<h2>🚀 内置功能</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>模块</th>
+            <th>功能描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1. 系统管理</td>
+            <td>管理系统基础配置，包括山东大学 601 实验室组织架构、用户权限、角色分配等</td>
+        </tr>
+        <tr>
+            <td>2. 用户管理</td>
+            <td>管理系统操作人员，支持视觉感知、触觉感知等部门的用户配置和权限分配</td>
+        </tr>
+        <tr>
+            <td>3. 角色管理</td>
+            <td>配置系统角色（首席执行官、项目经理、人力资源、普通员工等），分配菜单权限</td>
+        </tr>
+        <tr>
+            <td>4. 部门管理</td>
+            <td>树形结构管理山东大学601实验室组织架构，支持研发、测试、运维等部门的层级管理</td>
+        </tr>
+        <tr>
+            <td>5. 岗位管理</td>
+            <td>配置各部门下的岗位职责和权限范围</td>
+        </tr>
+        <tr>
+            <td>6. 菜单管理</td>
+            <td>配置系统功能菜单，包括系统管理、系统监控、系统工具、系统助手等模块</td>
+        </tr>
+        <tr>
+            <td>7. 通知公告</td>
+            <td>发布系统维护通知、新版本发布等公告信息</td>
+        </tr>
+        <tr>
+            <td>8. 日志管理</td>
+            <td>记录用户操作日志、登录日志，支持异常登录监控和审计</td>
+        </tr>
+        <tr>
+            <td>9. 系统监控</td>
+            <td>实时监控系统运行状态，包括在线用户、服务状态等</td>
+        </tr>
+        <tr>
+            <td>10. 视频监测</td>
+            <td>结构健康监测的核心功能，实时监控和分析结构状态数据</td>
+        </tr>
+        <tr>
+            <td>11. 数据监控</td>
+            <td>监控数据库连接池状态，分析SQL性能瓶颈</td>
+        </tr>
+        <tr>
+            <td>12. 服务监控</td>
+            <td>监视系统 CPU、内存、磁盘、堆栈等运行状态</td>
+        </tr>
+        <tr>
+            <td>13. 缓存监控</td>
+            <td>监控 Redis 缓存状态，查询缓存数据和统计信息</td>
+        </tr>
+        <tr>
+            <td>14. 系统助手</td>
+            <td>AI智能助手功能，包括应用创建、知识管理、工具调用等智能功能</td>
+        </tr>
+        <tr>
+            <td>15. 应用创建</td>
+            <td>创建和配置智能应用，支持结构健康监测的智能分析</td>
+        </tr>
+        <tr>
+            <td>16. 数据管理</td>
+            <td>管理结构健康监测的感知数据，包括视觉、触觉等感知数据</td>
+        </tr>
+        <tr>
+            <td>17. 工具调用</td>
+            <td>调用和配置结构健康监测相关的分析工具</td>
+        </tr>
+        <tr>
+            <td>18. 系统工具</td>
+            <td>提供代码生成、表单构建、系统接口等开发辅助工具</td>
+        </tr>
+        <tr>
+            <td>19. 表单构建</td>
+            <td>可视化构建结构健康监测系统的数据采集表单</td>
+        </tr>
+        <tr>
+            <td>20. 代码生成</td>
+            <td>一键生成结构健康监测业务模块的前后端代码</td>
+        </tr>
+        <tr>
+            <td>21. 系统官网</td>
+            <td>链接到项目 GitHub 官网，获取最新文档和更新</td>
+        </tr>
+    </tbody>
+</table>
+<h2>🔗 演示地址</h2>
+
+<pre><code># 用户名：admin 
+# 密码：admin123
+➜  Local:   http://localhost:81/
+➜  Network: http://192.168.137.1:81/
+➜  Network: http://172.20.10.4:81/
+➜  Network: http://172.24.224.1:81/
+
+<h2>📸 系统截图</h2>
+
+<h3>1. 系统首页</h3>
+
+![image-20251230145459164](README.assets/image-20251230145459164.png)
+
+<h3>2. 数据分析</h3>
+
+![image-20251230145527090](README.assets/image-20251230145527090.png)
+
+<h3>3. 监测详情</h3>
+
+![image-20251230145612640](README.assets/image-20251230145612640.png)
+
+<h2>📞 联系我们</h2>
+
+<p>如有任何问题或建议，请通过以下方式联系我们：</p>
+<ul>
+    <li>📧 邮箱：15948660043@163.com</li>
+    <li>📖 文档：<a href="https://github.com/Tang17354395073/MoMagTracker-System/README.md" target="_blank">项目开发文档</a></li>
+</ul>
+<hr>
+<div align="center">
+    <sub>Copyright © 2025 - 结构健康监测系统</sub>
+</div>
+
+# 项目 MoMagTracker 开发文档
 
 ## 1 创建 Github 仓库 MoMagTracker-SyStem
 
@@ -6,7 +153,7 @@
 
 进入到 `E:\RuoYiProject\MoMagTracker-System` 文件夹，打开 `git`，输入下述命令
 
-```
+```shell
 git init
 
 touch README.md
@@ -2009,7 +2156,7 @@ public class SysGenerateEmail {
 
 ##### 2 添加手机号登录映射 
 
-在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\system\SysLoginController.java` 文件中添加下述代码
+在 ` E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\system\SysLoginController.java` 文件中添加下述代码
 
 ```java
 package tracker.web.controller.system;
@@ -2196,7 +2343,7 @@ public class SysLoginController
 
 - 结果
 
-![image-20251027092558037](项目 MoMagTracker-System.assets/image-20251027092558037.png)
+![image-20251027092558037](../../Information/InSpur Project/项目 MoMagTracker-System.assets/image-20251027092558037.png)
 
 ##### 3 网易邮箱配置
 
@@ -2700,7 +2847,7 @@ public class SysLoginService
 
 - 结果
 
-![image-20251017171831450](项目 MoMagTracker-System.assets/image-20251017171831450.png)
+![image-20251017171831450](../../Information/InSpur Project/项目 MoMagTracker-System.assets/image-20251017171831450.png)
 
 ##### 2 增加短信配置
 
@@ -21188,6 +21335,9 @@ $warningColor: #f59e0b;
   }
 }
 </style>
+```
+
+```shell
 <template>
   <div class="right-board">
     <el-tabs v-model="currentTab" stretch class="center-tabs">
@@ -22331,7 +22481,7 @@ $lightGray: #F5F5F5;
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\tool\gen\index.vue` 文件中加入下述代码
 
-```
+```java
 <template>
   <div class="gen-management">
     <div class="main-card">
@@ -23114,7 +23264,7 @@ getList()
 
 在 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\core\config\SwaggerConfig.java` 文件中修改下述内容
 
-```
+```java
 package tracker.web.core.config;
 
 import java.util.ArrayList;
@@ -23246,7 +23396,7 @@ public class SwaggerConfig
 
 文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\system\SysLoginController.java`
 
-```
+```shell
 @Api(tags = "系统登录接口")  // 添加中文标签
 @RestController
 public class SysLoginController
@@ -23256,7 +23406,7 @@ public class SysLoginController
 
 文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\tool\TestController.java`
 
-```
+```shell
 @Api(tags = "用户信息管理接口")  // 添加中文标签
 @RestController
 @RequestMapping("/test/user")
@@ -23268,7 +23418,7 @@ public class SysLoginController
 
 ### 2.3.7 推送至远程仓库
 
-```
+```shell
 ls -a
 
 git status
@@ -23284,7 +23434,7 @@ git push -u origin master
 
 - 结果
 
-```
+```shell
 17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
 $ ls -a
 ./   .git/              MoMagTracker-Vue3/  README.md
@@ -23459,9 +23609,7 @@ branch 'master' set up to track 'origin/master'.
 
 ## 3 子系统功能开发（Dify）
 
-```
-Dify` 登录地址：`http://localhost:18080/apps
-```
+`Dify` 登录地址：`http://localhost:18080/apps`
 
 前后端登录地址：`http://localhost:81/index`
 
@@ -23712,6 +23860,9 @@ OracleLinux_9_1                 Oracle Linux 9.1
 
 ```python
 PowerShell 中输入 wsl --install --web-download 命令
+```
+
+```python
 C:\Windows\System32>wsl --install --web-download
 正在安装 Windows 可选组件: VirtualMachinePlatform
 
@@ -23741,6 +23892,9 @@ C:\Windows\System32>wsl.exe --update
 C:\Windows\System32>wsl --install --web-download
 正在下载: 适用于 Linux 的 Windows 子系统 2.5.9
 与服务器的连接被重置       25.1%                           ]
+```
+
+```python
 点击链接 https://github.com/microsoft/WSL/releases
 ```
 
@@ -23756,8 +23910,11 @@ C:\Windows\System32>wsl --install --web-download
 
 ###### 2 启动 WSL
 
-```python
+````python
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+````
+
+```python
 C:\Windows\System32>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
 部署映像服务和管理工具
@@ -23776,6 +23933,9 @@ C:\Windows\System32>dism.exe /online /enable-feature /featurename:VirtualMachine
 
 ```python
 wsl --set-default-version 2
+```
+
+```python
 C:\Windows\System32>wsl --set-default-version 2
 有关与 WSL 2 关键区别的信息，请访问 https://aka.ms/wsl2
 
@@ -23803,6 +23963,7 @@ C:\Windows\System32>wsl --set-default-version 2
 - 下载完成后，双击 `DockerDesktopInsta1ler.exe` 运行安装程序。默认情况下，``Docker Desktop` 安装在 `C:\Program Files\Docker\Docker`
 - 按照安装向导的提示进行安装即可
 - 安装完成后，系统会提示 `Close and log out` 重启计算机 
+
 - 验证安装成功需要打开 `cmd` 输入 `docker --version` 查看 `Docker` 版本
 
 ```python
@@ -23901,6 +24062,9 @@ PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
  ✔ weaviate Pulled                                                                                    146.1s
  ✔ redis Pulled                                                                                       284.1s
  ✔ web Pulled                                                                                         693.8s
+```
+
+```python
 PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
 [+] Running 10/10
  ✔ Container docker-redis-1          Running                                                            0.0s
@@ -23919,6 +24083,9 @@ PS E:\inSpur\LLaMA\dify\docker> docker compose up -d
 
 ```python
 在 dify\docker 目录下打开终端 cmd 中输入：docker ps
+```
+
+```python
 PS E:\inSpur\LLaMA\dify\docker> docker ps
 CONTAINER ID   IMAGE                                       COMMAND                   CREATED         STATUS                   PORTS                                                                          NAMES
 daf8fd073e29   nginx:latest                                "sh -c 'cp /docker-e…"   5 minutes ago   Up 4 minutes             0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp   docker-nginx-1
@@ -23965,7 +24132,7 @@ c6612618ceaf   postgres:15-alpine                          "docker-entrypoint.s�
 点击 `模型供应商` -> 下载 `Ollama` 模型
 ```
 
-![image-20250703150156046](README.assets/image-20250703150156046.png)
+<img src="README.assets/image-20250703150156046.png" alt="image-20250703150156046" style="zoom:80%;" />
 
 ```python
 完成安装 Ollama 模型后得到 `待配置模型`
@@ -23979,6 +24146,9 @@ c6612618ceaf   postgres:15-alpine                          "docker-entrypoint.s�
 
 ```python
 cmd 中输入 ipconfig 命令查看本地 IPv4 地址
+```
+
+```python
 无线局域网适配器 WLAN:
 
    连接特定的 DNS 后缀 . . . . . . . :
@@ -25788,7 +25958,7 @@ nginx.exe                    12220 Console                    1     10,116 K
     - 这会代理到 `http://localhost:8080/`（你的 Spring Boot 后端）
 - **结果图**
 
-![image-20251215092114437](README.assets/image-20251215092114437.png)
+<img src="README.assets/image-20251215092114437.png" alt="image-20251215092114437" style="zoom:80%;" />
 
 ###### Dify 服务
 
@@ -25798,7 +25968,7 @@ nginx.exe                    12220 Console                    1     10,116 K
 
 ![image-20251215092052265](README.assets/image-20251215092052265.png)
 
-```
+```shell
 PS E:\Nginx\nginx-1.28.0> tasklist | findstr nginx
 nginx.exe                    15544 Console                    1      9,844 K
 nginx.exe                    12220 Console                    1     10,500 K
@@ -25820,7 +25990,7 @@ PS E:\Nginx\nginx-1.28.0> netstat -ano | findstr :8090
 
 ### 3.6 推送至远程仓库
 
-```
+```shell
 git status
 
 git add .
@@ -25834,7 +26004,7 @@ git push -u origin master
 
 - 结果
 
-```
+```shell
 17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
 $ git status
 On branch master
@@ -25992,7 +26162,7 @@ branch 'master' set up to track 'origin/master'.
 
 #### 4.1.1 整体开发框架
 
-```
+```shell
 E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\
 ├── src/
 │   ├── api/
@@ -26039,7 +26209,7 @@ E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\
 
 创建文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\api\data\index.js`
 
-```
+```shell
 import request from '@/utils/request'
 
 // 视频处理相关API
@@ -26335,7 +26505,7 @@ export function batchProcessVideos(formData) {
 
 创建文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\data\index.vue`
 
-```
+```shell
 <template>
   <div class="app-container video-monitor">
     <!-- 顶部操作栏 -->
@@ -27748,7 +27918,7 @@ export default {
 
 #### 4.2.1 整体开发框架
 
-```
+```shell
 E:\RuoYiProject\MoMagTracker-Compare\
 ├── tracker-admin/
 │   └── src/main/java/tracker/web/controller/monitor/
@@ -27765,7 +27935,7 @@ E:\RuoYiProject\MoMagTracker-Compare\
 
 创建文件 `E:\RuoYiProject\MoMagTracker-Compare\tracker-admin\src\main\java\tracker\web\controller\monitor\VideoMonitorController.java`
 
-```
+```shell
 package tracker.web.controller.monitor;
 
 import org.springframework.web.bind.annotation.*;
@@ -27893,7 +28063,7 @@ public class VideoMonitorController extends BaseController {
 
 创建文件 `E:\RuoYiProject\MoMagTracker-Compare\tracker-system\src\main\java\tracker\system\service\IVideoProcessService.java`
 
-```
+```shell
 package tracker.system.service;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -27939,7 +28109,7 @@ public interface IVideoProcessService {
 
 创建文件 `E:\RuoYiProject\MoMagTracker-Compare\tracker-system\src\main\java\tracker\system\service\impl\VideoProcessServiceImpl.java`
 
-```
+```shell
 package tracker.system.service.impl;
 
 import org.springframework.stereotype.Service;
@@ -28113,7 +28283,7 @@ public class VideoProcessServiceImpl implements IVideoProcessService {
 
 在文件 `E:\RuoYiProject\MoMagTracker-Compare\pom.xml` 中添加代码
 
-```
+```shell
 <!-- OpenCV 视频处理 -->
 <dependency>
     <groupId>org.openpnp</groupId>
@@ -28140,7 +28310,7 @@ public class VideoProcessServiceImpl implements IVideoProcessService {
 
 在 `MySQL` 数据库的 `sys_menu` 表中添加菜单记录：
 
-```
+```shell
 -- 插入视频监测菜单
 INSERT INTO sys_menu (
     menu_id, menu_name, parent_id, order_num, path, component, is_frame, 
@@ -28157,7 +28327,7 @@ INSERT INTO sys_menu (
 
 修改文件 `E:\RuoYiProject\MoMagTracker-Compare\tracker-admin\src\main\resources\application.yml`
 
-```
+```shell
 # 视频处理配置
 video:
   upload:
@@ -28174,7 +28344,7 @@ spring:
 
 ### 4.4 推送至远程仓库
 
-```
+```shell
 git status
 
 git add .
@@ -28185,3 +28355,3481 @@ git commit -m "第五次提交，修改 README.md 文件和系统接口英文显
 
 git push -u origin master
 ```
+
+- 结果
+
+```shell
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   MoMagTracker-Vue/pom.xml
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/system/SysLoginController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/tool/TestController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application.yml
+        deleted:    README.assets/image-20251218162854410.png
+        deleted:    README.assets/image-20251218162920730.png
+        deleted:    README.assets/image-20251218163808324.png
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MoMagTracker-Vue/output/
+        MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/monitor/VideoMonitorController.java
+        MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/IVideoProcessService.java
+        MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/VideoProcessServiceImpl.java
+        MoMagTracker-Vue/uploads/
+        MoMagTracker-Vue3/src/api/data/
+        MoMagTracker-Vue3/src/assets/icons/svg/algorithm.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/camera-connect.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/camera-disconnect.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/camera-placeholder.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/camera-recording.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/camera.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/check.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/deeplearning-icon.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/download-white.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/eulerian-icon.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/file.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/lagrangian-icon.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/loading.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/monitor-data.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/parameter.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/progress.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/record-start.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/record-stop.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/result.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/screenshot.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/share.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/start-process.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/success.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/video-pause.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/video-play.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/video-preview.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/video-status.svg
+        MoMagTracker-Vue3/src/views/monitor/data/
+        README.assets/image-20251218164006419.png
+        README.assets/image-20251218164028995.png
+        README.assets/image-20251218164051178.png
+        README.assets/image-20251223155431978.png
+        README.assets/image-20251223155821546.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git add .
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   MoMagTracker-Vue/output/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede_processed.mp4
+        new file:   MoMagTracker-Vue/output/video/4a5733af-057b-45de-910c-c659247f3363_processed.mp4
+        new file:   MoMagTracker-Vue/output/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095_processed.mp4
+        new file:   MoMagTracker-Vue/output/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c_processed.mp4
+        new file:   MoMagTracker-Vue/output/video/d6e0e671-c29c-4df6-ba40-ba506049816d_processed.mp4
+        modified:   MoMagTracker-Vue/pom.xml
+        new file:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/monitor/VideoMonitorController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/system/SysLoginController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/tool/TestController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application.yml
+        new file:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/IVideoProcessService.java
+        new file:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/VideoProcessServiceImpl.java
+        new file:   MoMagTracker-Vue/uploads/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede.mp4
+        new file:   MoMagTracker-Vue/uploads/video/4a5733af-057b-45de-910c-c659247f3363.mp4
+        new file:   MoMagTracker-Vue/uploads/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095.mp4
+        new file:   MoMagTracker-Vue/uploads/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c.mp4
+        new file:   MoMagTracker-Vue/uploads/video/d6e0e671-c29c-4df6-ba40-ba506049816d.mp4
+        new file:   MoMagTracker-Vue3/src/api/data/index.js
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/algorithm.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/camera-connect.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/camera-disconnect.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/camera-placeholder.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/camera-recording.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/camera.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/check.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/deeplearning-icon.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/download-white.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/eulerian-icon.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/file.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/lagrangian-icon.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/loading.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/monitor-data.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/parameter.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/progress.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/record-start.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/record-stop.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/result.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/screenshot.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/share.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/start-process.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/success.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/video-pause.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/video-play.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/video-preview.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/video-status.svg
+        new file:   MoMagTracker-Vue3/src/views/monitor/data/index.vue
+        deleted:    README.assets/image-20251218162854410.png
+        deleted:    README.assets/image-20251218162920730.png
+        deleted:    README.assets/image-20251218163808324.png
+        new file:   README.assets/image-20251218164006419.png
+        new file:   README.assets/image-20251218164028995.png
+        new file:   README.assets/image-20251218164051178.png
+        new file:   README.assets/image-20251223155431978.png
+        new file:   README.assets/image-20251223155821546.png
+        modified:   README.md
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git commit -m "第五次提交，修改 README.md 文件和系统接口英文显示问题，开发视频监控模块，并融合多种视频运动放大算法，实现视频选择、视频处理前后对比结果视频基础版本"
+[master 8ae4b79] 第五次提交，修改 README.md 文件和系统接口英文显示问题，开发视频监控模块，并融合多种视频运动放大算法，实现视频选择、视频处理前后对比结果视频基础版本
+ 55 files changed, 4640 insertions(+), 49 deletions(-)
+ create mode 100644 MoMagTracker-Vue/output/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede_processed.mp4
+ create mode 100644 MoMagTracker-Vue/output/video/4a5733af-057b-45de-910c-c659247f3363_processed.mp4
+ create mode 100644 MoMagTracker-Vue/output/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095_processed.mp4
+ create mode 100644 MoMagTracker-Vue/output/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c_processed.mp4
+ create mode 100644 MoMagTracker-Vue/output/video/d6e0e671-c29c-4df6-ba40-ba506049816d_processed.mp4
+ create mode 100644 MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/monitor/VideoMonitorController.java
+ create mode 100644 MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/IVideoProcessService.java
+ create mode 100644 MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/VideoProcessServiceImpl.java
+ create mode 100644 MoMagTracker-Vue/uploads/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede.mp4
+ create mode 100644 MoMagTracker-Vue/uploads/video/4a5733af-057b-45de-910c-c659247f3363.mp4
+ create mode 100644 MoMagTracker-Vue/uploads/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095.mp4
+ create mode 100644 MoMagTracker-Vue/uploads/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c.mp4
+ create mode 100644 MoMagTracker-Vue/uploads/video/d6e0e671-c29c-4df6-ba40-ba506049816d.mp4
+ create mode 100644 MoMagTracker-Vue3/src/api/data/index.js
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/algorithm.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/camera-connect.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/camera-disconnect.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/camera-placeholder.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/camera-recording.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/camera.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/check.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/deeplearning-icon.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/download-white.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/eulerian-icon.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/file.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/lagrangian-icon.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/loading.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/monitor-data.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/parameter.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/progress.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/record-start.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/record-stop.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/result.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/screenshot.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/share.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/start-process.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/success.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/video-pause.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/video-play.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/video-preview.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/video-status.svg
+ create mode 100644 MoMagTracker-Vue3/src/views/monitor/data/index.vue
+ delete mode 100644 README.assets/image-20251218162854410.png
+ delete mode 100644 README.assets/image-20251218162920730.png
+ delete mode 100644 README.assets/image-20251218163808324.png
+ create mode 100644 README.assets/image-20251218164006419.png
+ create mode 100644 README.assets/image-20251218164028995.png
+ create mode 100644 README.assets/image-20251218164051178.png
+ create mode 100644 README.assets/image-20251223155431978.png
+ create mode 100644 README.assets/image-20251223155821546.png
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git push -u origin master
+Enumerating objects: 111, done.
+Counting objects: 100% (111/111), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (69/69), done.
+Writing objects: 100% (80/80), 3.07 MiB | 1.39 MiB/s, done.
+Total 80 (delta 22), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (22/22), completed with 19 local objects.
+To 17354395073_github_account:Tang17354395073/MoMagTracker-System.git
+   e2ae73e..8ae4b79  master -> master
+branch 'master' set up to track 'origin/master'.
+```
+
+## 5 子系统功能开发（融合算法）
+
+### 5.1 后端
+
+#### 5.1.1 后端代码整体结构
+
+```shell
+E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\
+├── tracker-admin/
+│   └── src/main/java/tracker/web/controller/monitor/
+│       └── VideoMonitorController.java     # 视频监控控制器
+├── tracker-system/
+│   └── src/main/java/tracker/system/
+│       ├── config/
+│       │   └── PythonScriptConfig.java     # Python脚本配置类
+│       ├── service/
+│       │   └── IVideoProcessService.java   # 服务接口
+│       └── service/impl/
+│           ├── VideoProcessServiceImpl.java # 服务实现类
+│           └── PythonScriptExecutor.java   # Python脚本执行器
+└── src/main/resources/
+    └── application.yml                      # 配置文件
+```
+
+#### 5.1.2 控制器类（VideoMonitorController.java）
+
+更新文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\java\tracker\web\controller\monitor\VideoMonitorController.java`
+
+```shell
+package tracker.web.controller.monitor;
+
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import tracker.common.annotation.Anonymous;
+import tracker.common.core.controller.BaseController;
+import tracker.common.core.domain.R;
+import tracker.system.service.IVideoProcessService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.OutputStream;
+
+@Api(tags = "视频监控处理接口")
+@RestController
+@RequestMapping("/video")
+public class VideoMonitorController extends BaseController {
+
+    private static final Logger log = LoggerFactory.getLogger(VideoMonitorController.class);
+
+    @Resource
+    private IVideoProcessService videoProcessService;
+
+    @ApiOperation("处理视频")
+    @PostMapping("/process")
+    public R<Object> processVideo(
+            @ApiParam(value = "视频文件", required = true) @RequestParam("video") MultipartFile videoFile,
+            @ApiParam(value = "算法类型", required = true) @RequestParam("algorithm") String algorithm,
+            @ApiParam(value = "放大倍数", required = true) @RequestParam("amplification") Double amplification,
+            @ApiParam(value = "时域滤波开关", required = true) @RequestParam("temporalFilter") Boolean temporalFilter,
+            @ApiParam(value = "其他设置开关", required = true) @RequestParam("otherSettings") Boolean otherSettings,
+            @ApiParam(value = "上限阈值", required = true) @RequestParam("upperThreshold") Double upperThreshold,
+            @ApiParam(value = "下限阈值", required = true) @RequestParam("lowerThreshold") Double lowerThreshold,
+            @ApiParam(value = "空间平滑参数", required = true) @RequestParam("spatialSigma") Double spatialSigma) {
+
+        try {
+            // 验证参数
+            if (videoFile.isEmpty()) {
+                return R.fail("请上传视频文件");
+            }
+
+            if (amplification < 1 || amplification > 100) {
+                return R.fail("放大倍数必须在1-100之间");
+            }
+
+            if (upperThreshold < 0 || upperThreshold > 1) {
+                return R.fail("上限阈值必须在0-1之间");
+            }
+
+            if (lowerThreshold < 0 || lowerThreshold > 0.1) {
+                return R.fail("下限阈值必须在0-0.1之间");
+            }
+
+            if (spatialSigma < 0 || spatialSigma > 5) {
+                return R.fail("空间平滑参数必须在0-5之间");
+            }
+
+            String taskId = videoProcessService.processVideo(
+                    videoFile,
+                    algorithm,
+                    amplification,
+                    temporalFilter,
+                    otherSettings,
+                    upperThreshold,
+                    lowerThreshold,
+                    spatialSigma
+            );
+            return R.ok(taskId);
+        } catch (Exception e) {
+            log.error("视频处理失败", e);
+            return R.fail("视频处理失败：" + e.getMessage());
+        }
+    }
+
+    @ApiOperation("获取处理进度")
+    @GetMapping("/progress/{taskId}")
+    public R<Object> getProgress(@ApiParam(value = "任务ID", required = true) @PathVariable String taskId) {
+        try {
+            Double progress = videoProcessService.getProgress(taskId);
+            if (progress == -1.0) {
+                return R.fail("任务处理失败");
+            }
+            return R.ok(progress);
+        } catch (Exception e) {
+            log.error("获取进度失败", e);
+            return R.fail("获取进度失败：" + e.getMessage());
+        }
+    }
+
+    @ApiOperation("开始实时处理")
+    @PostMapping("/realtime/start")
+    public R<Object> startRealtimeProcess(@RequestBody RealtimeParams params) {
+        try {
+            videoProcessService.startRealtimeProcess(
+                    params.getAlgorithm(),
+                    params.getAmplification(),
+                    params.getTemporalFilter(),
+                    params.getOtherSettings(),
+                    params.getUpperThreshold(),
+                    params.getLowerThreshold(),
+                    params.getSpatialSigma()
+            );
+            return R.ok("实时处理已启动");
+        } catch (Exception e) {
+            log.error("启动实时处理失败", e);
+            return R.fail("启动失败：" + e.getMessage());
+        }
+    }
+
+    @ApiOperation("停止实时处理")
+    @PostMapping("/realtime/stop")
+    public R<Object> stopRealtimeProcess() {
+        try {
+            videoProcessService.stopRealtimeProcess();
+            return R.ok("实时处理已停止");
+        } catch (Exception e) {
+            log.error("停止实时处理失败", e);
+            return R.fail("停止失败：" + e.getMessage());
+        }
+    }
+
+    @ApiOperation("下载处理结果")
+    @GetMapping("/download/{taskId}")
+    @Anonymous  // 添加此注解允许匿名访问
+    public void downloadResult(@ApiParam(value = "任务ID", required = true) @PathVariable String taskId,
+                               HttpServletResponse response) {
+        try {
+            File resultFile = videoProcessService.getResultFile(taskId);
+
+            // 设置响应头
+            response.setContentType("video/mp4");
+            response.setHeader("Content-Disposition",
+                    "attachment; filename=\"processed_video.mp4\"");
+            response.setHeader("Content-Length", String.valueOf(resultFile.length()));
+
+            // 写入响应流
+            try (FileInputStream fis = new FileInputStream(resultFile);
+                 OutputStream os = response.getOutputStream()) {
+
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = fis.read(buffer)) != -1) {
+                    os.write(buffer, 0, bytesRead);
+                }
+                os.flush();
+            }
+
+            log.info("下载处理结果成功，任务ID: {}", taskId);
+        } catch (Exception e) {
+            log.error("下载失败", e);
+            try {
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().write("{\"code\":500,\"msg\":\"下载失败：" + e.getMessage() + "\"}");
+            } catch (Exception ex) {
+                log.error("写入错误响应失败", ex);
+            }
+        }
+    }
+
+    @ApiOperation("获取处理状态")
+    @GetMapping("/status/{taskId}")
+    public R<Object> getTaskStatus(@ApiParam(value = "任务ID", required = true) @PathVariable String taskId) {
+        try {
+            Double progress = videoProcessService.getProgress(taskId);
+
+            String status;
+            if (progress == null || progress == 0.0) {
+                status = "PENDING";
+            } else if (progress > 0 && progress < 100) {
+                status = "PROCESSING";
+            } else if (progress >= 100) {
+                status = "COMPLETED";
+            } else if (progress == -1.0) {
+                status = "FAILED";
+            } else {
+                status = "UNKNOWN";
+            }
+
+            return R.ok(status);
+        } catch (Exception e) {
+            log.error("获取任务状态失败", e);
+            return R.fail("获取状态失败：" + e.getMessage());
+        }
+    }
+
+    public static class RealtimeParams {
+        private String algorithm;
+        private Double amplification;
+        private Boolean temporalFilter;
+        private Boolean otherSettings;
+        private Double upperThreshold;
+        private Double lowerThreshold;
+        private Double spatialSigma;
+
+        // getters and setters
+        public String getAlgorithm() { return algorithm; }
+        public void setAlgorithm(String algorithm) { this.algorithm = algorithm; }
+
+        public Double getAmplification() { return amplification; }
+        public void setAmplification(Double amplification) { this.amplification = amplification; }
+
+        public Boolean getTemporalFilter() { return temporalFilter; }
+        public void setTemporalFilter(Boolean temporalFilter) { this.temporalFilter = temporalFilter; }
+
+        public Boolean getOtherSettings() { return otherSettings; }
+        public void setOtherSettings(Boolean otherSettings) { this.otherSettings = otherSettings; }
+
+        public Double getUpperThreshold() { return upperThreshold; }
+        public void setUpperThreshold(Double upperThreshold) { this.upperThreshold = upperThreshold; }
+
+        public Double getLowerThreshold() { return lowerThreshold; }
+        public void setLowerThreshold(Double lowerThreshold) { this.lowerThreshold = lowerThreshold; }
+
+        public Double getSpatialSigma() { return spatialSigma; }
+        public void setSpatialSigma(Double spatialSigma) { this.spatialSigma = spatialSigma; }
+    }
+}
+```
+
+#### 5.1.3 服务接口类（IVideoProcessService.java）
+
+修改文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-system\src\main\java\tracker\system\service\IVideoProcessService.java`
+
+```shell
+package tracker.system.service;
+
+import org.springframework.web.multipart.MultipartFile;
+import java.io.File;
+
+public interface IVideoProcessService {
+
+    /**
+     * 处理视频文件
+     */
+    String processVideo(MultipartFile videoFile,
+                        String algorithm,
+                        Double amplification,
+                        Boolean temporalFilter,
+                        Boolean otherSettings,
+                        Double upperThreshold,
+                        Double lowerThreshold,
+                        Double spatialSigma) throws Exception;
+
+    /**
+     * 获取处理进度
+     */
+    Double getProgress(String taskId);
+
+    /**
+     * 开始实时处理
+     */
+    void startRealtimeProcess(String algorithm,
+                              Double amplification,
+                              Boolean temporalFilter,
+                              Boolean otherSettings,
+                              Double upperThreshold,
+                              Double lowerThreshold,
+                              Double spatialSigma) throws Exception;
+
+    /**
+     * 停止实时处理
+     */
+    void stopRealtimeProcess();
+
+    /**
+     * 获取处理结果文件
+     */
+    File getResultFile(String taskId) throws Exception;
+}
+```
+
+#### 5.1.4 服务实现类（VideoProcessServiceImpl.java）
+
+修改文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-system\src\main\java\tracker\system\service\impl\VideoProcessServiceImpl.java`
+
+```shell
+package tracker.system.service.impl;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import tracker.system.config.PythonScriptConfig;
+import tracker.system.service.IVideoProcessService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.PostConstruct;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.*;
+
+@Service
+public class VideoProcessServiceImpl implements IVideoProcessService {
+
+    private static final Logger log = LoggerFactory.getLogger(VideoProcessServiceImpl.class);
+
+    private final ExecutorService executorService = Executors.newFixedThreadPool(3);
+    private final ConcurrentHashMap<String, Double> progressMap = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<String, String> taskStatusMap = new ConcurrentHashMap<>();
+    private final String UPLOAD_DIR = "uploads/video/";
+    private final String OUTPUT_DIR = "output/video/";
+
+    @Autowired
+    private PythonScriptConfig pythonConfig;
+
+    @Autowired
+    private PythonScriptExecutor pythonExecutor;
+
+    @PostConstruct
+    public void init() {
+        try {
+            new File(UPLOAD_DIR).mkdirs();
+            new File(OUTPUT_DIR).mkdirs();
+            log.info("视频处理服务初始化完成，上传目录：{}，输出目录：{}", UPLOAD_DIR, OUTPUT_DIR);
+
+            // 检查Python环境
+            if (pythonConfig.isEnabled()) {
+                boolean pythonAvailable = pythonExecutor.checkPythonEnvironment();
+                log.info("Python环境检查: {}", pythonAvailable ? "可用" : "不可用");
+
+                if (!pythonAvailable) {
+                    log.warn("Python环境不可用，部分功能可能无法正常工作");
+                }
+            } else {
+                log.info("Python脚本功能已禁用");
+            }
+
+        } catch (Exception e) {
+            log.error("初始化视频目录失败", e);
+        }
+    }
+
+    @Override
+    public String processVideo(MultipartFile videoFile,
+                               String algorithm,
+                               Double amplification,
+                               Boolean temporalFilter,
+                               Boolean otherSettings,
+                               Double upperThreshold,
+                               Double lowerThreshold,
+                               Double spatialSigma) throws Exception {
+
+        String taskId = UUID.randomUUID().toString();
+        String originalFilename = videoFile.getOriginalFilename();
+        String extension = "";
+        if (originalFilename != null && originalFilename.contains(".")) {
+            extension = originalFilename.substring(originalFilename.lastIndexOf("."));
+        }
+
+        String inputPath = UPLOAD_DIR + taskId + extension;
+        String outputPath = OUTPUT_DIR + taskId + "_processed.mp4";
+
+        // 保存上传的文件
+        Path uploadPath = Paths.get(inputPath);
+        Files.copy(videoFile.getInputStream(), uploadPath);
+
+        // 提交处理任务
+        executorService.submit(() -> {
+            try {
+                processVideoTask(taskId, inputPath, outputPath, algorithm,
+                        amplification, temporalFilter, otherSettings,
+                        upperThreshold, lowerThreshold, spatialSigma);
+            } catch (Exception e) {
+                log.error("视频处理任务失败", e);
+                progressMap.put(taskId, -1.0);
+                taskStatusMap.put(taskId, "FAILED");
+            }
+        });
+
+        log.info("视频处理任务已提交，任务ID：{}，算法：{}，放大倍数：{}，时域滤波：{}",
+                taskId, algorithm, amplification, temporalFilter);
+
+        taskStatusMap.put(taskId, "PROCESSING");
+        return taskId;
+    }
+
+    private void processVideoTask(String taskId, String inputPath, String outputPath,
+                                  String algorithm, Double amplification,
+                                  Boolean temporalFilter, Boolean otherSettings,
+                                  Double upperThreshold, Double lowerThreshold,
+                                  Double spatialSigma) {
+
+        progressMap.put(taskId, 0.0);
+
+        // 根据算法类型选择处理方式
+        if (pythonConfig.hasScript(algorithm)) {
+            // 使用Python脚本处理
+            processWithPythonScript(taskId, algorithm, inputPath, outputPath,
+                    amplification, temporalFilter,
+                    upperThreshold, lowerThreshold, spatialSigma);
+        } else {
+            // 使用Java模拟处理
+            processWithJavaSimulation(taskId, algorithm, amplification,
+                    temporalFilter, otherSettings,
+                    upperThreshold, lowerThreshold,
+                    spatialSigma);
+        }
+    }
+
+    private void processWithPythonScript(String taskId, String algorithm,
+                                         String inputPath, String outputPath,
+                                         Double amplification, Boolean temporalFilter,
+                                         Double upperThreshold, Double lowerThreshold,
+                                         Double spatialSigma) {
+        try {
+            log.info("开始Python脚本处理，任务ID: {}, 算法: {}, 输入: {}, 输出: {}",
+                    taskId, algorithm, inputPath, outputPath);
+
+            if (!pythonConfig.isEnabled()) {
+                String errorMsg = "Python脚本功能未启用";
+                log.error(errorMsg);
+                progressMap.put(taskId, -1.0);
+                taskStatusMap.put(taskId, "FAILED");
+                return;
+            }
+
+            PythonScriptExecutor.ProgressCallback callback = new PythonScriptExecutor.ProgressCallback() {
+                @Override
+                public void onProgress(double progress) {
+                    progressMap.put(taskId, progress);
+                    log.debug("任务{}进度更新: {}%", taskId, progress);
+                }
+
+                @Override
+                public void onStepStart(String stepName) {
+                    log.info("任务{}步骤开始: {}", taskId, stepName);
+                }
+
+                @Override
+                public void onStepComplete(String stepName) {
+                    log.info("任务{}步骤完成: {}", taskId, stepName);
+                }
+
+                @Override
+                public void onError(String error) {
+                    log.error("任务{}处理错误: {}", taskId, error);
+                    progressMap.put(taskId, -1.0);
+                    taskStatusMap.put(taskId, "FAILED");
+                }
+            };
+
+            // 构建参数映射
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("alpha", amplification);
+            parameters.put("temporal_filter", temporalFilter);
+            parameters.put("lower_threshold", lowerThreshold);
+            parameters.put("upper_threshold", upperThreshold);
+            parameters.put("spatial_sigma", spatialSigma);
+
+            // 调用Python脚本执行器
+            PythonScriptExecutor.ProcessResult result = pythonExecutor.executePythonScript(
+                    algorithm,
+                    inputPath,
+                    outputPath,
+                    parameters,
+                    callback
+            );
+
+            if (result.isSuccess()) {
+                log.info("Python脚本处理完成，任务ID: {}, 算法: {}, 输出路径: {}",
+                        taskId, algorithm, result.getOutputPath());
+                progressMap.put(taskId, 100.0);
+                taskStatusMap.put(taskId, "COMPLETED");
+            } else {
+                log.error("Python脚本处理失败，任务ID: {}, 算法: {}, 错误: {}",
+                        taskId, algorithm, result.getError());
+                progressMap.put(taskId, -1.0);
+                taskStatusMap.put(taskId, "FAILED");
+            }
+
+        } catch (Exception e) {
+            log.error("Python脚本处理异常，任务ID: {}, 算法: {}", taskId, algorithm, e);
+            progressMap.put(taskId, -1.0);
+            taskStatusMap.put(taskId, "FAILED");
+        }
+    }
+
+    private void processWithJavaSimulation(String taskId, String algorithm,
+                                           Double amplification, Boolean temporalFilter,
+                                           Boolean otherSettings, Double upperThreshold,
+                                           Double lowerThreshold, Double spatialSigma) {
+        // Java模拟处理
+        try {
+            log.info("开始Java模拟处理，任务ID: {}, 算法: {}, 放大倍数: {}, 时域滤波: {}",
+                    taskId, algorithm, amplification, temporalFilter);
+
+            // 模拟处理步骤
+            for (int i = 0; i <= 100; i += 10) {
+                Thread.sleep(1000); // 模拟处理时间
+                progressMap.put(taskId, (double) i);
+
+                switch (algorithm) {
+                    case "eulerian":
+                        log.debug("使用欧拉视角算法处理，阈值范围：[{}, {}]", lowerThreshold, upperThreshold);
+                        break;
+                    case "deeplearning":
+                        log.debug("使用深度学习算法处理，空间平滑: {}", spatialSigma);
+                        break;
+                    default:
+                        log.warn("未知算法：{}，使用默认处理", algorithm);
+                }
+            }
+
+            progressMap.put(taskId, 100.0);
+            taskStatusMap.put(taskId, "COMPLETED");
+            log.info("Java模拟处理完成：{}", taskId);
+
+        } catch (Exception e) {
+            log.error("Java处理任务失败", e);
+            progressMap.put(taskId, -1.0);
+            taskStatusMap.put(taskId, "FAILED");
+        }
+    }
+
+    @Override
+    public Double getProgress(String taskId) {
+        Double progress = progressMap.get(taskId);
+        if (progress == null) {
+            return 0.0;
+        }
+
+        // 如果任务失败，返回-1
+        if (progress == -1.0) {
+            return -1.0;
+        }
+
+        return progress;
+    }
+
+    @Override
+    public void startRealtimeProcess(String algorithm, Double amplification,
+                                     Boolean temporalFilter, Boolean otherSettings,
+                                     Double upperThreshold, Double lowerThreshold,
+                                     Double spatialSigma) {
+        log.info("开始实时视频处理，算法：{}，参数：[放大倍数={}, 时域滤波={}, 上下限阈值=[{}, {}], 空间平滑={}]",
+                algorithm, amplification, temporalFilter, lowerThreshold, upperThreshold, spatialSigma);
+        // TODO: 实现实时处理逻辑
+    }
+
+    @Override
+    public void stopRealtimeProcess() {
+        log.info("停止实时视频处理");
+        // TODO: 实现停止实时处理逻辑
+    }
+
+    @Override
+    public File getResultFile(String taskId) throws Exception {
+        String outputPath = OUTPUT_DIR + taskId + "_processed.mp4";
+        File resultFile = new File(outputPath);
+
+        if (!resultFile.exists()) {
+            // 尝试其他可能的扩展名
+            String[] extensions = {".mp4", ".avi", ".mov", ".mkv"};
+            for (String ext : extensions) {
+                resultFile = new File(OUTPUT_DIR + taskId + "_processed" + ext);
+                if (resultFile.exists()) {
+                    break;
+                }
+            }
+        }
+
+        if (!resultFile.exists()) {
+            throw new FileNotFoundException("处理结果不存在，任务ID: " + taskId);
+        }
+
+        return resultFile;
+    }
+}
+```
+
+#### 5.1.5 创建 Python 脚本配置类
+
+创建文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-system\src\main\java\tracker\system\config\PythonScriptConfig.java`
+
+```shell
+package tracker.system.config;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Component
+@ConfigurationProperties(prefix = "python")
+public class PythonScriptConfig {
+
+    private String executable = "python3";
+    private boolean enabled = true;
+    private Map<String, String> scripts = new HashMap<>();
+
+    // getters and setters
+    public String getExecutable() {
+        return executable;
+    }
+
+    public void setExecutable(String executable) {
+        this.executable = executable;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public Map<String, String> getScripts() {
+        return scripts;
+    }
+
+    public void setScripts(Map<String, String> scripts) {
+        this.scripts = scripts;
+    }
+
+    /**
+     * 根据算法名称获取脚本路径
+     */
+    public String getScriptPath(String algorithm) {
+        return scripts.get(algorithm);
+    }
+
+    /**
+     * 检查算法是否有对应的Python脚本
+     */
+    public boolean hasScript(String algorithm) {
+        return scripts.containsKey(algorithm) && scripts.get(algorithm) != null && !scripts.get(algorithm).isEmpty();
+    }
+}
+```
+
+#### 5.1.5 创建 Python脚本执行器（PythonScriptExecutor.java）
+
+创建文件 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-system\src\main\java\tracker\system\service\impl\PythonScriptExecutor.java`
+
+```shell
+package tracker.system.service.impl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import tracker.system.config.PythonScriptConfig;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.concurrent.*;
+
+@Component
+public class PythonScriptExecutor {
+
+    private static final Logger log = LoggerFactory.getLogger(PythonScriptExecutor.class);
+
+    @Autowired
+    private PythonScriptConfig pythonConfig;
+
+    private final ExecutorService executorService = Executors.newCachedThreadPool();
+
+    /**
+     * 执行Python脚本
+     */
+    public ProcessResult executePythonScript(
+            String algorithm,
+            String inputVideoPath,
+            String outputVideoPath,
+            Map<String, Object> parameters,
+            ProgressCallback callback) {
+
+        ProcessResult result = new ProcessResult();
+
+        try {
+            // 检查算法是否有对应的Python脚本
+            if (!pythonConfig.hasScript(algorithm)) {
+                String errorMsg = String.format("算法 '%s' 没有对应的Python脚本配置", algorithm);
+                log.error(errorMsg);
+                result.setSuccess(false);
+                result.setError(errorMsg);
+                return result;
+            }
+
+            // 获取脚本路径
+            String scriptPath = pythonConfig.getScriptPath(algorithm);
+            File scriptFile = new File(scriptPath);
+            if (!scriptFile.exists()) {
+                String errorMsg = String.format("Python脚本不存在: %s", scriptPath);
+                log.error(errorMsg);
+                result.setSuccess(false);
+                result.setError(errorMsg);
+                return result;
+            }
+
+            // 构建Python命令
+            String[] command = buildPythonCommand(
+                    scriptPath,
+                    inputVideoPath,
+                    outputVideoPath,
+                    parameters
+            );
+
+            log.info("执行Python脚本 - 算法: {}, 脚本: {}", algorithm, scriptPath);
+            log.debug("Python命令: {}", String.join(" ", command));
+
+            // 创建进程
+            ProcessBuilder processBuilder = new ProcessBuilder(command);
+            processBuilder.redirectErrorStream(true); // 合并标准错误和标准输出
+
+            Process process = processBuilder.start();
+
+            // 启动线程读取输出
+            Future<?> outputReader = executorService.submit(() -> {
+                try (BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(process.getInputStream(), "GBK"))) {
+
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        log.debug("Python输出: {}", line);
+                        processOutput(line, result, callback);
+                    }
+                } catch (IOException e) {
+                    log.error("读取Python输出时出错", e);
+                }
+            });
+
+            // 等待进程完成
+            int exitCode = process.waitFor();
+            outputReader.get(); // 等待输出读取完成
+
+            result.setExitCode(exitCode);
+
+            // 处理结果
+            handleProcessResult(result, outputVideoPath);
+
+        } catch (Exception e) {
+            log.error("执行Python脚本失败", e);
+            result.setSuccess(false);
+            result.setError("执行失败: " + e.getMessage());
+        }
+
+        return result;
+    }
+
+    private String[] buildPythonCommand(
+            String scriptPath,
+            String inputPath,
+            String outputPath,
+            Map<String, Object> parameters) {
+
+        // 构建命令参数数组
+        List<String> commandList = new ArrayList<>();
+        commandList.add(pythonConfig.getExecutable());
+        commandList.add(scriptPath);
+
+        // 添加必需参数
+        commandList.add("--input");
+        commandList.add(inputPath);
+
+        commandList.add("--output");
+        commandList.add(outputPath);
+
+        // 添加可选参数
+        Object alpha = parameters.get("alpha");
+        if (alpha != null) {
+            commandList.add("--alpha");
+            commandList.add(String.valueOf(alpha));
+        }
+
+        Object temporalFilter = parameters.get("temporal_filter");
+        if (temporalFilter != null) {
+            commandList.add("--temporal_filter");
+            commandList.add(String.valueOf(temporalFilter));
+        }
+
+        Object lowerThreshold = parameters.get("lower_threshold");
+        if (lowerThreshold != null) {
+            commandList.add("--lower_threshold");
+            commandList.add(String.valueOf(lowerThreshold));
+        }
+
+        Object upperThreshold = parameters.get("upper_threshold");
+        if (upperThreshold != null) {
+            commandList.add("--upper_threshold");
+            commandList.add(String.valueOf(upperThreshold));
+        }
+
+        Object spatialSigma = parameters.get("spatial_sigma");
+        if (spatialSigma != null) {
+            commandList.add("--spatial_sigma");
+            commandList.add(String.valueOf(spatialSigma));
+        }
+
+        return commandList.toArray(new String[0]);
+    }
+
+    private void processOutput(String line, ProcessResult result, ProgressCallback callback) {
+        // 解析进度信息
+        if (line.startsWith("PROGRESS:")) {
+            String progressStr = line.substring(9).trim();
+            try {
+                double progress = Double.parseDouble(progressStr);
+                if (callback != null) {
+                    callback.onProgress(progress);
+                }
+            } catch (NumberFormatException e) {
+                log.warn("无法解析进度: {}", progressStr);
+            }
+        }
+        // 解析错误信息
+        else if (line.startsWith("ERROR:")) {
+            String error = line.substring(6).trim();
+            result.setError(error);
+            if (callback != null) {
+                callback.onError(error);
+            }
+        }
+        // 解析最终结果
+        else if (line.startsWith("FINAL_RESULT:")) {
+            String finalPath = line.substring(13).trim();
+            result.setOutputPath(finalPath);
+        }
+        else if (line.startsWith("RESULT:")) {
+            String finalPath = line.substring(7).trim();
+            result.setOutputPath(finalPath);
+        }
+        else if (line.startsWith("PROGRESS_START:")) {
+            String stepName = line.substring(15).trim();
+            if (callback != null) {
+                callback.onStepStart(stepName);
+            }
+        }
+        else if (line.startsWith("PROGRESS_COMPLETE:")) {
+            String stepName = line.substring(18).trim();
+            if (callback != null) {
+                callback.onStepComplete(stepName);
+            }
+        }
+    }
+
+    private void handleProcessResult(ProcessResult result, String expectedOutputPath) {
+        if (result.getExitCode() == 0) {
+            // 检查输出文件是否存在
+            File outputFile = new File(expectedOutputPath);
+            if (outputFile.exists() && outputFile.length() > 0) {
+                result.setSuccess(true);
+                log.info("Python脚本执行成功，输出文件: {}", expectedOutputPath);
+            } else {
+                result.setSuccess(false);
+                String errorMsg = "输出文件未生成或为空";
+                result.setError(errorMsg);
+                log.error(errorMsg);
+            }
+        } else {
+            result.setSuccess(false);
+            if (result.getError() == null) {
+                String errorMsg = "Python进程异常退出，退出码: " + result.getExitCode();
+                result.setError(errorMsg);
+            }
+            log.error("Python脚本执行失败: {}", result.getError());
+        }
+    }
+
+    /**
+     * 检查Python环境是否可用
+     */
+    public boolean checkPythonEnvironment() {
+        try {
+            // 检查Python是否安装
+            ProcessBuilder pb = new ProcessBuilder(pythonConfig.getExecutable(), "--version");
+            Process process = pb.start();
+            int exitCode = process.waitFor();
+
+            if (exitCode != 0) {
+                log.error("Python环境检查失败，退出码: {}", exitCode);
+                return false;
+            }
+
+            // 检查脚本是否存在
+            boolean allScriptsExist = true;
+            for (Map.Entry<String, String> entry : pythonConfig.getScripts().entrySet()) {
+                String algorithm = entry.getKey();
+                String scriptPath = entry.getValue();
+
+                if (scriptPath != null && !scriptPath.isEmpty()) {
+                    File scriptFile = new File(scriptPath);
+                    if (!scriptFile.exists()) {
+                        log.warn("算法 {} 的Python脚本不存在: {}", algorithm, scriptPath);
+                        allScriptsExist = false;
+                    } else {
+                        log.info("算法 {} 的Python脚本存在: {}", algorithm, scriptPath);
+                    }
+                }
+            }
+
+            // 检查依赖
+            ProcessBuilder depPb = new ProcessBuilder(
+                    pythonConfig.getExecutable(),
+                    "-c",
+                    "import cv2; import numpy; import scipy; print('Dependencies OK')"
+            );
+            Process depProcess = depPb.start();
+            try (BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(depProcess.getInputStream()))) {
+                String line = reader.readLine();
+                log.info("Python依赖检查: {}", line);
+            }
+            int depExitCode = depProcess.waitFor();
+
+            if (depExitCode != 0) {
+                log.error("Python依赖检查失败，请确保已安装OpenCV, NumPy和SciPy");
+                return false;
+            }
+
+            return allScriptsExist;
+
+        } catch (Exception e) {
+            log.error("检查Python环境失败", e);
+            return false;
+        }
+    }
+
+    /**
+     * 获取算法列表
+     */
+    public Map<String, String> getAvailableAlgorithms() {
+        return new HashMap<>(pythonConfig.getScripts());
+    }
+
+    // 进度回调接口
+    public interface ProgressCallback {
+        void onProgress(double progress);
+        void onStepStart(String stepName);
+        void onStepComplete(String stepName);
+        void onError(String error);
+    }
+
+    // 处理结果类
+    public static class ProcessResult {
+        private boolean success;
+        private String outputPath;
+        private String error;
+        private int exitCode;
+
+        // getters and setters
+        public boolean isSuccess() { return success; }
+        public void setSuccess(boolean success) { this.success = success; }
+        public String getOutputPath() { return outputPath; }
+        public void setOutputPath(String outputPath) { this.outputPath = outputPath; }
+        public String getError() { return error; }
+        public void setError(String error) { this.error = error; }
+        public int getExitCode() { return exitCode; }
+        public void setExitCode(int exitCode) { this.exitCode = exitCode; }
+    }
+}
+```
+
+#### 5.1.5 配置文件（application.yml）
+
+新增代码 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue\tracker-admin\src\main\resources\application.yml`
+
+```shell
+# 项目相关配置
+ruoyi:
+  # 名称
+  name: MoMagTracker
+  # 版本
+  version: 3.9.0
+  # 版权年份
+  copyrightYear: 2025
+  # 文件路径
+  profile: D:/MoMagTracker/uploadPath  # 建议改为项目相关路径
+  # 获取ip地址开关
+  addressEnabled: false
+  # 验证码类型 math 数字计算 char 字符验证
+  captchaType: math
+
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为8080
+  port: 8080
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  tomcat:
+    max-swallow-size: -1  # 不限制上传文件大小
+    max-http-form-post-size: -1  # 不限制表单POST大小
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # 连接数满后的排队数，默认为100
+    accept-count: 1000
+    threads:
+      # tomcat最大线程数，默认为200
+      max: 800
+      # Tomcat启动初始化的线程数，默认值10
+      min-spare: 100
+
+# 日志配置
+logging:
+  level:
+    tracker: debug
+    org.springframework: warn
+
+# 用户配置
+user:
+  password:
+    # 密码最大错误次数
+    maxRetryCount: 5
+    # 密码锁定时间（默认10分钟）
+    lockTime: 10
+
+# Dify配置
+dify:
+  api:
+    url: http://8.141.94.106:21777  # Dify系统地址
+    key: # 如果有API Key，填写在这里
+  username: 15948660043@163.com    # Dify登录用户名
+  password: tang2001 # Dify登录密码
+
+# 视频处理配置
+video:
+  upload:
+    max-size: 1024MB
+    allowed-extensions: .mp4,.avi,.mov,.mkv,.flv
+
+# Python脚本配置
+python:
+  executable: python3
+  enabled: true
+  # 算法脚本路径配置 - 现在可以灵活配置不同算法的脚本
+  scripts:
+    # 拉格朗日算法
+    lagrangian: "E:/RuoYiProject/MoMagTracker-Compare/Lagrangian-based-Motion-Mag/Lagrangian-based-Motion-Magnification.py"
+    # 欧拉算法
+    eulerian: "E:/RuoYiProject/MoMagTracker-Compare/Eulerian-based-Motion-Mag/Eulerian-based-Motion-Magnification.py"
+    # 深度学习算法
+    deeplearning: "E:/RuoYiProject/MoMagTracker-Compare/Learning-based-Motion-Mag/Learning-based-Motion-Magnification.py"
+    # 其他算法可以继续添加
+    # example: "E:/RuoYiProject/MoMagTracker-Compare/Another-Algorithm/algorithm.py"
+
+# Spring 配置
+spring:
+  # 邮件配置 - 新增网易邮箱配置
+  mail:
+    host: smtp.163.com  # 邮箱服务器
+    port: 465           # SSL端口
+    username: 15948660043@163.com  # 发件人邮箱
+    password: LVxYK34uNZTgMfUM  # SMTP授权码
+    default-encoding: UTF-8
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: false  # 不使用 TLS
+          ssl:
+            enable: true   # 使用 SSL 加密
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  profiles:
+    active: druid
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size: 1024MB
+      # 设置总上传的文件大小
+      max-request-size: 1024MB
+      enabled: true
+  # 服务模块
+  devtools:
+    restart:
+      # 热部署开关
+      enabled: true
+  # redis 配置
+  redis:
+    # 地址
+    host: 127.0.0.1
+    # 端口，默认为 6379
+    port: 6379
+    # 数据库索引
+    database: 0
+    # 密码
+    password: Tang15948660043
+    # 连接超时时间
+    timeout: 10s
+    lettuce:
+      pool:
+        # 连接池中的最小空闲连接
+        min-idle: 0
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池的最大数据库连接数
+        max-active: 8
+        # #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+
+# 应用配置 - 新增
+app:
+  name: MoMagTracker
+
+# token配置
+token:
+  # 令牌自定义标识
+  header: Authorization
+  # 令牌密钥
+  secret: abcdefghijklmnopqrstuvwxyz
+  # 令牌有效期（默认30分钟）
+  expireTime: 30
+
+# MyBatis配置
+mybatis:
+  # 搜索指定包别名
+  typeAliasesPackage: tracker.**.domain
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis/mybatis-config.xml
+
+# PageHelper分页插件
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true
+  params: count=countSql
+
+# Swagger配置
+swagger:
+  # 是否开启swagger
+  enabled: true
+  # 请求前缀
+  pathMapping: /dev-api
+
+# 防止XSS攻击
+xss:
+  # 过滤开关
+  enabled: true
+  # 排除链接（多个用逗号分隔）
+  excludes: /system/notice
+  # 匹配链接
+  urlPatterns: /system/*,/monitor/*,/tool/*
+```
+
+- 结果
+
+```shell
+14:05:13.247 [http-nio-8080-exec-79] INFO  t.s.s.i.VideoProcessServiceImpl - [processVideo,100] - 视频处理任务已提交，任务ID：0ccb4306-9edf-4266-a874-8d454c6cd2d3，算法：lagrangian，放大倍数：20.0，时域滤波：false
+14:05:13.248 [pool-3-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,136] - 开始Python脚本处理，任务ID: 0ccb4306-9edf-4266-a874-8d454c6cd2d3, 算法: lagrangian, 输入: uploads/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3.mp4, 输出: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+14:05:13.249 [pool-3-thread-2] INFO  t.s.s.i.PythonScriptExecutor - [executePythonScript,67] - 执行Python脚本 - 算法: lagrangian, 脚本: E:/RuoYiProject/MoMagTracker-Compare/Lagrangian-based-Motion-Mag/Lagrangian-based-Motion-Magnification.py
+14:05:13.249 [pool-3-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [executePythonScript,68] - Python命令: E:/RuoYiProject/MoMagTracker-Compare/.venv/Scripts/python.exe E:/RuoYiProject/MoMagTracker-Compare/Lagrangian-based-Motion-Mag/Lagrangian-based-Motion-Magnification.py --input uploads/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3.mp4 --output output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4 --alpha 20.0 --temporal_filter false --lower_threshold 0.03 --upper_threshold 0.5 --spatial_sigma 3.0
+14:05:17.472 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:初始化
+14:05:17.472 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 初始化
+14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 基于拉格朗日视角的视频运动放大方法
+14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入视频: uploads/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3.mp4
+14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 放大因子: 20.0
+14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 时域滤波: 关闭
+14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:3.0
+14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 3.0%
+14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:3.0
+14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 3.0%
+14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:初始化
+14:05:17.475 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 初始化
+14:05:17.476 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:读取视频
+14:05:17.476 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 读取视频
+14:05:18.991 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤1] 读取视频并预处理...
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   开始读取视频，帧率: 30, 分辨率: 960x544
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 100 帧
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 200 帧
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 300 帧
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   读取完成，共 301 帧
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频信息: 960x544, 30 FPS, 处理帧数: 301
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:10.0
+14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 10.0%
+14:05:18.994 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:10.0
+14:05:18.994 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 10.0%
+14:05:18.994 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:读取视频
+14:05:18.994 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 读取视频
+14:05:18.994 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:特征点检测与跟踪
+14:05:18.994 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 特征点检测与跟踪
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤2] 特征点检测与轨迹跟踪...
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   开始特征点跟踪...
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 0/301 帧到灰度图
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 100/301 帧到灰度图
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 200/301 帧到灰度图
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 300/301 帧到灰度图
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   检测第一帧特征点...
+14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   初始化 1000 条轨迹
+14:05:20.020 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:11.7
+14:05:20.020 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 11.7%
+14:05:20.346 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 20/300 帧，活跃轨迹: 1000
+14:05:20.346 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:13.3
+14:05:20.346 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 13.3%
+14:05:20.755 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 40/300 帧，活跃轨迹: 1000
+14:05:20.756 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:15.0
+14:05:20.756 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 15.0%
+14:05:21.020 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 60/300 帧，活跃轨迹: 1000
+14:05:21.020 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:16.7
+14:05:21.020 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 16.7%
+14:05:21.256 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 80/300 帧，活跃轨迹: 1000
+14:05:21.257 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:18.3
+14:05:21.257 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 18.3%
+14:05:21.554 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 100/300 帧，活跃轨迹: 1000
+14:05:21.554 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:20.0
+14:05:21.554 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 20.0%
+14:05:21.847 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 120/300 帧，活跃轨迹: 1000
+14:05:21.847 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:21.7
+14:05:21.847 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 21.7%
+14:05:22.073 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 140/300 帧，活跃轨迹: 1000
+14:05:22.073 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:23.3
+14:05:22.073 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 23.3%
+14:05:22.331 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 160/300 帧，活跃轨迹: 1000
+14:05:22.331 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:25.0
+14:05:22.331 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 25.0%
+14:05:22.572 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 180/300 帧，活跃轨迹: 999
+14:05:22.572 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:26.7
+14:05:22.572 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 26.7%
+14:05:22.842 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 200/300 帧，活跃轨迹: 999
+14:05:22.842 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:28.3
+14:05:22.842 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 28.3%
+14:05:23.101 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 220/300 帧，活跃轨迹: 999
+14:05:23.101 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.0
+14:05:23.101 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 30.0%
+14:05:23.442 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 240/300 帧，活跃轨迹: 998
+14:05:23.442 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.7
+14:05:23.442 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 31.7%
+14:05:23.727 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 260/300 帧，活跃轨迹: 998
+14:05:23.727 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.3
+14:05:23.727 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 33.3%
+14:05:23.972 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 280/300 帧，活跃轨迹: 998
+14:05:23.972 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+14:05:23.972 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 35.0%
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 300/300 帧，活跃轨迹: 998
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   后处理轨迹...
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   有效轨迹: 1000 条
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   成功提取 1000 条轨迹，轨迹长度: 301 帧
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 35.0%
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 35.0%
+14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:特征点检测与跟踪
+14:05:24.085 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 特征点检测与跟踪
+14:05:24.085 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:计算轨迹运动
+14:05:24.085 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 计算轨迹运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤3] 计算轨迹运动...
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   计算轨迹运动...
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 0/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 100/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 200/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 300/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 400/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 500/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 600/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 700/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 800/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 900/1000 条轨迹的运动
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.0
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 45.0%
+14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.0
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 45.0%
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:计算轨迹运动
+14:05:24.222 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 计算轨迹运动
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:时域带通滤波
+14:05:24.222 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 时域带通滤波
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 55.0%
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 55.0%
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:时域带通滤波
+14:05:24.222 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 时域带通滤波
+14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:05:24.223 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤4] 时域带通滤波...
+14:05:24.223 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   未使用时域滤波，跳过此步骤
+14:05:24.223 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:计算稠密运动场
+14:05:24.223 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 计算稠密运动场
+14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤5] 计算稠密运动场...
+14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   计算稠密运动场...
+14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
+14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 55.0%
+14:05:29.147 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 0/300 帧的运动场
+14:05:29.149 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.3
+14:05:29.149 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 56.3%
+14:05:33.672 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 20/300 帧的运动场
+14:05:33.672 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.7
+14:05:33.672 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 57.7%
+14:05:38.747 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 40/300 帧的运动场
+14:05:38.747 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.0
+14:05:38.747 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 59.0%
+14:05:45.189 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 60/300 帧的运动场
+14:05:45.189 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.3
+14:05:45.189 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 60.3%
+14:05:51.329 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 80/300 帧的运动场
+14:05:51.329 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.7
+14:05:51.329 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 61.7%
+14:06:09.652 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 100/300 帧的运动场
+14:06:09.652 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.0
+14:06:09.652 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 63.0%
+14:06:18.516 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 120/300 帧的运动场
+14:06:18.516 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.3
+14:06:18.516 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 64.3%
+14:06:24.577 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 140/300 帧的运动场
+14:06:24.577 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.7
+14:06:24.577 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 65.7%
+14:06:30.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 160/300 帧的运动场
+14:06:30.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.0
+14:06:30.055 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 67.0%
+14:06:35.966 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 180/300 帧的运动场
+14:06:35.966 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.3
+14:06:35.966 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 68.3%
+14:06:41.362 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 200/300 帧的运动场
+14:06:41.362 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.7
+14:06:41.362 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 69.7%
+14:06:47.111 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 220/300 帧的运动场
+14:06:47.111 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.0
+14:06:47.111 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 71.0%
+14:06:52.786 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 240/300 帧的运动场
+14:06:52.787 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.3
+14:06:52.787 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 72.3%
+14:06:58.195 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 260/300 帧的运动场
+14:06:58.195 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.7
+14:06:58.195 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 73.7%
+14:07:03.585 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 280/300 帧的运动场
+14:07:03.585 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 75.0%
+14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 300/300 帧的运动场
+14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 75.0%
+14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 75.0%
+14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:计算稠密运动场
+14:07:03.588 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 计算稠密运动场
+14:07:03.588 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:运动放大
+14:07:03.588 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 运动放大
+14:07:04.013 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:07:04.014 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤6] 运动放大...
+14:07:04.014 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   应用运动放大...
+14:07:04.014 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.0
+14:07:04.014 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 76.0%
+14:07:04.451 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 20/300 帧
+14:07:04.451 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.0
+14:07:04.451 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 77.0%
+14:07:04.915 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 40/300 帧
+14:07:04.915 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.0
+14:07:04.915 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 78.0%
+14:07:05.328 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 60/300 帧
+14:07:05.328 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.0
+14:07:05.328 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 79.0%
+14:07:05.798 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 80/300 帧
+14:07:05.798 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.0
+14:07:05.798 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 80.0%
+14:07:06.272 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 100/300 帧
+14:07:06.272 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.0
+14:07:06.273 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 81.0%
+14:07:06.721 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 120/300 帧
+14:07:06.721 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.0
+14:07:06.721 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 82.0%
+14:07:07.203 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 140/300 帧
+14:07:07.203 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.0
+14:07:07.203 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 83.0%
+14:07:07.671 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 160/300 帧
+14:07:07.671 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.0
+14:07:07.671 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 84.0%
+14:07:08.216 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 180/300 帧
+14:07:08.216 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.0
+14:07:08.216 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 85.0%
+14:07:08.830 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 200/300 帧
+14:07:08.830 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.0
+14:07:08.830 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 86.0%
+14:07:09.405 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 220/300 帧
+14:07:09.405 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.0
+14:07:09.405 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 87.0%
+14:07:09.944 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 240/300 帧
+14:07:09.944 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:88.0
+14:07:09.944 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 88.0%
+14:07:10.436 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 260/300 帧
+14:07:10.436 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:89.0
+14:07:10.436 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 89.0%
+14:07:10.918 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 280/300 帧
+14:07:10.918 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+14:07:10.918 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 90.0%
+14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 300/300 帧
+14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 90.0%
+14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 90.0%
+14:07:10.921 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:运动放大
+14:07:10.921 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 运动放大
+14:07:10.921 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:后处理
+14:07:10.921 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 后处理
+14:07:26.228 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:07:26.228 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤7] 后处理...
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   后处理...
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 95.0%
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 95.0%
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:后处理
+14:07:26.230 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 后处理
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:保存结果
+14:07:26.230 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 保存结果
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤8] 保存结果...
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   保存视频...
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   输出尺寸: 960x544, 帧数: 301, 帧率: 30
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
+14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 95.0%
+14:07:26.287 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 0/301 帧
+14:07:26.287 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.8
+14:07:26.287 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 95.8%
+14:07:26.369 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 100/301 帧
+14:07:26.369 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:96.7
+14:07:26.369 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 96.7%
+14:07:26.470 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 200/301 帧
+14:07:26.470 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:97.5
+14:07:26.470 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 97.5%
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 300/301 帧
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   保存临时图像序列...
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 0/301 张临时图像
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 100/301 张临时图像
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 200/301 张临时图像
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 300/301 张临时图像
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   使用FFmpeg编码视频...
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频保存成功: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4 (0.36 MB)
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 100.0%
+14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 100.0%
+14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 100.0%
+14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:保存结果
+14:07:36.595 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 保存结果
+14:07:37.054 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 处理完成!
+14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 总耗时: 139.12秒
+14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入帧数: 301
+14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出帧数: 301
+14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: FINAL_RESULT:output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+14:07:37.104 [http-nio-8080-exec-15] INFO  t.w.c.m.VideoMonitorController - [downloadResult,155] - 下载处理结果成功，任务ID: 0ccb4306-9edf-4266-a874-8d454c6cd2d3
+14:07:37.571 [pool-3-thread-2] INFO  t.s.s.i.PythonScriptExecutor - [handleProcessResult,211] - Python脚本执行成功，输出文件: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+14:07:37.573 [pool-3-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,190] - Python脚本处理完成，任务ID: 0ccb4306-9edf-4266-a874-8d454c6cd2d3, 算法: lagrangian, 输出路径: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+```
+
+### 5.2 前端（index.vue）
+
+![image-20251230141350626](README.assets/image-20251230141350626.png)
+
+新增代码 `E:\RuoYiProject\MoMagTracker-System\MoMagTracker-Vue3\src\views\monitor\data\index.vue`
+
+```shell
+<template>
+  <div class="app-container video-monitor">
+    <!-- 顶部操作栏 -->
+    <div class="top-action-bar">
+      <div class="left-actions">
+        <!-- 视频源选择 -->
+        <div class="video-source-group">
+          <div class="section-header">
+            <!-- 自定义SVG图标 -->
+            <svg-icon icon-class="video-source" class-name="header-icon custom-svg-icon"></svg-icon>
+            <span class="section-label">视频源选择</span>
+          </div>
+          <div class="action-buttons">
+            <el-upload
+              class="upload-action"
+              :show-file-list="false"
+              :before-upload="handleVideoUpload"
+              accept="video/*"
+            >
+              <el-button class="source-btn upload-btn">
+                <svg-icon icon-class="upload" class-name="btn-svg-icon"></svg-icon>
+                上传本地视频
+              </el-button>
+            </el-upload>
+            
+            <el-button 
+              v-if="!cameraConnected"
+              class="source-btn camera-btn"
+              @click="connectCamera"
+            >
+              <svg-icon icon-class="camera-connect" class-name="btn-svg-icon"></svg-icon>
+              连接摄像头
+            </el-button>
+            
+            <el-button 
+              v-else
+              class="source-btn disconnect-btn"
+              @click="disconnectCamera"
+            >
+              <svg-icon icon-class="camera-disconnect" class-name="btn-svg-icon"></svg-icon>
+              断开摄像头
+            </el-button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="right-actions">
+        <!-- 开始处理按钮 -->
+        <el-button 
+          class="process-btn"
+          :class="{ 'processing': processing }"
+          @click="startProcessing"
+          :loading="processing"
+          :disabled="!videoSrc && !cameraConnected"
+          size="large"
+        >
+          <svg-icon v-if="!processing" icon-class="start-process" class-name="process-svg-icon"></svg-icon>
+          <svg-icon v-else icon-class="loading" class-name="process-svg-icon loading-icon"></svg-icon>
+          {{ processing ? '处理中...' : '开始处理' }}
+        </el-button>
+      </div>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+      <!-- 左侧控制面板 -->
+      <div class="control-panel">
+        <el-card class="panel-card" shadow="never">
+          <!-- 算法设置 -->
+          <div class="panel-header-section">
+            <div class="panel-header">
+              <!-- 自定义SVG图标 -->
+              <svg-icon icon-class="algorithm" class-name="header-icon custom-svg-icon"></svg-icon>
+              <span class="header-title">算法设置</span>
+            </div>
+          </div>
+          
+          <div class="section-block algorithm-section">
+            <div class="algorithm-options">
+              <div 
+                v-for="algo in algorithmOptions" 
+                :key="algo.value"
+                class="algorithm-item"
+                :class="{ 'algorithm-active': algorithm === algo.value }"
+                @click="algorithm = algo.value"
+              >
+                <div class="algorithm-icon" :style="{ background: algo.color }">
+                  <svg-icon :icon-class="algo.icon" class-name="algo-svg-icon"></svg-icon>
+                </div>
+                <div class="algorithm-info">
+                  <div class="algorithm-name">{{ algo.label }}</div>
+                  <div class="algorithm-desc">{{ algo.desc }}</div>
+                </div>
+                <div v-if="algorithm === algo.value" class="algorithm-check">
+                  <svg-icon icon-class="check" class-name="check-svg-icon"></svg-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 参数设置 -->
+          <div class="panel-header-section">
+            <div class="panel-header">
+              <!-- 自定义SVG图标 -->
+              <svg-icon icon-class="parameter" class-name="header-icon custom-svg-icon"></svg-icon>
+              <span class="header-title">参数设置</span>
+            </div>
+          </div>
+          
+          <div class="section-block param-section">
+            <!-- 放大倍数 -->
+            <div class="param-item">
+              <div class="param-header">
+                <span class="param-label">放大倍数</span>
+                <div class="param-value-group">
+                  <span class="param-value" :style="{ color: getAmplificationColor() }">{{ amplification }}x</span>
+                  <span class="param-range">(1-100)</span>
+                </div>
+              </div>
+              <el-slider
+                v-model="amplification"
+                :min="1"
+                :max="100"
+                :step="1"
+                :show-tooltip="true"
+                @change="onAmplificationChange"
+              />
+            </div>
+
+            <!-- 时域滤波开关 -->
+            <div class="param-item filter-switch">
+              <div class="param-header">
+                <span class="param-label">时域滤波</span>
+                <div class="switch-container">
+                  <el-switch
+                    v-model="temporalFilter"
+                    active-color="#13ce66"
+                    inactive-color="#ff4949"
+                    @change="onTemporalFilterChange"
+                  >
+                  </el-switch>
+                  <span class="switch-label">{{ temporalFilter ? '开启' : '关闭' }}</span>
+                </div>
+              </div>
+              <div class="filter-description">
+                使用时域带通滤波器来分离特定频率的运动
+              </div>
+            </div>
+
+            <!-- 时域滤波参数（仅当时域滤波开启时显示） -->
+            <div v-if="temporalFilter" class="filter-params">
+              <!-- 下限阈值 -->
+              <div class="param-item threshold-item">
+                <div class="param-header">
+                  <span class="param-label">下限阈值</span>
+                  <div class="param-value-group">
+                    <span class="param-value" :style="{ color: getLowerThresholdColor() }">{{ lowerThreshold.toFixed(2) }}</span>
+                    <span class="param-range">(0-0.1)</span>
+                  </div>
+                </div>
+                <el-slider
+                  v-model="lowerThreshold"
+                  :min="0"
+                  :max="0.1"
+                  :step="0.01"
+                  :show-tooltip="true"
+                  @change="onLowerThresholdChange"
+                />
+                <div class="param-description">
+                  控制滤波的下限频率，较低的值允许更慢的运动通过
+                </div>
+              </div>
+              
+              <!-- 上限阈值 -->
+              <div class="param-item threshold-item">
+                <div class="param-header">
+                  <span class="param-label">上限阈值</span>
+                  <div class="param-value-group">
+                    <span class="param-value" :style="{ color: getUpperThresholdColor() }">{{ upperThreshold.toFixed(1) }}</span>
+                    <span class="param-range">(0-1)</span>
+                  </div>
+                </div>
+                <el-slider
+                  v-model="upperThreshold"
+                  :min="0"
+                  :max="1"
+                  :step="0.1"
+                  :show-tooltip="true"
+                  @change="onUpperThresholdChange"
+                />
+                <div class="param-description">
+                  控制滤波的上限频率，较高的值允许更快的运动通过
+                </div>
+              </div>
+            </div>
+
+            <!-- 其他设置开关 -->
+            <div class="param-item other-settings-switch">
+              <div class="param-header">
+                <span class="param-label">其他设置</span>
+                <div class="switch-container">
+                  <el-switch
+                    v-model="otherSettings"
+                    active-color="#13ce66"
+                    inactive-color="#ff4949"
+                    @change="onOtherSettingsChange"
+                  >
+                  </el-switch>
+                  <span class="switch-label">{{ otherSettings ? '开启' : '关闭' }}</span>
+                </div>
+              </div>
+              <div class="filter-description">
+                调整空间平滑和其他高级参数
+              </div>
+            </div>
+
+            <!-- 其他设置参数（仅当其他设置开启时显示） -->
+            <div v-if="otherSettings" class="other-settings-params">
+              <!-- 空间平滑参数 -->
+              <div class="param-item">
+                <div class="param-header">
+                  <span class="param-label">空间平滑</span>
+                  <div class="param-value-group">
+                    <span class="param-value" :style="{ color: getSpatialSigmaColor() }">{{ spatialSigma.toFixed(1) }}</span>
+                    <span class="param-range">(0-5)</span>
+                  </div>
+                </div>
+                <el-slider
+                  v-model="spatialSigma"
+                  :min="0"
+                  :max="5"
+                  :step="0.1"
+                  :show-tooltip="true"
+                  @change="onSpatialSigmaChange"
+                />
+                <div class="param-description">
+                  控制空间平滑的强度，较高的值会使结果更平滑
+                </div>
+              </div>
+              
+              <!-- 这里可以添加更多其他设置参数 -->
+              <!-- <div class="param-item">
+                <div class="param-header">
+                  <span class="param-label">其他参数</span>
+                  <div class="param-value-group">
+                    <span class="param-value">0.5</span>
+                    <span class="param-range">(0-1)</span>
+                  </div>
+                </div>
+                <el-slider
+                  v-model="otherParam"
+                  :min="0"
+                  :max="1"
+                  :step="0.1"
+                  :show-tooltip="true"
+                  @change="onOtherParamChange"
+                />
+                <div class="param-description">
+                  其他参数描述
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <!-- 视频状态 -->
+          <div class="panel-header-section">
+            <div class="panel-header">
+              <!-- 自定义SVG图标 -->
+              <svg-icon icon-class="video-status" class-name="header-icon custom-svg-icon"></svg-icon>
+              <span class="header-title">视频状态</span>
+            </div>
+          </div>
+
+          <div class="section-block status-section">
+            <div class="status-info">
+              <div class="status-item">
+                <div class="status-icon" :class="getStatusIconClass()">
+                  <svg-icon :icon-class="getStatusIcon()" class-name="status-svg-icon"></svg-icon>
+                </div>
+                <div class="status-content">
+                  <div class="status-label">当前源</div>
+                  <div class="status-value" :class="getStatusClass()">
+                    {{ getVideoStatus() }}
+                  </div>
+                </div>
+              </div>
+              
+              <div v-if="videoSrc && !cameraConnected" class="status-item">
+                <div class="status-icon status-icon-file">
+                  <svg-icon icon-class="file" class-name="status-svg-icon"></svg-icon>
+                </div>
+                <div class="status-content">
+                  <div class="status-label">文件大小</div>
+                  <div class="status-value">
+                    {{ videoFile ? formatFileSize(videoFile.size) : '未知' }}
+                  </div>
+                </div>
+              </div>
+              
+              <div v-if="cameraConnected" class="status-item">
+                <div class="status-icon" :class="{ 'status-icon-recording': isRecording }">
+                  <svg-icon v-if="!isRecording" icon-class="camera" class-name="status-svg-icon"></svg-icon>
+                  <svg-icon v-else icon-class="camera-recording" class-name="status-svg-icon"></svg-icon>
+                </div>
+                <div class="status-content">
+                  <div class="status-label">录制状态</div>
+                  <div class="status-value recording-status" :class="{ 'recording': isRecording }">
+                    {{ isRecording ? '录制中' : '待录制' }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- 参数预览 -->
+              <div class="status-item param-preview">
+                <div class="status-icon status-icon-params">
+                  <svg-icon icon-class="now-parameter" class-name="status-svg-icon"></svg-icon>
+                </div>
+                <div class="status-content">
+                  <div class="status-label">当前参数</div>
+                  <div class="status-value">
+                    <span class="param-badge">放大: {{ amplification }}x</span>
+                    <span class="param-badge">滤波: {{ temporalFilter ? '开' : '关' }}</span>
+                    <span v-if="temporalFilter" class="param-badge">阈值: {{ lowerThreshold.toFixed(2) }}-{{ upperThreshold.toFixed(1) }}</span>
+                    <span v-if="otherSettings" class="param-badge">平滑: {{ spatialSigma.toFixed(1) }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </el-card>
+      </div>
+
+      <!-- 右侧视频预览区 -->
+      <div class="video-panel">
+        <el-card class="panel-card" shadow="never">
+          <!-- 视频预览区标题 -->
+          <div class="panel-header-section">
+            <div class="panel-header">
+              <!-- 自定义SVG图标 -->
+              <svg-icon icon-class="video-preview" class-name="header-icon custom-svg-icon"></svg-icon>
+              <span class="header-title">视频预览区</span>
+            </div>
+          </div>
+          
+          <!-- 视频显示区域 -->
+          <div class="video-container">
+            <div v-if="videoSrc && !cameraConnected" class="video-player">
+              <video
+                ref="videoElement"
+                :src="videoSrc"
+                controls
+                class="video-element"
+              ></video>
+            </div>
+            
+            <div v-else-if="cameraConnected" class="camera-preview">
+              <video ref="cameraElement" autoplay class="camera-element"></video>
+              <div class="camera-controls">
+                <el-button-group>
+                  <el-button 
+                    class="camera-action-btn"
+                    :class="{ 'recording': isRecording }"
+                    @click="toggleRecording"
+                    size="small"
+                  >
+                    <svg-icon v-if="!isRecording" icon-class="record-start" class-name="camera-svg-icon"></svg-icon>
+                    <svg-icon v-else icon-class="record-stop" class-name="camera-svg-icon"></svg-icon>
+                    {{ isRecording ? '停止录制' : '开始录制' }}
+                  </el-button>
+                  <el-button 
+                    class="camera-action-btn" 
+                    @click="captureFrame"
+                    size="small"
+                  >
+                    <svg-icon icon-class="screenshot" class-name="camera-svg-icon"></svg-icon>
+                    截图
+                  </el-button>
+                </el-button-group>
+              </div>
+            </div>
+            
+            <div v-else class="video-placeholder">
+              <div class="placeholder-icon">
+                <svg-icon icon-class="camera-placeholder" class-name="placeholder-svg-icon"></svg-icon>
+              </div>
+              <div class="placeholder-text">
+                <p class="placeholder-title">等待视频输入</p>
+                <p class="placeholder-hint">请在上方选择视频源</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 处理进度 -->
+          <div v-if="processing" class="progress-section">
+            <div class="panel-header-section">
+              <div class="panel-header">
+                <svg-icon v-if="processingProgress < 100" icon-class="progress" class-name="header-icon custom-svg-icon loading-icon"></svg-icon>
+                <svg-icon v-else icon-class="success" class-name="header-icon custom-svg-icon"></svg-icon>
+                <span class="header-title">处理进度</span>
+              </div>
+            </div>
+            <div class="progress-content">
+              <div class="progress-header">
+                <span class="progress-percent" :style="{ color: getProgressColor() }">
+                  {{ processingProgress }}%
+                </span>
+                <span class="progress-status">
+                  {{ formatProgress(processingProgress) }}
+                </span>
+              </div>
+              <el-progress 
+                :percentage="processingProgress" 
+                :stroke-width="10"
+                :format="formatProgress"
+                :color="getProgressColor()"
+                class="custom-progress"
+              />
+            </div>
+          </div>
+
+          <!-- 处理结果 -->
+          <div v-if="processedVideo" class="result-section">
+            <div class="panel-header-section">
+              <div class="panel-header">
+                <svg-icon icon-class="result" class-name="header-icon custom-svg-icon"></svg-icon>
+                <span class="header-title">处理结果</span>
+              </div>
+            </div>
+            <div class="result-content">
+              <div class="result-video-container">
+                <video :src="processedVideo" controls class="result-video"></video>
+              </div>
+              <div class="result-actions">
+                <el-button class="download-btn" @click="downloadResult">
+                  <svg-icon icon-class="download-white" class-name="btn-svg-icon"></svg-icon>
+                  下载处理结果
+                </el-button>
+                <el-button class="share-btn" @click="shareResult">
+                  <svg-icon icon-class="share" class-name="btn-svg-icon"></svg-icon>
+                  分享
+                </el-button>
+                <el-button class="compare-btn" @click="compareOriginal">
+                  <svg-icon icon-class="compare" class-name="btn-svg-icon"></svg-icon>
+                  对比原始视频
+                </el-button>
+              </div>
+            </div>
+          </div>
+        </el-card>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import * as videoApi from '@/api/data'
+import { getToken } from '@/utils/auth'
+
+export default {
+  name: 'VideoMonitor',
+  data() {
+    return {
+      algorithm: 'lagrangian',
+      amplification: 20,
+      temporalFilter: false, // 时域滤波开关
+      otherSettings: false, // 其他设置开关
+      spatialSigma: 3.0,    // 空间平滑参数
+      upperThreshold: 0.5,
+      lowerThreshold: 0.03,
+      videoSrc: '',
+      cameraConnected: false,
+      processing: false,
+      processingProgress: 0,
+      processedVideo: '',
+      videoFile: null,
+      mediaStream: null,
+      isRecording: false,
+      mediaRecorder: null,
+      recordedChunks: [],
+      currentTaskId: null,
+      algorithmOptions: [
+        {
+          value: 'lagrangian',
+          label: '拉格朗日视角视频运动放大',
+          desc: '通过跟踪像素点的运动轨迹来实现运动放大，适合处理较大的运动',
+          icon: 'lagrangian-icon',
+          color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+        },
+        {
+          value: 'eulerian',
+          label: '欧拉视角视频运动放大',
+          desc: '通过分析像素值的变化来放大运动，适合处理细微的运动',
+          icon: 'eulerian-icon',
+          color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+        },
+        {
+          value: 'deeplearning',
+          label: '深度学习视频运动放大',
+          desc: '使用神经网络学习运动模式，能够处理复杂的运动场景',
+          icon: 'deeplearning-icon',
+          color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+        }
+      ]
+    }
+  },
+  mounted() {
+    this.progressTimer = null
+  },
+  beforeDestroy() {
+    this.stopProgressPolling()
+    if (this.mediaStream) {
+      this.disconnectCamera()
+    }
+  },
+  methods: {
+    getVideoStatus() {
+      if (this.cameraConnected) return '摄像头已连接'
+      if (this.videoSrc) return '视频已加载'
+      return '未选择'
+    },
+    
+    getStatusIcon() {
+      if (this.cameraConnected) return 'camera'
+      if (this.videoSrc) return 'video-play'
+      return 'video-pause'
+    },
+    
+    getStatusIconClass() {
+      if (this.cameraConnected) return 'status-icon-camera'
+      if (this.videoSrc) return 'status-icon-video'
+      return 'status-icon-none'
+    },
+    
+    getStatusClass() {
+      if (this.cameraConnected) return 'status-connected'
+      if (this.videoSrc) return 'status-uploaded'
+      return 'status-none'
+    },
+    
+    getProgressColor() {
+      if (this.processingProgress < 30) return '#667eea'
+      if (this.processingProgress < 70) return '#f093fb'
+      return '#4facfe'
+    },
+    
+    getAmplificationColor() {
+      if (this.amplification < 20) return '#4cd964'
+      if (this.amplification < 50) return '#ff9500'
+      if (this.amplification < 80) return '#ff3b30'
+      return '#8e44ad'
+    },
+    
+    getUpperThresholdColor() {
+      if (this.upperThreshold < 0.3) return '#4cd964'
+      if (this.upperThreshold < 0.7) return '#ff9500'
+      return '#ff3b30'
+    },
+    
+    getLowerThresholdColor() {
+      if (this.lowerThreshold < 0.03) return '#4cd964'
+      if (this.lowerThreshold < 0.07) return '#ff9500'
+      return '#ff3b30'
+    },
+    
+    getSpatialSigmaColor() {
+      if (this.spatialSigma < 1) return '#4cd964'
+      if (this.spatialSigma < 3) return '#ff9500'
+      return '#ff3b30'
+    },
+    
+    onAmplificationChange(value) {
+      console.log('放大倍数改变:', value)
+    },
+    
+    onTemporalFilterChange(value) {
+      console.log('时域滤波开关改变:', value)
+      if (!value) {
+        // 关闭时域滤波时，重置阈值为默认值
+        this.upperThreshold = 0.5
+        this.lowerThreshold = 0.03
+      }
+    },
+    
+    onOtherSettingsChange(value) {
+      console.log('其他设置开关改变:', value)
+    },
+    
+    onSpatialSigmaChange(value) {
+      console.log('空间平滑参数改变:', value)
+    },
+    
+    onUpperThresholdChange(value) {
+      console.log('上限阈值改变:', value)
+      // 确保上限阈值大于下限阈值
+      if (value <= this.lowerThreshold) {
+        this.upperThreshold = this.lowerThreshold + 0.1
+      }
+    },
+    
+    onLowerThresholdChange(value) {
+      console.log('下限阈值改变:', value)
+      // 确保下限阈值小于上限阈值
+      if (value >= this.upperThreshold) {
+        this.lowerThreshold = Math.max(0, this.upperThreshold - 0.1)
+      }
+    },
+    
+    formatFileSize(bytes) {
+      if (bytes === 0) return '0 B'
+      const k = 1024
+      const sizes = ['B', 'KB', 'MB', 'GB']
+      const i = Math.floor(Math.log(bytes) / Math.log(k))
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
+    },
+    
+    async startProcessing() {
+      if (!this.videoFile && !this.cameraConnected) {
+        this.$message.warning('请先选择视频源')
+        return
+      }
+
+      this.processing = true
+      this.processingProgress = 0
+      
+      try {
+        const formData = new FormData()
+        if (this.videoFile) {
+          formData.append('video', this.videoFile)
+        }
+        formData.append('algorithm', this.algorithm)
+        formData.append('amplification', this.amplification)
+        formData.append('temporalFilter', this.temporalFilter)
+        formData.append('otherSettings', this.otherSettings)
+        
+        // 只有当时域滤波开启时才传递阈值参数
+        if (this.temporalFilter) {
+          formData.append('upperThreshold', this.upperThreshold)
+          formData.append('lowerThreshold', this.lowerThreshold)
+        } else {
+          // 如果不开启时域滤波，传递默认值
+          formData.append('upperThreshold', 0.5)
+          formData.append('lowerThreshold', 0.03)
+        }
+        
+        // 只有当其他设置开启时才传递空间平滑参数
+        if (this.otherSettings) {
+          formData.append('spatialSigma', this.spatialSigma)
+        } else {
+          // 如果不开启其他设置，传递默认值
+          formData.append('spatialSigma', 3.0)
+        }
+        
+        const response = await videoApi.processVideo(formData)
+        
+        if (response.code === 200) {
+          this.currentTaskId = response.data
+          this.startProgressPolling(this.currentTaskId)
+          this.$message.success('视频处理任务已提交')
+        }
+      } catch (error) {
+        this.$message.error('处理失败：' + error.message)
+        this.processing = false
+      }
+    },
+    
+    startProgressPolling(taskId) {
+      this.stopProgressPolling()
+      this.progressTimer = setInterval(async () => {
+        try {
+          const response = await videoApi.getProcessProgress(taskId)
+          if (response.code === 200) {
+            this.processingProgress = response.data
+            if (this.processingProgress >= 100) {
+              this.processing = false
+              this.stopProgressPolling()
+              this.downloadProcessedVideo(taskId)
+            }
+          }
+        } catch (error) {
+          console.error('获取进度失败:', error)
+        }
+      }, 1000)
+    },
+    
+    stopProgressPolling() {
+      if (this.progressTimer) {
+        clearInterval(this.progressTimer)
+        this.progressTimer = null
+      }
+    },
+    
+    async downloadProcessedVideo(taskId) {
+      try {
+        const response = await videoApi.downloadResult(taskId, {
+          responseType: 'blob'
+        })
+        const url = window.URL.createObjectURL(new Blob([response]))
+        this.processedVideo = url
+        this.$message.success('视频处理完成')
+      } catch (error) {
+        this.$message.error('下载处理结果失败：' + error.message)
+      }
+    },
+    
+    downloadResult() {
+      if (!this.processedVideo) {
+        this.$message.warning('没有可下载的结果')
+        return
+      }
+      
+      const a = document.createElement('a')
+      a.href = this.processedVideo
+      a.download = `processed_video_${new Date().getTime()}.mp4`
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+    },
+    
+    shareResult() {
+      this.$message.info('分享功能开发中')
+    },
+    
+    compareOriginal() {
+      if (!this.videoSrc || !this.processedVideo) {
+        this.$message.warning('无法对比，请确保有原始视频和处理结果')
+        return
+      }
+      
+      // 在实际项目中，这里可以打开一个新的对比窗口
+      // 这里我们简单显示一个信息
+      this.$message.info('对比功能开发中，当前使用原始视频和处理后的视频')
+      
+      // 可以在新窗口中同时播放两个视频
+      const compareWindow = window.open('', '_blank')
+      if (compareWindow) {
+        compareWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>视频对比</title>
+            <style>
+              body { margin: 0; padding: 20px; background: #f5f7fa; }
+              .compare-container { display: flex; gap: 20px; }
+              .video-wrapper { flex: 1; }
+              .video-wrapper h3 { text-align: center; margin-bottom: 10px; }
+              video { width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+            </style>
+          </head>
+          <body>
+            <div class="compare-container">
+              <div class="video-wrapper">
+                <h3>原始视频</h3>
+                <video src="${this.videoSrc}" controls></video>
+              </div>
+              <div class="video-wrapper">
+                <h3>处理结果</h3>
+                <video src="${this.processedVideo}" controls></video>
+              </div>
+            </div>
+          </body>
+          </html>
+        `)
+      }
+    },
+    
+    formatProgress(percentage) {
+      return percentage === 100 ? '处理完成' : `处理中 ${percentage}%`
+    },
+    
+    handleVideoUpload(file) {
+      this.videoFile = file
+      this.videoSrc = URL.createObjectURL(file)
+      this.cameraConnected = false
+      if (this.mediaStream) {
+        this.disconnectCamera()
+      }
+      return false
+    },
+    
+    async connectCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: {
+            width: { ideal: 1280 },
+            height: { ideal: 720 },
+            facingMode: 'environment'
+          },
+          audio: false
+        })
+        
+        this.mediaStream = stream
+        this.cameraConnected = true
+        
+        if (this.$refs.cameraElement) {
+          this.$refs.cameraElement.srcObject = stream
+        }
+        
+        this.$message.success('摄像头连接成功')
+      } catch (error) {
+        this.$message.error('无法访问摄像头：' + error.message)
+      }
+    },
+    
+    disconnectCamera() {
+      if (this.mediaStream) {
+        this.mediaStream.getTracks().forEach(track => track.stop())
+        this.mediaStream = null
+      }
+      if (this.isRecording) {
+        this.stopRecording()
+      }
+      this.cameraConnected = false
+      this.$message.info('摄像头已断开')
+    },
+    
+    toggleRecording() {
+      if (this.isRecording) {
+        this.stopRecording()
+      } else {
+        this.startRecording()
+      }
+    },
+    
+    startRecording() {
+      if (!this.mediaStream) return
+      
+      this.recordedChunks = []
+      this.mediaRecorder = new MediaRecorder(this.mediaStream)
+      
+      this.mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          this.recordedChunks.push(event.data)
+        }
+      }
+      
+      this.mediaRecorder.onstop = () => {
+        const blob = new Blob(this.recordedChunks, { type: 'video/webm' })
+        this.videoFile = new File([blob], 'recorded_video.webm', { type: 'video/webm' })
+        this.videoSrc = URL.createObjectURL(blob)
+        this.$message.success('录制完成')
+      }
+      
+      this.mediaRecorder.start()
+      this.isRecording = true
+      this.$message.info('开始录制视频')
+    },
+    
+    stopRecording() {
+      if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
+        this.mediaRecorder.stop()
+      }
+      this.isRecording = false
+    },
+    
+    captureFrame() {
+      if (!this.mediaStream || !this.$refs.cameraElement) return
+      
+      const canvas = document.createElement('canvas')
+      canvas.width = this.$refs.cameraElement.videoWidth
+      canvas.height = this.$refs.cameraElement.videoHeight
+      const ctx = canvas.getContext('2d')
+      ctx.drawImage(this.$refs.cameraElement, 0, 0, canvas.width, canvas.height)
+      
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = 'screenshot_' + new Date().getTime() + '.png'
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+        URL.revokeObjectURL(url)
+        this.$message.success('截图已保存')
+      }, 'image/png')
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.app-container {
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: calc(100vh - 84px);
+}
+
+/* SVG图标样式 */
+.custom-svg-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  font-size: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-svg-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.process-svg-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  
+  &.loading-icon {
+    animation: rotate 2s linear infinite;
+  }
+}
+
+.algo-svg-icon {
+  width: 22px;
+  height: 22px;
+  color: white;
+}
+
+.check-svg-icon {
+  width: 22px;
+  height: 22px;
+  color: #4cd964;
+}
+
+.status-svg-icon {
+  width: 22px;
+  height: 22px;
+  color: white;
+}
+
+.camera-svg-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.placeholder-svg-icon {
+  width: 80px;
+  height: 80px;
+  color: #667eea;
+  opacity: 0.8;
+}
+
+/* 旋转动画 */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 顶部操作栏 */
+.top-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  
+  .left-actions {
+    .video-source-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        .section-label {
+          font-weight: 700;
+          color: #2c3e50;
+          font-size: 18px;
+        }
+      }
+      
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+      }
+    }
+  }
+  
+  .right-actions {
+    .process-btn {
+      padding: 14px 36px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      transition: all 0.3s ease;
+      
+      &:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+      }
+      
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      
+      &.processing {
+        background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+      }
+    }
+  }
+}
+
+/* 主内容区 */
+.main-content {
+  display: flex;
+  gap: 20px;
+  
+  .control-panel {
+    flex: 0 0 380px;
+    
+    .panel-card {
+      border-radius: 12px;
+      padding: 0;
+      border: none;
+      
+      :deep(.el-card__body) {
+        padding: 0;
+      }
+    }
+  }
+  
+  .video-panel {
+    flex: 1;
+    
+    .panel-card {
+      border-radius: 12px;
+      padding: 0;
+      border: none;
+      
+      :deep(.el-card__body) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+/* 统一的标题栏样式 */
+.panel-header-section {
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 2px solid #e2e8f0;
+  
+  .panel-header {
+    display: flex;
+    align-items: center;
+    
+    .header-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+  }
+}
+
+/* 内容区块样式 */
+.section-block {
+  padding: 24px;
+  
+  &.algorithm-section {
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  &.param-section {
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  &.status-section {
+    border-bottom: none;
+  }
+}
+
+/* 算法选择 */
+.algorithm-options {
+  .algorithm-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    &.algorithm-active {
+      border-color: transparent;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+    }
+    
+    .algorithm-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+    
+    .algorithm-info {
+      flex: 1;
+      
+      .algorithm-name {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 6px;
+        font-size: 15px;
+      }
+      
+      .algorithm-desc {
+        color: #718096;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+/* 参数设置 */
+.param-section {
+  .param-item {
+    margin-bottom: 28px;
+    
+    &.filter-switch,
+    &.other-settings-switch {
+      .switch-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        
+        .switch-label {
+          font-weight: 600;
+          color: #4a5568;
+          font-size: 16px;
+        }
+      }
+      
+      .filter-description {
+        margin-top: 8px;
+        color: #718096;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+    }
+    
+    &.threshold-item {
+      margin-bottom: 24px;
+      padding-left: 12px;
+      border-left: 3px solid rgba(102, 126, 234, 0.3);
+    }
+    
+    .param-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      
+      .param-label {
+        color: #4a5568;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      
+      .param-value-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+        .param-value {
+          font-weight: 700;
+          font-size: 18px;
+        }
+        
+        .param-range {
+          color: #a0aec0;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+    
+    .param-description {
+      margin-top: 8px;
+      color: #718096;
+      font-size: 13px;
+      line-height: 1.4;
+      font-style: italic;
+    }
+  }
+  
+  .filter-params {
+    margin: 16px 0 24px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+  }
+  
+  .other-settings-params {
+    margin: 16px 0 0 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(76, 217, 100, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(76, 217, 100, 0.2);
+  }
+  
+  :deep(.el-slider) {
+    .el-slider__runway {
+      background-color: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+    }
+    
+    .el-slider__bar {
+      height: 8px;
+      border-radius: 4px;
+    }
+    
+    .el-slider__button {
+      width: 20px;
+      height: 20px;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+/* 视频状态 */
+.status-section {
+  .status-info {
+    .status-item {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      &.param-preview {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        border: 1px solid rgba(102, 126, 234, 0.2);
+      }
+      
+      .status-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        
+        &.status-icon-camera {
+          background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        &.status-icon-video {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        &.status-icon-none {
+          background: linear-gradient(135deg, #a0aec0 0%, #718096 100%);
+        }
+        
+        &.status-icon-file {
+          background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        &.status-icon-recording {
+          background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+        }
+        
+        &.status-icon-params {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+      }
+      
+      .status-content {
+        .status-label {
+          color: #718096;
+          font-size: 13px;
+          margin-bottom: 4px;
+        }
+        
+        .status-value {
+          font-weight: 700;
+          font-size: 16px;
+          
+          &.status-connected {
+            color: #4cd964;
+          }
+          
+          &.status-uploaded {
+            color: #667eea;
+          }
+          
+          &.status-none {
+            color: #a0aec0;
+          }
+          
+          &.recording-status {
+            &.recording {
+              color: #ff3b30;
+            }
+          }
+          
+          .param-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 6px;
+            margin-right: 8px;
+            font-size: 14px;
+            color: #667eea;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 视频预览区 */
+.video-container {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  background: linear-gradient(135deg, #000 0%, #1a202c 100%);
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .video-player,
+  .camera-preview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .video-element,
+  .camera-element {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .camera-controls {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    
+    .camera-action-btn {
+      background: rgba(255, 255, 255, 0.95);
+      color: #2c3e50;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 0 5px;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      &.recording {
+        background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+        color: white;
+      }
+    }
+  }
+  
+  .video-placeholder {
+    text-align: center;
+    color: #a0aec0;
+    
+    .placeholder-text {
+      .placeholder-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+        font-weight: 700;
+        color: #e2e8f0;
+      }
+      
+      .placeholder-hint {
+        font-size: 15px;
+        opacity: 0.8;
+        color: #a0aec0;
+      }
+    }
+  }
+}
+
+/* 处理进度 */
+.progress-section {
+  border-top: 2px solid #e2e8f0;
+  
+  .progress-content {
+    padding: 24px;
+    
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      
+      .progress-percent {
+        font-weight: 800;
+        font-size: 28px;
+      }
+      
+      .progress-status {
+        color: #4a5568;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    
+    .custom-progress {
+      :deep(.el-progress-bar__outer) {
+        background-color: #e2e8f0;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      :deep(.el-progress-bar__inner) {
+        border-radius: 8px;
+        transition: width 0.6s ease;
+      }
+      
+      :deep(.el-progress__text) {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-left: 15px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* 处理结果 */
+.result-section {
+  border-top: 2px solid #e2e8f0;
+  
+  .result-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    .result-video-container {
+      width: 100%;
+      max-width: 700px;
+      
+      .result-video {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+    }
+    
+    .result-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+      .download-btn {
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #4cd964 0%, #2ecc71 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 25px rgba(76, 217, 100, 0.4);
+        }
+      }
+      
+      .share-btn {
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+      }
+      
+      .compare-btn {
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 25px rgba(255, 149, 0, 0.4);
+        }
+      }
+    }
+  }
+}
+
+/* 按钮样式 */
+.source-btn {
+  padding: 12px 24px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  
+  &.upload-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(102, 126, 234, 0.3);
+    }
+  }
+  
+  &.camera-btn {
+    background: linear-gradient(135deg, #4cd964 0%, #2ecc71 100%);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(76, 217, 100, 0.3);
+    }
+  }
+  
+  &.disconnect-btn {
+    background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+    color: white;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(255, 149, 0, 0.3);
+    }
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .main-content {
+    flex-direction: column;
+    
+    .control-panel {
+      flex: none;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+  
+  .top-action-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    
+    .left-actions {
+      width: 100%;
+      
+      .video-source-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        
+        .action-buttons {
+          width: 100%;
+          flex-wrap: wrap;
+          
+          .source-btn {
+            flex: 1;
+            min-width: 120px;
+          }
+        }
+      }
+    }
+    
+    .right-actions {
+      width: 100%;
+      
+      .process-btn {
+        width: 100%;
+      }
+    }
+  }
+  
+  .video-container {
+    min-height: 350px;
+    
+    .camera-controls {
+      bottom: 15px;
+      
+      .camera-action-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+    }
+    
+    .video-placeholder {
+      .placeholder-svg-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  
+  .algorithm-options .algorithm-item {
+    padding: 12px;
+  }
+  
+  .result-actions {
+    flex-direction: column;
+    align-items: center;
+    
+    .download-btn,
+    .share-btn,
+    .compare-btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .top-action-bar {
+    padding: 12px;
+    
+    .video-source-group .section-header {
+      .section-label {
+        font-size: 16px;
+      }
+    }
+  }
+  
+  .video-container {
+    min-height: 300px;
+    
+    .camera-controls {
+      flex-direction: column;
+      gap: 8px;
+      bottom: 10px;
+      
+      .camera-action-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    .video-placeholder {
+      .placeholder-svg-icon {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .placeholder-text .placeholder-title {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  .param-section .filter-params,
+  .param-section .other-settings-params {
+    padding: 15px;
+  }
+  
+  .status-section .status-item .status-content .status-value .param-badge {
+    display: block;
+    margin-bottom: 4px;
+    width: fit-content;
+  }
+}
+</style>
+```
+
+- 视频对比结果
+
+![image-20251230141528655](README.assets/image-20251230141528655.png)
+
+### 5.3 推送至远程仓库
+
+```shell
+git status
+
+git add .
+
+git status
+
+git commit -m "第六次提交，修改 README.md 文件，继续开发视频监控模块，实现基于拉格朗日视角的视频运动放大算法的实时处理版本"
+
+git push -u origin master
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

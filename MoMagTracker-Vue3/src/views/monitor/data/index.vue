@@ -108,7 +108,7 @@
           </div>
           
           <div class="section-block param-section">
-            <!-- 参数项保持不变 -->
+            <!-- 放大倍数 -->
             <div class="param-item">
               <div class="param-header">
                 <span class="param-label">放大倍数</span>
@@ -126,41 +126,139 @@
                 @change="onAmplificationChange"
               />
             </div>
-            
-            <div class="param-item">
+
+            <!-- 时域滤波开关 -->
+            <div class="param-item filter-switch">
               <div class="param-header">
-                <span class="param-label">上限阈值</span>
-                <div class="param-value-group">
-                  <span class="param-value" :style="{ color: getUpperThresholdColor() }">{{ upperThreshold.toFixed(1) }}</span>
-                  <span class="param-range">(0-1)</span>
+                <span class="param-label">时域滤波</span>
+                <div class="switch-container">
+                  <el-switch
+                    v-model="temporalFilter"
+                    active-color="#13ce66"
+                    inactive-color="#ff4949"
+                    @change="onTemporalFilterChange"
+                  >
+                  </el-switch>
+                  <span class="switch-label">{{ temporalFilter ? '开启' : '关闭' }}</span>
                 </div>
               </div>
-              <el-slider
-                v-model="upperThreshold"
-                :min="0"
-                :max="1"
-                :step="0.1"
-                :show-tooltip="true"
-                @change="onUpperThresholdChange"
-              />
+              <div class="filter-description">
+                使用时域带通滤波器来分离特定频率的运动
+              </div>
             </div>
-            
-            <div class="param-item">
-              <div class="param-header">
-                <span class="param-label">下限阈值</span>
-                <div class="param-value-group">
-                  <span class="param-value" :style="{ color: getLowerThresholdColor() }">{{ lowerThreshold.toFixed(2) }}</span>
-                  <span class="param-range">(0-0.1)</span>
+
+            <!-- 时域滤波参数（仅当时域滤波开启时显示） -->
+            <div v-if="temporalFilter" class="filter-params">
+              <!-- 下限阈值 -->
+              <div class="param-item threshold-item">
+                <div class="param-header">
+                  <span class="param-label">下限阈值</span>
+                  <div class="param-value-group">
+                    <span class="param-value" :style="{ color: getLowerThresholdColor() }">{{ lowerThreshold.toFixed(2) }}</span>
+                    <span class="param-range">(0-0.1)</span>
+                  </div>
+                </div>
+                <el-slider
+                  v-model="lowerThreshold"
+                  :min="0"
+                  :max="0.1"
+                  :step="0.01"
+                  :show-tooltip="true"
+                  @change="onLowerThresholdChange"
+                />
+                <div class="param-description">
+                  控制滤波的下限频率，较低的值允许更慢的运动通过
                 </div>
               </div>
-              <el-slider
-                v-model="lowerThreshold"
-                :min="0"
-                :max="0.1"
-                :step="0.01"
-                :show-tooltip="true"
-                @change="onLowerThresholdChange"
-              />
+              
+              <!-- 上限阈值 -->
+              <div class="param-item threshold-item">
+                <div class="param-header">
+                  <span class="param-label">上限阈值</span>
+                  <div class="param-value-group">
+                    <span class="param-value" :style="{ color: getUpperThresholdColor() }">{{ upperThreshold.toFixed(1) }}</span>
+                    <span class="param-range">(0-1)</span>
+                  </div>
+                </div>
+                <el-slider
+                  v-model="upperThreshold"
+                  :min="0"
+                  :max="1"
+                  :step="0.1"
+                  :show-tooltip="true"
+                  @change="onUpperThresholdChange"
+                />
+                <div class="param-description">
+                  控制滤波的上限频率，较高的值允许更快的运动通过
+                </div>
+              </div>
+            </div>
+
+            <!-- 其他设置开关 -->
+            <div class="param-item other-settings-switch">
+              <div class="param-header">
+                <span class="param-label">其他设置</span>
+                <div class="switch-container">
+                  <el-switch
+                    v-model="otherSettings"
+                    active-color="#13ce66"
+                    inactive-color="#ff4949"
+                    @change="onOtherSettingsChange"
+                  >
+                  </el-switch>
+                  <span class="switch-label">{{ otherSettings ? '开启' : '关闭' }}</span>
+                </div>
+              </div>
+              <div class="filter-description">
+                调整空间平滑和其他高级参数
+              </div>
+            </div>
+
+            <!-- 其他设置参数（仅当其他设置开启时显示） -->
+            <div v-if="otherSettings" class="other-settings-params">
+              <!-- 空间平滑参数 -->
+              <div class="param-item">
+                <div class="param-header">
+                  <span class="param-label">空间平滑</span>
+                  <div class="param-value-group">
+                    <span class="param-value" :style="{ color: getSpatialSigmaColor() }">{{ spatialSigma.toFixed(1) }}</span>
+                    <span class="param-range">(0-5)</span>
+                  </div>
+                </div>
+                <el-slider
+                  v-model="spatialSigma"
+                  :min="0"
+                  :max="5"
+                  :step="0.1"
+                  :show-tooltip="true"
+                  @change="onSpatialSigmaChange"
+                />
+                <div class="param-description">
+                  控制空间平滑的强度，较高的值会使结果更平滑
+                </div>
+              </div>
+              
+              <!-- 这里可以添加更多其他设置参数 -->
+              <!-- <div class="param-item">
+                <div class="param-header">
+                  <span class="param-label">其他参数</span>
+                  <div class="param-value-group">
+                    <span class="param-value">0.5</span>
+                    <span class="param-range">(0-1)</span>
+                  </div>
+                </div>
+                <el-slider
+                  v-model="otherParam"
+                  :min="0"
+                  :max="1"
+                  :step="0.1"
+                  :show-tooltip="true"
+                  @change="onOtherParamChange"
+                />
+                <div class="param-description">
+                  其他参数描述
+                </div>
+              </div> -->
             </div>
           </div>
 
@@ -208,6 +306,22 @@
                   <div class="status-label">录制状态</div>
                   <div class="status-value recording-status" :class="{ 'recording': isRecording }">
                     {{ isRecording ? '录制中' : '待录制' }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- 参数预览 -->
+              <div class="status-item param-preview">
+                <div class="status-icon status-icon-params">
+                  <svg-icon icon-class="now-parameter" class-name="status-svg-icon"></svg-icon>
+                </div>
+                <div class="status-content">
+                  <div class="status-label">当前参数</div>
+                  <div class="status-value">
+                    <span class="param-badge">放大: {{ amplification }}x</span>
+                    <span class="param-badge">滤波: {{ temporalFilter ? '开' : '关' }}</span>
+                    <span v-if="temporalFilter" class="param-badge">阈值: {{ lowerThreshold.toFixed(2) }}-{{ upperThreshold.toFixed(1) }}</span>
+                    <span v-if="otherSettings" class="param-badge">平滑: {{ spatialSigma.toFixed(1) }}</span>
                   </div>
                 </div>
               </div>
@@ -322,8 +436,12 @@
                   下载处理结果
                 </el-button>
                 <el-button class="share-btn" @click="shareResult">
-                  <svg-icon icon-class="share" class-name="btn-svg-icon"></svg-icon>
+                  <svg-icon icon-class="share" class-name="btn-svg-icon"></svg-icon>8【
                   分享
+                </el-button>
+                <el-button class="compare-btn" @click="compareOriginal">
+                  <svg-icon icon-class="compare" class-name="btn-svg-icon"></svg-icon>
+                  对比原始视频
                 </el-button>
               </div>
             </div>
@@ -336,6 +454,7 @@
 
 <script>
 import * as videoApi from '@/api/data'
+import { getToken } from '@/utils/auth'
 
 export default {
   name: 'VideoMonitor',
@@ -343,6 +462,9 @@ export default {
     return {
       algorithm: 'lagrangian',
       amplification: 20,
+      temporalFilter: false, // 时域滤波开关
+      otherSettings: false, // 其他设置开关
+      spatialSigma: 3.0,    // 空间平滑参数
       upperThreshold: 0.5,
       lowerThreshold: 0.03,
       videoSrc: '',
@@ -361,21 +483,21 @@ export default {
           value: 'lagrangian',
           label: '拉格朗日视角视频运动放大',
           desc: '通过跟踪像素点的运动轨迹来实现运动放大，适合处理较大的运动',
-          icon: 'lagrangian-icon', // 修改为自定义SVG图标名称
+          icon: 'lagrangian-icon',
           color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
         },
         {
           value: 'eulerian',
           label: '欧拉视角视频运动放大',
           desc: '通过分析像素值的变化来放大运动，适合处理细微的运动',
-          icon: 'eulerian-icon', // 修改为自定义SVG图标名称
+          icon: 'eulerian-icon',
           color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
         },
         {
           value: 'deeplearning',
           label: '深度学习视频运动放大',
           desc: '使用神经网络学习运动模式，能够处理复杂的运动场景',
-          icon: 'deeplearning-icon', // 修改为自定义SVG图标名称
+          icon: 'deeplearning-icon',
           color: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
         }
       ]
@@ -440,16 +562,47 @@ export default {
       return '#ff3b30'
     },
     
+    getSpatialSigmaColor() {
+      if (this.spatialSigma < 1) return '#4cd964'
+      if (this.spatialSigma < 3) return '#ff9500'
+      return '#ff3b30'
+    },
+    
     onAmplificationChange(value) {
       console.log('放大倍数改变:', value)
     },
     
+    onTemporalFilterChange(value) {
+      console.log('时域滤波开关改变:', value)
+      if (!value) {
+        // 关闭时域滤波时，重置阈值为默认值
+        this.upperThreshold = 0.5
+        this.lowerThreshold = 0.03
+      }
+    },
+    
+    onOtherSettingsChange(value) {
+      console.log('其他设置开关改变:', value)
+    },
+    
+    onSpatialSigmaChange(value) {
+      console.log('空间平滑参数改变:', value)
+    },
+    
     onUpperThresholdChange(value) {
       console.log('上限阈值改变:', value)
+      // 确保上限阈值大于下限阈值
+      if (value <= this.lowerThreshold) {
+        this.upperThreshold = this.lowerThreshold + 0.1
+      }
     },
     
     onLowerThresholdChange(value) {
       console.log('下限阈值改变:', value)
+      // 确保下限阈值小于上限阈值
+      if (value >= this.upperThreshold) {
+        this.lowerThreshold = Math.max(0, this.upperThreshold - 0.1)
+      }
     },
     
     formatFileSize(bytes) {
@@ -476,8 +629,26 @@ export default {
         }
         formData.append('algorithm', this.algorithm)
         formData.append('amplification', this.amplification)
-        formData.append('upperThreshold', this.upperThreshold)
-        formData.append('lowerThreshold', this.lowerThreshold)
+        formData.append('temporalFilter', this.temporalFilter)
+        formData.append('otherSettings', this.otherSettings)
+        
+        // 只有当时域滤波开启时才传递阈值参数
+        if (this.temporalFilter) {
+          formData.append('upperThreshold', this.upperThreshold)
+          formData.append('lowerThreshold', this.lowerThreshold)
+        } else {
+          // 如果不开启时域滤波，传递默认值
+          formData.append('upperThreshold', 0.5)
+          formData.append('lowerThreshold', 0.03)
+        }
+        
+        // 只有当其他设置开启时才传递空间平滑参数
+        if (this.otherSettings) {
+          formData.append('spatialSigma', this.spatialSigma)
+        } else {
+          // 如果不开启其他设置，传递默认值
+          formData.append('spatialSigma', 3.0)
+        }
         
         const response = await videoApi.processVideo(formData)
         
@@ -547,6 +718,49 @@ export default {
     
     shareResult() {
       this.$message.info('分享功能开发中')
+    },
+    
+    compareOriginal() {
+      if (!this.videoSrc || !this.processedVideo) {
+        this.$message.warning('无法对比，请确保有原始视频和处理结果')
+        return
+      }
+      
+      // 在实际项目中，这里可以打开一个新的对比窗口
+      // 这里我们简单显示一个信息
+      this.$message.info('对比功能开发中，当前使用原始视频和处理后的视频')
+      
+      // 可以在新窗口中同时播放两个视频
+      const compareWindow = window.open('', '_blank')
+      if (compareWindow) {
+        compareWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>视频对比</title>
+            <style>
+              body { margin: 0; padding: 20px; background: #f5f7fa; }
+              .compare-container { display: flex; gap: 20px; }
+              .video-wrapper { flex: 1; }
+              .video-wrapper h3 { text-align: center; margin-bottom: 10px; }
+              video { width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+            </style>
+          </head>
+          <body>
+            <div class="compare-container">
+              <div class="video-wrapper">
+                <h3>原始视频</h3>
+                <video src="${this.videoSrc}" controls></video>
+              </div>
+              <div class="video-wrapper">
+                <h3>处理结果</h3>
+                <video src="${this.processedVideo}" controls></video>
+              </div>
+            </div>
+          </body>
+          </html>
+        `)
+      }
     },
     
     formatProgress(percentage) {
@@ -677,8 +891,8 @@ export default {
   margin-right: 12px;
   font-size: 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-clip: text; /* 标准属性 /
-  -webkit-background-clip: text; / 带前缀的属性 */
+  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -925,37 +1139,91 @@ export default {
 }
 
 /* 参数设置 */
-.param-item {
-  margin-bottom: 28px;
-  
-  .param-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+.param-section {
+  .param-item {
+    margin-bottom: 28px;
     
-    .param-label {
-      color: #4a5568;
-      font-weight: 600;
-      font-size: 15px;
+    &.filter-switch,
+    &.other-settings-switch {
+      .switch-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        
+        .switch-label {
+          font-weight: 600;
+          color: #4a5568;
+          font-size: 16px;
+        }
+      }
+      
+      .filter-description {
+        margin-top: 8px;
+        color: #718096;
+        font-size: 13px;
+        line-height: 1.4;
+      }
     }
     
-    .param-value-group {
+    &.threshold-item {
+      margin-bottom: 24px;
+      padding-left: 12px;
+      border-left: 3px solid rgba(102, 126, 234, 0.3);
+    }
+    
+    .param-header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 8px;
+      margin-bottom: 16px;
       
-      .param-value {
-        font-weight: 700;
-        font-size: 18px;
+      .param-label {
+        color: #4a5568;
+        font-weight: 600;
+        font-size: 15px;
       }
       
-      .param-range {
-        color: #a0aec0;
-        font-size: 12px;
-        font-weight: 500;
+      .param-value-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+        .param-value {
+          font-weight: 700;
+          font-size: 18px;
+        }
+        
+        .param-range {
+          color: #a0aec0;
+          font-size: 12px;
+          font-weight: 500;
+        }
       }
     }
+    
+    .param-description {
+      margin-top: 8px;
+      color: #718096;
+      font-size: 13px;
+      line-height: 1.4;
+      font-style: italic;
+    }
+  }
+  
+  .filter-params {
+    margin: 16px 0 24px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+  }
+  
+  .other-settings-params {
+    margin: 16px 0 0 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(76, 217, 100, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(76, 217, 100, 0.2);
   }
   
   :deep(.el-slider) {
@@ -994,6 +1262,11 @@ export default {
         margin-bottom: 0;
       }
       
+      &.param-preview {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        border: 1px solid rgba(102, 126, 234, 0.2);
+      }
+      
       .status-icon {
         width: 48px;
         height: 48px;
@@ -1021,6 +1294,10 @@ export default {
         
         &.status-icon-recording {
           background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+        }
+        
+        &.status-icon-params {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
       }
       
@@ -1051,6 +1328,17 @@ export default {
             &.recording {
               color: #ff3b30;
             }
+          }
+          
+          .param-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 6px;
+            margin-right: 8px;
+            font-size: 14px;
+            color: #667eea;
+            border: 1px solid rgba(102, 126, 234, 0.2);
           }
         }
       }
@@ -1206,6 +1494,8 @@ export default {
     .result-actions {
       display: flex;
       gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
       
       .download-btn {
         padding: 12px 28px;
@@ -1234,6 +1524,21 @@ export default {
         &:hover {
           transform: translateY(-3px);
           box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+      }
+      
+      .compare-btn {
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 25px rgba(255, 149, 0, 0.4);
         }
       }
     }
@@ -1356,6 +1661,18 @@ export default {
   .algorithm-options .algorithm-item {
     padding: 12px;
   }
+  
+  .result-actions {
+    flex-direction: column;
+    align-items: center;
+    
+    .download-btn,
+    .share-btn,
+    .compare-btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -1397,6 +1714,17 @@ export default {
         font-size: 18px;
       }
     }
+  }
+  
+  .param-section .filter-params,
+  .param-section .other-settings-params {
+    padding: 15px;
+  }
+  
+  .status-section .status-item .status-content .status-value .param-badge {
+    display: block;
+    margin-bottom: 4px;
+    width: fit-content;
   }
 }
 </style>

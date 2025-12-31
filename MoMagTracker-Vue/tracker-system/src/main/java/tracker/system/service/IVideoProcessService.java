@@ -11,8 +11,11 @@ public interface IVideoProcessService {
     String processVideo(MultipartFile videoFile,
                         String algorithm,
                         Double amplification,
+                        Boolean temporalFilter,
+                        Boolean otherSettings,
                         Double upperThreshold,
-                        Double lowerThreshold) throws Exception;
+                        Double lowerThreshold,
+                        Double spatialSigma) throws Exception;
 
     /**
      * 获取处理进度
@@ -24,8 +27,11 @@ public interface IVideoProcessService {
      */
     void startRealtimeProcess(String algorithm,
                               Double amplification,
+                              Boolean temporalFilter,
+                              Boolean otherSettings,
                               Double upperThreshold,
-                              Double lowerThreshold) throws Exception;
+                              Double lowerThreshold,
+                              Double spatialSigma) throws Exception;
 
     /**
      * 停止实时处理

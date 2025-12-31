@@ -21,6 +21,8 @@ server:
     # 应用的访问路径
     context-path: /
   tomcat:
+    max-swallow-size: -1  # 不限制上传文件大小
+    max-http-form-post-size: -1  # 不限制表单POST大小
     # tomcat的URI编码
     uri-encoding: UTF-8
     # 连接数满后的排队数，默认为100
@@ -58,6 +60,21 @@ video:
   upload:
     max-size: 1024MB
     allowed-extensions: .mp4,.avi,.mov,.mkv,.flv
+
+# Python脚本配置
+python:
+  executable: "E:/RuoYiProject/MoMagTracker-Compare/.venv/Scripts/python.exe"
+  enabled: true
+  # 算法脚本路径配置 - 现在可以灵活配置不同算法的脚本
+  scripts:
+    # 拉格朗日算法
+    lagrangian: "E:/RuoYiProject/MoMagTracker-Compare/Lagrangian-based-Motion-Mag/Lagrangian-based-Motion-Magnification.py"
+    # 欧拉算法
+    eulerian: "E:/RuoYiProject/MoMagTracker-Compare/Eulerian-based-Motion-Mag/Eulerian-based-Motion-Magnification.py"
+    # 深度学习算法
+    deeplearning: "E:/RuoYiProject/MoMagTracker-Compare/Learning-based-Motion-Mag/Learning-based-Motion-Magnification.py"
+    # 其他算法可以继续添加
+    # example: "E:/RuoYiProject/MoMagTracker-Compare/Another-Algorithm/algorithm.py"
 
 # Spring 配置
 spring:
