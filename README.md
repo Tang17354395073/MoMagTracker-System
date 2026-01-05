@@ -1,6 +1,8 @@
-<img src="README.assets/logo.png" alt="logo" style="zoom:10%;" />
+<img src="README.assets/logo.png" alt="logo" style="width: 60px; height: 60px;" />
 
 <h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">结构健康监测系统 v2.0.0</h1>
+
+<hr>
 
 <h2>📋 系统简介</h2>
 
@@ -13,6 +15,8 @@
     <li><strong>动态权限</strong>：支持加载动态权限菜单，多方式轻松权限控制</li>
     <li><strong>高效开发</strong>：使用代码生成器可以一键生成前后端代码</li>
 </ul>
+<hr>
+
 
 <h2>🚀 内置功能</h2>
 
@@ -110,6 +114,9 @@
         </tr>
     </tbody>
 </table>
+
+<hr>
+
 <h2>🔗 演示地址</h2>
 
 <pre><code># 用户名：admin 
@@ -118,20 +125,24 @@
 ➜  Network: http://192.168.137.1:81/
 ➜  Network: http://172.20.10.4:81/
 ➜  Network: http://172.24.224.1:81/
+<hr>
+
 
 <h2>📸 系统截图</h2>
 
 <h3>1. 系统首页</h3>
 
-![image-20251230145459164](README.assets/image-20251230145459164.png)
+<img src="README.assets/image-20251230145459164.png" alt="系统首页" class="screenshot">
 
 <h3>2. 数据分析</h3>
 
-![image-20251230145527090](README.assets/image-20251230145527090.png)
+<img src="README.assets/image-20251230145527090.png" alt="数据分析" class="screenshot">
 
 <h3>3. 监测详情</h3>
 
-![image-20251230145612640](README.assets/image-20251230145612640.png)
+<img src="README.assets/image-20251230145612640.png" alt="监测详情" class="screenshot">
+
+<hr>
 
 <h2>📞 联系我们</h2>
 
@@ -144,6 +155,8 @@
 <div align="center">
     <sub>Copyright © 2025 - 结构健康监测系统</sub>
 </div>
+<hr>
+
 
 # 项目 MoMagTracker 开发文档
 
@@ -29748,312 +29761,1529 @@ xss:
   urlPatterns: /system/*,/monitor/*,/tool/*
 ```
 
-- 结果
+#### 5.1.6 后端处理结果
+
+##### 1 基于拉格朗日视角的视频运动放大方法处理结果
 
 ```shell
-14:05:13.247 [http-nio-8080-exec-79] INFO  t.s.s.i.VideoProcessServiceImpl - [processVideo,100] - 视频处理任务已提交，任务ID：0ccb4306-9edf-4266-a874-8d454c6cd2d3，算法：lagrangian，放大倍数：20.0，时域滤波：false
-14:05:13.248 [pool-3-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,136] - 开始Python脚本处理，任务ID: 0ccb4306-9edf-4266-a874-8d454c6cd2d3, 算法: lagrangian, 输入: uploads/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3.mp4, 输出: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
-14:05:13.249 [pool-3-thread-2] INFO  t.s.s.i.PythonScriptExecutor - [executePythonScript,67] - 执行Python脚本 - 算法: lagrangian, 脚本: E:/RuoYiProject/MoMagTracker-Compare/Lagrangian-based-Motion-Mag/Lagrangian-based-Motion-Magnification.py
-14:05:13.249 [pool-3-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [executePythonScript,68] - Python命令: E:/RuoYiProject/MoMagTracker-Compare/.venv/Scripts/python.exe E:/RuoYiProject/MoMagTracker-Compare/Lagrangian-based-Motion-Mag/Lagrangian-based-Motion-Magnification.py --input uploads/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3.mp4 --output output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4 --alpha 20.0 --temporal_filter false --lower_threshold 0.03 --upper_threshold 0.5 --spatial_sigma 3.0
-14:05:17.472 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:初始化
-14:05:17.472 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 初始化
-14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
-14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 基于拉格朗日视角的视频运动放大方法
-14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
-14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入视频: uploads/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3.mp4
-14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
-14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 放大因子: 20.0
-14:05:17.473 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 时域滤波: 关闭
-14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:3.0
-14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 3.0%
-14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:3.0
-14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 3.0%
-14:05:17.475 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:初始化
-14:05:17.475 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 初始化
-14:05:17.476 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:读取视频
-14:05:17.476 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 读取视频
-14:05:18.991 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤1] 读取视频并预处理...
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   开始读取视频，帧率: 30, 分辨率: 960x544
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 100 帧
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 200 帧
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 300 帧
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   读取完成，共 301 帧
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频信息: 960x544, 30 FPS, 处理帧数: 301
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:10.0
-14:05:18.993 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 10.0%
-14:05:18.994 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:10.0
-14:05:18.994 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 10.0%
-14:05:18.994 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:读取视频
-14:05:18.994 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 读取视频
-14:05:18.994 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:特征点检测与跟踪
-14:05:18.994 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 特征点检测与跟踪
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤2] 特征点检测与轨迹跟踪...
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   开始特征点跟踪...
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 0/301 帧到灰度图
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 100/301 帧到灰度图
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 200/301 帧到灰度图
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 300/301 帧到灰度图
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   检测第一帧特征点...
-14:05:20.019 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   初始化 1000 条轨迹
-14:05:20.020 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:11.7
-14:05:20.020 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 11.7%
-14:05:20.346 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 20/300 帧，活跃轨迹: 1000
-14:05:20.346 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:13.3
-14:05:20.346 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 13.3%
-14:05:20.755 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 40/300 帧，活跃轨迹: 1000
-14:05:20.756 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:15.0
-14:05:20.756 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 15.0%
-14:05:21.020 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 60/300 帧，活跃轨迹: 1000
-14:05:21.020 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:16.7
-14:05:21.020 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 16.7%
-14:05:21.256 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 80/300 帧，活跃轨迹: 1000
-14:05:21.257 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:18.3
-14:05:21.257 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 18.3%
-14:05:21.554 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 100/300 帧，活跃轨迹: 1000
-14:05:21.554 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:20.0
-14:05:21.554 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 20.0%
-14:05:21.847 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 120/300 帧，活跃轨迹: 1000
-14:05:21.847 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:21.7
-14:05:21.847 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 21.7%
-14:05:22.073 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 140/300 帧，活跃轨迹: 1000
-14:05:22.073 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:23.3
-14:05:22.073 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 23.3%
-14:05:22.331 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 160/300 帧，活跃轨迹: 1000
-14:05:22.331 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:25.0
-14:05:22.331 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 25.0%
-14:05:22.572 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 180/300 帧，活跃轨迹: 999
-14:05:22.572 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:26.7
-14:05:22.572 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 26.7%
-14:05:22.842 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 200/300 帧，活跃轨迹: 999
-14:05:22.842 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:28.3
-14:05:22.842 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 28.3%
-14:05:23.101 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 220/300 帧，活跃轨迹: 999
-14:05:23.101 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.0
-14:05:23.101 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 30.0%
-14:05:23.442 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 240/300 帧，活跃轨迹: 998
-14:05:23.442 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.7
-14:05:23.442 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 31.7%
-14:05:23.727 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 260/300 帧，活跃轨迹: 998
-14:05:23.727 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.3
-14:05:23.727 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 33.3%
-14:05:23.972 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 280/300 帧，活跃轨迹: 998
-14:05:23.972 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
-14:05:23.972 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 35.0%
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 300/300 帧，活跃轨迹: 998
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   后处理轨迹...
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   有效轨迹: 1000 条
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   成功提取 1000 条轨迹，轨迹长度: 301 帧
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 35.0%
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 35.0%
-14:05:24.084 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:特征点检测与跟踪
-14:05:24.085 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 特征点检测与跟踪
-14:05:24.085 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:计算轨迹运动
-14:05:24.085 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 计算轨迹运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤3] 计算轨迹运动...
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   计算轨迹运动...
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 0/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 100/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 200/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 300/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 400/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 500/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 600/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 700/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 800/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 900/1000 条轨迹的运动
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.0
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 45.0%
-14:05:24.220 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.0
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 45.0%
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:计算轨迹运动
-14:05:24.222 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 计算轨迹运动
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:时域带通滤波
-14:05:24.222 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 时域带通滤波
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 55.0%
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 55.0%
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:时域带通滤波
-14:05:24.222 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 时域带通滤波
-14:05:24.222 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:05:24.223 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤4] 时域带通滤波...
-14:05:24.223 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   未使用时域滤波，跳过此步骤
-14:05:24.223 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:计算稠密运动场
-14:05:24.223 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 计算稠密运动场
-14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤5] 计算稠密运动场...
-14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   计算稠密运动场...
-14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
-14:05:24.574 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 55.0%
-14:05:29.147 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 0/300 帧的运动场
-14:05:29.149 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.3
-14:05:29.149 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 56.3%
-14:05:33.672 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 20/300 帧的运动场
-14:05:33.672 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.7
-14:05:33.672 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 57.7%
-14:05:38.747 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 40/300 帧的运动场
-14:05:38.747 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.0
-14:05:38.747 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 59.0%
-14:05:45.189 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 60/300 帧的运动场
-14:05:45.189 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.3
-14:05:45.189 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 60.3%
-14:05:51.329 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 80/300 帧的运动场
-14:05:51.329 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.7
-14:05:51.329 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 61.7%
-14:06:09.652 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 100/300 帧的运动场
-14:06:09.652 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.0
-14:06:09.652 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 63.0%
-14:06:18.516 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 120/300 帧的运动场
-14:06:18.516 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.3
-14:06:18.516 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 64.3%
-14:06:24.577 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 140/300 帧的运动场
-14:06:24.577 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.7
-14:06:24.577 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 65.7%
-14:06:30.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 160/300 帧的运动场
-14:06:30.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.0
-14:06:30.055 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 67.0%
-14:06:35.966 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 180/300 帧的运动场
-14:06:35.966 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.3
-14:06:35.966 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 68.3%
-14:06:41.362 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 200/300 帧的运动场
-14:06:41.362 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.7
-14:06:41.362 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 69.7%
-14:06:47.111 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 220/300 帧的运动场
-14:06:47.111 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.0
-14:06:47.111 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 71.0%
-14:06:52.786 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 240/300 帧的运动场
-14:06:52.787 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.3
-14:06:52.787 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 72.3%
-14:06:58.195 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 260/300 帧的运动场
-14:06:58.195 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.7
-14:06:58.195 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 73.7%
-14:07:03.585 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 280/300 帧的运动场
-14:07:03.585 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
-14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 75.0%
-14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 300/300 帧的运动场
-14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
-14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 75.0%
-14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
-14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 75.0%
-14:07:03.587 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:计算稠密运动场
-14:07:03.588 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 计算稠密运动场
-14:07:03.588 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:运动放大
-14:07:03.588 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 运动放大
-14:07:04.013 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:07:04.014 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤6] 运动放大...
-14:07:04.014 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   应用运动放大...
-14:07:04.014 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.0
-14:07:04.014 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 76.0%
-14:07:04.451 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 20/300 帧
-14:07:04.451 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.0
-14:07:04.451 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 77.0%
-14:07:04.915 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 40/300 帧
-14:07:04.915 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.0
-14:07:04.915 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 78.0%
-14:07:05.328 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 60/300 帧
-14:07:05.328 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.0
-14:07:05.328 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 79.0%
-14:07:05.798 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 80/300 帧
-14:07:05.798 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.0
-14:07:05.798 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 80.0%
-14:07:06.272 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 100/300 帧
-14:07:06.272 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.0
-14:07:06.273 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 81.0%
-14:07:06.721 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 120/300 帧
-14:07:06.721 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.0
-14:07:06.721 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 82.0%
-14:07:07.203 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 140/300 帧
-14:07:07.203 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.0
-14:07:07.203 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 83.0%
-14:07:07.671 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 160/300 帧
-14:07:07.671 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.0
-14:07:07.671 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 84.0%
-14:07:08.216 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 180/300 帧
-14:07:08.216 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.0
-14:07:08.216 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 85.0%
-14:07:08.830 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 200/300 帧
-14:07:08.830 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.0
-14:07:08.830 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 86.0%
-14:07:09.405 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 220/300 帧
-14:07:09.405 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.0
-14:07:09.405 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 87.0%
-14:07:09.944 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 240/300 帧
-14:07:09.944 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:88.0
-14:07:09.944 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 88.0%
-14:07:10.436 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 260/300 帧
-14:07:10.436 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:89.0
-14:07:10.436 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 89.0%
-14:07:10.918 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 280/300 帧
-14:07:10.918 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
-14:07:10.918 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 90.0%
-14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 300/300 帧
-14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
-14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 90.0%
-14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
-14:07:10.920 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 90.0%
-14:07:10.921 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:运动放大
-14:07:10.921 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 运动放大
-14:07:10.921 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:后处理
-14:07:10.921 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 后处理
-14:07:26.228 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:07:26.228 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤7] 后处理...
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   后处理...
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 95.0%
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 95.0%
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:后处理
-14:07:26.230 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 后处理
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:保存结果
-14:07:26.230 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤开始: 保存结果
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤8] 保存结果...
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   保存视频...
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   输出尺寸: 960x544, 帧数: 301, 帧率: 30
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
-14:07:26.230 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 95.0%
-14:07:26.287 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 0/301 帧
-14:07:26.287 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.8
-14:07:26.287 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 95.8%
-14:07:26.369 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 100/301 帧
-14:07:26.369 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:96.7
-14:07:26.369 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 96.7%
-14:07:26.470 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 200/301 帧
-14:07:26.470 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:97.5
-14:07:26.470 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 97.5%
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 300/301 帧
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   保存临时图像序列...
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 0/301 张临时图像
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 100/301 张临时图像
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 200/301 张临时图像
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 300/301 张临时图像
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   使用FFmpeg编码视频...
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频保存成功: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4 (0.36 MB)
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
-14:07:36.549 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 100.0%
-14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
-14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 100.0%
-14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
-14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3进度更新: 100.0%
-14:07:36.595 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:保存结果
-14:07:36.595 [pool-4-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务0ccb4306-9edf-4266-a874-8d454c6cd2d3步骤完成: 保存结果
-14:07:37.054 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
-14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
-14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 处理完成!
-14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 总耗时: 139.12秒
-14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入帧数: 301
-14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出帧数: 301
-14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
-14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
-14:07:37.055 [pool-4-thread-2] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: FINAL_RESULT:output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
-14:07:37.104 [http-nio-8080-exec-15] INFO  t.w.c.m.VideoMonitorController - [downloadResult,155] - 下载处理结果成功，任务ID: 0ccb4306-9edf-4266-a874-8d454c6cd2d3
-14:07:37.571 [pool-3-thread-2] INFO  t.s.s.i.PythonScriptExecutor - [handleProcessResult,211] - Python脚本执行成功，输出文件: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
-14:07:37.573 [pool-3-thread-2] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,190] - Python脚本处理完成，任务ID: 0ccb4306-9edf-4266-a874-8d454c6cd2d3, 算法: lagrangian, 输出路径: output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+08:50:24.583 [http-nio-8080-exec-11] INFO  t.s.s.i.VideoProcessServiceImpl - [processVideo,100] - 视频处理任务已提交，任务ID：8e9abeab-c473-4991-99b1-a819a13a74ea，算法：lagrangian，放大倍数：20.0，时域滤波：true
+08:50:24.585 [pool-3-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,136] - 开始Python脚本处理，任务ID: 8e9abeab-c473-4991-99b1-a819a13a74ea, 算法: lagrangian, 输入: uploads/video/8e9abeab-c473-4991-99b1-a819a13a74ea.mp4, 输出: output/video/8e9abeab-c473-4991-99b1-a819a13a74ea_processed.mp4
+08:50:24.585 [pool-3-thread-1] INFO  t.s.s.i.PythonScriptExecutor - [executePythonScript,67] - 执行Python脚本 - 算法: lagrangian, 脚本: E:/RuoYiProject/MoMagTracker-Compare/Lagrangian-based-Motion-Mag/Lagrangian-based-Motion-Magnification.py
+08:50:24.587 [pool-3-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [executePythonScript,68] - Python命令: E:/RuoYiProject/MoMagTracker-Compare/.venv/Scripts/python.exe E:/RuoYiProject/MoMagTracker-Compare/Lagrangian-based-Motion-Mag/Lagrangian-based-Motion-Magnification.py --input uploads/video/8e9abeab-c473-4991-99b1-a819a13a74ea.mp4 --output output/video/8e9abeab-c473-4991-99b1-a819a13a74ea_processed.mp4 --alpha 20.0 --temporal_filter true --lower_threshold 0.04 --upper_threshold 0.4 --spatial_sigma 3.0
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:初始化
+08:50:28.140 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 初始化
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 基于拉格朗日视角的视频运动放大方法
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入视频: uploads/video/8e9abeab-c473-4991-99b1-a819a13a74ea.mp4
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/8e9abeab-c473-4991-99b1-a819a13a74ea_processed.mp4
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 放大因子: 20.0
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 时域滤波: 开启
+08:50:28.140 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:3.0
+08:50:28.141 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 3.0%
+08:50:28.141 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:3.0
+08:50:28.141 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 3.0%
+08:50:28.141 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:初始化
+08:50:28.141 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 初始化
+08:50:28.141 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:读取视频
+08:50:28.141 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 读取视频
+08:50:29.257 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:50:29.257 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤1] 读取视频并预处理...
+08:50:29.257 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   开始读取视频，帧率: 30, 分辨率: 960x544
+08:50:29.257 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 100 帧
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 200 帧
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 300 帧
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   读取完成，共 301 帧
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频信息: 960x544, 30 FPS, 处理帧数: 301
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:10.0
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 10.0%
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:10.0
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 10.0%
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:读取视频
+08:50:29.258 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 读取视频
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   时域滤波器: 0.50Hz - 8.10Hz
+08:50:29.258 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:特征点检测与跟踪
+08:50:29.260 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 特征点检测与跟踪
+08:50:29.700 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:50:29.700 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤2] 特征点检测与轨迹跟踪...
+08:50:29.700 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   开始特征点跟踪...
+08:50:29.700 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 0/301 帧到灰度图
+08:50:29.700 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 100/301 帧到灰度图
+08:50:29.700 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 200/301 帧到灰度图
+08:50:29.700 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 300/301 帧到灰度图
+08:50:29.702 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   检测第一帧特征点...
+08:50:29.702 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   初始化 1000 条轨迹
+08:50:29.702 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:11.7
+08:50:29.702 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 11.7%
+08:50:30.016 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 20/300 帧，活跃轨迹: 1000
+08:50:30.016 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:13.3
+08:50:30.016 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 13.3%
+08:50:30.279 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 40/300 帧，活跃轨迹: 1000
+08:50:30.279 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:15.0
+08:50:30.279 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 15.0%
+08:50:30.466 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 60/300 帧，活跃轨迹: 1000
+08:50:30.466 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:16.7
+08:50:30.466 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 16.7%
+08:50:30.662 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 80/300 帧，活跃轨迹: 1000
+08:50:30.662 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:18.3
+08:50:30.662 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 18.3%
+08:50:30.879 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 100/300 帧，活跃轨迹: 1000
+08:50:30.879 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:20.0
+08:50:30.879 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 20.0%
+08:50:31.167 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 120/300 帧，活跃轨迹: 1000
+08:50:31.167 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:21.7
+08:50:31.167 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 21.7%
+08:50:31.386 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 140/300 帧，活跃轨迹: 1000
+08:50:31.386 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:23.3
+08:50:31.386 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 23.3%
+08:50:31.589 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 160/300 帧，活跃轨迹: 1000
+08:50:31.589 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:25.0
+08:50:31.589 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 25.0%
+08:50:31.801 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 180/300 帧，活跃轨迹: 999
+08:50:31.801 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:26.7
+08:50:31.801 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 26.7%
+08:50:31.995 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 200/300 帧，活跃轨迹: 999
+08:50:31.995 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:28.3
+08:50:31.995 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 28.3%
+08:50:32.240 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 220/300 帧，活跃轨迹: 999
+08:50:32.240 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.0
+08:50:32.240 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 30.0%
+08:50:32.417 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 240/300 帧，活跃轨迹: 998
+08:50:32.417 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.7
+08:50:32.417 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 31.7%
+08:50:32.740 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 260/300 帧，活跃轨迹: 998
+08:50:32.741 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.3
+08:50:32.741 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 33.3%
+08:50:33.051 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 280/300 帧，活跃轨迹: 998
+08:50:33.051 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+08:50:33.051 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 35.0%
+08:50:33.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已跟踪 300/300 帧，活跃轨迹: 998
+08:50:33.164 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   后处理轨迹...
+08:50:33.164 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   有效轨迹: 1000 条
+08:50:33.164 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   成功提取 1000 条轨迹，轨迹长度: 301 帧
+08:50:33.164 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+08:50:33.164 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 35.0%
+08:50:33.164 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+08:50:33.164 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 35.0%
+08:50:33.164 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:特征点检测与跟踪
+08:50:33.165 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 特征点检测与跟踪
+08:50:33.165 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:计算轨迹运动
+08:50:33.165 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 计算轨迹运动
+08:50:33.295 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤3] 计算轨迹运动...
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   计算轨迹运动...
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 0/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 100/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 200/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 300/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 400/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 500/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 600/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 700/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 800/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 900/1000 条轨迹的运动
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.0
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 45.0%
+08:50:33.296 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.0
+08:50:33.297 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 45.0%
+08:50:33.297 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:计算轨迹运动
+08:50:33.297 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 计算轨迹运动
+08:50:33.297 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:时域带通滤波
+08:50:33.297 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 时域带通滤波
+08:50:33.632 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:50:33.632 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤4] 时域带通滤波...
+08:50:33.632 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   应用时域滤波...
+08:50:33.632 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
+08:50:33.634 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 55.0%
+08:50:33.634 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
+08:50:33.634 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 55.0%
+08:50:33.634 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:时域带通滤波
+08:50:33.634 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 时域带通滤波
+08:50:33.634 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:计算稠密运动场
+08:50:33.634 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 计算稠密运动场
+08:50:33.919 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:50:33.919 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤5] 计算稠密运动场...
+08:50:33.919 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   计算稠密运动场...
+08:50:33.920 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
+08:50:33.920 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 55.0%
+08:50:39.923 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 0/300 帧的运动场
+08:50:39.923 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.3
+08:50:39.923 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 56.3%
+08:50:45.631 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 20/300 帧的运动场
+08:50:45.631 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.7
+08:50:45.632 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 57.7%
+08:50:51.935 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 40/300 帧的运动场
+08:50:51.935 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.0
+08:50:51.935 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 59.0%
+08:50:57.415 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 60/300 帧的运动场
+08:50:57.415 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.3
+08:50:57.415 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 60.3%
+08:51:03.091 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 80/300 帧的运动场
+08:51:03.091 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.7
+08:51:03.091 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 61.7%
+08:51:09.102 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 100/300 帧的运动场
+08:51:09.102 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.0
+08:51:09.102 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 63.0%
+08:51:15.379 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 120/300 帧的运动场
+08:51:15.379 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.3
+08:51:15.379 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 64.3%
+08:51:21.660 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 140/300 帧的运动场
+08:51:21.660 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.7
+08:51:21.660 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 65.7%
+08:51:32.368 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 160/300 帧的运动场
+08:51:32.368 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.0
+08:51:32.368 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 67.0%
+08:51:39.346 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 180/300 帧的运动场
+08:51:39.346 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.3
+08:51:39.346 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 68.3%
+08:51:45.073 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 200/300 帧的运动场
+08:51:45.074 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.7
+08:51:45.074 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 69.7%
+08:51:51.101 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 220/300 帧的运动场
+08:51:51.101 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.0
+08:51:51.101 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 71.0%
+08:51:58.617 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 240/300 帧的运动场
+08:51:58.617 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.3
+08:51:58.617 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 72.3%
+08:52:05.335 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 260/300 帧的运动场
+08:52:05.336 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.7
+08:52:05.336 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 73.7%
+08:52:11.945 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 280/300 帧的运动场
+08:52:11.945 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+08:52:11.945 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 75.0%
+08:52:11.946 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已计算 300/300 帧的运动场
+08:52:11.946 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+08:52:11.946 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 75.0%
+08:52:11.946 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+08:52:11.946 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 75.0%
+08:52:11.946 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:计算稠密运动场
+08:52:11.946 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 计算稠密运动场
+08:52:11.946 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:运动放大
+08:52:11.946 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 运动放大
+08:52:12.502 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:52:12.502 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤6] 运动放大...
+08:52:12.502 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   应用运动放大...
+08:52:12.502 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.0
+08:52:12.502 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 76.0%
+08:52:13.060 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 20/300 帧
+08:52:13.060 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.0
+08:52:13.060 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 77.0%
+08:52:13.635 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 40/300 帧
+08:52:13.635 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.0
+08:52:13.635 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 78.0%
+08:52:14.192 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 60/300 帧
+08:52:14.192 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.0
+08:52:14.192 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 79.0%
+08:52:14.709 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 80/300 帧
+08:52:14.709 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.0
+08:52:14.709 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 80.0%
+08:52:15.224 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 100/300 帧
+08:52:15.224 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.0
+08:52:15.225 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 81.0%
+08:52:15.735 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 120/300 帧
+08:52:15.736 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.0
+08:52:15.736 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 82.0%
+08:52:16.173 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 140/300 帧
+08:52:16.173 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.0
+08:52:16.173 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 83.0%
+08:52:16.767 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 160/300 帧
+08:52:16.767 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.0
+08:52:16.767 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 84.0%
+08:52:17.406 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 180/300 帧
+08:52:17.406 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.0
+08:52:17.407 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 85.0%
+08:52:17.992 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 200/300 帧
+08:52:17.992 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.0
+08:52:17.992 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 86.0%
+08:52:18.650 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 220/300 帧
+08:52:18.650 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.0
+08:52:18.650 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 87.0%
+08:52:19.222 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 240/300 帧
+08:52:19.223 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:88.0
+08:52:19.223 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 88.0%
+08:52:19.815 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 260/300 帧
+08:52:19.815 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:89.0
+08:52:19.815 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 89.0%
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 280/300 帧
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 90.0%
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 300/300 帧
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 90.0%
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 90.0%
+08:52:20.357 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:运动放大
+08:52:20.357 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 运动放大
+08:52:20.359 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:后处理
+08:52:20.359 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 后处理
+08:52:39.333 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:52:39.333 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤7] 后处理...
+08:52:39.333 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   后处理...
+08:52:39.333 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
+08:52:39.333 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 95.0%
+08:52:39.333 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
+08:52:39.333 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 95.0%
+08:52:39.333 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:后处理
+08:52:39.333 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 后处理
+08:52:39.334 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:保存结果
+08:52:39.334 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤开始: 保存结果
+08:52:39.335 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:52:39.335 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤8] 保存结果...
+08:52:39.335 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   保存视频...
+08:52:39.335 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   输出尺寸: 960x544, 帧数: 301, 帧率: 30
+08:52:39.335 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
+08:52:39.335 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 95.0%
+08:52:39.387 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 0/301 帧
+08:52:39.388 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.8
+08:52:39.388 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 95.8%
+08:52:39.443 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 100/301 帧
+08:52:39.443 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:96.7
+08:52:39.443 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 96.7%
+08:52:39.508 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 200/301 帧
+08:52:39.508 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:97.5
+08:52:39.508 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 97.5%
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已转换 300/301 帧
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   保存临时图像序列...
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 0/301 张临时图像
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 100/301 张临时图像
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 200/301 张临时图像
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 300/301 张临时图像
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   使用FFmpeg编码视频...
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频保存成功: output/video/8e9abeab-c473-4991-99b1-a819a13a74ea_processed.mp4 (0.34 MB)
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+08:52:58.162 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 100.0%
+08:52:58.246 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+08:52:58.246 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 100.0%
+08:52:58.247 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+08:52:58.247 [pool-4-thread-1] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea进度更新: 100.0%
+08:52:58.247 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:保存结果
+08:52:58.247 [pool-4-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务8e9abeab-c473-4991-99b1-a819a13a74ea步骤完成: 保存结果
+08:52:58.649 [http-nio-8080-exec-71] INFO  t.w.c.m.VideoMonitorController - [downloadResult,155] - 下载处理结果成功，任务ID: 8e9abeab-c473-4991-99b1-a819a13a74ea
+08:52:59.092 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+08:52:59.092 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+08:52:59.092 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 处理完成!
+08:52:59.092 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 总耗时: 150.11秒
+08:52:59.092 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入帧数: 301
+08:52:59.092 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出帧数: 301
+08:52:59.094 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/8e9abeab-c473-4991-99b1-a819a13a74ea_processed.mp4
+08:52:59.094 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+08:52:59.094 [pool-4-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: FINAL_RESULT:output/video/8e9abeab-c473-4991-99b1-a819a13a74ea_processed.mp4
+08:52:59.580 [pool-3-thread-1] INFO  t.s.s.i.PythonScriptExecutor - [handleProcessResult,211] - Python脚本执行成功，输出文件: output/video/8e9abeab-c473-4991-99b1-a819a13a74ea_processed.mp4
+08:52:59.580 [pool-3-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,190] - Python脚本处理完成，任务ID: 8e9abeab-c473-4991-99b1-a819a13a74ea, 算法: lagrangian, 输出路径: output/video/8e9abeab-c473-4991-99b1-a819a13a74ea_processed.mp4
+```
+
+##### 2 基于欧拉视角的视频运动放大方法处理结果
+
+```shell
+09:34:34.069 [pool-3-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,136] - 开始Python脚本处理，任务ID: 4e75d487-76c4-4957-9f69-b148317ea045, 算法: eulerian, 输入: uploads/video/4e75d487-76c4-4957-9f69-b148317ea045.mp4, 输出: output/video/4e75d487-76c4-4957-9f69-b148317ea045_processed.mp4
+09:34:34.068 [http-nio-8080-exec-17] INFO  t.s.s.i.VideoProcessServiceImpl - [processVideo,100] - 视频处理任务已提交，任务ID：4e75d487-76c4-4957-9f69-b148317ea045，算法：eulerian，放大倍数：20.0，时域滤波：true
+09:34:34.069 [pool-3-thread-3] INFO  t.s.s.i.PythonScriptExecutor - [executePythonScript,67] - 执行Python脚本 - 算法: eulerian, 脚本: E:/RuoYiProject/MoMagTracker-Compare/Eulerian-based-Motion-Mag/Eulerian-based-Motion-Magnification.py
+09:34:34.069 [pool-3-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [executePythonScript,68] - Python命令: E:/RuoYiProject/MoMagTracker-Compare/.venv/Scripts/python.exe E:/RuoYiProject/MoMagTracker-Compare/Eulerian-based-Motion-Mag/Eulerian-based-Motion-Magnification.py --input uploads/video/4e75d487-76c4-4957-9f69-b148317ea045.mp4 --output output/video/4e75d487-76c4-4957-9f69-b148317ea045_processed.mp4 --alpha 20.0 --temporal_filter true --lower_threshold 0.04 --upper_threshold 0.4 --spatial_sigma 3.0
+09:34:36.651 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: Traceback (most recent call last):
+09:34:36.651 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   File "E:\RuoYiProject\MoMagTracker-Compare\Eulerian-based-Motion-Mag\Eulerian-based-Motion-Magnification.py", line 1135, in <module>
+09:34:36.652 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:     main()
+09:34:36.653 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   File "E:\RuoYiProject\MoMagTracker-Compare\Eulerian-based-Motion-Mag\Eulerian-based-Motion-Magnification.py", line 1073, in main
+09:34:36.654 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:     print("\u2713 检测到FFmpeg，将生成高质量H.264视频")
+09:34:36.654 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: UnicodeEncodeError: 'gbk' codec can't encode character '\u2713' in position 0: illegal multibyte sequence
+09:34:36.815 [pool-3-thread-3] ERROR t.s.s.i.PythonScriptExecutor - [handleProcessResult,224] - Python脚本执行失败: Python进程异常退出，退出码: 1
+09:34:36.820 [pool-3-thread-3] ERROR t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,195] - Python脚本处理失败，任务ID: 4e75d487-76c4-4957-9f69-b148317ea045, 算法: eulerian, 错误: Python进程异常退出，退出码: 1
+09:34:59.103 [http-nio-8080-exec-67] INFO  t.c.u.SecurityUtils - [getUserId,31] - 🔍 [SecurityUtils] 开始获取用户ID
+09:34:59.103 [http-nio-8080-exec-67] INFO  t.c.u.SecurityUtils - [getUserId,46] - ✅ [SecurityUtils] 成功获取用户ID: 1
+09:34:59.105 [http-nio-8080-exec-67] INFO  t.w.c.s.SysLoginController - [getRouters,152] - 🔄 [后端] 获取路由信息，用户ID: 1
+09:34:59.109 [http-nio-8080-exec-67] DEBUG t.s.m.S.selectMenuTreeAll - [debug,135] - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.path, m.component, m.`query`, m.route_name, m.visible, m.status, ifnull(m.perms,'') as perms, m.is_frame, m.is_cache, m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m where m.menu_type in ('M', 'C') and m.status = 0 order by m.parent_id, m.order_num
+09:34:59.110 [http-nio-8080-exec-67] DEBUG t.s.m.S.selectMenuTreeAll - [debug,135] - ==> Parameters: 
+09:34:59.126 [http-nio-8080-exec-67] DEBUG t.s.m.S.selectMenuTreeAll - [debug,135] - <==      Total: 29
+09:34:59.128 [http-nio-8080-exec-67] INFO  t.w.c.s.SysLoginController - [getRouters,155] - ✅ [后端] selectMenuTreeByUserId 返回的菜单数量: 5
+09:42:05.229 [pool-3-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,136] - 开始Python脚本处理，任务ID: 885dedf3-17bd-49ae-aa35-4d5235ab610c, 算法: eulerian, 输入: uploads/video/885dedf3-17bd-49ae-aa35-4d5235ab610c.mp4, 输出: output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+09:42:05.229 [http-nio-8080-exec-71] INFO  t.s.s.i.VideoProcessServiceImpl - [processVideo,100] - 视频处理任务已提交，任务ID：885dedf3-17bd-49ae-aa35-4d5235ab610c，算法：eulerian，放大倍数：20.0，时域滤波：true
+09:42:05.230 [pool-3-thread-1] INFO  t.s.s.i.PythonScriptExecutor - [executePythonScript,67] - 执行Python脚本 - 算法: eulerian, 脚本: E:/RuoYiProject/MoMagTracker-Compare/Eulerian-based-Motion-Mag/Eulerian-based-Motion-Magnification.py
+09:42:05.230 [pool-3-thread-1] DEBUG t.s.s.i.PythonScriptExecutor - [executePythonScript,68] - Python命令: E:/RuoYiProject/MoMagTracker-Compare/.venv/Scripts/python.exe E:/RuoYiProject/MoMagTracker-Compare/Eulerian-based-Motion-Mag/Eulerian-based-Motion-Magnification.py --input uploads/video/885dedf3-17bd-49ae-aa35-4d5235ab610c.mp4 --output output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4 --alpha 20.0 --temporal_filter true --lower_threshold 0.04 --upper_threshold 0.4 --spatial_sigma 3.0
+09:42:07.676 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [OK] 检测到FFmpeg，将生成高质量H.264视频
+09:42:07.676 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:初始化
+09:42:07.676 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤开始: 初始化
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 基于欧拉视角的视频运动放大方法
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 金字塔模式: laplacian
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 放大因子: 20.0
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 频率范围: 0.2960-2.0600 Hz
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: Lambda截止: 16
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 衰减因子: 0.1
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入视频: uploads/video/885dedf3-17bd-49ae-aa35-4d5235ab610c.mp4
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:5.0
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 5.0%
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:5.0
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 5.0%
+09:42:07.677 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:初始化
+09:42:07.679 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤完成: 初始化
+09:42:07.679 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:读取视频
+09:42:07.679 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤开始: 读取视频
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤1] 读取视频...
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   开始读取视频，帧率: 30, 分辨率: 960x544
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 100 帧
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 200 帧
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已读取 300 帧
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   读取完成，共 301 帧
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频信息: 960x544, 30 FPS, 处理帧数: 301
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:15.0
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 15.0%
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:15.0
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 15.0%
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:读取视频
+09:42:08.940 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤完成: 读取视频
+09:42:08.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:构建金字塔
+09:42:08.941 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤开始: 构建金字塔
+09:42:08.994 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:42:08.994 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤2] 构建laplacian金字塔...
+09:42:08.994 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   构建拉普拉斯金字塔，层数: 4
+09:42:08.994 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:15.0
+09:42:08.994 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 15.0%
+09:42:10.141 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 0/300 帧的金字塔
+09:42:10.141 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:16.3
+09:42:10.141 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 16.3%
+09:42:11.251 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 20/300 帧的金字塔
+09:42:11.251 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:17.7
+09:42:11.251 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 17.7%
+09:42:12.288 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 40/300 帧的金字塔
+09:42:12.288 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:19.0
+09:42:12.288 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 19.0%
+09:42:13.281 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 60/300 帧的金字塔
+09:42:13.282 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:20.3
+09:42:13.282 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 20.3%
+09:42:14.250 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 80/300 帧的金字塔
+09:42:14.250 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:21.7
+09:42:14.250 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 21.7%
+09:42:15.167 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 100/300 帧的金字塔
+09:42:15.167 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:23.0
+09:42:15.167 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 23.0%
+09:42:16.113 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 120/300 帧的金字塔
+09:42:16.113 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:24.3
+09:42:16.113 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 24.3%
+09:42:17.054 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 140/300 帧的金字塔
+09:42:17.054 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:25.7
+09:42:17.054 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 25.7%
+09:42:17.976 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 160/300 帧的金字塔
+09:42:17.976 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:27.0
+09:42:17.976 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 27.0%
+09:42:18.940 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 180/300 帧的金字塔
+09:42:18.942 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:28.3
+09:42:18.942 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 28.3%
+09:42:20.568 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 200/300 帧的金字塔
+09:42:20.570 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:29.7
+09:42:20.570 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 29.7%
+09:42:21.566 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 220/300 帧的金字塔
+09:42:21.566 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.0
+09:42:21.566 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 31.0%
+09:42:22.531 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 240/300 帧的金字塔
+09:42:22.531 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:32.3
+09:42:22.531 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 32.3%
+09:42:23.452 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 260/300 帧的金字塔
+09:42:23.452 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.7
+09:42:23.452 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 33.7%
+09:42:24.372 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 280/300 帧的金字塔
+09:42:24.372 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+09:42:24.372 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 35.0%
+09:42:24.372 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已构建 300/300 帧的金字塔
+09:42:24.372 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   金字塔构建完成，帧数: 301
+09:42:24.374 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+09:42:24.374 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 35.0%
+09:42:24.374 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+09:42:24.374 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 35.0%
+09:42:24.374 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:构建金字塔
+09:42:24.374 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤完成: 构建金字塔
+09:42:24.374 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:时域带通滤波
+09:42:24.374 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤开始: 时域带通滤波
+09:42:25.334 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:42:25.335 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤3] 时域带通滤波...
+09:42:25.335 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   应用时域带通滤波，频率范围: 0.2960-2.0600 Hz
+09:42:25.335 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:36.0
+09:42:25.335 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 36.0%
+09:42:26.373 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 20/300 帧
+09:42:26.373 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:37.0
+09:42:26.374 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 37.0%
+09:42:27.721 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 40/300 帧
+09:42:27.721 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:38.0
+09:42:27.721 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 38.0%
+09:42:28.927 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 60/300 帧
+09:42:28.927 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:39.0
+09:42:28.929 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 39.0%
+09:42:29.959 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 80/300 帧
+09:42:29.960 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:40.0
+09:42:29.960 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 40.0%
+09:42:30.962 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 100/300 帧
+09:42:30.962 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:41.0
+09:42:30.962 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 41.0%
+09:42:32.043 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 120/300 帧
+09:42:32.043 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:42.0
+09:42:32.043 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 42.0%
+09:42:33.066 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 140/300 帧
+09:42:33.066 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:43.0
+09:42:33.066 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 43.0%
+09:42:34.163 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 160/300 帧
+09:42:34.163 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:44.0
+09:42:34.165 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 44.0%
+09:42:35.278 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 180/300 帧
+09:42:35.278 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.0
+09:42:35.278 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 45.0%
+09:42:36.675 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 200/300 帧
+09:42:36.676 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:46.0
+09:42:36.676 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 46.0%
+09:42:38.033 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 220/300 帧
+09:42:38.033 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:47.0
+09:42:38.033 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 47.0%
+09:42:39.545 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 240/300 帧
+09:42:39.545 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:48.0
+09:42:39.545 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 48.0%
+09:42:40.684 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 260/300 帧
+09:42:40.684 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:49.0
+09:42:40.684 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 49.0%
+09:42:41.788 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 280/300 帧
+09:42:41.788 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.0
+09:42:41.788 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 50.0%
+09:42:41.792 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已滤波 300/300 帧
+09:42:41.792 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   滤波完成
+09:42:41.792 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.0
+09:42:41.792 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 50.0%
+09:42:41.792 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.0
+09:42:41.792 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 50.0%
+09:42:41.792 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:时域带通滤波
+09:42:41.792 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤完成: 时域带通滤波
+09:42:41.794 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:运动放大
+09:42:41.794 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤开始: 运动放大
+09:42:41.811 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:42:41.811 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤4] 运动放大...
+09:42:41.811 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   应用放大因子: 20.0
+09:42:41.811 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.0
+09:42:41.811 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 50.0%
+09:42:41.922 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 0/300 帧
+09:42:41.922 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:51.7
+09:42:41.922 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 51.7%
+09:42:42.038 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 20/300 帧
+09:42:42.038 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:53.3
+09:42:42.038 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 53.3%
+09:42:42.176 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 40/300 帧
+09:42:42.176 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.0
+09:42:42.176 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 55.0%
+09:42:42.283 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 60/300 帧
+09:42:42.283 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.7
+09:42:42.283 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 56.7%
+09:42:42.399 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 80/300 帧
+09:42:42.399 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:58.3
+09:42:42.399 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 58.3%
+09:42:42.484 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 100/300 帧
+09:42:42.484 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.0
+09:42:42.484 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 60.0%
+09:42:42.562 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 120/300 帧
+09:42:42.563 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.7
+09:42:42.563 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 61.7%
+09:42:42.645 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 140/300 帧
+09:42:42.645 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.3
+09:42:42.645 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 63.3%
+09:42:42.721 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 160/300 帧
+09:42:42.721 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.0
+09:42:42.721 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 65.0%
+09:42:42.815 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 180/300 帧
+09:42:42.815 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:66.7
+09:42:42.815 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 66.7%
+09:42:42.914 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 200/300 帧
+09:42:42.914 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.3
+09:42:42.914 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 68.3%
+09:42:43.002 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 220/300 帧
+09:42:43.003 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:70.0
+09:42:43.003 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 70.0%
+09:42:43.106 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 240/300 帧
+09:42:43.106 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.7
+09:42:43.108 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 71.7%
+09:42:43.178 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 260/300 帧
+09:42:43.178 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.3
+09:42:43.178 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 73.3%
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 280/300 帧
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 75.0%
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已放大 300/300 帧
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   放大完成，放大因子: 20.0
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 75.0%
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 75.0%
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:运动放大
+09:42:43.277 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤完成: 运动放大
+09:42:43.277 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:重建视频
+09:42:43.277 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤开始: 重建视频
+09:42:43.420 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:42:43.420 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤5] 重建视频...
+09:42:43.420 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   从拉普拉斯金字塔重建视频...
+09:42:43.420 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+09:42:43.420 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 75.0%
+09:42:44.890 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 0/300 帧
+09:42:44.890 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.0
+09:42:44.890 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 76.0%
+09:42:46.210 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 20/300 帧
+09:42:46.210 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.0
+09:42:46.210 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 77.0%
+09:42:47.529 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 40/300 帧
+09:42:47.529 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.0
+09:42:47.530 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 78.0%
+09:42:48.848 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 60/300 帧
+09:42:48.848 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.0
+09:42:48.848 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 79.0%
+09:42:50.179 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 80/300 帧
+09:42:50.179 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.0
+09:42:50.179 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 80.0%
+09:42:51.503 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 100/300 帧
+09:42:51.503 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.0
+09:42:51.503 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 81.0%
+09:42:52.867 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 120/300 帧
+09:42:52.867 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.0
+09:42:52.867 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 82.0%
+09:42:54.143 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 140/300 帧
+09:42:54.145 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.0
+09:42:54.145 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 83.0%
+09:42:55.447 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 160/300 帧
+09:42:55.447 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.0
+09:42:55.447 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 84.0%
+09:42:56.790 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 180/300 帧
+09:42:56.790 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.0
+09:42:56.790 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 85.0%
+09:42:58.310 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 200/300 帧
+09:42:58.310 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.0
+09:42:58.310 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 86.0%
+09:42:59.720 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 220/300 帧
+09:42:59.720 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.0
+09:42:59.720 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 87.0%
+09:43:01.035 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 240/300 帧
+09:43:01.035 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:88.0
+09:43:01.035 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 88.0%
+09:43:02.384 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 260/300 帧
+09:43:02.384 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:89.0
+09:43:02.384 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 89.0%
+09:43:03.723 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 280/300 帧
+09:43:03.723 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+09:43:03.723 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 90.0%
+09:43:04.008 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已重建 300/300 帧
+09:43:04.008 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   验证和修复帧数据...
+09:43:04.008 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   验证完成，有效帧数: 301
+09:43:04.008 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   重建完成，帧数: 301
+09:43:04.008 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+09:43:04.008 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 90.0%
+09:43:04.010 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:90.0
+09:43:04.010 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 90.0%
+09:43:04.010 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:重建视频
+09:43:04.010 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤完成: 重建视频
+09:43:04.010 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:保存结果
+09:43:04.010 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤开始: 保存结果
+09:43:04.110 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:43:04.110 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤6] 保存结果...
+09:43:04.110 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   使用FFmpeg生成H.264编码视频: output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+09:43:04.112 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   创建临时目录: C:\Users\17354\AppData\Local\Temp\motion_mag_sp0ujja6
+09:43:04.112 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   将帧保存为PNG图像...
+09:43:04.112 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:99.0
+09:43:04.112 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 99.0%
+09:43:05.674 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 0/301 帧
+09:43:05.674 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:99.1
+09:43:05.674 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 99.1%
+09:43:07.222 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 50/301 帧
+09:43:07.223 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:99.2
+09:43:07.223 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 99.2%
+09:43:08.739 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 100/301 帧
+09:43:08.739 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:99.2
+09:43:08.739 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 99.2%
+09:43:10.257 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 150/301 帧
+09:43:10.257 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:99.3
+09:43:10.257 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 99.3%
+09:43:11.790 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 200/301 帧
+09:43:11.790 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:99.4
+09:43:11.790 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 99.4%
+09:43:13.324 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 250/301 帧
+09:43:13.325 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:99.5
+09:43:13.325 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 99.5%
+09:43:17.403 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   已保存 300/301 帧
+09:43:17.403 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   使用FFmpeg编码为H.264...
+09:43:17.403 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   执行FFmpeg命令: ffmpeg -y -framerate 30 -i C:\Users\17354\AppData\Local\Temp\motion_mag_sp0ujja6\frame_%06d.png -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -profile:v high -level 4.1 -movflags +faststart -r 30 output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+09:43:17.403 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   FFmpeg编码成功
+09:43:17.405 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:99.8
+09:43:17.405 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 99.8%
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频保存成功: output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4 (2.15 MB)
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频编码信息:
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:     编码格式: h264
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:     分辨率: 960x544
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:     像素格式: yuv420p
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   [OK] 视频使用H.264编码，像素格式为yuv420p，浏览器兼容性良好
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频时长信息: 0.000000
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 10.033333
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   清理临时目录: C:\Users\17354\AppData\Local\Temp\motion_mag_sp0ujja6
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+09:43:20.773 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 100.0%
+09:43:20.775 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+09:43:20.775 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 100.0%
+09:43:20.775 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+09:43:20.775 [pool-4-thread-4] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c进度更新: 100.0%
+09:43:20.775 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:保存结果
+09:43:20.775 [pool-4-thread-4] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务885dedf3-17bd-49ae-aa35-4d5235ab610c步骤完成: 保存结果
+09:43:21.312 [http-nio-8080-exec-25] INFO  t.w.c.m.VideoMonitorController - [downloadResult,155] - 下载处理结果成功，任务ID: 885dedf3-17bd-49ae-aa35-4d5235ab610c
+09:43:21.536 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 处理完成!
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 总耗时: 73.10秒
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入帧数: 301
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出帧数: 301
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: FINAL_RESULT:output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 视频生成完成!
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出文件: output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 文件大小: 2.15 MB
+09:43:21.537 [pool-4-thread-4] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:43:21.981 [pool-3-thread-1] INFO  t.s.s.i.PythonScriptExecutor - [handleProcessResult,211] - Python脚本执行成功，输出文件: output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+09:43:21.981 [pool-3-thread-1] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,190] - Python脚本处理完成，任务ID: 885dedf3-17bd-49ae-aa35-4d5235ab610c, 算法: eulerian, 输出路径: output/video/885dedf3-17bd-49ae-aa35-4d5235ab610c_processed.mp4
+```
+
+##### 3 基于深度学习的视频运动放大方法处理结果
+
+```shell
+09:13:20.555 [http-nio-8080-exec-86] INFO  t.s.s.i.VideoProcessServiceImpl - [processVideo,100] - 视频处理任务已提交，任务ID：baf7205f-44bd-4ec4-8070-bc25577c0d2a，算法：deeplearning，放大倍数：20.0，时域滤波：true
+09:13:20.555 [pool-3-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,136] - 开始Python脚本处理，任务ID: baf7205f-44bd-4ec4-8070-bc25577c0d2a, 算法: deeplearning, 输入: uploads/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a.mp4, 输出: output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4
+09:13:20.557 [pool-3-thread-3] INFO  t.s.s.i.PythonScriptExecutor - [executePythonScript,67] - 执行Python脚本 - 算法: deeplearning, 脚本: E:/RuoYiProject/MoMagTracker-Compare/Learning-based-Motion-Mag/Learning-based-Motion-Magnification.py
+09:13:20.557 [pool-3-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [executePythonScript,68] - Python命令: E:/RuoYiProject/MoMagTracker-Compare/.venv/Scripts/python.exe E:/RuoYiProject/MoMagTracker-Compare/Learning-based-Motion-Mag/Learning-based-Motion-Magnification.py --input uploads/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a.mp4 --output output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4 --checkpoint E:/RuoYiProject/MoMagTracker-Compare/Learning-based-Motion-Mag/model/epoch50.tar --alpha 20.0 --temporal_filter true --lower_threshold 0.04 --upper_threshold 0.4 --spatial_sigma 3.0
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 使用--alpha参数值作为放大因子: 20.0
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 接收到的spatial_sigma参数: 3.0 (此参数在深度学习方法中未使用)
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 频率范围计算: 0.040Hz - 0.400Hz
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:初始化
+09:13:30.035 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤开始: 初始化
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 基于深度学习的视频运动放大方法
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输入视频: uploads/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a.mp4
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 模式: play_temporal
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 放大因子: 20.0
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 频率范围: [0.04, 0.4]
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:5.0
+09:13:30.035 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 5.0%
+09:13:30.037 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:5.0
+09:13:30.037 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 5.0%
+09:13:30.037 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:初始化
+09:13:30.037 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤完成: 初始化
+09:13:30.039 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 步骤 '初始化' 耗时: 0.00秒
+09:13:30.039 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:分解视频帧
+09:13:30.039 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤开始: 分解视频帧
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤1] 分解视频帧...
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   输入视频: uploads/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a.mp4
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   临时目录: C:\Users\17354\AppData\Local\Temp\dl_video_frames_59fjg06h
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频信息: 960x544, 30.0 FPS, 总帧数: 301
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   正在提取视频帧...
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频帧提取完成，提取帧数: 301
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:20.0
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 20.0%
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:20.0
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 20.0%
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:分解视频帧
+09:13:33.360 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤完成: 分解视频帧
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 步骤 '分解视频帧' 耗时: 3.32秒
+09:13:33.360 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:加载模型
+09:13:33.360 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤开始: 加载模型
+09:13:33.550 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:13:33.550 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤2] 加载模型...
+09:13:33.550 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   模型路径: E:/RuoYiProject/MoMagTracker-Compare/Learning-based-Motion-Mag/model/epoch50.tar
+09:13:33.550 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   加载模型状态字典，键数量: 88
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   处理后的状态字典，键数量: 88
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   前5个键: ['encoder.res_encoder.conv1.weight', 'encoder.res_encoder.conv1.bias', 'encoder.res_encoder.conv2.weight', 'encoder.res_encoder.conv2.bias', 'encoder.res_encoder.residual.0.conv1.weight']
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   模型加载成功（严格模式，完全匹配）
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   模型加载成功
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.0
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 30.0%
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.0
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 30.0%
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:加载模型
+09:13:33.551 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤完成: 加载模型
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 步骤 '加载模型' 耗时: 0.19秒
+09:13:33.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:应用视频运动放大
+09:13:33.551 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤开始: 应用视频运动放大
+09:13:37.260 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: [步骤3] 应用视频运动放大方法...
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   模式: play_temporal (时域滤波放大)
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   放大因子: 20.0
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   采样率: 30.0
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   频率范围: [0.04, 0.4]
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   滤波器类型: differenceOfIIR
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   处理帧数: 301
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.2
+09:13:37.261 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 30.2%
+09:13:37.405 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.3
+09:13:37.405 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 30.3%
+09:13:37.544 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.5
+09:13:37.544 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 30.5%
+09:13:37.690 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.7
+09:13:37.690 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 30.7%
+09:13:37.843 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:30.8
+09:13:37.843 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 30.8%
+09:13:37.991 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.0
+09:13:37.991 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 31.0%
+09:13:38.143 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.2
+09:13:38.143 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 31.2%
+09:13:38.287 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.3
+09:13:38.287 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 31.3%
+09:13:38.427 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.5
+09:13:38.427 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 31.5%
+09:13:38.562 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.7
+09:13:38.562 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 31.7%
+09:13:38.715 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:31.8
+09:13:38.715 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 31.8%
+09:13:38.867 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:32.0
+09:13:38.867 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 32.0%
+09:13:39.021 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:32.2
+09:13:39.021 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 32.2%
+09:13:39.168 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:32.3
+09:13:39.168 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 32.3%
+09:13:39.310 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:32.5
+09:13:39.310 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 32.5%
+09:13:39.443 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:32.7
+09:13:39.443 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 32.7%
+09:13:39.586 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:32.8
+09:13:39.586 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 32.8%
+09:13:39.739 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.0
+09:13:39.739 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 33.0%
+09:13:39.891 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.2
+09:13:39.891 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 33.2%
+09:13:40.041 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.3
+09:13:40.041 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 33.3%
+09:13:40.192 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.5
+09:13:40.192 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 33.5%
+09:13:40.332 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.7
+09:13:40.332 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 33.7%
+09:13:40.472 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:33.8
+09:13:40.472 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 33.8%
+09:13:40.612 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:34.0
+09:13:40.612 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 34.0%
+09:13:40.762 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:34.2
+09:13:40.763 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 34.2%
+09:13:40.913 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:34.3
+09:13:40.913 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 34.3%
+09:13:41.066 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:34.5
+09:13:41.068 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 34.5%
+09:13:41.217 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:34.7
+09:13:41.217 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 34.7%
+09:13:41.356 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:34.8
+09:13:41.356 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 34.8%
+09:13:41.493 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.0
+09:13:41.494 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 35.0%
+09:13:41.637 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.1
+09:13:41.637 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 35.1%
+09:13:41.790 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.3
+09:13:41.790 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 35.3%
+09:13:41.944 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.5
+09:13:41.944 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 35.5%
+09:13:42.104 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.6
+09:13:42.105 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 35.6%
+09:13:42.253 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:35.8
+09:13:42.253 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 35.8%
+09:13:42.390 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:36.0
+09:13:42.390 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 36.0%
+09:13:42.530 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:36.1
+09:13:42.530 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 36.1%
+09:13:42.679 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:36.3
+09:13:42.680 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 36.3%
+09:13:42.839 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:36.5
+09:13:42.839 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 36.5%
+09:13:42.991 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:36.6
+09:13:42.991 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 36.6%
+09:13:43.146 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:36.8
+09:13:43.146 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 36.8%
+09:13:43.282 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:37.0
+09:13:43.282 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 37.0%
+09:13:43.424 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:37.1
+09:13:43.424 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 37.1%
+09:13:43.564 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:37.3
+09:13:43.564 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 37.3%
+09:13:43.721 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:37.5
+09:13:43.721 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 37.5%
+09:13:43.875 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:37.6
+09:13:43.875 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 37.6%
+09:13:44.031 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:37.8
+09:13:44.031 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 37.8%
+09:13:44.181 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:38.0
+09:13:44.183 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 38.0%
+09:13:44.323 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:38.1
+09:13:44.323 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 38.1%
+09:13:44.463 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:38.3
+09:13:44.463 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 38.3%
+09:13:44.610 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:38.5
+09:13:44.610 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 38.5%
+09:13:44.767 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:38.6
+09:13:44.767 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 38.6%
+09:13:44.919 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:38.8
+09:13:44.919 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 38.8%
+09:13:45.071 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:39.0
+09:13:45.071 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 39.0%
+09:13:45.220 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:39.1
+09:13:45.222 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 39.1%
+09:13:45.362 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:39.3
+09:13:45.362 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 39.3%
+09:13:45.501 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:39.5
+09:13:45.501 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 39.5%
+09:13:45.646 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:39.6
+09:13:45.646 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 39.6%
+09:13:45.803 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:39.8
+09:13:45.803 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 39.8%
+09:13:45.956 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:40.0
+09:13:45.956 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 40.0%
+09:13:46.111 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:40.1
+09:13:46.111 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 40.1%
+09:13:46.251 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:40.3
+09:13:46.251 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 40.3%
+09:13:46.392 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:40.5
+09:13:46.392 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 40.5%
+09:13:46.530 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:40.6
+09:13:46.530 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 40.6%
+09:13:46.680 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:40.8
+09:13:46.680 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 40.8%
+09:13:46.833 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:41.0
+09:13:46.833 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 41.0%
+09:13:46.990 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:41.1
+09:13:46.990 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 41.1%
+09:13:47.143 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:41.3
+09:13:47.143 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 41.3%
+09:13:47.286 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:41.5
+09:13:47.286 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 41.5%
+09:13:47.426 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:41.6
+09:13:47.426 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 41.6%
+09:13:47.568 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:41.8
+09:13:47.568 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 41.8%
+09:13:47.722 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:42.0
+09:13:47.722 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 42.0%
+09:13:47.876 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:42.1
+09:13:47.876 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 42.1%
+09:13:48.029 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:42.3
+09:13:48.030 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 42.3%
+09:13:48.187 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:42.5
+09:13:48.187 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 42.5%
+09:13:48.327 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:42.6
+09:13:48.327 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 42.6%
+09:13:48.476 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:42.8
+09:13:48.476 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 42.8%
+09:13:48.617 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:43.0
+09:13:48.617 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 43.0%
+09:13:48.772 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:43.1
+09:13:48.772 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 43.1%
+09:13:48.926 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:43.3
+09:13:48.926 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 43.3%
+09:13:49.090 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:43.5
+09:13:49.090 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 43.5%
+09:13:49.236 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:43.6
+09:13:49.236 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 43.6%
+09:13:49.376 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:43.8
+09:13:49.378 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 43.8%
+09:13:49.514 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:44.0
+09:13:49.514 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 44.0%
+09:13:49.663 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:44.1
+09:13:49.663 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 44.1%
+09:13:49.817 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:44.3
+09:13:49.817 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 44.3%
+09:13:49.969 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:44.5
+09:13:49.969 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 44.5%
+09:13:50.124 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:44.6
+09:13:50.125 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 44.6%
+09:13:50.270 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:44.8
+09:13:50.270 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 44.8%
+09:13:50.408 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.0
+09:13:50.408 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 45.0%
+09:13:50.549 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.1
+09:13:50.549 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 45.1%
+09:13:50.698 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.3
+09:13:50.698 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 45.3%
+09:13:50.851 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.4
+09:13:50.851 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 45.4%
+09:13:51.004 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.6
+09:13:51.006 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 45.6%
+09:13:51.162 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.8
+09:13:51.162 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 45.8%
+09:13:51.303 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:45.9
+09:13:51.303 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 45.9%
+09:13:51.448 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:46.1
+09:13:51.448 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 46.1%
+09:13:51.593 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:46.3
+09:13:51.593 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 46.3%
+09:13:51.751 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:46.4
+09:13:51.751 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 46.4%
+09:13:51.902 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:46.6
+09:13:51.902 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 46.6%
+09:13:52.058 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:46.8
+09:13:52.058 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 46.8%
+09:13:52.209 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:46.9
+09:13:52.209 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 46.9%
+09:13:52.349 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:47.1
+09:13:52.349 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 47.1%
+09:13:52.488 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:47.3
+09:13:52.488 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 47.3%
+09:13:52.633 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:47.4
+09:13:52.633 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 47.4%
+09:13:52.791 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:47.6
+09:13:52.791 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 47.6%
+09:13:52.950 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:47.8
+09:13:52.950 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 47.8%
+09:13:53.121 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:47.9
+09:13:53.121 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 47.9%
+09:13:53.267 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:48.1
+09:13:53.267 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 48.1%
+09:13:53.408 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:48.3
+09:13:53.408 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 48.3%
+09:13:53.554 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:48.4
+09:13:53.554 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 48.4%
+09:13:53.713 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:48.6
+09:13:53.713 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 48.6%
+09:13:53.872 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:48.8
+09:13:53.872 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 48.8%
+09:13:54.027 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:48.9
+09:13:54.027 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 48.9%
+09:13:54.181 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:49.1
+09:13:54.181 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 49.1%
+09:13:54.316 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:49.3
+09:13:54.316 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 49.3%
+09:13:54.459 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:49.4
+09:13:54.461 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 49.4%
+09:13:54.603 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:49.6
+09:13:54.603 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 49.6%
+09:13:54.764 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:49.8
+09:13:54.764 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 49.8%
+09:13:54.919 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:49.9
+09:13:54.921 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 49.9%
+09:13:55.084 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.1
+09:13:55.084 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 50.1%
+09:13:55.239 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.3
+09:13:55.239 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 50.3%
+09:13:55.386 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.4
+09:13:55.386 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 50.4%
+09:13:55.531 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.6
+09:13:55.531 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 50.6%
+09:13:55.690 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.8
+09:13:55.690 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 50.8%
+09:13:55.846 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:50.9
+09:13:55.847 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 50.9%
+09:13:56.008 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:51.1
+09:13:56.008 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 51.1%
+09:13:56.167 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:51.3
+09:13:56.168 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 51.3%
+09:13:56.312 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:51.4
+09:13:56.312 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 51.4%
+09:13:56.454 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:51.6
+09:13:56.454 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 51.6%
+09:13:56.596 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:51.8
+09:13:56.596 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 51.8%
+09:13:56.756 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:51.9
+09:13:56.756 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 51.9%
+09:13:56.918 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:52.1
+09:13:56.918 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 52.1%
+09:13:57.076 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:52.3
+09:13:57.076 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 52.3%
+09:13:57.229 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:52.4
+09:13:57.229 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 52.4%
+09:13:57.368 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:52.6
+09:13:57.368 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 52.6%
+09:13:57.508 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:52.8
+09:13:57.508 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 52.8%
+09:13:57.652 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:52.9
+09:13:57.652 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 52.9%
+09:13:57.809 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:53.1
+09:13:57.809 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 53.1%
+09:13:57.963 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:53.3
+09:13:57.963 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 53.3%
+09:13:58.119 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:53.4
+09:13:58.119 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 53.4%
+09:13:58.265 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:53.6
+09:13:58.265 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 53.6%
+09:13:58.409 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:53.8
+09:13:58.409 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 53.8%
+09:13:58.554 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:53.9
+09:13:58.554 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 53.9%
+09:13:58.711 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:54.1
+09:13:58.711 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 54.1%
+09:13:58.864 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:54.3
+09:13:58.864 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 54.3%
+09:13:59.019 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:54.4
+09:13:59.019 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 54.4%
+09:13:59.175 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:54.6
+09:13:59.175 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 54.6%
+09:13:59.317 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:54.8
+09:13:59.319 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 54.8%
+09:13:59.458 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:54.9
+09:13:59.458 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 54.9%
+09:13:59.605 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.1
+09:13:59.605 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 55.1%
+09:13:59.763 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.2
+09:13:59.763 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 55.2%
+09:13:59.918 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.4
+09:13:59.918 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 55.4%
+09:14:00.073 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.6
+09:14:00.073 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 55.6%
+09:14:00.226 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.7
+09:14:00.228 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 55.7%
+09:14:00.369 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:55.9
+09:14:00.369 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 55.9%
+09:14:00.515 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.1
+09:14:00.515 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 56.1%
+09:14:00.660 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.2
+09:14:00.660 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 56.2%
+09:14:00.816 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.4
+09:14:00.816 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 56.4%
+09:14:00.970 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.6
+09:14:00.970 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 56.6%
+09:14:01.127 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.7
+09:14:01.127 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 56.7%
+09:14:01.271 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:56.9
+09:14:01.271 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 56.9%
+09:14:01.412 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.1
+09:14:01.412 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 57.1%
+09:14:01.551 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.2
+09:14:01.551 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 57.2%
+09:14:01.701 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.4
+09:14:01.701 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 57.4%
+09:14:01.860 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.6
+09:14:01.860 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 57.6%
+09:14:02.017 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.7
+09:14:02.017 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 57.7%
+09:14:02.170 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:57.9
+09:14:02.170 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 57.9%
+09:14:02.316 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:58.1
+09:14:02.316 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 58.1%
+09:14:02.458 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:58.2
+09:14:02.458 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 58.2%
+09:14:02.601 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:58.4
+09:14:02.601 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 58.4%
+09:14:02.760 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:58.6
+09:14:02.760 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 58.6%
+09:14:02.915 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:58.7
+09:14:02.915 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 58.7%
+09:14:03.072 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:58.9
+09:14:03.072 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 58.9%
+09:14:03.223 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.1
+09:14:03.223 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 59.1%
+09:14:03.361 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.2
+09:14:03.361 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 59.2%
+09:14:03.503 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.4
+09:14:03.503 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 59.4%
+09:14:03.650 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.6
+09:14:03.650 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 59.6%
+09:14:03.807 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.7
+09:14:03.808 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 59.7%
+09:14:03.964 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:59.9
+09:14:03.964 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 59.9%
+09:14:04.120 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.1
+09:14:04.120 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 60.1%
+09:14:04.266 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.2
+09:14:04.266 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 60.2%
+09:14:04.411 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.4
+09:14:04.411 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 60.4%
+09:14:04.549 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.6
+09:14:04.550 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 60.6%
+09:14:04.701 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.7
+09:14:04.701 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 60.7%
+09:14:04.854 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:60.9
+09:14:04.854 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 60.9%
+09:14:05.012 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.1
+09:14:05.012 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 61.1%
+09:14:05.166 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.2
+09:14:05.168 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 61.2%
+09:14:05.314 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.4
+09:14:05.314 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 61.4%
+09:14:05.457 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.6
+09:14:05.457 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 61.6%
+09:14:05.606 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.7
+09:14:05.606 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 61.7%
+09:14:05.764 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:61.9
+09:14:05.766 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 61.9%
+09:14:05.922 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:62.1
+09:14:05.922 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 62.1%
+09:14:06.081 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:62.2
+09:14:06.081 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 62.2%
+09:14:06.233 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:62.4
+09:14:06.233 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 62.4%
+09:14:06.375 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:62.6
+09:14:06.375 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 62.6%
+09:14:06.520 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:62.7
+09:14:06.520 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 62.7%
+09:14:06.668 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:62.9
+09:14:06.668 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 62.9%
+09:14:06.822 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.1
+09:14:06.822 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 63.1%
+09:14:06.985 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.2
+09:14:06.985 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 63.2%
+09:14:07.145 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.4
+09:14:07.146 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 63.4%
+09:14:07.288 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.6
+09:14:07.288 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 63.6%
+09:14:07.433 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.7
+09:14:07.433 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 63.7%
+09:14:07.576 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:63.9
+09:14:07.576 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 63.9%
+09:14:07.735 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.1
+09:14:07.735 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 64.1%
+09:14:07.892 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.2
+09:14:07.894 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 64.2%
+09:14:08.054 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.4
+09:14:08.054 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 64.4%
+09:14:08.203 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.6
+09:14:08.205 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 64.6%
+09:14:08.346 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.7
+09:14:08.346 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 64.7%
+09:14:08.486 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:64.9
+09:14:08.486 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 64.9%
+09:14:08.635 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.0
+09:14:08.635 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 65.0%
+09:14:08.801 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.2
+09:14:08.801 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 65.2%
+09:14:08.963 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.4
+09:14:08.963 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 65.4%
+09:14:09.125 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.5
+09:14:09.125 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 65.5%
+09:14:09.279 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.7
+09:14:09.279 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 65.7%
+09:14:09.422 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:65.9
+09:14:09.422 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 65.9%
+09:14:09.567 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:66.0
+09:14:09.567 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 66.0%
+09:14:09.729 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:66.2
+09:14:09.729 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 66.2%
+09:14:09.893 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:66.4
+09:14:09.893 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 66.4%
+09:14:10.052 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:66.5
+09:14:10.052 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 66.5%
+09:14:10.209 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:66.7
+09:14:10.211 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 66.7%
+09:14:10.349 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:66.9
+09:14:10.350 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 66.9%
+09:14:10.497 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.0
+09:14:10.497 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 67.0%
+09:14:10.644 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.2
+09:14:10.644 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 67.2%
+09:14:10.809 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.4
+09:14:10.809 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 67.4%
+09:14:10.973 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.5
+09:14:10.973 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 67.5%
+09:14:11.140 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.7
+09:14:11.142 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 67.7%
+09:14:11.308 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:67.9
+09:14:11.308 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 67.9%
+09:14:11.461 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.0
+09:14:11.461 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 68.0%
+09:14:11.612 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.2
+09:14:11.612 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 68.2%
+09:14:11.760 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.4
+09:14:11.760 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 68.4%
+09:14:11.898 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.5
+09:14:11.900 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 68.5%
+09:14:12.042 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.7
+09:14:12.042 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 68.7%
+09:14:12.190 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:68.9
+09:14:12.190 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 68.9%
+09:14:12.330 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.0
+09:14:12.332 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 69.0%
+09:14:12.467 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.2
+09:14:12.467 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 69.2%
+09:14:12.608 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.4
+09:14:12.608 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 69.4%
+09:14:12.756 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.5
+09:14:12.756 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 69.5%
+09:14:12.897 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.7
+09:14:12.897 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 69.7%
+09:14:13.038 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:69.9
+09:14:13.040 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 69.9%
+09:14:13.186 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:70.0
+09:14:13.186 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 70.0%
+09:14:13.334 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:70.2
+09:14:13.334 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 70.2%
+09:14:13.482 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:70.4
+09:14:13.482 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 70.4%
+09:14:13.622 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:70.5
+09:14:13.622 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 70.5%
+09:14:13.770 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:70.7
+09:14:13.770 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 70.7%
+09:14:13.911 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:70.9
+09:14:13.911 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 70.9%
+09:14:14.058 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.0
+09:14:14.058 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 71.0%
+09:14:14.198 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.2
+09:14:14.198 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 71.2%
+09:14:14.339 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.4
+09:14:14.339 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 71.4%
+09:14:14.480 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.5
+09:14:14.481 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 71.5%
+09:14:14.625 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.7
+09:14:14.625 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 71.7%
+09:14:14.765 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:71.9
+09:14:14.765 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 71.9%
+09:14:14.913 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.0
+09:14:14.913 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 72.0%
+09:14:15.059 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.2
+09:14:15.059 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 72.2%
+09:14:15.206 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.4
+09:14:15.206 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 72.4%
+09:14:15.354 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.5
+09:14:15.354 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 72.5%
+09:14:15.526 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.7
+09:14:15.526 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 72.7%
+09:14:15.669 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:72.9
+09:14:15.669 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 72.9%
+09:14:15.815 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.0
+09:14:15.815 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 73.0%
+09:14:15.958 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.2
+09:14:15.958 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 73.2%
+09:14:16.104 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.4
+09:14:16.104 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 73.4%
+09:14:16.241 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.5
+09:14:16.241 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 73.5%
+09:14:16.385 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.7
+09:14:16.385 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 73.7%
+09:14:16.523 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:73.9
+09:14:16.523 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 73.9%
+09:14:16.668 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:74.0
+09:14:16.668 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 74.0%
+09:14:16.806 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:74.2
+09:14:16.806 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 74.2%
+09:14:16.950 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:74.4
+09:14:16.950 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 74.4%
+09:14:17.091 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:74.5
+09:14:17.091 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 74.5%
+09:14:17.234 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:74.7
+09:14:17.234 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 74.7%
+09:14:17.377 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:74.9
+09:14:17.377 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 74.9%
+09:14:17.529 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.0
+09:14:17.529 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 75.0%
+09:14:17.675 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.2
+09:14:17.675 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 75.2%
+09:14:17.821 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.3
+09:14:17.821 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 75.3%
+09:14:17.969 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.5
+09:14:17.969 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 75.5%
+09:14:18.117 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.7
+09:14:18.119 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 75.7%
+09:14:18.255 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:75.8
+09:14:18.255 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 75.8%
+09:14:18.398 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.0
+09:14:18.398 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 76.0%
+09:14:18.537 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.2
+09:14:18.537 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 76.2%
+09:14:18.687 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.3
+09:14:18.687 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 76.3%
+09:14:18.828 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.5
+09:14:18.828 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 76.5%
+09:14:18.984 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.7
+09:14:18.984 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 76.7%
+09:14:19.125 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:76.8
+09:14:19.125 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 76.8%
+09:14:19.269 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.0
+09:14:19.269 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 77.0%
+09:14:19.412 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.2
+09:14:19.412 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 77.2%
+09:14:19.559 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.3
+09:14:19.560 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 77.3%
+09:14:19.697 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.5
+09:14:19.697 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 77.5%
+09:14:19.841 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.7
+09:14:19.841 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 77.7%
+09:14:19.983 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:77.8
+09:14:19.983 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 77.8%
+09:14:20.129 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.0
+09:14:20.129 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 78.0%
+09:14:20.273 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.2
+09:14:20.273 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 78.2%
+09:14:20.420 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.3
+09:14:20.420 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 78.3%
+09:14:20.565 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.5
+09:14:20.565 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 78.5%
+09:14:20.713 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.7
+09:14:20.713 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 78.7%
+09:14:20.857 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:78.8
+09:14:20.857 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 78.8%
+09:14:21.003 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.0
+09:14:21.003 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 79.0%
+09:14:21.141 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.2
+09:14:21.141 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 79.2%
+09:14:21.286 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.3
+09:14:21.286 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 79.3%
+09:14:21.428 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.5
+09:14:21.428 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 79.5%
+09:14:21.570 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.7
+09:14:21.570 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 79.7%
+09:14:21.712 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:79.8
+09:14:21.712 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 79.8%
+09:14:21.859 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.0
+09:14:21.859 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.0%
+09:14:21.859 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   保存处理后的帧...
+09:14:21.859 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.0
+09:14:21.859 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.0%
+09:14:21.859 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:应用视频运动放大
+09:14:21.859 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤完成: 应用视频运动放大
+09:14:21.861 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 步骤 '应用视频运动放大' 耗时: 48.31秒
+09:14:21.861 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:保存处理结果
+09:14:21.861 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤开始: 保存处理结果
+09:14:21.932 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频尺寸: 960x544
+09:14:21.932 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   帧率: 30.0
+09:14:21.932 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   输出路径: output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4
+09:14:21.932 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   将帧保存为PNG图像到临时目录: C:\Users\17354\AppData\Local\Temp\dl_motion_mag_frames_gnph3u9z
+09:14:21.932 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.0
+09:14:21.932 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.0%
+09:14:22.100 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.1
+09:14:22.100 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.1%
+09:14:22.247 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.3
+09:14:22.247 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.3%
+09:14:22.386 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.4
+09:14:22.386 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.4%
+09:14:22.541 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.5
+09:14:22.541 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.5%
+09:14:22.686 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.6
+09:14:22.686 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.6%
+09:14:22.850 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.8
+09:14:22.850 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.8%
+09:14:23.004 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:80.9
+09:14:23.004 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 80.9%
+09:14:23.148 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.0
+09:14:23.148 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 81.0%
+09:14:23.296 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.1
+09:14:23.296 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 81.1%
+09:14:23.437 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.3
+09:14:23.437 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 81.3%
+09:14:23.595 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.4
+09:14:23.596 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 81.4%
+09:14:23.773 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.5
+09:14:23.773 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 81.5%
+09:14:23.931 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.6
+09:14:23.931 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 81.6%
+09:14:24.075 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.8
+09:14:24.075 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 81.8%
+09:14:24.236 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:81.9
+09:14:24.236 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 81.9%
+09:14:24.398 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.0
+09:14:24.398 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 82.0%
+09:14:24.570 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.1
+09:14:24.570 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 82.1%
+09:14:24.747 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.3
+09:14:24.747 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 82.3%
+09:14:24.940 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.4
+09:14:24.940 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 82.4%
+09:14:25.120 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.5
+09:14:25.120 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 82.5%
+09:14:25.297 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.6
+09:14:25.297 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 82.6%
+09:14:25.498 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.8
+09:14:25.498 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 82.8%
+09:14:25.691 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:82.9
+09:14:25.691 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 82.9%
+09:14:25.878 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.0
+09:14:25.878 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 83.0%
+09:14:26.055 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.1
+09:14:26.055 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 83.1%
+09:14:26.232 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.3
+09:14:26.232 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 83.3%
+09:14:26.421 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.4
+09:14:26.421 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 83.4%
+09:14:26.605 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.5
+09:14:26.605 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 83.5%
+09:14:26.775 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.6
+09:14:26.775 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 83.6%
+09:14:26.940 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.8
+09:14:26.940 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 83.8%
+09:14:27.134 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:83.9
+09:14:27.134 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 83.9%
+09:14:27.288 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.0
+09:14:27.288 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 84.0%
+09:14:27.423 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.1
+09:14:27.423 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 84.1%
+09:14:27.595 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.3
+09:14:27.595 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 84.3%
+09:14:27.747 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.4
+09:14:27.747 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 84.4%
+09:14:27.890 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.5
+09:14:27.890 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 84.5%
+09:14:28.030 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.6
+09:14:28.030 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 84.6%
+09:14:28.198 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.8
+09:14:28.198 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 84.8%
+09:14:28.355 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:84.9
+09:14:28.355 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 84.9%
+09:14:28.520 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.0
+09:14:28.520 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 85.0%
+09:14:28.667 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.1
+09:14:28.668 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 85.1%
+09:14:28.821 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.3
+09:14:28.821 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 85.3%
+09:14:28.973 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.4
+09:14:28.973 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 85.4%
+09:14:29.152 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.5
+09:14:29.152 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 85.5%
+09:14:29.323 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.6
+09:14:29.323 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 85.6%
+09:14:29.489 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.8
+09:14:29.490 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 85.8%
+09:14:29.636 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:85.9
+09:14:29.636 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 85.9%
+09:14:29.790 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.0
+09:14:29.790 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 86.0%
+09:14:29.936 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.1
+09:14:29.936 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 86.1%
+09:14:30.091 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.3
+09:14:30.092 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 86.3%
+09:14:30.237 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.4
+09:14:30.237 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 86.4%
+09:14:30.390 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.5
+09:14:30.390 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 86.5%
+09:14:30.564 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.6
+09:14:30.564 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 86.6%
+09:14:30.704 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.8
+09:14:30.705 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 86.8%
+09:14:30.846 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:86.9
+09:14:30.846 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 86.9%
+09:14:30.990 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.0
+09:14:30.990 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 87.0%
+09:14:31.138 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.1
+09:14:31.138 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 87.1%
+09:14:31.288 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.3
+09:14:31.288 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 87.3%
+09:14:31.433 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.4
+09:14:31.433 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 87.4%
+09:14:31.602 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.5
+09:14:31.602 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 87.5%
+09:14:31.602 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:87.5
+09:14:31.602 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 87.5%
+09:14:31.602 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   使用FFmpeg编码视频...
+09:14:31.602 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:89.0
+09:14:31.603 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 89.0%
+09:14:34.518 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频保存成功: output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4 (0.48 MB)
+09:14:34.518 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频验证: 文件大小 0.48 MB
+09:14:34.518 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出:   视频验证: 960x544, 30.0 FPS, 301 帧
+09:14:34.518 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
+09:14:34.518 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 95.0%
+09:14:34.867 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:95.0
+09:14:34.869 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 95.0%
+09:14:34.869 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:保存处理结果
+09:14:34.869 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤完成: 保存处理结果
+09:14:34.930 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 步骤 '保存处理结果' 耗时: 13.01秒
+09:14:34.930 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_START:清理临时文件
+09:14:34.930 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepStart,156] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤开始: 清理临时文件
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 清理临时目录: C:\Users\17354\AppData\Local\Temp\dl_video_frames_59fjg06h
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 100.0%
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS:100.0
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.VideoProcessServiceImpl - [onProgress,151] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a进度更新: 100.0%
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: PROGRESS_COMPLETE:清理临时文件
+09:14:35.195 [pool-4-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [onStepComplete,161] - 任务baf7205f-44bd-4ec4-8070-bc25577c0d2a步骤完成: 清理临时文件
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 步骤 '清理临时文件' 耗时: 0.27秒
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 处理完成!
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 总耗时: 65.16秒
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 处理帧数: 301
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: 输出视频: output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: ======================================================================
+09:14:35.195 [pool-4-thread-3] DEBUG t.s.s.i.PythonScriptExecutor - [lambda$executePythonScript$0,83] - Python输出: FINAL_RESULT:output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4
+09:14:36.135 [http-nio-8080-exec-63] INFO  t.w.c.m.VideoMonitorController - [downloadResult,155] - 下载处理结果成功，任务ID: baf7205f-44bd-4ec4-8070-bc25577c0d2a
+09:14:36.206 [pool-3-thread-3] INFO  t.s.s.i.PythonScriptExecutor - [handleProcessResult,221] - Python脚本执行成功，输出文件: output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4
+09:14:36.206 [pool-3-thread-3] INFO  t.s.s.i.VideoProcessServiceImpl - [processWithPythonScript,190] - Python脚本处理完成，任务ID: baf7205f-44bd-4ec4-8070-bc25577c0d2a, 算法: deeplearning, 输出路径: output/video/baf7205f-44bd-4ec4-8070-bc25577c0d2a_processed.mp4
 ```
 
 ### 5.2 前端（index.vue）
@@ -31808,12 +33038,158 @@ git add .
 
 git status
 
-git commit -m "第六次提交，修改 README.md 文件，继续开发视频监控模块，实现基于拉格朗日视角的视频运动放大算法的实时处理版本"
+git commit -m "第六次提交，修改 README.md 文件，继续开发视频监测模块，实现基于拉格朗日视角的视频运动放大算法的实时处理版本"
 
 git push -u origin master
 ```
 
+- 结果
 
+```shell
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    MoMagTracker-Vue/output/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede_processed.mp4
+        deleted:    MoMagTracker-Vue/output/video/4a5733af-057b-45de-910c-c659247f3363_processed.mp4
+        deleted:    MoMagTracker-Vue/output/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095_processed.mp4
+        deleted:    MoMagTracker-Vue/output/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c_processed.mp4
+        deleted:    MoMagTracker-Vue/output/video/d6e0e671-c29c-4df6-ba40-ba506049816d_processed.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/4a5733af-057b-45de-910c-c659247f3363.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/d6e0e671-c29c-4df6-ba40-ba506049816d.mp4
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    MoMagTracker-Vue/README.md
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/monitor/VideoMonitorController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application.yml
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/IVideoProcessService.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/VideoProcessServiceImpl.java
+        deleted:    MoMagTracker-Vue3/README.md
+        modified:   MoMagTracker-Vue3/src/views/monitor/data/index.vue
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MoMagTracker-Vue/output/
+        MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/config/
+        MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/PythonScriptExecutor.java
+        MoMagTracker-Vue/uploads/
+        MoMagTracker-Vue3/src/assets/icons/svg/compare.svg
+        MoMagTracker-Vue3/src/assets/icons/svg/now-parameter.svg
+        README.assets/191164766-blue.svg+xml
+        README.assets/image-20251230141350626.png
+        README.assets/image-20251230141528655.png
+        README.assets/image-20251230145459164.png
+        README.assets/image-20251230145527090.png
+        README.assets/image-20251230145612640.png
+        README.assets/logo.png
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git add .
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    MoMagTracker-Vue/README.md
+        new file:   MoMagTracker-Vue/output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+        deleted:    MoMagTracker-Vue/output/video/4a5733af-057b-45de-910c-c659247f3363_processed.mp4
+        deleted:    MoMagTracker-Vue/output/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095_processed.mp4
+        deleted:    MoMagTracker-Vue/output/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c_processed.mp4
+        deleted:    MoMagTracker-Vue/output/video/d6e0e671-c29c-4df6-ba40-ba506049816d_processed.mp4
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/java/tracker/web/controller/monitor/VideoMonitorController.java
+        modified:   MoMagTracker-Vue/tracker-admin/src/main/resources/application.yml
+        new file:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/config/PythonScriptConfig.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/IVideoProcessService.java
+        new file:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/PythonScriptExecutor.java
+        modified:   MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/VideoProcessServiceImpl.java
+        renamed:    MoMagTracker-Vue/output/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede_processed.mp4 -> MoMagTracker-Vue/uploads/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/4a5733af-057b-45de-910c-c659247f3363.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c.mp4
+        deleted:    MoMagTracker-Vue/uploads/video/d6e0e671-c29c-4df6-ba40-ba506049816d.mp4
+        deleted:    MoMagTracker-Vue3/README.md
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/compare.svg
+        new file:   MoMagTracker-Vue3/src/assets/icons/svg/now-parameter.svg
+        modified:   MoMagTracker-Vue3/src/views/monitor/data/index.vue
+        new file:   README.assets/191164766-blue.svg+xml
+        new file:   README.assets/image-20251230141350626.png
+        new file:   README.assets/image-20251230141528655.png
+        new file:   README.assets/image-20251230145459164.png
+        new file:   README.assets/image-20251230145527090.png
+        new file:   README.assets/image-20251230145612640.png
+        new file:   README.assets/logo.png
+        modified:   README.md
+
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git commit -m "第六次提交，修改 README.md 文件，继续开发视频监测模块，实现基于拉格朗日视角的视频运动放大算法的实时处理版本"
+[master 32ec6bb] 第六次提交，修改 README.md 文件，继续开发视频监测模块，实现基于拉格朗日视角的视频运动放大算法的实时处理版本
+ 30 files changed, 4774 insertions(+), 314 deletions(-)
+ delete mode 100644 MoMagTracker-Vue/README.md
+ create mode 100644 MoMagTracker-Vue/output/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3_processed.mp4
+ delete mode 100644 MoMagTracker-Vue/output/video/4a5733af-057b-45de-910c-c659247f3363_processed.mp4
+ delete mode 100644 MoMagTracker-Vue/output/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095_processed.mp4
+ delete mode 100644 MoMagTracker-Vue/output/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c_processed.mp4
+ delete mode 100644 MoMagTracker-Vue/output/video/d6e0e671-c29c-4df6-ba40-ba506049816d_processed.mp4
+ create mode 100644 MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/config/PythonScriptConfig.java
+ create mode 100644 MoMagTracker-Vue/tracker-system/src/main/java/tracker/system/service/impl/PythonScriptExecutor.java
+ rename MoMagTracker-Vue/{output/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede_processed.mp4 => uploads/video/0ccb4306-9edf-4266-a874-8d454c6cd2d3.mp4} (100%)
+ delete mode 100644 MoMagTracker-Vue/uploads/video/3b9d2430-1f6f-4fb1-aeb0-a4b5174aeede.mp4
+ delete mode 100644 MoMagTracker-Vue/uploads/video/4a5733af-057b-45de-910c-c659247f3363.mp4
+ delete mode 100644 MoMagTracker-Vue/uploads/video/77c4ce25-1f0c-4715-968d-3adc0d7e1095.mp4
+ delete mode 100644 MoMagTracker-Vue/uploads/video/91f37c75-3b3b-4b1d-9da3-b7f02608468c.mp4
+ delete mode 100644 MoMagTracker-Vue/uploads/video/d6e0e671-c29c-4df6-ba40-ba506049816d.mp4
+ delete mode 100644 MoMagTracker-Vue3/README.md
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/compare.svg
+ create mode 100644 MoMagTracker-Vue3/src/assets/icons/svg/now-parameter.svg
+ create mode 100644 README.assets/191164766-blue.svg+xml
+ create mode 100644 README.assets/image-20251230141350626.png
+ create mode 100644 README.assets/image-20251230141528655.png
+ create mode 100644 README.assets/image-20251230145459164.png
+ create mode 100644 README.assets/image-20251230145527090.png
+ create mode 100644 README.assets/image-20251230145612640.png
+ create mode 100644 README.assets/logo.png
+
+17354@LAPTOP-3CJQNHQH MINGW64 /e/RuoYiProject/MoMagTracker-System (master)
+$ git push -u origin master
+Enumerating objects: 88, done.
+Counting objects: 100% (88/88), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (43/43), done.
+Writing objects: 100% (52/52), 3.52 MiB | 183.00 KiB/s, done.
+Total 52 (delta 19), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (19/19), completed with 19 local objects.
+To 17354395073_github_account:Tang17354395073/MoMagTracker-System.git
+   8ae4b79..32ec6bb  master -> master
+branch 'master' set up to track 'origin/master'.
+```
+
+### 5.4 继续推送新增算法功能至远程仓库
+
+```shell
+git status
+
+git add .
+
+git status
+
+git commit -m "第七次提交，修改 README.md 文件，解决了其他参数设置的处理问题，并继续开发视频监测模块，实现了基于欧拉视角的视频运动放大算法和基于深度学习的视频运动放大算法的实时处理版本"
+
+git push -u origin master
+```
 
 
 

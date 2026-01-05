@@ -124,6 +124,16 @@ public class PythonScriptExecutor {
         commandList.add("--output");
         commandList.add(outputPath);
 
+        // 添加模型路径参数 - 深度学习算法需要
+        if ("deeplearning".equals(getAlgorithmFromScriptPath(scriptPath))) {
+            // 添加模型检查点路径
+            String modelPath = pythonConfig.getDeeplearningModelPath();
+            if (modelPath != null && !modelPath.isEmpty()) {
+                commandList.add("--checkpoint");
+                commandList.add(modelPath);
+            }
+        }
+
         // 添加可选参数
         Object alpha = parameters.get("alpha");
         if (alpha != null) {
@@ -289,6 +299,20 @@ public class PythonScriptExecutor {
      */
     public Map<String, String> getAvailableAlgorithms() {
         return new HashMap<>(pythonConfig.getScripts());
+    }
+
+    /**
+     * 从脚本路径获取算法名称
+     */
+    private String getAlgorithmFromScriptPath(String scriptPath) {
+        if (scriptPath.contains("deeplearning") || scriptPath.contains("Learning-based-Motion-Mag")) {
+            return "deeplearning";
+        } else if (scriptPath.contains("eulerian") || scriptPath.contains("Eulerian-based-Motion-Mag")) {
+            return "eulerian";
+        } else if (scriptPath.contains("lagrangian") || scriptPath.contains("Lagrangian-based-Motion-Mag")) {
+            return "lagrangian";
+        }
+        return "unknown";
     }
 
     // 进度回调接口

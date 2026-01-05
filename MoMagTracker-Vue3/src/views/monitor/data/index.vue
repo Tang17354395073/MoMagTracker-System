@@ -436,7 +436,7 @@
                   下载处理结果
                 </el-button>
                 <el-button class="share-btn" @click="shareResult">
-                  <svg-icon icon-class="share" class-name="btn-svg-icon"></svg-icon>8【
+                  <svg-icon icon-class="share" class-name="btn-svg-icon"></svg-icon>
                   分享
                 </el-button>
                 <el-button class="compare-btn" @click="compareOriginal">
@@ -576,8 +576,8 @@ export default {
       console.log('时域滤波开关改变:', value)
       if (!value) {
         // 关闭时域滤波时，重置阈值为默认值
-        this.upperThreshold = 0.5
-        this.lowerThreshold = 0.03
+        this.upperThreshold = 0.4
+        this.lowerThreshold = 0.04
       }
     },
     
@@ -638,8 +638,8 @@ export default {
           formData.append('lowerThreshold', this.lowerThreshold)
         } else {
           // 如果不开启时域滤波，传递默认值
-          formData.append('upperThreshold', 0.5)
-          formData.append('lowerThreshold', 0.03)
+          formData.append('upperThreshold', 0.4)
+          formData.append('lowerThreshold', 0.04)
         }
         
         // 只有当其他设置开启时才传递空间平滑参数
@@ -1281,7 +1281,7 @@ export default {
         }
         
         &.status-icon-video {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(135deg, #4FD1C5 0%, #38B2AC 100%);
         }
         
         &.status-icon-none {
@@ -1289,7 +1289,7 @@ export default {
         }
         
         &.status-icon-file {
-          background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+          background: linear-gradient(135deg, #C9B6E4 0%, #A091F0 100%);
         }
         
         &.status-icon-recording {
@@ -1297,7 +1297,7 @@ export default {
         }
         
         &.status-icon-params {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(135deg, #FF9D6C 0%, #FF6B6B 100%);
         }
       }
       

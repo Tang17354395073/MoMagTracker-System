@@ -65,6 +65,8 @@ video:
 python:
   executable: "E:/RuoYiProject/MoMagTracker-Compare/.venv/Scripts/python.exe"
   enabled: true
+  # 深度学习模型路径
+  deeplearning-model-path: "E:/RuoYiProject/MoMagTracker-Compare/Learning-based-Motion-Mag/model/epoch50.tar"
   # 算法脚本路径配置 - 现在可以灵活配置不同算法的脚本
   scripts:
     # 拉格朗日算法

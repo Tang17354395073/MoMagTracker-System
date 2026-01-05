@@ -13,8 +13,20 @@ public class PythonScriptConfig {
     private String executable = "python3";
     private boolean enabled = true;
     private Map<String, String> scripts = new HashMap<>();
+    private String deeplearningModelPath;
 
     // getters and setters
+    /**
+     * 自动添加深度学习模型路径参数
+     */
+    public String getDeeplearningModelPath() {
+        return deeplearningModelPath;
+    }
+
+    public void setDeeplearningModelPath(String deeplearningModelPath) {
+        this.deeplearningModelPath = deeplearningModelPath;
+    }
+
     public String getExecutable() {
         return executable;
     }
@@ -52,4 +64,5 @@ public class PythonScriptConfig {
     public boolean hasScript(String algorithm) {
         return scripts.containsKey(algorithm) && scripts.get(algorithm) != null && !scripts.get(algorithm).isEmpty();
     }
+
 }
